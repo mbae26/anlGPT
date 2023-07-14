@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 gpt_env/
+*.DS_Store/
