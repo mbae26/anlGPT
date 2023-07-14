@@ -1,0 +1,974 @@
+pubs.acs.org/cm
+
+Article
+
+Ionic Dynamics of the Charge Carrier in Layered Solid Materials for
+Mg Rechargeable Batteries
+Chuhong Wang, Tim Mueller, and Rajeev S. Assary*
+Cite This: Chem. Mater. 2022, 34, 8769−8776
+
+Downloaded via ARGONNE NATL LABORATORY on January 11, 2023 at 16:44:12 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+ACCESS
+
+Metrics & More
+
+Read Online
+
+Article Recommendations
+
+sı Supporting Information
+*
+
+ABSTRACT: Multivalent-ion batteries have attracted growing attention due to their high
+theoretical energy density that potentially outperforms Li-ion batteries. One of the critical
+challenges of realizing a multivalent-ion battery is the strong polarization that results in the
+sluggish intercalation of ions in the host lattice, which motivates a fundamental understanding of
+multivalent-ion dynamics in solid-state materials. In this contribution, we investigate the
+diffusion mechanisms of divalent ions in a novel Mg anode coating, BiOCl, using first-principles
+informed learning-on-the-fly molecular dynamics. Based on nanosecond-scale dynamics
+observations, we gained insights into the concerted diffusion mechanism of Mg cation site-to-site hopping facilitated by
+synchronous anion rotational motion. Furthermore, we compute the Mg-ion diffusion in additional candidate host structures
+screened from available layered materials space. The results suggest the co-operative divalent cation−anion motion is likely a
+common phenomenon in layered oxyhalide structures. Our findings provide a new perspective on how to enhance multivalent-ion
+diffusion in layered materials.
+reversible Mg plating/stripping behavior.13−16 To accelerate
+materials design for anode artificial coatings, computational
+research has been focused on the identification of Mg2+
+conductors with desirable electronic and stability properties.
+Canepa et al. systematically evaluated a variety of compounds
+using first-principles calculations and suggested MgSiN2, MgS,
+MgSe, MgBr2, and MgI2 as promising coating materials.
+Relatively high Mg2+ migration barriers (>600 meV) are
+predicted in the identified coating candidates, which can be
+attributed to the high degree of polarization and charge density
+of divalent Mg ions.17
+Canepa et al. have also reported that the cation complex
+MgCl+ is the major electroactive species in most halide-based
+Mg electrolytes.18 Several cathodes based on intercalation of
+Mg2+ carriers, including Mg(DME)32+, Mg(H2O)x2+, and
+MgCl+, have been established to improve the magnesium
+conduction rate via electrostatic shielding of the Mg2+
+ions.19−21 A recent study of anode interphase modification
+showed that electrodeposited bismuth effectively functions as a
+passivation layer that permits diffusion of MgCl+ as charge
+carriers.12 Fast transportation of ion complexes potentially
+alleviates the issue of sluggish dissociation and diffusion of bare
+Mg2+ ions, which highlights the critical role of MgCl+ diffusion
+in enhancing rate capability. Compared to Mg-based electro-
+
+1. INTRODUCTION
+The recent emergence of rechargeable magnesium-based
+batteries has received extensive attention due to several unique
+advantages over their lithium counterparts. The metallic Mg
+possesses a low reduction potential, high abundance in the
+Earth’s crust, and high theoretical specific capacity (3833 mA h
+cm−3 and 2205 mA h g−1).1,2 The high volumetric energy
+density and low cost promote the development of magnesiumbased batteries as the alternative candidates for beyond-lithium
+batteries.3 Additionally, Mg is less prone to dendrite formation
+than Li metal, thus eliminating the safety concerns of cell
+internal short circuits.
+Despite these compelling features, two critical challenges
+limit the development of magnesium-based batteries. On the
+anode side, in contrast to the ionically conductive solidelectrolyte interphase layer formed in Li-ion batteries, the
+formation of an ionically insulating surface layer in numerous
+conventional electrolytes results in irreversible plating/
+stripping of Mg.4−6 Another challenge is the sluggish insertion
+kinetics of the Mg in the cathode host structure due to its
+divalent nature, which generates large overpotentials for Mg
+intercalation and greatly hinders the commercialization of Mgion batteries.7,8
+Many research efforts have been devoted to the material
+design of an artificial interphase layer on the anode that
+mitigates detrimental decomposition reactions and facilitates
+charge transfer. Several strategies for forming the interphase
+layer in-situ on the anode surface have demonstrated a
+protective effect on electrochemical cycling with reduced
+reaction overpotential.9−12 Direct modification of the Mg
+anode surface prior to battery assembly with well-designed
+artificial coating materials has also been shown to enable
+© 2022 UChicago Argonne, LLC,
+Operator of Argonne National
+Laboratory. Published by American
+Chemical Society
+
+Received: June 30, 2022
+Revised: September 6, 2022
+Published: September 23, 2022
+
+8769
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+Article
+
+Figure 1. Calculation workflow of diffusivity and the activation energy barrier for each system using learning on-the-fly molecular dynamics
+(LOTF-MD).
+
+lytes, such as magnesium aluminum chloride complex,18 less is
+known about the intercalation mechanism and diffusion
+kinetics of Mg cation complexes in solid materials.
+A comprehensive understanding of Mg ion complex transfer
+in crystalline solids can lead to generalized design rules for
+improved ionic conductors, but it is challenging to attain via
+experimental characterization.22 This motivates the use of
+atomistic simulations to elucidate the mechanism behind
+macroscopic diffusional properties observed in experiments. In
+terms of first-principles investigations, the climbing image
+nudged elastic band method (CI-NEB)23,24 and ab initio
+molecular dynamics (AIMD) simulations are the two common
+approaches to calculating the ionic diffusion rate. The CI-NEB
+method is frequently used to determine the energy of the
+transition state along the minimum energy path; however, this
+approach requires prior knowledge of the diffusion mechanism,
+which substantially affects the prediction accuracy of migration
+energy. AIMD does not require prior knowledge of the
+diffusion mechanism, but it comes with a high computational
+cost due to longer-scale dynamic simulations based on a firstprinciples approach. The challenges of using AIMD to study
+solid-state conduction of multivalent ions arise from their high
+charge density and strong Coulombic interactions with the
+anion sublattice, which results in sluggish diffusion through
+solid materials.25−27 Owing to the high computational cost of
+AIMD simulation and the rare occurrence of multivalent ion
+hopping, we adopted learning on-the-fly molecular dynamics
+(LOTF-MD) driven by machine-learned interatomic potentials
+with automated density functional theory (DFT) retraining to
+capture the rare transition events of multivalent ions.28 A
+layered material, BiOCl, which has been characterized and
+computed as an effective Mg anode protection layer in our
+recent study,12 was selected as a representative host material
+for this investigation.
+Enabled by the computational efficiency of the LOTF-MD
+method, we simulated atomic dynamics at nanosecond (ns)
+timescales, which revealed highly cooperative motion of Mg
+and Cl ions that facilitates Mg2+ transfer in the BiOCl/MgCl+
+system. Based on the simulation of two types of ion carrier,
+MgCl+ and Mg2+, we identified that the cooperative motion in
+the layered structure is induced by the ion complex MgCl+ but
+not by the Mg2+ ion alone. Identification of this characteristic
+feature provides guidelines for the rational design of host
+lattices paired with an ion carrier for an enhanced ion diffusion
+rate. The computed diffusion barrier of Mg under different
+external conditions is consistent with previous reports.12
+Hence, we present the workflow as a systematic computational
+
+strategy to investigate the diffusion dynamics of ionic
+complexes in solid-state materials. Given the diffusional
+behavior observed in layered BiOCl, we further investigated
+the diffusion of MgCl+ and Mg2+ in analogous layered materials
+selected from a large materials space. The anion/cation
+cooperative motion and comparatively fast conduction
+detected in the identified structures highlights the importance
+of mechanistic insight toward rational design of an artificial
+interphase for Mg anodes.
+
+2. METHODS
+2.1. Density Functional Theory. To simulate ionic dynamics in
+the layered structures, we performed ground-state structural
+optimization and AIMD simulations at elevated temperatures using
+Vienna Ab-initio Simulation Package29 and the projector augmented
+wave approach.30 3 × 3 × 1 supercells of BiOCl, ScOCl, and BiOBr
+were constructed from the Materials Project31 structure entries mp22939, mp-989195, and mp-23072, respectively, with one embedded
+Mg2+ or MgCl+ (MgBr+ in BiOBr), followed by full geometry
+optimizations with a plane wave energy cutoff of 520 eV and a 2 × 2 ×
+2 Monkhorst−Pack k-point mesh. The charged cell was compensated
+by a uniform jellium background of opposite charge. Supercells were
+constructed to ensure there was at least a 9 Å separation between
+neighboring images32 to avoid periodic boundary effects. The relaxed
+lattice parameters were then used as an initial geometry for the
+subsequent AIMD simulations. In line with previous publications,32,33
+the calculation parameters of AIMD were selected to balance accuracy
+versus computational cost. We used a plane wave energy cutoff of 400
+eV and a minimal Γ-point-only k-point mesh. The AIMD simulations
+were carried out at 1000 K using the NVT ensemble. Additionally, the
+lattice expansion of BiOCl resulting from MgCl+ intercalation was
+investigated with AIMD using the NPT ensemble under 1 atm
+pressure for 160 ps. The temperature control for NVT-AIMD
+simulations and NPT-AIMD simulations was achieved by using the
+Nosé thermostat34,35 and Langevin thermostat,36,37 respectively. In
+both 0 K geometry optimization and AIMD simulations, van der
+Waals interaction was approximated by applying the DFT-D3 method
+with Becke−Johnson damping.38,39
+2.2. Learning On-The-Fly Molecular Dynamics. As illustrated
+in Figure 1, for each system, 15 ps AIMD at 1000 K was performed
+with the ground-state relaxed geometry using the DFT parameters
+described above. For the machine learned interatomic potential
+model, we applied moment tensor potentials (MTPs), which express
+the energy of the local environment around an atom using invariant
+polynomials.40 MTPs have shown an excellent trade-off between the
+execution speed and accuracy compared to Gaussian approximation
+potential, neural network (NN), and spectral neighbor analysis
+potential (SNAP).41 A MTP model was pretrained on a series of
+DFT-calculated energies and forces generated in AIMD. The
+pretrained potential was used for MTP molecular dynamics (MTPMD) simulations with LAMMPS.42 The interface between MTP-MD
+8770
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+and DFT static calculations was automated by the Machine Learning
+of Interatomic Potentials (MLIP) software package.43 During the
+dynamic evolution of the structure in MTP-MD, DFT calculations
+were conditionally triggered by the occurrence of “extrapolation”
+configurations. After updating the training set, the MTP was retrained,
+and the molecular dynamics run was restarted with the improved
+potentials. Details of MTP training, including the size of polynomial
+basis, cut-off radius for the local atomic environment, and the
+definition of extrapolation threshold, are provided in the Supporting
+Information Section S1. By sampling the configurational space
+iteratively, MTP eventually becomes sufficiently accurate for the
+entire energy landscape that it no longer acquires additional training
+data to complete nanosecond long molecular dynamics production.
+The use of this iterative scheme enables us to gather orders of
+magnitude more data than can be accessed by direct AIMD with little
+loss of accuracy, resulting in reduced statistical variance in the
+estimated diffusivity, which especially benefits the prediction of
+structures with medium-to-high diffusion barriers. DFT validation of
+MTP predicted energies and forces, as well as experimental
+benchmark results of diffusion barriers in various crystalline
+structures, are reported in a recent study.44 We performed DFT
+validation of the fitted MTP on configurations that are not included in
+the training set, as described in Section S1. The average mean
+absolute errors (MAE) of validation for energies and components of
+force vectors are 3.27 meV/atom and 70.1 meV/Å, respectively.
+Detailed training and validation results for each structure are listed in
+Table S1.
+The initial temperature (T) for LOTF-MD simulations of each
+simulation snapshot was 1000 K. We apply the following equation to
+compute the tracer diffusivity
+
+Dtr = lim
+t
+
+1
+6
+
+2
+
+r(t )
+t
+
+Figure 2. Side-view and top-view images of the relaxed crystal
+structure of (a) Mg2+ and (c) MgCl+ insertion between the BiOCl
+sheets with the relaxed lattice along the c-axis labeled on the side view
+images. The purple, red, green, and orange spheres represent Bi, O,
+Cl, and Mg atoms, respectively. The Bi3+ is bonded to four equivalent
+O2− represented in a 4-coordinate geometry by purple tetrahedra.
+Plots of Mg and Cl atoms trajectories from 2 ns MD production at
+1000 K for (b) Mg2+ in BiOCl and (d) MgCl+ in BiOCl. Note that
+the Bi and O atoms are omitted in the top-view images and trajectory
+plots (b,d) for clarity.
+
+The DFT-relaxed lattice parameter for pristine BiOCl is 7.3 Å.
+Mg2+ inserted into the host structure forms a tetrahedron with
+four nearest-neighbor Cl in their original lattice sites of BiOCl
+layers (Figure 2) and reduces the DFT-optimized lattice
+constant to 7.2 Å. When MgCl+ is inserted into the structure,
+the vertical dimension is expanded to 7.7 Å, where Cl ions
+adjacent to Mg are slightly displaced from the lattice sites by
+the cation complex.
+To investigate the ionic dynamics, we performed LOTF-MD
+of both systems. Based on 2 ns of MD production at 1000 K, as
+shown in Figure 2b, in the system where divalent Mg2+ was
+inserted, Mg and Cl locally vibrated within their own lattice
+sites, and no site-to-site hopping was detected during the
+observation time. In contrast, during 2 ns MD, in the system
+where the MgCl+ ion complex is inserted, the rotational
+motion of Cl around Mg in the center can be observed in
+Figure 2d. Displaced by the nonstoichiometric Cl, the five-fold
+Mg−Cl coordination activates the Cl orbiting around the Mg
+cation. The reduced cation−anion bond strength facilitates Mg
+hopping as compared with the four-fold coordination of lattice
+Cl with Mg in the Mg2+/BiOCl system.
+To better understand the ion motion and quantify Mg
+diffusivity in both systems, we simulated long (20 ns) LOTFMD trajectories to obtain sufficient statistics on Mg hopping
+events. In the BiOCl/Mg2+ system, the MSD of Mg atoms at
+1000 K had no measurable slope with respect to time (t).
+Assuming each Mg2+ undergoes a site-to-site hop exactly every
+20 ns, we estimate the upper limit of its diffusivity to be 7.5 ×
+10−9 cm2/s (the derivation is shown in Section S3). In
+comparison, Mg diffusion in the BiOCl/MgCl+ system is
+significantly faster, with diffusivity of 8.2 × 10−7 cm2/s at 1000
+K, which is higher than that in BiOCl/Mg2+ by at least 2 orders
+of magnitude.
+The trajectory analysis reveals the significant impact of
+nonstoichiometric chlorine on the dynamics of both cations
+and anions in the system. The cooperative motion of Mg and
+Cl ions in BiOCl/MgCl+ is demonstrated at 1000 K at 2, 4,
+
+(1)
+
+where 2r(t ) is the mean square displacement (MSD) of Mg atom
+after time t, and the constant 6 is used for three-dimensional diffusion.
+MD simulation temperature was decremented by 50 K until the
+diffusivity of Mg was so low that no site-to-site hopping of Mg was
+detected within 20 ns. (Figure 1) The temperature-dependent
+diffusivities were used to fit the Arrhenius relationship
+D(T ) = D( ) e Ea / kBT
+
+Article
+
+(2)
+
+We denote the estimated tracer diffusivity at temperature T as
+D(T). The activation energy, Ea, can be calculated from a linear fit of
+log(D(T)) to 1 , where kB is Boltzmann’s constant. As demonstrated
+kBT
+
+by He et al.,45 the variance in the independent variable D should be
+considered when fitting the Arrhenius equation for a statistically
+meaningful estimation of Ea. Following their method, we estimated
+the variance in the diffusivity of Mg ions and propagated to the
+variance in the activation barrier Ea. These variances were then used in
+a weighted least-squares regression to estimate Ea. The equation for
+variance calculation and weighted least-squares regression are
+provided in Section S2.
+
+3. RESULTS AND DISCUSSION
+3.1. Diffusion of Mg ion Carrier MgCl+ Versus Mg2+ in
+BiOCl. A previous study by Yoo et al. on a layered Mg cathode
+(TiS2) reports that the MgCl+ exhibits faster diffusion due to
+the reduced polarization strength of Mg2+ by an anionshielding effect.21 However, in the host structure such as
+BiOCl where Cl ions are already present, it is nontrivial to
+anticipate the interaction of Mg2+ with the available Cl− and its
+effect on the diffusion rate. Thus, we constructed atomic
+models for both MgCl+ and Mg2+ inserted between layers of
+pristine BiOCl and relaxed the structures with DFT, as shown
+in Figure 2a,c. We simulate the dilute, noninteracting case
+where a single Mg2+ or MgCl+ is placed in the simulation box.
+8771
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+Article
+
+Figure 3. Molecular Dynamics (MD) trajectory plots of Mg and Cl atoms of MgCl+ in BiOCl at 1000 K at 2, 4, and 6 ns. Projection planes
+correspond to the axis at the left corner on each row. Oxygen and bismuth ions have been omitted for clarity. Initial positions of Mg and Cl ions are
+denoted by orange and green spheres, respectively, on the 2 ns plots. Rotational motion of Cl ions synergetic with Mg motion observed from MD
+trajectories are marked by black solid curved arrows. Site-to-site hopping of the Mg ion is marked by dashed straight arrows.
+
+Figure 4. Displacement at each time step for Cl ions during the 6 ns trajectory. Within each subplot, the x axis represents time, and the y axis the
+magnitude of displacement in Å at each time step for each Cl ion. The warmer color represents the Cl ion closer to the Mg ion, while the cooler,
+the farther to the Mg ion.
+
+we manually expanded the lattice of the BiOCl/Mg2+ cell to
+match that of BiOCl/MgCl+ and performed LOTF-MD. No
+rotational motion of Cl ions was observed in the expanded
+BiOCl/Mg2+ system, which indicates that the presence of the
+Mg−Cl ion complex is critical to the cooperative diffusion
+behavior and enhanced Mg diffusion. There has recently been
+a growing interest in the study of the correlation between
+cooperative motion and enhanced ionic diffusion, such as the
+multivalent ion intercalation in the cathode,46,47 as well as Liion diffusion in solid electrolyte materials.48−51 While intrinsic
+cooperative motion is commonly observed in several types of
+Li-ion superconductors, the cooperative motion of multivalent
+ions usually requires externally introduced ions.46,52,53 To our
+knowledge, this is the first time the characteristic mechanism of
+Mg diffusion facilitated by synchronous anion motion in the
+layered oxyhalide host structure has been identified. The
+atomistic insight improves the understanding of how tailoring
+
+and 6 ns in Figure 3. It suggests the spatial correlation between
+the rotational motion of Cl ions and Mg diagonal site-to-site
+hopping behavior. We further probe the temporal correlation
+between Mg and the motion of Cl anions in the system by
+tracking the movement of each atom with time. We compute
+Cl displacement at each time step over the course of 6 ns MD
+production and color code based on their distance to Mg in
+Figure 4. The result suggests large displacement undergone by
+multiple Cl anions is in sync with a short Mg−Cl distance
+throughout the 6 ns trajectory. The radial distribution function
+(RDF) and the coordination number analysis of Mg−Cl in
+Figure S1 indicate Mg is usually coordinated with five Cl
+anions. As illustrated in Figure 4 and the MSD plot of all Clions (Figure S2), Mg diffusion is accompanied by one of the
+neighboring Cl ions following along that maintains five-fold Cl
+coordination of the migrating Mg cation.
+To assess whether the improved diffusivity in BiOCl/MgCl+
+relative to BiOCl/Mg2+ was due to its larger lattice parameter,
+8772
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+higher than (by ∼0.2 eV) that determined by LOTF-MD. This
+could be explained by the concerted motion of Mg and Cl ions
+identified by LOTF-MD, which was not captured in the CINEB calculations.
+3.3. Diffusion of Mg Species in Layered Oxyhalide
+Structures. Considering the cooperative diffusion mechanism
+observed in the BiOCl/MgCl+ system, there is likely a family of
+structures where Mg diffusion is facilitated by the concerted
+cation−anion motion. To investigate analogous structures in
+the materials space, we perform a material screening of the
+Materials Project database31 with compositional and structural
+searching criteria illustrated in Figure 6. We identified 91
+
+the ion carrier for a specific host lattice can lead to improved
+ionic conduction.
+3.2. Interlayer Expansion of Host Lattice BiOCl. The
+analysis of Mg diffusivity shown in Figure 2 was performed
+with molecular dynamics in the NVT ensemble with the lattice
+dimension fixed at that of the ground state of BiOCl with
+MgCl inserted. In many cases, the battery components, in
+particular layered materials, are likely to expand notably in the
+dimension of charge carrier intercalation. To investigate the
+lattice expansion caused by MgCl+ insertion, we perform
+AIMD in the NPT ensemble under 1 bar pressure at 1000 K.
+During the 160 ps AIMD equilibration, the vertical lattice
+expanded from 7.7 to 8.6 Å. In the expanded lattice, the MgCl+
+ion complex has more free space for diffusion, which may lead
+to a lower diffusion barrier. To investigate this hypothesis and
+quantify the effect of lattice expansion on diffusion kinetics, we
+computed the activation energy (Ea) of Mg diffusion from
+values of diffusivity observed at 750−1050 and 700−1050 K in
+the simulation cell of the original lattice and the expanded
+lattice, respectively. The Arrhenius plot of two sets of
+diffusivity values is shown in Figure 5. With the interlayer
+
+Figure 6. Screening workflow for identification of layered oxyhalide
+structures capable of Mg diffusion based on compositional and
+structural features of BiOCl.
+
+oxyhalide compounds, and from these, we searched for P4/
+nmm space group structures in layered configurations using the
+algorithm developed by Cheon et al.54 Considering the
+relatively long bond length of Bi−Cl55 in BiOCl may have
+contributed to the mobility of Cl anions, we require that the
+M−X (X = Cl, Br) bond length is longer than the sum of the
+covalent radii of the constituent atoms. Additionally, we
+require that +3 is among the common oxidation numbers of
+the metal cation M.
+This screening resulted in two candidate materials, BiOBr
+(mp-23072) and ScOCl (mp-989195), with high similarity to
+BiOCl in terms of the searching criteria. After inserting the
+guest ion MgBr+ and MgCl+ in BiOBr and ScOCl, respectively,
+we performed LOTF-MD to evaluate Mg diffusivities and
+activation energy barriers. Mg hopping coupled with halide-ion
+rotational motions, similar to that observed in BiOCl/MgCl+,
+was observed in both candidate host structures. This provides
+support to our hypothesized material descriptors governing
+ionic diffusional properties. The computed diffusivities and
+activation energies are shown in the Arrhenius plot in Figure 7,
+with values listed in Table 2. The two materials are predicted
+to allow lower diffusion barriers for Mg than the reference
+BiOCl structure, which could be attributed to the larger
+intrinsic interlayer distance in the ground states of the pristine
+BiOBr and ScOCl structures. In addition, the atomic radius,
+polarization strength and electronegativity of constituent ions
+in the host lattice may also contribute to the mobility of the
+Mg ion carrier.
+The activation energies for Mg ions diffusion in the layered
+materials studied in this work are at least 0.5 eV higher than
+that of Li-ion in the state-of-art thiophosphate electrolytes,
+such as Li10GeP2S12 (0.22 eV)56 and Li6PS5X (X = Cl, Br, or I)
+argyrodites (0.3−0.4 eV)57 while within a comparable range of
+oxide-based Li-ion solid electrolytes, such as LiPON (0.55
+eV)58 and tetragonal Li7La3Zr2O12 (0.56 eV).59 It suggests the
+possibility of reducing the Mg migration barrier by substituting
+oxygen with sulfur in the host structure.8,60 The activation
+energies are lower than those reported for other multivalent
+ions in other materials. Yaghoobnejad Asl et al. reported
+
+Figure 5. Computed temperature-dependent MgCl+ diffusivity (D)
+and activation energies (Ea) of BiOCl in the original lattice (c = 7.7 Å)
+and lattice expanded by cation complex insertion (c = 8.6 Å).
+
+distance increased by ∼12%, the Mg diffusion barrier decreases
+from 1.13 to 0.41 eV. Literature values of diffusion barriers
+calculated by CI-NEB are listed in Table 1 for comparison.
+The two methods reach the same qualitative conclusion about
+the lattice expansion effect. The diffusion activation barrier in
+the original lattice of BiOCl determined by CI-NEB is slightly
+Table 1. Comparison of the Computed Diffusion Activation
+Barriers (Ea) of Mg in BiOCl/MgCl+ Cells Using LOTF-MD
+and the CI-NEB obtained from ref 12
+Ea (eV)
+optimized lattice c (Å)
+
+LOTF-MD
+
+CI-NEB12
+
+7.7a
+8.6b
+10.0c
+
+1.13 ± 0.256
+0.41 ± 0.027
+N/A
+
+1.4
+N/A
+0.17
+
+Article
+
+a
+Original BiOCl lattice. bBiOCl lattice expanded by (MgCl+)
+complex insertion. cFixed-expanded BiOCl lattice from ref 12.
+
+8773
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+Article
+
+materials to come out of this screen (ScOCl and BiOBr),
+indicating a promising role of layered oxyhalide structures in
+alleviating the sluggish diffusion issue of multivalent ions in
+solid-state materials. We thus recommend these promising
+materials for further experimental validation. Our findings
+improve the understanding of the MV ion diffusion mechanism
+and open new paths for the rational design of Mg anode
+coatings for an enhanced rate performance.
+
+■
+
+ASSOCIATED CONTENT
+
+sı Supporting Information
+*
+
+The Supporting Information is available free of charge at
+https://pubs.acs.org/doi/10.1021/acs.chemmater.2c01954.
+Details of MTP training and validation; discussion of the
+statistical error analysis and weighted least-squares
+regression of the Arrhenius relationship; estimation of
+the upper limit of diffusivity; radial distribution function
+and coordination analysis of LOTF-MD data; MSD of
+Cl ions during the 6 ns LOTF-MD production; and
+MAE for predictions of energy and forces by MTP with
+reference to DFT (PDF)
+
+Figure 7. Simulated temperature-dependent Mg2+ diffusivity and
+activation energies (Ea) for ScOCl and BiOBr with reference to
+BiOCl. The diffusivities (D) on this plot are computed by LOTF-MD
+in the NVT ensemble with lattice parameters fixed at that of DFT 0 K
+optimized structures. The computational cell of ScOCl and BiOBr are
+shown next to the line of corresponding Arrhenius fitting labeled with
+lattice parameter c.
+
+■
+
+Table 2. Computed Diffusion Activation Barriers (Ea) of Mg
+in BiOCl, ScOCl, and BiOBr Host Structure with
+Corresponding Ion Complex as a Mg Ion Barrier
+host structure
+BiOCl
+ScOCl
+BiOBr
+
+optimized lattice, c (Å)
+7.67
+7.95
+8.58
+
+Ea (eV)
+1.13 ± 0.256
+1.04 ± 0.076
+0.65 ± 0.041
+
+AUTHOR INFORMATION
+
+Corresponding Author
+
+Rajeev S. Assary − Materials Science Division and Joint Center
+for Energy Storage Research (JCESR), Argonne National
+Laboratory, Lemont, Illinois 60439, United States;
+orcid.org/0000-0002-9571-3307; Phone: 630-252-3536;
+Email: Assary@anl.gov
+
+Mg ion carrier
++
+
+MgCl
+MgCl+
+MgBr+
+
+Authors
+
+activation energies of 0.70 and 0.84 eV in hexagonal KxW3O9
+for Zn2+ and Mg2+, respectively, and attributed faster kinetics
+of Zn to the occurrence of metastable monovalent Zn+.61 Iton
+and See, reviewed the latest findings in inorganic solid-state
+conductors of Mg2+, Zn2+, and Ca2+ and summarized generally
+high values of diffusion barriers (≥0.8 eV) from experimental
+and computational measurements. The authors also highlighted leveraging complex migration mechanisms as one of the
+strategies to overcome the challenge facing multivalent ion
+battery.25 Our simulation results demonstrate the promising
+role of cation−anion concerted motion in reducing the
+diffusion barrier of multivalent ions in solid materials for
+practical battery applications.
+
+Chuhong Wang − Materials Science Division, Argonne
+National Laboratory, Lemont, Illinois 60439, United States;
+Materials Science and Engineering, John Hopkins University,
+Baltimore, Maryland 21218, United States; orcid.org/
+0000-0001-8993-3226
+Tim Mueller − Materials Science and Engineering, John
+Hopkins University, Baltimore, Maryland 21218, United
+States; orcid.org/0000-0001-8284-7747
+Complete contact information is available at:
+https://pubs.acs.org/10.1021/acs.chemmater.2c01954
+Author Contributions
+
+C.W. and R.S.A. conceived the idea and directed the research.
+C.W. performed DFT simulations and developed machine
+learning models. The manuscript was written through
+contributions of all authors. All authors have given approval
+to the final version of the manuscript.
+
+4. CONCLUSIONS
+The learning on-the-fly molecular dynamics (LOTF-MD)
+framework provides a systematic approach to elucidating the
+ionic dynamics of multivalent ions in solid phases. Enabled by
+real-time observation at the ns timescale, the simulated
+trajectory reveals a highly cooperative motion of Mg and Cl
+during ionic conduction of MgCl+ in BiOCl. We estimate its
+diffusivity upper limit to be 7.5 × 10−9 and 8.2 × 10−7 cm2/s at
+1000 K for Mg diffusion in BiOCl/Mg2+ and BiOCl/MgCl+
+systems, respectively, during the 20 ns LOTF-MD. Intercalation of Mg monovalent cation complexes (MgCl+) creates
+5-fold Mg−Cl coordination and triggers the rotational motion
+of neighboring Cl anions, which, in turn, facilitates the site-tosite hopping of Mg cations by weakening the Mg-anion bond
+strength. In light of this newly identified diffusion mechanism,
+we searched for BiOCl analogous structures as potential Mg
+host materials and determined their diffusion barriers. The
+concerted motion was also observed in the two top candidate
+
+Notes
+
+The authors declare no competing financial interest.
+
+■
+
+ACKNOWLEDGMENTS
+This work was supported as part of the Joint Center for Energy
+Storage Research, an Energy Innovation Hub funded by the
+U.S. Department of Energy, Office of Science, Basic Energy
+Sciences. The authors gratefully acknowledge the computing
+resources provided on “Bebop,” a 1024-node computing
+cluster operated by the Laboratory Computing Resource
+Center at Argonne National Laboratory. C.W. and R.S.A.
+acknowledge Dr. Brian Ingram and Dr. Baris Key of Argonne
+National Laboratory for fruitful discussions. The submitted
+manuscript has been created by UChicago Argonne, LLC,
+8774
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+(17) Chen, T.; Sai Gautam, G.; Canepa, P. Ionic Transport in
+Potential Coating Materials for Mg Batteries. Chem. Mater. 2019, 31,
+8087−8099.
+(18) Canepa, P.; Jayaraman, S.; Cheng, L.; Rajput, N. N.; Richards,
+W. D.; Gautam, G. S.; Curtiss, L. A.; Persson, K. A.; Ceder, G.
+Elucidating the structure of the magnesium aluminum chloride
+complex electrolyte for magnesium-ion batteries. Energy Environ. Sci.
+2015, 8, 3718−3730.
+(19) Li, Z.; Mu, X.; Zhao-Karger, Z.; Diemant, T.; Behm, R. J.;
+Kübel, C.; Fichtner, M. Fast kinetics of multivalent intercalation
+chemistry enabled by solvated magnesium-ions into self-established
+metallic layered materials. Nat. Commun. 2018, 9, 5115.
+(20) Ji, X.; Chen, J.; Wang, F.; Sun, W.; Ruan, Y.; Miao, L.; Jiang, J.;
+Wang, C. Water-Activated VOPO4 for Magnesium Ion Batteries.
+Nano Lett. 2018, 18, 6441−6448.
+(21) Yoo, H. D.; Liang, Y.; Dong, H.; Lin, J.; Wang, H.; Liu, Y.; Ma,
+L.; Wu, T.; Li, Y.; Ru, Q.; Jing, Y.; An, Q.; Zhou, W.; Guo, J.; Lu, J.;
+Pantelides, S. T.; Qian, X.; Yao, Y. Fast kinetics of magnesium
+monochloride cations in interlayer-expanded titanium disulfide for
+magnesium rechargeable batteries. Nat. Commun. 2017, 8, 339.
+(22) Gao, Y.; Nolan, A. M.; Du, P.; Wu, Y.; Yang, C.; Chen, Q.; Mo,
+Y.; Bo, S. H. Classical and Emerging Characterization Techniques for
+Investigation of Ion Transport Mechanisms in Crystalline Fast Ionic
+Conductors. Chem. Rev. 2020, 120, 5954−6008.
+(23) Henkelman, G.; Uberuaga, B. P.; Jónsson, H. A climbing image
+nudged elastic band method for finding saddle points and minimum
+energy paths. J. Chem. Phys. 2000, 113, 9901−9904.
+(24) Henkelman, G.; Jónsson, H. Improved tangent estimate in the
+nudged elastic band method for finding minimum energy paths and
+saddle points. J. Chem. Phys. 2000, 113, 9978−9985.
+(25) Iton, Z. W. B.; See, K. A. Multivalent Ion Conduction in
+Inorganic Solids. Chem. Mater. 2022, 34, 881−898.
+(26) Jaschin, P. W.; Gao, Y.; Li, Y.; Bo, S.-H. A materials perspective
+on magnesium-ion-based solid-state electrolytes. J Mater Chem A
+2020, 8, 2875−2897.
+(27) Rong, Z.; Malik, R.; Canepa, P.; Sai Gautam, G.; Liu, M.; Jain,
+A.; Persson, K.; Ceder, G. Materials Design Rules for Multivalent Ion
+Mobility in Intercalation Structures. Chem. Mater. 2015, 27, 6016−
+6021.
+(28) Wang, C.; Aoyagi, K.; Aykol, M.; Mueller, T. Ionic Conduction
+through Reaction Products at the Electrolyte-Electrode Interface in
+All-Solid-State Li(+) Batteries. ACS Appl. Mater. Interfaces 2020, 12,
+55510−55519.
+(29) Kresse, G.; Furthmüller, J. Efficient iterative schemes for ab
+initio total-energy calculations using a plane-wave basis set. Phys. Rev.
+B: Condens. Matter Mater. Phys. 1996, 54, 11169−11186.
+(30) Blöchl, P. E. Projector Augmented-Wave Method. Phys. Rev. B:
+Condens. Matter Mater. Phys. 1994, 50, 17953−17979.
+(31) Jain, A.; Ong, S. P.; Hautier, G.; Chen, W.; Richards, W. D.;
+Dacek, S.; Cholia, S.; Gunter, D.; Skinner, D.; Ceder, G.; Persson, K.
+A. Commentary: The Materials Project: A materials genome approach
+to accelerating materials innovation. APL Mater. 2013, 1, 011002.
+(32) Ong, S. P.; Mo, Y. F.; Richards, W. D.; Miara, L.; Lee, H. S.;
+Ceder, G. Phase stability, electrochemical stability and ionic
+conductivity of the Li10 +/- 1MP2X12 (M = Ge, Si, Sn, Al or P,
+and X = O, S or Se) family of superionic conductors. Energy Environ.
+Sci. 2013, 6, 148−156.
+(33) Zhu, Z. Y.; Chu, I. H.; Ong, S. P. Li3Y(PS4)(2) and
+Li5PS4Cl2: New Lithium Superionic Conductors Predicted from
+Silver Thiophosphates using Efficiently Tiered Ab Initio Molecular
+Dynamics Simulations. Chem. Mater. 2017, 29, 2474−2484.
+(34) Hoover, W. G. Canonical dynamics: Equilibrium phase-space
+distributions. Phys. Rev. A: At., Mol., Opt. Phys. 1985, 31, 1695−1697.
+(35) Nosé, S. A unified formulation of the constant temperature
+molecular dynamics methods. J. Chem. Phys. 1984, 81, 511−519.
+(36) Parrinello, M.; Rahman, A. Polymorphic transitions in single
+crystals: A new molecular dynamics method. J. Appl. Phys. 1981, 52,
+7182−7190.
+
+Operator of Argonne National Laboratory (“Argonne”).
+Argonne, a U.S. Department of Energy Office of Science
+laboratory, is operated under contract no. DE-AC0206CH11357. The U.S. Government retains for itself, and
+others acting on its behalf, a paid-up nonexclusive, irrevocable
+worldwide license in said article to reproduce, prepare
+derivative works, distribute copies to the public, and perform
+publicly and display publicly, by or on behalf of the
+Government.
+
+■
+
+Article
+
+REFERENCES
+
+(1) Matsui, M. Study on electrochemically deposited Mg metal. J.
+Power Sources 2011, 196, 7048−7055.
+(2) Ling, C.; Banerjee, D.; Matsui, M. Study of the electrochemical
+deposition of Mg in the atomic level: Why it prefers the non-dendritic
+morphology. Electrochim. Acta 2012, 76, 270−274.
+(3) Canepa, P.; Sai Gautam, G.; Hannah, D. C.; Malik, R.; Liu, M.;
+Gallagher, K. G.; Persson, K. A.; Ceder, G. Odyssey of Multivalent
+Cathode Materials: Open Questions and Future Challenges. Chem.
+Rev. 2017, 117, 4287−4341.
+(4) Xu, K. Electrolytes and interphases in Li-ion batteries and
+beyond. Chem. Rev. 2014, 114, 11503−11618.
+(5) Tutusaus, O.; Mohtadi, R.; Singh, N.; Arthur, T. S.; Mizuno, F.
+Study of Electrochemical Phenomena Observed at the Mg Metal/
+Electrolyte Interface. ACS Energy Lett. 2016, 2, 224−229.
+(6) Yoo, H. D.; Han, S. D.; Bolotin, I. L.; Nolis, G. M.; Bayliss, R. D.;
+Burrell, A. K.; Vaughey, J. T.; Cabana, J. Degradation Mechanisms of
+Magnesium Metal Anodes in Electrolytes Based on (CF3SO2)2N(-)
+at High Current Densities. Langmuir 2017, 33, 9398−9406.
+(7) Yoo, H. D.; Shterenberg, I.; Gofer, Y.; Gershinsky, G.; Pour, N.;
+Aurbach, D. Mg rechargeable batteries: an on-going challenge. Energ
+Environ Sci 2013, 6, 2265.
+(8) Huie, M. M.; Bock, D. C.; Takeuchi, E. S.; Marschilok, A. C.;
+Takeuchi, K. J. Cathode materials for magnesium and magnesium-ion
+based batteries. Coord. Chem. Rev. 2015, 287, 15−27.
+(9) Zhang, J.; Guan, X.; Lv, R.; Wang, D.; Liu, P.; Luo, J.
+Rechargeable Mg metal batteries enabled by a protection layer formed
+in vivo. Energy Storage Mater. 2020, 26, 408−413.
+(10) Li, X.; Gao, T.; Han, F.; Ma, Z.; Fan, X.; Hou, S.; Eidson, N.;
+Li, W.; Wang, C. Reducing Mg Anode Overpotential via Ion
+Conductive Surface Layer Formation by Iodine Additive. Adv. Energy
+Mater. 2017, 8, 1701728.
+(11) Tang, K.; Du, A.; Dong, S.; Cui, Z.; Liu, X.; Lu, C.; Zhao, J.;
+Zhou, X.; Cui, G. A Stable Solid Electrolyte Interphase for
+Magnesium Metal Anode Evolved from a Bulky Anion Lithium Salt.
+Adv. Mater. 2020, 32, No. e1904987.
+(12) Wang, H.; Ryu, J.; McClary, S. A.; Long, D. M.; Zhou, M.;
+Engelhard, M. H.; Zou, L.; Quinn, J.; Kotula, P.; Han, K. S.; Jia, H.;
+Wang, C.; Assary, R. S.; Zavadil, K. R.; Murugesan, V.; Mueller, K. T.;
+Shao, Y. An Electrochemically Activated Nanofilm for Sustainable Mg
+Anode with Fast Charge Transfer Kinetics. J. Electrochem. Soc. 2021,
+168, 120519.
+(13) Li, B.; Masse, R.; Liu, C.; Hu, Y.; Li, W.; Zhang, G.; Cao, G.
+Kinetic surface control for improved magnesium-electrolyte interfaces
+for magnesium ion batteries. Energy Storage Mater. 2019, 22, 96−104.
+(14) Lv, R.; Guan, X.; Zhang, J.; Xia, Y.; Luo, J. Enabling Mg metal
+anodes rechargeable in conventional electrolytes by fast ionic
+transport interphase. Natl. Sci. Rev. 2020, 7, 333−341.
+(15) Park, H.; Lim, H.-K.; Oh, S. H.; Park, J.; Lim, H.-D.; Kang, K.
+Tailoring Ion-Conducting Interphases on Magnesium Metals for
+High-Efficiency Rechargeable Magnesium Metal Batteries. ACS
+Energy Lett. 2020, 5, 3733−3740.
+(16) Zhao, Y.; Du, A.; Dong, S.; Jiang, F.; Guo, Z.; Ge, X.; Qu, X.;
+Zhou, X.; Cui, G. A Bismuth-Based Protective Layer for Magnesium
+Metal Anode in Noncorrosive Electrolytes. ACS Energy Lett. 2021, 6,
+2594−2601.
+8775
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+
+
+Chemistry of Materials
+
+pubs.acs.org/cm
+
+(37) Parrinello, M.; Rahman, A. Crystal Structure and Pair
+Potentials: A Molecular-Dynamics Study. Phys. Rev. Lett. 1980, 45,
+1196−1199.
+(38) Bucko, T.; Lebegue, S.; Hafner, J. R.; Angyan, J. G. Improved
+density dependent correction for the description of London
+dispersion forces. J. Chem. Theory Comput. 2013, 9, 4293−4299.
+(39) Grimme, S.; Ehrlich, S.; Goerigk, L. Effect of the damping
+function in dispersion corrected density functional theory. J. Comput.
+Chem. 2011, 32, 1456−1465.
+(40) Shapeev, A. V. Moment Tensor Potentials: A Class of
+Systematically Improvable Interatomic Potentials. Multiscale Model
+Sim 2016, 14, 1153−1173.
+(41) Zuo, Y.; Chen, C.; Li, X.; Deng, Z.; Chen, Y.; Behler, J. r.;
+Csányi, G.; Shapeev, A. V.; Thompson, A. P.; Wood, M. A.; Ong, S. P.
+Performance and cost assessment of machine learning interatomic
+potentials. J. Phys. Chem. A 2020, 124, 731−745.
+(42) Plimpton, S. Fast Parallel Algorithms for Short-Range
+Molecular Dynamics. J. Comput. Phys. 1995, 117, 1−19.
+(43) Podryabinkin, E. V.; Shapeev, A. V. Active learning of linearly
+parametrized interatomic potentials. Comp Mater Sci 2017, 140, 171−
+180.
+(44) Wang, C.; Aoyagi, K.; Wisesa, P.; Mueller, T. Lithium Ion
+Conduction in Cathode Coating Materials from On-the-Fly Machine
+Learning. Chem. Mater. 2020, 32, 3741−3752.
+(45) He, X.; Zhu, Y.; Epstein, A.; Mo, Y. Statistical variances of
+diffusional properties from ab initio molecular dynamics simulations.
+npj Comput. Mater. 2018, 4, 18.
+(46) Li, H.; Okamoto, N. L.; Hatakeyama, T.; Kumagai, Y.; Oba, F.;
+Ichitsubo, T. Fast Diffusion of Multivalent Ions Facilitated by
+Concerted Interactions in Dual-Ion Battery Systems. Adv. Energy
+Mater. 2018, 8, 1801475.
+(47) Hu, P.; Zou, Z.; Sun, X.; Wang, D.; Ma, J.; Kong, Q.; Xiao, D.;
+Gu, L.; Zhou, X.; Zhao, J.; Dong, S.; He, B.; Avdeev, M.; Shi, S.; Cui,
+G.; Chen, L. Uncovering the Potential of M1-Site-Activated
+NASICON Cathodes for Zn-Ion Batteries. Adv. Mater. 2020, 32,
+No. e1907526.
+(48) He, X.; Zhu, Y.; Mo, Y. Origin of fast ion diffusion in superionic conductors. Nat. Commun. 2017, 8, 15893.
+(49) Morgan, B. J. Mechanistic Origin of Superionic Lithium
+Diffusion in Anion-Disordered Li6PS5 X Argyrodites. Chem. Mater.
+2021, 33, 2004−2018.
+(50) Jalem, R.; Yamamoto, Y.; Shiiba, H.; Nakayama, M.; Munakata,
+H.; Kasuga, T.; Kanamura, K. Concerted Migration Mechanism in the
+Li Ion Dynamics of Garnet-Type Li7La3Zr2O12. Chem. Mater. 2013,
+25, 425−430.
+(51) Deng, Y.; Eames, C.; Chotard, J. N.; Lalère, F.; Seznec, V.;
+Emge, S.; Pecher, O.; Grey, C. P.; Masquelier, C.; Islam, M. S.
+Structural and Mechanistic Insights into Fast Lithium-Ion Conduction in Li4SiO4-Li3PO4 Solid Electrolytes. J. Am. Chem. Soc.
+2015, 137, 9136−9145.
+(52) Ichitsubo, T.; Okamoto, S.; Kawaguchi, T.; Kumagai, Y.; Oba,
+F.; Yagi, S.; Goto, N.; Doi, T.; Matsubara, E. Toward “rocking-chair
+type” Mg−Li dual-salt batteries. J Mater Chem A 2015, 3, 10188−
+10194.
+(53) Liu, Q.; Wang, H.; Jiang, C.; Tang, Y. Multi-ion strategies
+towards emerging rechargeable batteries with high performance.
+Energy Storage Mater. 2019, 23, 566−586.
+(54) Cheon, G.; Duerloo, K. N.; Sendek, A. D.; Porter, C.; Chen, Y.;
+Reed, E. J. Data Mining for New Two- and One-Dimensional Weakly
+Bonded Solids and Lattice-Commensurate Heterostructures. Nano
+Lett. 2017, 17, 1915−1923.
+(55) Nyburg, S. C.; Ozin, G. A.; Szymański, S. T. The crystal and
+molecular structure of bismuth trichloride. Corrigendum. Acta.
+Crystallogr. B. Struct. Sci. Cryst. Eng. Mater. 1972, 28, 2885.
+(56) Kuhn, A.; Duppel, V.; Lotsch, B. V. Tetragonal Li10GeP2S12
+and Li7GePS8 - exploring the Li ion dynamics in LGPS Li
+electrolytes. Energ Environ Sci 2013, 6, 3548−3552.
+(57) Boulineau, S.; Courty, M.; Tarascon, J.-M.; Viallet, V.
+Mechanochemical synthesis of Li-argyrodite Li6PS5X (X=Cl, Br, I)
+
+Article
+
+as sulfur-based solid electrolytes for all solid state batteries
+application. Solid State Ionics 2012, 221, 1−5.
+(58) Lacivita, V.; Artrith, N.; Ceder, G. Structural and Compositional Factors That Control the Li-Ion Conductivity in LiPON
+Electrolytes. Chem. Mater. 2018, 30, 7077−7090.
+(59) Meier, K.; Laino, T.; Curioni, A. Solid-State Electrolytes:
+Revealing the Mechanisms of Li-Ion Conduction in Tetragonal and
+Cubic LLZO by First-Principles Calculations. J. Phys. Chem. C. 2014,
+118, 6668−6679.
+(60) Canepa, P.; Bo, S. H.; Sai Gautam, G.; Key, B.; Richards, W. D.;
+Shi, T.; Tian, Y.; Wang, Y.; Li, J.; Ceder, G. High magnesium mobility
+in ternary spinel chalcogenides. Nat. Commun. 2017, 8, 1759.
+(61) Yaghoobnejad Asl, H.; Manthiram, A. Mass Transfer of
+Divalent Ions in an Oxide Host: Comparison of Mg2+ and Zn2+
+Diffusion in Hexagonal KxW3O9 Bronze. Chem. Mater. 2019, 31,
+2296−2307.
+
+Recommended by ACS
+Modulating the Energy Band Structure of the Mg-Doped
+Sr0.5Pr0.5Fe0.2Mg0.2Ti0.6O3−δ Electrolyte with Boosted Ionic
+Conductivity and Electrochemical Performance for S...
+Sajid Rauf, Wei Xu, et al.
+SEPTEMBER 19, 2022
+ACS APPLIED MATERIALS & INTERFACES
+
+READ
+
+Charge–Discharge Properties of Sputtered Mg Anode in
+Flexible All-Solid-State Mg-Ion Batteries
+Kuan-Jen Chen, Yen-Ting He, et al.
+NOVEMBER 14, 2022
+ACS OMEGA
+
+READ
+
+Ether–Water Hybrid Electrolyte Contributing to Excellent
+Mg Ion Storage in Layered Sodium Vanadate
+Xiaoke Wang, Cuiping Han, et al.
+MARCH 21, 2022
+ACS NANO
+
+READ
+
+Amorphous Redox-Rich Polysulfides for Mg Cathodes
+Minglei Mao, Liquan Chen, et al.
+JUNE 29, 2021
+JACS AU
+
+READ
+
+Get More Suggestions >
+
+8776
+
+https://doi.org/10.1021/acs.chemmater.2c01954
+Chem. Mater. 2022, 34, 8769−8776
+
+

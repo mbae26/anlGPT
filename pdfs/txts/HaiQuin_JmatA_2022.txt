@@ -1,0 +1,1118 @@
+Journal of
+
+Materials Chemistry A
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+PAPER
+
+Cite this: J. Mater. Chem. A, 2022, 10,
+7739
+
+View Journal | View Issue
+
+Mesolytic cleavage of homobenzylic ethers for
+programmable end-of-life function in redoxmers†‡
+Hai Qian, §abc Michael J. Counihan, §ac Hieu A. Doan, §ae Naﬁsa A. Ibrahim,ac
+Andrew S. Danis,ac Worapol Setwipatanachai,c Nathan S. Purwanto,d
+Joaquı́n Rodrı́guez-López, *abc Rajeev S. Assary *ae and Jeﬀrey S. Moore *abcd
+Irreparable chemical damage to redox-active monomers, oligomers, and polymers (i.e. redoxmers) limits
+the lifetime of energy storage devices (e.g. redox ﬂow batteries) by causing electrode and membrane
+fouling, as well as irreversible capacity loss. To predictably restore device and materials performance, it is
+desirable to add programmed destruction capabilities into these damage-prone materials. Here, we
+report the use of triggerable retrograde reactions to achieve programmable end-of-life function in
+redoxmers. Retrograde reactions are intended to break up damaged redoxmer materials into more
+soluble small-molecule constituents to prevent irreparably fouling battery interfaces. We investigated the
+redox-triggered mesolytic cleavage of homobenzylic ethers (HBEs) for this purpose. Combining
+experimental methods with simulations, we probed the inﬂuence of ring substituents on the
+programmable bond-scission behavior of HBEs. Variation of para-substituents on the HBEs allowed us to
+modify the oxidation potential, degradation pathway, and electrochemical mechanisms of the generated
+products. Given its ideal oxidation potential, we selected the para-methoxy-based HBE as the cleavage
+scaﬀold and integrated it with dialkoxybenzene, TEMPO, viologen, and para-nitrobenzene redox centers
+for compatibility, bulk deconstruction, and electrode defouling tests. Upon applying a high oxidation
+
+Received 1st December 2021
+Accepted 26th February 2022
+
+potential, the redox-active pendant is cleaved from the backbone via HBE bonds; of the four redox
+centers tested, three of them remained fully redox active. Viologen-appended redox active polymers
+with HBE linkers were cleaved to fully separate the redox centers from the backbone. Polymer-ﬁlmed
+
+DOI: 10.1039/d1ta10291e
+
+electrodes were partially restored following HBE oxidation defouling. These studies highlight the co-
+
+rsc.li/materials-a
+
+design of new materials functions for developing sustainable energy storage materials.
+
+Introduction
+Analogous to biological systems that have evolved to cope with
+the chemical demands of oxidative phosphorylation,1,2 articial
+energy conversion (e.g. photovoltaics) and storage (e.g.
+batteries) systems also operate under extreme chemical stress.
+Thus, accumulated damage, including both physical and
+chemical, becomes unavoidable and is detrimental to longevity
+of energy capture and storage devices.3–5 To prevent and repair
+damage, numerous healing strategies based on additives, which
+are extrinsic to the active material, have been developed.6 For
+example, power conversion eﬃciency losses and long-term
+damage caused by the eﬀects of humidity in lead halide
+a
+
+perovskite photovoltaics are prevented through the addition of
+polyethylene glycol as a water adsorption layer.7 Similarly, in Liion batteries, the addition of crack-healing agents (e.g. lowmelting point metallic alloys,8,9 self-healing polymer
+binders,10,11 and new self-healing polymer electrolytes12–14)
+prevents capacity fade ascribed to the formation of micro-cracks
+upon cycling.
+Irreparable chemical damage of battery components due to
+the demands of the electrochemical environment requires new
+mitigation strategies, as the above physical barrier and healing
+strategies are not relevant in all cases. Failure to remove
+degraded species may result in dysfunctional cell operation due
+to irreversible deposition of lms on electrodes and membrane
+
+Joint Center for Energy Storage Research, Argonne National Laboratory, 9700 South
+Cass Avenue, Lemont, Illinois 60439, USA. E-mail: joaquinr@illinois.edu; assary@
+anl.gov;
+jsmoore@illinois.edu;
+Tel:
++1-217-300-7354;
++1-630-252-3536;
++1-217-244-5289
+
+d
+
+b
+
+† This paper is dedicated in memoriam of Susan A. Odom.
+
+The Beckman Institute for Advanced Science and Technology, University of Illinois
+at Urbana-Champaign, Urbana, Illinois 61801, USA
+
+c
+
+Department of Chemistry, University of Illinois at Urbana-Champaign, Urbana,
+Illinois 61801, USA
+
+This journal is © The Royal Society of Chemistry 2022
+
+Department of Materials Science and Engineering, University of Illinois at UrbanaChampaign, Urbana, Illinois 61801, USA
+
+e
+
+Materials Science Division, Argonne National Laboratory, Lemont, Illinois 60439,
+USA
+‡ Electronic supplementary
+10.1039/d1ta10291e
+
+information
+
+(ESI)
+
+available.
+
+See
+
+DOI:
+
+§ H. Q., M. J. C., and H. A. D. contributed equally to this work.
+
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7739
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+fouling. For instance, defects in the formation of solid electrolyte
+interphase layers at Li-ion battery anodes lead to capacity fade
+and power loss,4 and the precipitation of vanadium electrolytes
+in redox ow batteries (RFBs) causes blockages in the stacks and
+pumps that suppress the energy density and capacity of RFBs.5
+For these systems it would be desirable to develop a strategy that
+relies on conditionally activating an intrinsic redox response that
+would help dealing with irreversible damage.
+Redoxmers, alternative RFB electrolytes incorporating
+multiple copies of redox-active units into a single molecule, are
+of great interest for size-exclusion RFBs.15 These redoxmers are
+also known to produce insoluble species in extreme electrochemical environments. Damaged or overcharged redoxmers
+passivate the electrodes, foul separator membranes, and
+contaminate electrolyte solutions, thus lowering the energy
+storage eﬃciency, overall performance, and long-term operation (Scheme 1a).16,17 Early intervention via a restoration regime
+would halt the deterioration of power and storage capacities
+before system failure. We imagined the need to add new functionality that enables programmable deconstruction of
+redoxmers that reverts them back to their small-molecule
+constituents,18 which would be more soluble in electrolytes
+and limit precipitation of blocking lms. Further down the line,
+this operation might enable the separation of the damaged
+components and perhaps even their re-assembly. Organic
+redoxmers are the ideal platform to incorporate the programmable end-of-life functionality because of their structural
+versatility and synthetic accessibility.
+
+Paper
+
+The chemical structures of homobenzylic ethers (HBEs)
+with various substituents (Ri) for the studies of oxidative mesolytic
+cleavage via a benzylic Ca–Cb bond (red).
+Scheme 2
+
+A complete redoxmer restoration requires, in its simplest
+form, detachment of damaged redox centers from the redoxmer
+backbone followed by reattachment of fully functional centers.
+As a rst step towards this long-term objective, we set out to
+demonstrate the value of retrograde reactions that break up
+redoxmers in response to a redox-triggering event. In searching
+for retrograde processes in redoxmers, we again take inspiration
+from nature since many biomacromolecules are well suited for
+multi-generation lifecycles. For example, lignin is a class of
+complex organic biopolymers in which the b-aryl ether (i.e.,
+a homobenzylic ether) is the most common linkage (45–60% of
+
+Scheme 1 Restoring fouled redox ﬂow battery (RFB) components with programmable end-of-life function in redoxmers (a) fouling of RFB
+caused by consecutive processes of absorption, redox process, deactivation, and accumulation of redoxmers; (b) application of HBEs with
+redoxmer architectures for programmable redoxmer deconstruction via mesolytic cleavage.
+
+7740 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Paper
+all linkages).19 Lignin scission at the Ca–Cb bonds occurs by
+a catalytic oxidative cleavage pathway triggered by bacteria and
+fungi.20 An electron transfer reaction followed by a bond
+breaking reaction is the elementary reaction step known as
+mesolytic cleavage.21
+Mesolytic cleavage is a thermodynamically favorable bond
+scission reaction driven by a diminished bond dissociation free
+energy of a radical ion. This results in the formation of one radical
+and one ion.22 There have been many molecular scaﬀolds reported that undergo mesolytic cleavage, such as alkoxyamines,23–26 aromatic disuldes,27 benzylic thioethers,28,29 enol
+carbonates,30 haloacetonitriles,31 and others.32–35 Synthetic chemists have utilized these cleavage reactions for various purposes,36,37
+such as in situ carbocation generation for organic
+synthesis,24,25,28,37 single-molecular conductance control via electrostatic cleavage,38 synthesis of terminal functionalized polymers,39 and photo-controlled cationic polymerization via
+mesolytic cleavage of dithioester chain transfer agents.40,41 Mesolytic cleavage of homobenzylic ethers (HBEs, Scheme 1b), were
+rst investigated by Arnold et al.,42,43 then exploited by Floreancig
+and others,44 who developed electron-transfer-initiated cyclization
+reactions using mesolytic cleavage of HBEs.45–49
+By utilizing the fundamental reaction step of mesolytic bond
+cleavage, we imagined redoxmer architectures in which an HBE
+scaﬀold is appended with redox-active pendant groups. The
+pendant groups are the energy-storage redox center, chosen to
+exhibit stable, reversible electrochemical performance. Programmable end-of-life deconstruction is imagined as requiring a redox
+potential that is outside the operational window of the pendant
+group. To realize this design, the mesolytic cleavage pathway of
+the HBE must be tightly controlled. Despite many historical
+precedents, there are yet no systematic studies on tuning fragmentation and electrochemical behaviors of HBEs. Here, we
+advanced the fundamental chemistry for this purpose. We
+computationally screened and synthesized a series of HBEs with
+diﬀerent electron donating (EDG) and withdrawing (EWG) groups
+at the para-position of the aryl core (Scheme 2), selecting the most
+practical HBE scaﬀold using the methods shown in Scheme 1b.
+Our results not only show that it is possible to achieve compatibility with various redox active centers and the deconstruction
+reaction, but also demonstrate an important step in the development of programmable electroactive materials.
+
+Experimental
+Materials and methods
+Synthetic procedures and characterization (NMR and HRMS) of
+HBEs and HBE-incorporated redox monomers, dimers, and
+polymers (i.e. viologen-appended polystyrenes with (PB-Vio-HBE)
+or without (PB-Vio) HBE linkers, and linear viologen-based redox
+active polymers with (PM-Vio-HBE) or without (PM-Vio) HBE
+linkers inserted into main-chain backbones) were detailed in ESI.‡
+Fragmentation studies
+Chromatograms of fragmentation were acquired using a GC-MS
+system (Agilent Inc., CA, USA) consisting of an Agilent 6890 gas
+
+This journal is © The Royal Society of Chemistry 2022
+
+Journal of Materials Chemistry A
+chromatograph, an Agilent 5973 MSD and a HP 7683B autosampler (see details in ESI‡). All results were reproduced on
+a Shimadzu Gas Chromatograph/Mass Spectrometer (GCMSQP2010 Plus) equipped with an auto injector (AOC-20i) to
+conrm the accuracy of fragmentation pattern. The error bar of
+relative intensity between benzylic and oxocarbenium cations
+was estimated from standard deviation of the average of three
+measurements.
+
+Electrochemistry studies
+Tetrabutylammonium hexauorophosphate (TBAPF6, 98%,
+TCI) was recrystallized twice from ethanol and dried under
+vacuum before use. Acetonitrile (MeCN, 99.7%, anhydrous,
+Sigma-Aldrich) was dried over molecular sieves in an argonlled glovebox prior to use.
+All electrochemical experiments were carried out in an
+argon-lled glovebox (O2 < 0.1 ppm, H2O < 0.1 ppm). HBE
+solutions containing 2–5 mM HBE and 100 mM TBAPF6 in
+MeCN were used. The working electrode was a 3 mm diameter
+glassy carbon disc for standard CV studies. The counter electrode in all cases was a 0.5 mm platinum wire. The reference
+electrode was a 0.5 mm Pt wire on which a polypyrrole lm was
+deposited as described by Ghilane et al.,50 and this electrode was
+sealed in a glass tube lled with 0.1 M TABPF6 in MeCN and t
+with a porous glass frit. This ensured the potential did not dri
+during extended testing of each molecule. The reference was
+tested against ferrocene at the end of each experiment. For
+redoxmer-HBE molecules, a silver wire was used as quasireference, as any shi in potential shi could be tracked since
+the redoxmer potential versus ferrocene is known.
+For collection experiments, a double-barreled theta ultramicroelectrode was used. Platinum wires (25 mm diameter,
+99.99%, Goodfellow) were sealed in each barrel of the glass
+capillary. The nished theta-ultramicroelectrode (theta-UME)
+had the electrodes 100 mm apart (Fig. S6‡). The collection eﬃciency (collector-to-generator current ratio) was only #3%, but
+the high throughput in these tests was valued more than high
+collection eﬃciency that could be achieved with standard
+scanning electrochemical microscopy (SECM; data not shown).
+The generator electrode was held at a mass transfer-limited
+potential to oxidize the HBE. The collector electrode was scanned over a 2–3 V window from near the oxidation potential (1 V
+vs. Fc/Fc+) to the negative limit of the system (usually 2 V) at
+20 mV s1 and back. Blanks were performed by leaving the
+generator at open circuit and scanning the collector. The redox
+potentials of the products were dened as the half-wave
+potentials of the reduction waves (Fig. S7‡).
+Bulk electrolysis (BE) experiments were carried out in a Wcell with glass frits separating three compartments. Supporting electrolyte was placed in the reference and counter
+compartments, and the HBE solution was placed in the central
+working compartment. BEs were carried out with carbon felt,
+graphite rod, and gold slug working electrodes; carbon felt was
+the counter electrode, and silver wire was used as a quasireference electrode. Gold electrodes were deemed incompatible with HBE oxidation, as the process seemed to catalytically
+
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7741
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+dissolve the gold. CVs of the products of HBE 2 using a graphite
+rod working electrode are shown in Fig. S11.‡ Like theta-UME
+collection experiments, two reductions are seen and show
+minimal electrochemical reversibility.
+To investigate oxidative deconstruction of redoxmers in bulk
+solution, membrane permeability studies were carried out in
+a custom Teon H-cell with a Daramic-175 membrane separating the compartments. One cell was lled with 2 mM (repeat
+unit) PB-Vio-HBE, 100 mM TBAPF6 in MeCN solution (origin
+cell), and the other was lled with 100 mM TBAPF6 in MeCN
+(blank cell) at equal volumes of 3.6 mL. A Pt microelectrode (25
+mm diameter) was used as working electrode in the blank cell,
+where CVs (100 mV s1) were run at regular intervals to quantify
+viologen (Vio) content based on steady-state currents. A carbon
+rod counter/reference electrode was used in the origin cell.
+Results, permeability calculations, and current corrections
+based on evaporation are presented in the Fig. S16.‡
+To investigate oxidative deconstruction of redoxmers at
+electrode interfaces, lm removal studies were performed with
+a 1.5 mm-diameter Pt macroelectrode. PB-Vio, PB-Vio-HBE, PMVio, and PM-Vio-HBE lms were electrodeposited by cyclic voltammetry in 1 mM (repeat unit) polymer, 100 mM TBAPF6 in
+
+Paper
+MeCN; one cycle accessing the second reduction of viologen is
+adequate to precipitate multiple polymer layers on the electrode. Filmed electrodes were then gently rinsed with MeCN
+and placed in a blank 100 mM TBAPF6 solution. Vio content was
+determined by CV (20 mV s1) of the rst reduction of viologen
+and quantied based on the integrated area of the anodic peak.
+Eox was accessed by CV (100 mV s1) sweeping to those potentials, leaving the lm at or above the potential of HBE oxidation
+for a total of 3 seconds. Convection was accomplished by stirring the solution with a stir bar directly underneath the lmed
+electrode.
+Computational studies
+All density functional theory (DFT) calculations were performed
+using the B3LYP/6-31+G(d,p)51 level of theory as implemented in
+Gaussian 16, Revision A.03.52 To account for the free energies of
+solvation in acetonitrile solvent (dielectric constant ¼ 37.5)
+when necessary, self-consistent reaction-eld (SCRF) calculations using the conductor-like polarizable continuum model
+(CPCM)53,54 was employed. Numerical integrations were carried
+using an ultra-ne grid. Equations for calculating the oxidation
+potentials (Eox), the bond dissociation Gibbs free energy change
+
+Fragmentation patterns of HBEs (a) GC-MS results of 2 (red, blue, and pink denote radical cations, benzylic cations, and oxocarbenium
+cation, respectively); (b) Proposed mesolytic cleavage pathways of HBEs (pink and blue for pathways I and II, respectively); (c) the plot of the
+logarithmic m/z intensity ratio between benzylic and oxocarbenium cations (log(IB/IO)) as a function of the Hammett constant (sp+). The error
+was estimated using the standard deviation of the average of three measurements; (d) the empirical sp+ parameter is able to predict the
+distribution ratio of two major mesolytic cleavage pathways for various HBEs as well as the Boltzmann factor (BF). The BF values are calculated
+using the inset equation with predicted DG values for each cleavage pathway.
+Fig. 1
+
+7742 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Paper
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Table 1
+
+Journal of Materials Chemistry A
+Summary of electrochemical and corresponding computational results of HBEs
+
+HBEs
+
+Eox,1a
+(V vs. Fc/Fc+)
+
+Simulated Eox,1c
+(V vs. Fc/Fc+)
+
+Eox,2a
+(V vs. Fc/Fc+)
+
+Simulated Eox,2d
+(V vs. Fc/Fc+)
+
+BDFEsubb
+(eV)
+
+DGmesoe
+(eV, fav. path.)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+0.30
+1.10
+1.10
+1.55
+1.36
+1.78
+1.71
+2.20
+2.40
+2.45
+2.12
+
+0.37
+1.14
+1.19
+1.60
+1.32
+1.83
+1.76
+2.27
+2.12
+2.08
+2.20
+
+1.42
+1.41
+1.41
+2.00
+1.85
+2.27
+2.09
+—f
+2.90
+2.98
+—f
+
+0.94
+1.68
+1.18
+1.91
+1.44
+2.05
+2.11
+2.63
+2.30
+2.45
+2.58
+
+3.90
+3.98
+3.68
+3.96
+3.93
+4.00
+4.01
+4.13
+3.97
+3.93
+3.92
+
+1.86 (II)
+1.79 (II)
+0.99 (II)
+1.77 (II)g
+1.94 (II)
+1.74 (I)
+1.86 (I)
+1.26 (I)
+1.35 (I)
+1.31 (I)
+1.05 (I)
+
+a
+Taken as the half-wave potentials of the respective oxidation waves at 50 mV s1. b Bond dissociation free energy of neutral HBE substrates
+(BDFEsub) calculated from homolysis via a benzylic Ca–Cb bond in gas phase. c Simulated oxidation potential of neutral HBEs to their radical
+cations in MeCN solvent. d Simulated oxidation potential of benzylic cations to double cations (Fig. 2c) in MeCN solvent. e The calculated
+lowest Gibbs free energy change of mesolytic cleavage (DGmeso) is considered as the most favorable cleavage pathway (see Fig. 1b) in gas phase.
+f
+Second oxidation waves do not appear or overlap with electrolyte breakdown. g Pathway II is the second favorable cleavage pathway, as the
+fragments in the more favorable pathway are not observed experimentally.
+
+of a radical cationic HBE (DG), and the bond dissociation free
+energy of a neutral HBE (BDFEsub) are described in detail in
+ESI.‡
+
+Results and discussion
+Fragmentation analysis of HBEs
+The para-substituted HBE derivatives 1–11 (Scheme 2) were
+synthesized from commercially available starting materials (see
+details in ESI‡). All compounds were fully characterized using
+NMR spectroscopy and mass spectrometry. In order to probe
+the fragmentation behaviors of HBE radical cations, we rst
+employed gas chromatography-mass spectrometry (GC-MS) in
+which neutral HBE molecules are ionized to the corresponding
+radical cations under electron ionization (EI) conditions and
+the results are shown in Fig. 1. The resulting radical cations
+undergo a variety of fragmentation pathways in the gas phase,
+and the generated cationic species are analyzed by mass spectrometry. For example, in HBE 2, three representative cationic
+species with m/z values at 166.10, 121.07, and 45.03 were
+observed and assigned to the parent radical cation (red),
+benzylic cation (blue), and oxocarbenium cation (pink),
+respectively (Fig. 1a). Similar fragmentation patterns, with the
+benzylic cation displaying the highest intensity, were also found
+in HBEs 1, 3, 4, and 5, which all have EDGs at the para-position
+(Fig. S3b–e‡). As for HBEs 6, 7, 9, 10, and 11, which have
+a hydrogen atom or EWGs at their para-position, the oxocarbenium cation became the most intense fragment (Fig. S3f, g
+and i–k‡).{
+Comparison of GC-MS fragment intensities allowed us to
+quickly establish structure–reactivity trends in the fragmentation patterns (Fig. 1b). We hypothesized that HBE electronic
+{ Ammonium-based HBE 8 is known to undergo demethylation, rst under the
+high injection temperature of 250  C, followed by a similar fragmentation
+pattern as found for HBE 1 (Fig. S3h‡).
+
+This journal is © The Royal Society of Chemistry 2022
+
+structures dominate the preferred selection of the competing
+fragmentation pathways (i.e., benzylic vs. oxocarbenium ion
+formation), as indicated by the respective pathways I and II in
+Fig. 1b. A plot of the logarithmic value of the intensity ratio
+between benzylic and oxocarbenium cations vs. the Hammett
+para-substituent constant sp+ showed a linear correlation
+(Fig. 1c). As sp+ shied from negative to positive values, the
+fragmentation pathway shied from benzylic-cation-dominated
+to oxocarbenium-dominated. This indicates that control over
+the fragmentation pathway – at least in the gas phase – is
+achievable by choice of the para-substituent.55,56
+We next used these experimental observations as benchmarks for developing a computational screening and discovery
+tool. In particular, we employed DFT to compute oxidation
+potentials of HBEs and their mesolytic cleavage fragments (eqn
+S1 and Table S2‡), as well as the Gibbs free energy change of all
+possible mesolytic cleavage pathways associated with HBE
+radical cations, DGmeso (eqn S2‡).57 By comparing the DGmeso
+values (Table S3‡), the two most thermodynamically favorable
+cleavage pathways for most HBE cation radicals (except for HBE
+4) are pathways I and II in Fig. 1b, thus validating the computed
+patterns against the GC-MS observations. Pathway I results in
+a benzylic radical and an oxocarbenium cation, while the
+pathway II gives the opposite charge and multiplicity distribution for the two fragments. The lowest DGmeso associated with
+each HBE was reported in Table 1, which ranges from 1 to 2 eV.k
+In contrast to DGmeso, the corresponding homolytic bond
+dissociation free energies of the benzylic Ca–Cb bond (BDFEsub)
+of all HBE molecules are much larger and in a range of 3.90–
+4.13 eV (Table 1).** Clearly, all HBEs demonstrate signicantly
+k HBE 8 shows the lowest DGmeso ¼ 1.26 eV. We posit that the surprising
+exergonic mesolytic cleavage of 8 comes from the highly unstable nature of its
+doubly oxidized state of charge.
+** The exception is HBE 3, where the BDFEsub is at 3.68 eV due to stabilization of
+the benzylic radical by two adjacent methyl groups.
+
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7743
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+
+Paper
+
+Electrochemical oxidation of HBEs and collection of cleavage products (a) cyclic voltammograms of three HBEs with currents normalized
+to the experimental oxidative peak currents (50 mV s1, 3 mm glassy carbon electrode, 0.1 M TBAPF6 in MeCN; CVs for all HBEs are in Fig. S5‡); (b)
+cyclic voltammogram (20 mV s1, 25 mm Pt microelectrode) of collected products after oxidation of 2 at 1.35 V vs. Fc/Fc+ with a neighboring 25
+mm Pt microelectrode. Arrows indicate scan direction, boxes and lines refer to product groups in (c) and (d); (c) summary of all reduction
+potentials of products (left) from HBE cleavage at Eox,1 and Eox,2 and steady state current ratios (right) of product group 2 (purple box) to group 1
+(green box) after oxidation at Eox,1. Eox,1 and Eox,2 correspond to values for each molecule in Table 1. Asterisks denote that products from HBEs 1,
+8, 9, and 10 are not in these potential ranges to compare with the current; (d) proposed cleavage and further electrochemical pathways of HBEs
+based on electrochemical data. Colored pathways match redox processes outlined in (b) and (c). This mechanistic scheme represents the most
+possible cleavage pathways. For the sake of clarity, other cleavage pathways as well as the quenching of short-lived charged species by various
+nucleophiles in solution are not shown.
+Fig. 2
+
+more favorable bond cleavages once oxidized. Moreover, as the
+sp+ increased, the DGmeso dropped, accompanied with a shi in
+favorable cleavage pathway from II to I (Table 1). This indicates
+that the radical cations of HBEs with para-substituted EDGs are
+relatively more diﬃcult to fragment than the ones with parasubstituted EWGs. A more quantitative probability analysis of
+two mesolytic pathways was performed by computing their
+associated Boltzmann factors (Fig. 1d), which shows the same
+decreasing trend as that observed by GC-MS (Fig. 1c).
+Comparing HBEs 2 and 3, it is apparent that a more stabilized
+benzylic cation will lead to a higher probability of mesolytic
+cleavage pathway II.43
+
+Electrochemistry studies of HBEs
+We used cyclic voltammetry (CV) to assess the redox potential
+and electrochemical reversibility of these HBEs within
+
+7744 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+a specied window (Fig. 2a). Oxidations of all tested molecules†† showed total chemical irreversibility, as they lack return
+reduction waves even at and above 1 V s1 scan rates (Fig. 2a
+and S5‡). Only one of the solutions containing HBE 11 showed
+a reduction processes ascribed to the redox of the phenyl–NO2
+group as a primary electrochemical event.‡‡ This lack of
+reductive electrochemistry makes HBEs excellent candidates for
+exclusively oxidation-triggered rapid mesolytic cleavage of
+bonds in redoxmer structures. The DFT-computed oxidation
+potential values of the substrate to the radical cation species
+(Eox,1) (Table 1) correlate well with the CV results with a mean
+absolute error (MAE) of 100 mV. Increasing values for sp+ were
+reected in the experimental Eox,1 which shied from 0.30 to
+†† With the exception of 1.
+‡‡ HBE 11 showed an intrinsic and reversible one-electron reduction peak of the
+p-NO2 aryl group at 1.62 V vs. Fc/Fc+ (Fig. S9‡).
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Paper
+2.12 V vs. Fc/Fc+.58 The same Eox,1 (1.10 V) found in HBEs 2 and 3
+indicates that alkylation of the benzylic position does not aﬀect
+the oxidation potential of the aryl group in neutral HBEs. This is
+instructive for selecting a proper para-functionality based on
+the value of sp+ and including other chemistries on Ca and Cb
+for programmable redoxmer design.
+A second oxidation wave was observed in many tested HBEs
+(Fig. 2a). For some HBEs like 2, these waves were much less than
+500 mV more positive than the rst oxidation, a benchmark that
+is useful for characterizing if a second redox process occurs
+within the same redox motif as expected by electrostatic eﬀects
+upon consecutive electron transfer.59 This is further evidence
+that the radical cation undergoes a bond scission step yielding
+two new fragments with diﬀerent redox potentials. We suggest
+that the second oxidation belongs to the benzylic cation fragment (vide infra).
+To determine the identity and stability of the fragments, we
+employed a generation-collection technique with a doublebarreled theta-UME (Fig. S6‡). This high-throughput method
+enabled potentiostatic oxidation of the HBE at one electrode
+and oxidation or reduction of the fragmented products via CV at
+a neighboring electrode, just 100 mm away. The results for HBE
+2 are shown in Fig. 2b; all HBE results are in Fig. S7‡ and
+summarized in Fig. 2c. For HBEs 2–7 that have EDGs or weak
+EWGs on the benzene ring, two reduction waves are seen in the
+same potential ranges, one group at 0.6  0.3 V and one at
+1.7  0.2 V vs. Fc/Fc+. Additionally, the steady-state current
+from group 2 is consistently 2 to 3 times that of group 1, indicating that the products between HBEs are similar in size since
+currents are based on diﬀusion, which in turn depends on
+molecular size. This is expected from a controlled Ca–Cb bond
+cleavage as opposed to random fragmentation in the molecule.
+Both reductions are related to the benzylic fragment as
+proposed in the mechanism in Fig. 2d, as oxidation of
+a methoxybenzene with a butyl chain instead of the benzylic
+ether showed products at the same reduction potentials as HBE
+2 (Fig. S8‡). Based on the diﬀerence in size between the oxocarbenium and benzylic cations, the current intensity diﬀerences observed for the two reduction processes (Fig. 2c) support
+the reduction of the benzylic cation (group 1) followed by
+reduction of both the oxocarbenium and benzylic species
+(group 2). It is also possible that group 1 contains the reduction
+of both benzylic and oxocarbenium cations, and that group 2
+contains the second reduction of these species along with the
+reduction of other chemical adducts (e.g. cationic species
+chemically trapped by decomposed solvent and electrolyte, as
+shown in Fig. S22‡) (vide infra). Thus, the generation-collection
+currents we observe may be from a mixture of multiple
+components, including the proposed reactive intermediates in
+Fig. 2d and various quenched products.
+Based on DFT calculations, the methoxy-substituted
+benzylic and oxocarbenium radicals have oxidation potentials at 0.01 and 0.04 V and reduction potentials at 1.93 and
+2.20 V vs. Fc/Fc+, respectively (Table S2‡). Two reductions
+and no oxidations are seen experimentally because when the
+HBE is cleaved into radical and cation at the electrode, the
+radical (whether on the ether or benzylic group) is immediately
+
+This journal is © The Royal Society of Chemistry 2022
+
+Journal of Materials Chemistry A
+oxidized since the electrode is well positive of their predicted
+standard redox potentials.§§ This suggests that the oxidation
+of these HBEs follows an Electrochemical–Chemical–Electrochemical (ECE) mechanism, where the rst electrochemical
+step (oxidation of the HBE) is followed by a rapid irreversible
+chemical step (mesolytic cleavage) that produces oxidizable
+products (radicals) which are rapidly oxidized and only
+observed once reduced (Fig. 2b). The one-electron reduction of
+the p-NO2 moiety in HBE acts as an internal standard to probe
+the mobility of the parent HBE. We compared its Randles–
+Sevcik slope to that obtained via the oxidative cleavage process
+(Fig. S10‡). Our analysis showed that the oxidative process
+displays a current intensity 1.5 times higher than the reduction peak of the p-NO2 aryl moiety, thus suggesting a multielectron process as expected for the proposed ECE mechanism. A multi-electron transfer mechanism is apparent from
+macrodisk voltammetry of other HBEs, where the currents for
+HBE oxidation favor n ¼ 2 electrons based on calculations
+using the Randles–Sevcik equation (Fig. S10‡).60 The double
+oxidation phenomenon essentially overrides the distinction
+between diﬀerentiated cleavage pathways I and II as discussed
+above, since both cations are inevitably formed. However,
+qualitatively, we observed more electrode passivation (via
+unwanted chemical degradation, polymerization, etc.) with
+EWG-containing HBEs, which may be due to pathway diﬀerences and/or the high potentials required to oxidize these
+molecules. Nonetheless, the ECE mechanism is advantageous
+for two reasons: it mostly eliminates chemically reactive
+radicals, and it produces two charged products from a neutral
+molecule, making the fragments more soluble in polar
+solvents.
+Similar experiments were carried out with bulk electrolysis
+(BE) of HBE 2 (Fig. S11‡), in which the entire solution of HBE
+was electrolyzed and the products detected with a UME. The
+resultant fragments detected qualitatively match collections
+from theta-UME experiments, i.e., reduction potentials and
+current ratios are similar. This shows that these cationic
+products are stable over wide timescales, from single seconds
+(theta-UME) to tens of minutes and hours (BE). However, the
+products are not electrochemically reversible, as the reduction
+of these cations show minimal re-oxidation. Additionally, the
+experimental reduction potentials diﬀer greatly (up to 500 mV
+more negative) from the predicted potentials (Table S2‡),
+indicating that either these products undergo a secondary
+chemical step or they are strongly dependent on solvent and
+electrolyte interactions that are not accurately predicted by our
+modelling. Previous studies on the electrooxidation of pmethoxytoluene have shown that aryl–aryl coupling can occur
+between oxidized methoxybenzene species in non-aqueous
+conditions, where two radical cations couple followed by
+deprotonation.61 This was shown to occur on the 105 s
+timescale, which indicates a moderately high kinetic barrier to
+this process. We believe the C–C bond cleavage dominates in
+§§ This observation is diﬀerent from oxidative mesolytic cleavage using
+photooxidants, since no fast backward electron-transfer actually took place from
+reduced photooxidants to either radical cations or cleaved radical species.
+
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7745
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+
+Paper
+
+Fig. 3 Compatibility tests with HBE-containing redoxmer dimers slow (left) and fast (right) CV scans of (a) TEMPO dimer, (b) DAB dimer, (c)
+DiHBE Vio, and (d) NP dimer, (3 mm glassy carbon electrode, 0.5–1 mM dimer, 0.1 M TBAPF6 in MeCN) before and after cleavage of the HBE core.
+Slow scans demonstrate chemical compatibility of the redox unit with HBE cleavage products and no ﬁlm formation on the electrode, while fast
+scans reveal how compatible the redox units are with the high positive potentials applied to cleave the HBE. “Before” corresponds to CVs just in
+the potential window of the redoxmer. “After” corresponds to CVs of the redoxmer after the HBE had been oxidized in the same CV scan. Gray
+arrows show the emergence of new peaks in (b); pink arrows show smaller, distorted peaks in (d). Full CVs are shown in Fig. S12.‡
+
+our system for three reasons: (1) the C–C bond cleavage is
+predicted to be the most energetically favored (Fig. S95‡), (2)
+the deprotonation will also be slow in the absence of base, and
+(3) the low concentration of our HBEs (<5 mM) should limit
+the rate of bimolecular reaction. Additionally, we see no
+coupling in our HBE-containing polymers following oxidation
+(vide infra), indicating that dimerization does not occur even
+when the HBEs are in high concentration by being tethered
+together in the polymer. 1H NMR of the oxidized products of
+HBE 2 show very little aromatic signals aside from the parent
+molecule and the cleaved products that would indicate this
+process (Fig. S26‡). Still, this mechanism may operate at
+higher concentrations (the >0.5 M in a RFB) and requires study
+in future. 19F NMR studies on bulk electrolyzed products
+(Fig. S22‡) indicate that new uorine adducts were generated
+aer BE, which may be attributed to the decomposition of
+PF6 in the electrolyte followed by association of the uoride
+anion with the carbocation products. Chemical trapping
+analysis on the products from mesolytic cleavage was also
+examined to conrm the formation of oxocarbenium cations
+(Fig. S23 and S24‡).{{,37 While further spectroscopic studies
+are underway to elucidate the chemical mechanisms and
+product identities, our results here show that HBEs are cleaved
+to form stable, soluble products in non-aqueous systems via
+oxidation at an electrode.
+
+{{ The trapped benzylic cations might further undergo oxidative degradation
+(Fig. S25‡).
+
+7746 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+Applications of HBEs in redoxmer dimers
+Redox-triggered deconstruction of the HBE scaﬀold must occur
+outside of the redox potential window of the redox-active
+centers. Moreover, the oxidation of cleavage moieties should
+not chemically or electrochemically interfere with the redoxactive unit's charge and discharge. To demonstrate this, we
+appended four diﬀerent redox active moieties to dimer systems
+based on HBE 2: two catholytes, TEMPO and a dialkoxybenzene
+(DAB),62 and two anolytes, ethyl viologen (Vio)kk and paranitrobenzene (NP) (Fig. 3). The DAB redox potential is suﬃciently negative (0.5 V negative compared to HBE 2) so that the
+HBE is not cleaved under normal cycling conditions, while the
+remaining three are signicantly more negative than the
+cleavage potential for the HBE linkage.
+To initially judge the chemical and electrochemical
+compatibility of these redoxmers and HBEs, we tested these
+species at slow (#100 mV s1) and fast ($1 V s1) scan rates.
+Scanning slowly allows time ($4 s here) for potential chemical
+processes (redoxmer deactivation by HBE products, lm
+formation, etc.) to occur aer HBE cleavage, as products are
+released into solution from the electrode surface. Fast scan CV
+gives a better idea of electrochemical compatibility because
+molecules have less time (<0.5 s in the case of the DAB dimer) to
+diﬀuse from the electrode surface as the electrode sweeps
+
+kk The solubility of Vio dimer is poor in MeCN solution (0.1 mM) with the
+presence of 0.1 M TBAPF6 so that weak electrochemical signals were collected.
+Thus, the DiHBE Vio was synthesized for compatibility studies.
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Paper
+
+Journal of Materials Chemistry A
+
+Fig. 4 Bulk electrolysis studies of an HBE-containing redoxmer top row: outline of the BE steps to test the HBE-TEMPO shown. Middle row:
+charge and discharge curves corresponding to the BE steps. Bottom row: UME CVs (25 mm Pt microelectrode) taken of the solution following BE
+steps showing the TEMPO redox. The solution contained 2 mM HBE-TEMPO, 0.1 M TBAPF6 in MeCN, and BE was carried out with a carbon felt
+working electrode in a W-cell (see Electrochemistry studies in ESI‡ for details).
+
+between HBE and redoxmer potentials, and thus cleaved
+redoxmer units will be electrolyzed at the electrode.
+Fig. 3 compares fast and slow scan CVs for HBE architecture
+appended with the four diﬀerent redox units. At all scan rates,
+TEMPO dimer and DiHBE Vio show well-behaved, reversible
+signals.*** The DAB dimer is mostly the same, although the
+potentials used to cleave the HBE are nearing potentials of the
+second oxidation of DAB, which is known to be highly irreversible and produce side products like quinones and biphenyls63 that might yield diﬀerent re-reduction current proles as
+seen in Fig. 3b (gray arrows). In contrast, the NP dimer showed
+degradation in both fast and slow scans. At fast scan rates,
+cleavage products are reduced before and along with the
+nitrobenzenes; any chemical reactivity between these species
+may deactivate the nitrobenzene and thus lower overall currents
+compared to the neat condition (pink arrows, Fig. 3d). At slow
+scan rates, in which more time is allowed for HBE oxidations,
+a lm slowly accumulates on the electrode surface for this
+particular HBE, limiting the re-oxidation of the nitrobenzene;
+similar observations were made while testing HBE 11 (Fig. S9‡).
+Further evidence of HBE cleavage of redoxmer-HBE
+
+*** Some additional charging currents were observed when sweeping back from
+the HBE potentials.
+
+This journal is © The Royal Society of Chemistry 2022
+
+architectures is seen in BE collection experiments (vide infra), as
+the products show the same reduction potentials as the pure
+HBEs.
+We also tested the extreme condition where all HBEs in
+solution are cleaved via BE to determine if large-scale programmed degradation is possible. Fig. 4 shows the BE results of
+a TEMPO-appended HBE monomer. Full charge and discharge
+of the redox unit is facile. Aer the rst charge–discharge cycle
+(Fig. 4II and III), the HBE was cleaved (Fig. 4IV); at these
+potentials, TEMPO will also be oxidized. CVs with a UME in the
+solution revealed that the TEMPO+ product is electroactive,
+showing that the redox center survived the high cleavage
+potentials. Discharging (re-reducing, Fig. 4V) the now-cleaved
+TEMPO+ yields the expected charge value (ca. 0.8 C here), but
+UME CVs surprisingly show that the TEMPO has become almost
+entirely redox inactive. It is possible that the TEMPO interacts
+with reactive species from HBE oxidation, forming a N–O–R
+complex that is redox inactive in the usual potential window.38
+Indeed, these complexes showed some partial release of redox
+active TEMPO aer re-oxidizing them at high potentials
+(Fig. S14‡).55 This result is consistent with the CV data of this
+species (Fig. S13‡), as here the whole solution has ample time
+and stirring to react TEMPO with the HBE products compared
+to small quantities in the diﬀusion layer in CVs. While rereduction in the presence of HBE products is inadvisable in
+
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7747
+
+
+
+View Article Online
+
+Paper
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+
+Fig. 5 HBE-incorporated RAPs and deconstruction at the electrode interface. Structures of (a) viologen-appended polystyrenes with (PB-VioHBE) or without (PB-Vio) HBE linkers, and (b) linear viologen RAPs with (PM-Vio-HBE) or without (PM-Vio) HBE linkers inserted into main-chain
+backbones; (c) cartoon demonstrating the partial removal of electrodeposited ﬁlm content following the applied potential (Eox); CVs of electrodeposited thin ﬁlms of (d) PB-Vio-HBE and (e) PM-Vio-HBE as deposited, after applying potentials to oxidize the HBE, and after stirring the
+solution for various times. Normalized charges of Vio reduction from electrodeposited ﬁlms of (f) branched and (g) main-chain polymers after
+oxidation and solution stirring. Error bars are average of three trials with three diﬀerent electrodes and ﬁlms. More information can be found in
+the ESI.‡
+
+this case, the TEMPO/TEMPO+ redox couple can withstand the
+high potentials needed to cleave the HBE, proving this architecture can be of practical use for redox-triggered degradation.
+
+7748 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+BE tests were also run with the DiHBE Vio from Fig. 3c and
+show similar trends to HBE-TEMPO (Fig. S15‡). Charge and
+discharge before cleavage show reversible electrochemical
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Paper
+signals, but once the molecules are cleaved, the viologen
+reduction occurs at a similar potential as the HBE products.
+Further charging of the solution ends up reducing the HBE
+products (at the electrode surface and through Vio+c mediation),
+eliminating the Vio wave. While this shows that cleaved products should not be fully recharged aer cleavage, it is promising
+that both redoxmers and HBE products are stable and thus
+could be recovered and separated downstream aer cleavage
+(vide infra).
+
+Application of HBEs in redox active polymers
+Redox active polymers (RAPs) show promise for use in RFBs due
+to their low crossover between compartments separated by sizeexclusion membranes that decrease RFB cell resistance.15
+However, RAPs have a tendency deposit on electrode interfaces
+
+Fig. 6 Deconstruction of HBE-containing RAPs in bulk solution and
+interactions with size-exclusion membranes. (a) Schematic representation of the membrane permeability of HBE-containing RAPs
+before and after oxidative deconstruction; (b) microelectrode cyclic
+voltammograms of 2 mM (repeat unit) PB-Vio-HBE solution before and
+after bulk cleavage of the HBE linkers. Redox peaks in neat PB-Vio-HBE
+(black lines) are typical for RAPs that adsorb onto the electrode
+surface. When cleaving Vio units from PB-Vio-HBE RAPs, a higher
+current that is commensurate with an increase in apparent diﬀusion
+coeﬃcient and the disappearance of RAP peaks are observed; (c)
+crossover experiments using a Daramic 175 size-exclusion membrane
+show two orders of magnitude faster crossover of the cleaved Vio
+monomers compared to the neat PB-Vio-HBE RAP.
+
+This journal is © The Royal Society of Chemistry 2022
+
+Journal of Materials Chemistry A
+over time compared to monomeric and dimeric redoxmers.64,65
+This challenge could be addressed by employing the deconstruction chemistry of HBEs. Here we incorporated cleavable
+HBE linkers into both branched and main-chain RAPs to evaluate their programmable deconstruction at electrode interfaces
+and in bulk solutions.
+As a proof-of-concept, we rst took a well-studied viologenappended polystyrene (PB-Vio) as a control RAP and inserted
+a p-methoxy HBE linker between the Vio center and the polystyrene backbone to obtain a cleavable RAP (PB-Vio-HBE)
+(Fig. 5a). PB-Vio is known to deposit lms on the electrode
+surface when overcharged (i.e., accessing potentials negative
+enough to reduce Vio2+ to Vio0). While these lms mediate
+charge transfer with solution species, lms that are too thick
+impede electron transfer rates and reduces the power output of
+the battery over time.65 The ability to remove these lms periodically would provide simple way to maintain cells without
+replacing the electrode (Fig. 5c). We individually electrodeposited PB-Vio-HBE and PB-Vio RAPs on electrode surfaces to
+generate lms with similar thickness for proof-of-concept
+defouling tests (Fig. S17‡). To understand the eﬀect of polymer architecture on defouling behavior, we also synthesized
+and tested main-chain viologen polymers with (PM-Vio-HBE)
+and without (PM-Vio) HBE linkers within the backbone (Fig. 5b).
+Filmed electrodes were defouled under two conditions:
+application of positive potentials (Eox) that will oxidize HBE
+linkers, and solution convection underneath the lmed electrode, which imitate the eﬀect of potential and ow in an RFB,
+respectively. Film content was quantied by integrating the
+charge from CVs of the Vio-containing RAP lm (Fig. S18 and
+S19‡). For PB-Vio-HBE, immediately applying Eox for 3 seconds
+has little eﬀect on removing the lm; only convection directly
+following lm oxidation leads to the decrease of the lm viologen content, though not by more than 30% (Fig. 5d and f).
+Additionally, there is no signicant diﬀerence between the
+polymer with HBE and without HBE, indicating that although
+some HBEs are oxidized (likely just what is near the electrode
+surface and can transfer electrons), it does not disrupt the
+polymer lm. This holds true for thin (one electrodeposition
+cycle, Fig. 5d) and thick lms (ten electrodeposition cycles,
+Fig. S18‡), showing a fundamental limit of removal for this
+specic viologen polymer structure. In contrast, the main-chain
+polymer PM-Vio-HBE loses 30% of the viologen signal upon
+oxidation, and over 50% of the lm is removed with convection.
+Like the branched equivalent, however, there is only slightly
+more removal with the HBE-containing PM-Vio-HBE compared
+to the non-HBE-containing PM-Vio, although more than 50% of
+the lm can be removed under these conditions. Additionally,
+aer application of Eox, PM-Vio-HBE displays a slight positive
+shi and broadening of the CV wave, suggesting a small change
+in the energetics of adsorption and on the electrostatic interactions experienced by the adsorbed redox species.65,66 This
+suggests that, while not removing the adsorbed polymer, bond
+cleavage in PM-Vio-HBE may still lead to morphological changes
+detectable by its redox chemistry.
+These results reveal several aspects of RAP-electrode interface design. First, polymer architecture – and by extension lm
+J. Mater. Chem. A, 2022, 10, 7739–7753 | 7749
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Journal of Materials Chemistry A
+
+Paper
+
+Scheme 3 Proposed utilization of programmable end-of-life chemistries in RFBs. Cleavage chemistries incorporated into redoxmer architectures provide a way to defoul interfaces (A) and recycle redox components at the bulk scale (B). In practice, we envision redoxmer deconstruction triggered by redox stimuli happening through electrolysis at the electrode interface (shorter time of triggering stimuli for surface
+defouling, longer for larger volume recycling) followed by ﬂow through a secondary collection system. This system can utilize size-exclusion
+membranes to separate redox centers from organic backbones, and ideally would allow chemistries for redoxmer regeneration via the reappending of intact redox centers to the backbone and injecting the regenerated redoxmer solution back into the primary system. In such a way,
+a self-contained and integrated RFB system could directly solve its capacity fade problems to sustain battery lifetimes. Note: the schematic
+redoxmer cartoon represents a universal programmable architecture rather than a single branched one.
+
+morphology – plays a signicant role in electrode passivation
+with RAP adsorption and how easily those lms can be
+removed. Second, HBE incorporation into RAPs in this initial
+form plays a trivial role in lm removal. As alluded to above, this
+is likely due to the fact only the HBE linkers near the electrode
+surface (within the rst few nanometers) are oxidized. Since the
+ether linkage cleaves rapidly, there is little time for the oxidative
+charge to percolate out further in the lm before a “dead layer”
+of cleaved polymer forms on the electrode surface. This is evidenced by the persistence of the viologen signal even aer
+multiple removal treatments. Third, the removal of these
+particular Vio-containing RAPs is mostly driven by convection
+and electrostatic desorption, as evidenced by Fig. 5g where the
+PM-Vio is removed almost as much as PM-Vio-HBE aer applying
+Eox. This suggests another design strategy for lm removal: nonfaradaic desorption caused by charge repulsion between the
+backbone of the polymer and the electrode surface. All of these
+discoveries can direct future RAP design with or without
+cleavage chemistries to improve electrode longevity.
+Beyond the removal of thin lms from electrode interfaces,
+we investigated the deconstruction of HBE-containing RAPs in
+bulk solutions and how they would interact with other RFB
+components, namely the separator membrane between catholyte and anolyte compartments (Fig. 6a). To test this, bulk
+electrolysis was used to oxidize all the HBEs in a 2 mM solution
+of PB-Vio-HBE. Microelectrode CVs before and aer bulk electrolysis show both an increase in the Vio reduction current,
+
+7750 | J. Mater. Chem. A, 2022, 10, 7739–7753
+
+which is indicative of a larger diﬀusion coeﬃcient for the repeat
+unit versus the polymer, and a loss of PB-Vio-HBE peak features
+in the oxidative sweep, indicating the removal of the Vio side
+chains from the polymer backbone (Fig. 6b).65 NMR analysis of
+electrolyzed products also shows eﬃcient cleavage of polymeric
+Vio species to monomeric ones (Fig. S21‡). Using a sizeexclusion membrane (Daramic 175),67 the crossover rates of
+cleaved Vio species and neat PB-Vio-HBE between two
+compartments were compared. The cleaved redoxmer shows
+two orders of magnitude higher permeability68 (1.0  103
+cm2 min1) than the un-cleaved form (1.2  105 cm2 min1),
+and aer 24 h, nearly half of the cleaved species (45% of Vio
+units) pass through the membrane, which is close to full
+crossover relying on diﬀusion alone (Fig. 6c). An important
+aspect of deconstructing RAPs in situ is to separate the cleaved
+products from un-cleaved RAPs. These results demonstrate that
+size-exclusion is an eﬀective way to separate deconstructed
+components from RAPs that are still functioning in the bulk
+solution of the RFB, as long as measures are taken to prevent
+excessive crossover to the opposite RFB compartment.
+Finally, we present a vision for the application of these
+concepts in a practical RFB (Scheme 3). Should the electrodes
+foul or redoxmers chemically degrade, removal of those species
+is key to sustaining battery lifetime. Redox active linkers within
+redoxmers are cleavable at the electrode as demonstrated above.
+To prevent accumulation of deconstructed components in the
+primary tank and limit crossover between catholyte and anolyte
+
+This journal is © The Royal Society of Chemistry 2022
+
+
+
+View Article Online
+
+Published on 07 March 2022. Downloaded by Argonne Research Library on 1/11/2023 4:46:19 PM.
+
+Paper
+compartments, the contaminated solution is owed through
+a secondary system. This collection system is used to separate
+cleaved species from un-cleaved redoxmers via a membrane
+based on size (as demonstrated in Fig. 6), charge, or other
+properties. The products are then ltered through the system to
+separate redox centers and backbones, which would then
+ideally be regenerated, reattached (through chemical or electrochemical means), and recycled into the primary system. In
+this way, RFBs sustain their power and energy density by recycling dysfunctional material without the need for fully shutting
+down the system to rell and rebalance the solution. There are
+several chemical and engineering challenges to make this
+a reality, but this work provides the rst steps – controlled
+deconstruction, and the tools to design and analyze new
+materials – towards this sustainable goal.
+
+Conclusion
+In summary, we have systematically studied the oxidationtriggered mesolytic cleavage of a series of HBE molecules for
+potential use in redoxmer architectures. By changing the parasubstituent on the aryl core of HBE molecules, we were able to
+tune the most favorable mesolytic fragmentation pathway and
+oxidation potentials of HBE substrates. DFT, GC-MS, and
+generation-collection electrochemical methods were used to
+conrm these fragmentation pathways and oﬀered insight into
+relevant structure–activity properties of HBEs to guide redoxmer
+design. Due to its oxidation potential and stable charged
+products, the HBE with the para-OMe group was chosen and
+integrated with various redox centers, among which TEMPO,
+DAB, and viologen are le chemically and electrochemically
+compatible with the cleavage of HBE linkages. As a proof-ofconcept, Vio-containing RAPs incorporating HBE linkers were
+prepared to elucidate programmable deconstruction of
+redoxmers from an interface for electrode defouling and in bulk
+solution for potential downstream recycling. Deconstruction
+eﬃciency of cleavable redoxmers from an interface was
+improved by using main-chain RAPs compared to branched
+ones. The design of programmatically cleavable redoxmers
+takes the rst step towards the development of sustainable
+materials for electrochemical and energy storage devices.
+Further research will investigate the long-term stability and the
+charge capacity recovery of these cleavable redoxmers in a ow
+battery cell. The HBE chemistries reported here may also be
+applicable in aqueous organic redox ow batteries,69 as HBE
+oxidation in the presence of water would yield soluble alcohols.70 The chemistries are applicable to both catholyte and
+anolyte materials, although care must be taken to ensure full
+redoxmer-cleavage moiety compatibility. We are currently
+exploring other mesolytic cleavage chemistries so that
+a synthetic toolkit will be available for all redoxmers to incorporate programmable cleavage.
+
+Author contributions
+H. Q., M. J. C., H. A. D., J. R. L., R. S. A., and J. S. M. conceived the
+research; H. Q. and N. S. P. performed synthesis and
+
+This journal is © The Royal Society of Chemistry 2022
+
+Journal of Materials Chemistry A
+fragmentation studies; M. J. C., N. A. I., A. S. D., and W. S.
+performed electrochemistry studies; H. A. D. performed
+computational studies; H. Q., M. J. C., and H. A. D. analyzed
+data and wrote the paper. J. R. L., R. S. A., and J. S. M. provided
+guidance during all stages of the project. All authors have given
+approval to the nal version of the manuscript.
+
+Conﬂicts of interest
+There are no conicts to declare.
+
+Acknowledgements
+The research was nancially supported by the Joint Center for
+Energy Storage Research (JCESR), an Energy Innovation Hub
+funded by the U.S. Department of Energy, Oﬃce of Science,
+Basic Energy Sciences. H. Q. gratefully acknowledges Dr Alexander Vladimirovich Ulanov (Metabolomics Center, Roy J.
+Carver Biotechnology Center, University of Illinois at UrbanaChampaign) for assistance with the setup of GC-MS
+instruments. N. A. I. gratefully acknowledges support by the
+National Science Foundation Graduate Research Fellowship
+Program under Grant No. DGE – 1746047. We gratefully
+acknowledge the computing resources provided on Bebop,
+a high-performance computing cluster operated by the Laboratory Computing Resource Center at Argonne National
+Laboratory.
+

@@ -1,0 +1,1191 @@
+Journal of Molecular Liquids 334 (2021) 116533
+
+Contents lists available at ScienceDirect
+
+Journal of Molecular Liquids
+journal homepage: www.elsevier.com/locate/molliq
+
+Crowded electrolytes containing redoxmers in different states of charge:
+Solution structure, properties, and fundamental limits on energy density
+Ilya A. Shkrob a,b,⇑, Lily A. Robertson a,b, Zhou Yu a,c, Rajeev S. Assary a,c, Lei Cheng a,c, Lu Zhang a,b,
+Erik Sarnello d, Xinyi Liu d, Tao Li a,d,e, Aman Preet Kaur a,f, T. Malsha Suduwella a,f, Susan A. Odom a,f,1,
+Yilin Wang a,g,h, Randy H. Ewoldt a,g,h, Hossam M. Farag a,i,h, Y Z a,h,i,j
+a
+
+Joint Center for Energy Storage Research, United States
+Chemical Sciences and Engineering Division, Argonne National Laboratory, Lemont, IL 60439, United States
+Materials Science Division, Argonne National Laboratory, Lemont, IL 60439, United States
+d
+Department of Chemistry and Biochemistry, Northern Illinois University, DeKalb, IL 60115, United States
+e
+X-ray Science Division, Argonne National Laboratory, Lemont, IL 60439, United States
+f
+Department of Chemistry, University of Kentucky, Lexington, KY 40506, United States
+g
+Department of Mechanical Science and Engineering, University of Illinois at Urbana–Champaign, Urbana, IL 61801, United States
+h
+Beckman Institute for Advanced Science and Technology, University of Illinois at Urbana–Champaign, Urbana, IL 61801, United States
+i
+Department of Nuclear, Plasma, and Radiological Engineering, University of Illinois at Urbana–Champaign, Urbana, IL 61801, United States
+j
+Department of Electrical and Computer Engineering, University of Illinois at Urbana–Champaign, Urbana, IL 61801, United States
+b
+c
+
+a r t i c l e
+
+i n f o
+
+Article history:
+Received 19 March 2021
+Revised 10 May 2021
+Accepted 17 May 2021
+Available online 23 May 2021
+Keywords:
+Redox-active molecules
+Solutions
+Electrolytes
+Ionic conductivity
+Diffusivity
+Small-angle X-ray scattering
+Molecular dynamics
+
+a b s t r a c t
+Nonaqueous redox flow batteries use liquid electrolytes containing redox-active organic molecules (redoxmers) as their energy storage medium. To maximize energy density, the redoxmer concentration
+needs to be maximized while maintaining low viscosity and high ionic conductivity. During charge, a
+redoxmer molecule pairs with an ion in the electrolyte while another ion migrates across the membrane
+to maintain electric neutrality. In a crowded electrolyte, this reconstitution changes physical and chemical properties of the solution. To explore these behaviors, a phenothiazine redoxmer fully miscible with
+acetonitrile was used, and electrochemical charge was mimicked by chemical oxidation. The solutions
+were examined using small-angle X-ray scattering, nuclear magnetic resonance, and conductometry
+and modeled using classical molecular dynamics. Our study indicates that physical and structural properties of redoxmer solutions in both states of charge make it exceedingly difficult to increase the redoxmer concentrations over 2 M at any temperature without compromising dynamic properties of such
+solutions. The cause for this limitation is proximity to a gel-like regime in which fluidity, diffusivity,
+and ionic conductivity exponentially decrease with increasing concentration. This tendency is compounded by non-Arrhenius behavior of the electrolyte: a small increase in the concentration outruns
+gains in fluidity and conductivity at a higher temperature. Thus the properties of crowded electrolytes
+generally make it impossible to operate when gel-like behavior sets in. Pushing the redoxmer concentration to 2.5–3 M might be possible for small redoxmer molecules, but it would require the use of ionic liquid electrolytes at 340–360 K.
+Ó 2021 Elsevier B.V. All rights reserved.
+
+1. Introduction
+Redox flow batteries (RFBs) are energy storage devices in which
+electrochemical conversion occurs in stacks, while the separated
+charges are stored in external reservoirs [1–5]. A pump is used to
+transfer charged active material in a battery fluid from the stacks
+⇑ Corresponding author.
+1
+
+E-mail address: shkrob@anl.gov (I.A. Shkrob).
+Deceased (April 18, 2021).
+
+https://doi.org/10.1016/j.molliq.2021.116533
+0167-7322/Ó 2021 Elsevier B.V. All rights reserved.
+
+to each reservoir and back, hence the ‘‘flow” in the name of the battery. Due to this compartmentalization, the battery can be scaled
+up, and there are suggestions to use such batteries to balance supply and demand in the electric grid. Given their scale, the grid-size
+RFBs need to have high energy density, low cost, exceptional electrochemical stability, and ease of recycling for all materials. Only
+organic active materials (redoxmers) and/or complexes of crust
+abundant elements are viable on this scale [1,6]. A particularly
+attractive option would be an all-organic RFB: as the electrochem-
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+stacks and chains (Fig. 1c and S1). In contrast, the neutral compound is nonplanar (Fig. 1a) and does not form stacks, which is a
+contributing factor to miscibility. Solid salts containing MEEPT+d
+are exceptionally stable even in air, while solutions are sufficiently
+stable to allow for many types of measurements [8]. While
+MEEPT+dTFSI– is not miscible, it is one of the most soluble charged
+redoxmer salts known to date (see below). TFSI– is electrochemically inert and flexible anion that is used in ILs due to its ability
+to frustrate crystallization; [15,16] it serves the same purpose in
+RFB electrolytes.
+For the cation, we chose Li+ for the following reasons. First, in
+hybrid RFBs, lithium metal serves as an anode, releasing the Li+
+cations during cycling. Second, there is a dearth of selective membranes for nonaqueous RFBs, and Li+ cation conducting membranes
+are possible candidates, especially at a higher temperature. Third,
+lithium-based electrolytes are currently the most studied group
+of nonaqueous electrolytes.
+In solution, the Li+ cation strongly interacts with the ether
+chain of MEEPT (Fig. 1d). It is well known that glymes yield solvate ILs with lithium salts, with the Li+ cation chelated by two or
+more ether oxygens [12,17]. We will show that MEEPT and
+LiTFSI also form a solvate IL. Below we examine ionic conductivity, diffusivity, and small angle X-ray scattering (SAXS) in neutral
+and chemically oxidized (charged) MEEPT solutions and use
+molecular dynamics (MD) to interpret our observations. In a sister publication [18], we examine viscoelastic properties of these
+solutions; some of the viscosity data for this system were presented by Wang et al. in Ref. [11]. To save space, some sections
+and figures are placed in the Supporting Information. These
+materials are referenced with a letter ‘‘S” before the number,
+such as Figure S1.
+
+ical window of organic solvents is 2–3 times wider compared to
+water, their power density potentially can be greater.
+To be useful in an RFB, an electrolyte solution needs to satisfy
+numerous technical and economic requirements. At the very minimum, such solutions need to be flowable in all states of charge
+using conventional pumps, which means that their kinematic viscosity (g) should be <10–20 cP. For efficient charge separation in
+the stacks, the ions in the electrolyte need to conduct electricity
+well; the ionic conductivity (r) of the solution should exceed 5–
+10 mS/cm. To compete with aqueous RFBs, the molarity of redoxmers in these fluids needs to be at least 1.5–2.5 M and optimally
+2–4 M (assuming that all active molecules become charged during
+cycling) [6]. The redoxmers in such solutions need to be chemically
+stable in all states of charge and at all concentrations. The high
+molarity implies high solubility of both neutral and charged states
+of the redoxmer molecule.
+To illustrate what these requirements entail, consider a neutral
+molecule (C) that serves a positive charge carrier (also known as a
+catholyte) in a battery. [7]. In a charged state, this molecule
+becomes a radical cation, C+d that pairs with an anion, Y– in electrolyte (X+Y–). Depending on membrane selectivity, during charge,
+anion Y– can migrate across the membrane, cation X+ can migrate
+in the opposite direction, or (if the membrane is not ion selective)
+both ions migrate in opposing directions. In this way, charge and
+discharge can be thought of as converting a mixture of C and
+X+Y– to C+d Y– salt and vice versa. Because ionic conductivity decreases with electrolyte concentration for salt molarities >0.5–
+1 M (due to increasing ionic association between X+ and Y–) [7],
+a limited amount of electrolyte can be introduced in order to minimize a loss of ionic conductivity and the concomitant increase in
+viscosity. In the following, we will consider the optimistic scenario,
+which is a quantitative conversion of 1:1 mol/mol C: X+Y– solution
+to C+d Y– solution: if the concentration of electrolyte is lower, some
+catholyte molecules would not be charged, while if it is higher,
+ionic conductivity and fluidity will suffer. As electrochemical
+charging of concentrated solutions could be problematic even if
+they have favorable dynamic properties, we used chemical conversion of C to C+d Y– to prepare such solutions [8].
+As one increases the concentration, the solubility limit can
+become exceeded for one or more species, resulting in precipitation of C, X+Y–, or C+d Y– from the solution. Currently, there are
+examples of fully miscible redoxmers – at least in their uncharged
+states, [9–11] and there are also numerous examples of miscible
+eutectic and ionic liquid (IL) electrolytes [12]. Potentially there
+could be miscible C+dY– salts, too, although at present such materials have not been demonstrated. However, even if a solution is
+liquid, fluidity and conductivity of this solution can become too
+low for use as a battery fluid.
+Importantly, these limits become less restrictive at a higher
+temperature. Ohmic resistance in RFB stacks generates heat that
+is trapped in the reservoir, so heating is inherent to the application.
+If the desired dynamic properties cannot be achieved at room temperature, it may be possible that such properties could be achieved
+at higher temperatures. Here we show that for most redoxmers,
+crossing the 2 M ‘‘barrier” would be challenging at any
+temperature.
+Our case study system involves the N-[2-(2-methoxyethoxy)et
+hyl]phenothiazine (MEEPT) developed and studied in our laboratories [8,10,13,14]. This molecule (Fig. 1a) has a redox-active heterocyclic core and an oligoether chain added to improve solubility in
+polar organic solvents. Neutral MEEPT is liquid and fully miscible
+with acetonitrile (MeCN) at 300 K. The molecule can be chemically
+or electrochemically oxidized and paired with bis(triflyl)imide
+(TFSI–) anion to yield the MEEPT+dTFSI– salt (Fig. 1b) for which
+the crystal structure is known [8]. In this and related crystals
+[10], the radical cation is planar (Fig. 1b) forming face-to-face p-
+
+2. Materials and methods
+2.1. Materials
+MeCN (Baxter) was dried over molecular sieves before use;
+LiTFSI (Aldrich) was dried in a vacuum oven before use, CD3CN
+from Cambridge Isotope Laboratories was used without further
+purification. The phenothiazine redoxmers used in this study were
+synthesized and purified following the methods described in Refs.
+[8,10,13,14,19–23]. The crystal structures for neutral phenothiazines and their charged salts are given therein.
+
+2.2. Small-angle and wide-angle X-ray scattering (SAXS/WAXS)
+SAXS/WAXS experiments were performed at Argonne’s
+Advanced Photon Source (APS), sector 12ID, stations B and C.
+The liquid samples were contained in 1.5 mm diameter thinwalled quartz capillaries that we filled in an argon atmosphere
+containing < 5 ppm oxygen and < 5 ppm water and sealed.
+The data were collected on a Pilatus 2 M area detector (DECTRIS
+Ltd.), selecting a q range of 0.006–1 Å1 and an incident energy
+of 18 keV. The scattering vector q was calibrated using silver
+behenate. In addition to SAXS (q < 1 Å1), we collected wideangle scattering (WAXS) in the 1–2 Å1 range using a different
+X-ray detector operating in a tandem fashion with the SAXS
+detector. As the two detectors are optimized for different q
+ranges, there is a ‘‘blind spot” around 0.8–1 Å1 that is seen in
+some of the SAXS traces, which does not interfere with the data
+interpretation. All SAXS spectra were obtained at 298 K, and the
+signal from the capillary was subtracted to correct for background scattering [24].
+2
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Fig. 1. (a) A representation of the three-dimensional structure of MEEPT. Note the ‘‘book” conformation of the ring (the atoms are indicated in the plot). (b) The planar radical
+cation of MEEPT. (c) Formation of p -stacks of phenothiazine radical cations in a crystal (exemplified by EPT+d BF–4). (d) The solvation environment for a Li+ cation in a solution
+containing 1:1 mol/mol combination of MEEPT and LiTFSI in MeCN. The Li+ cation is chelated by two oxygens in the ether chain of MEEPT and interacts with the nitrogen
+atoms in the cyano group of MeCN and one of the oxygens in the TFSI– anion.
+
+throughout the experiments using a variable temperature unit.
+H, 7Li, and 19F nuclei were used to probe the diffusion. The attenuation of the stimulated echo E was fit to equation
+
+2.3. Ionic conductivity.
+
+1
+
+Direct current (d. c.) conductivity of solutions was measured
+using forced-voltage BICON method [25,26] implemented with a
+CH Instruments Model 660D analyzer. In this method, two
+100 ls long pulses (5–50 mV, depending on resistance) of opposite
+polarity were applied sequentially, and the current was sampled
+every microsecond; this bipolar pulse sequence was repeated
+200X to improve signal-to-noise ratio. The opposite pulses were
+used to remove capacitive contribution to impedance. The Ohmic
+component was quantified, averaged, and calibrated against an
+aqueous 10 mM KCl standard. A MI-905 platinum electrode from
+Microelectrodes, Inc. was used in these measurements.
+The liquid sample was placed in a glass container with a thermocouple microprobe positioned right above the microelectrode.
+A magnetic stirrer was used to homogenize the sample between
+conductivity measurements. A series of such measurements starts
+at the highest concentration, and the sample was incrementally
+diluted with MeCN. The aliquots were taken and diluted with
+CDCl3 for 1H and 19F NMR analysis that gives concentrations of
+all components (see Figure S2). In some cases, the NMR solvent
+contained 1,4-bis(trifluoromethyl)benzene as an internal standard:
+the signals of the protons in the solvent and the solute were referenced to the protons in the standard, and the same referencing was
+used for fluorine-19 nuclei in the TFSI– anions and the standard. In
+this way all mole ratios could be determined (the same method
+was used to verify concentrations in our SAXS experiments
+described below). This yielded the chemical composition, and
+molarities were computed knowing solution density. The molarities given below are for 298 K.
+
+lnðE=E0 Þ ¼ DðcgdÞ2 ðD  d=3  s=2Þ
+where c is the gyromagnetic ratio, g is the gradient strength, d is the
+duration of the gradient pulse, D is the interval between gradient
+pulses, s is the separation between the radio-frequency pulses,
+and D is the diffusion coefficient. The temperature was controlled
+by the spectrometer and was limited to 280–345 K. Paramagnetic
+NMR line broadening makes it impossible to use this method for
+charged redoxmers. Note that the diffusion coefficients are measured in CD3CN, which is slightly more viscous than MeCN. The diffusion coefficients for LiTFSI solutions obtained using this method
+were reported in Refs. [31] and [7].
+2.5. Molecular dynamics (MD) simulations.
+Nonpolarized OPLS-AA force field [32,33] in a LibParGen implementation [34,35] was used for the bond, angle, and torsion potentials in the redoxmers, while the density functional theory (DFT)
+with the dispersive WB97XD functional [36] and aug-cc-pVDZ
+basis set from Gaussian 16 [37] was used to optimize the molecular
+geometries.
+The partial atomic charges were calculated using CHELPG
+method [38,39] in a single-point Hartree-Fock calculation with
+the DFT optimized geometry. The input topology files for all species are given in the Supplemental Information. Experimental solution densities were used to compute molecular composition in a
+periodic cubic cell (3–6 nm on the side). Alternatively, NPT equilibration at 1 bar (1–2 ns) was used to estimate the density using the
+Parrinello-Rahman coupling with the solution compressibility of
+9.5  105 bar1. Particle mesh Ewald summation was used to
+account for electrostatic interactions, and the modified Berendsen
+thermostat was used to rescale atomic velocities. Short-range cutoffs of 1.1 nm were implemented, and the interatomic van der
+Waals interactions were parameterized using the OPLS-AA force
+field [32,33]. For NVT equilibration, we ran the trajectory for 2 ns
+
+2.4. Diffusivity
+To estimate diffusion coefficients D for a given species, pulsedfield gradient stimulated spin-echo (PGSE) NMR with longitudinal
+eddy current delay, bipolar gradients, and convection compensation was used [27–30]. DOSY module on a Bruker Avance III HD
+spectrometer operating at 300 MHz (1H) was used for data collection and processing. Constant temperature was maintained
+3
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+at room temperature, and Figure S4b shows the SAXS spectra computed using our MD model. The high-q peak in the spectra corresponds to scattering of the X-rays of the solvent domains. The
+lower-q feature seen in concentrated solutions is the so-called correlation peak that indicates intermediate range spatial ordering of
+X-ray scattering centers. In this system, due to strong scattering of
+X-rays by the six fluorine atoms in TFSI– anion, this peak originates
+entirely from ordering of TFSI– anions. In our MD simulations,
+these anions interact through their sulfonyl groups with multiple
+Li+ cations forming chains, and these chains organize themselves
+into networks of associated ions (see the Discussion). At higher
+concentrations, this ionic association becomes stronger and the
+aggregates become increasingly ordered. This is observed as an
+increase in the amplitude of the correlation peak (Figure S4a).
+The increased ordering is also seen in a progressive shift of the correlation peak to higher q that signifies the decreasing scale of spatial ordering.
+The increased ionic association is also revealed by ionic conductivity measurements shown in Fig. 3a. The ionic conductivity r
+increases for LiTFSI concentrations c < 1 M and decreases at higher
+c as the ion mobility decreases while ionic association becomes
+stronger, reducing the effective concentration of charge carriers.
+In Fig. 3b, we show changes in r from 20 to 65 °C for several LiTFSI
+concentrations. As seen from these plots, r changes almost linearly
+with temperature.
+
+at 300 K and then sampled it over 4 ns to obtain 200–500 equally
+spaced time frames. The initial configuration was generated using
+Packmol [40], and the MD trajectories were computed using Gromacs 2018 [41]. The VMD package [42] was used for visualization
+of the MD snapshots. For temperature dependences, NPT ensemble
+averaging was used prior to NVT averaging. The input topologies
+for MeCN and LiTFSI were taken from Ref. [31], other topology files
+are contained in the Supporting Information.
+For the graph theory analyses of molecular contacts in solution,
+[43,44] the connectivity matrices Pab were computed for the molecules of interest (Pab is 1 if molecules a and b are in contact and
+zero otherwise) and numerically diagonalized. The ensemble averaged histogram of the maximum eigenvalues kmax for these matrices shows narrow peaks for the next neighbor molecules, but it
+becomes increasingly smooth as the contact network emerges,
+which makes this histogram a convenient diagnostic of the solute
+network emergence [45]. The contact statistics were calculated
+for molecules with the interatomic distances smaller than the cutoff distance rcut of 2.8 Å, which was estimated from the computed
+interatomic radial pair distribution functions (RDFs). The partial
+charges and charge renormalization are examined in Section S1
+of the Supporting Information. The details of calculation of SAXS
+and graph theory analyses are given in Refs. [43,44]. The quantification of p -stacking in the MEEPT+d TFSI– solutions followed
+methodology outlined by Zhao et al., [43] which is summarized
+in Figure S3.
+
+In disordered systems, the Arrhenius behavior (log r / T 1 Þis
+frequently supplanted by the Vogel-Fulcher-Tammann (VFT)
+behavior (log r / ðT  T 0 Þ1 ) that linearizes over narrow temperature intervals. Even neat MeCN shows non-Arrhenius behavior
+near 300 K (see the Discussion) as do all electrolytes studied here.
+It is possible to fit segments of the temperature dependence using
+the Arrhenius equation (Figure S5), and in Fig. 3a we plot the corresponding activation energies Ea vs. c. These activation energies
+remain small (~7 kJ/mol) until r passes through the maximum,
+at which point Ea starts to increase reaching ~ 12 kJ/mol at 3 M.
+
+3. Results
+3.1. LiTFSI-MeCN system.
+Since LiTFSI is used as electrolyte in MEEPT:LiTFSI solution, we
+first briefly examined this binary system as we needed these
+results to shed light on the more complex ternary systems.
+Fig. 2a and S4a show SAXS spectra for solutions of LiTFSI in MeCN
+
+Fig. 2. (a) SAXS spectra for 1 M (blue) and 2 M (magenta) solutions of LiTFSI in MeCN at 298 K. For comparison, the signal from MeCN alone is shown in black. The correlation
+peak from TFSI– anions is seen in LiTFSI-containing samples. Comparison of SAXS spectra for MeCN solutions of (b) MEPT and (c) MEEPT at 298 K. The short-chain molecule
+shows a well resolved correlation peak (indicated with the arrow) at higher concentrations, whereas MEEPT does not show this peak at any concentration.
+4
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Fig. 3. (a) Ionic conductivity rfor LiTFSI solutions in MeCN (298 K, red symbols plotted to the left). The blue curve and symbols plotted to the right show the concentration
+dependence for the activation energy Ea of the conductivity. The vertical bars show the experimental uncertainty in the measurement. (b) Temperature dependences for
+conductivity at different salt concentrations (indicated in the plot). The solid lines are linear fits.
+
+in MeCN. The MD simulations shown in Figure S7 qualitatively
+reproduce these behaviors: MEPT solutions yield correlation peaks
+at concentrations >2 M (Fig. 2b), whereas MEEPT and DBrMEEPT
+solutions do not show such features at all concentrations (Fig. 2c).
+A remarkable transformation occurs when LiTFSI is added to
+MEEPT solutions (Figure S5a): a strong correlation peak emerges,
+with the amplitude greatly exceeding that of MEEPT scattering
+(the same is observed when LiTFSI is added to DBrMEEPT, see Figure S5b). This additional scattering is certainly from the TFSI–
+anions. The similar transformations have been observed in other
+redoxmer containing electrolytes, see Refs. [43,44]. Two effects
+are at work here. First, in the presence of a solute, fewer solvent
+molecules are available to screen ions, so the ionic association
+becomes stronger, causing increased ordering of electrolyte ions
+and stronger correlation peaks (as seen for LiTFSI solutions). Second, in this system, Li+ cations are complexed by MEEPT as shown
+in Fig. 1d. Due to this complexation, the chain flexibility decreases,
+so MEEPT molecules become easier to order, and spatial correlation
+between these ordered MEEPT:Li+ complexes and the TFSI– anions
+associated with these Li+ cations arises (see the Discussion below).
+Thus, SAXS spectroscopy is instrumental in revealing special
+modes of interactions between the components in a crowded
+electrolyte.
+
+Similar behaviors were obtained in other electrolyte systems (see,
+for example, Figure 10 in Ref. [46]). Henderson and co-workers
+[47–49] have studied conductivity in LiTFSI-MeCN solutions and
+estimated Ea from smoothed dlnðrÞ=dT plots obtained over a wide
+temperature range. These measurements gave rather different estimates from the ones reported here due to inherent ambiguity in
+using the Arrhenius equation for systems that display nonArrhenius behaviors.
+3.2. Phenothiazine derivatives in acetonitrile.
+MEPT (see the inset in Fig. 2b) is a phenothiazine molecule that
+is closely related to MEEPT (Fig. 1a and 2c); it has the same aromatic head but a shorter ether chain. When the concentration of
+MEPT in MeCN increases over 1.5 M, a correlation peak is observed
+in the SAXS spectra of MEPT solutions, suggesting aggregation and
+ordering of these molecules. The low-q spectrum is Lorentzian suggesting the classical Orenstein-Zernike behavior of density fluctuations [50–53].
+For MEEPT (Fig. 2c), which has a longer oligoether chain, even at
+2.5 M there is no apparent correlation peak, indicating that the
+longer chain frustrates molecular ordering. To further probe this
+ordering, we used 3,7-dibromo derivative of MEEPT (DBrMEEPT),
+the synthesis of which is described in ref. [54] Without the bromine atoms, the X-ray scattering contrast between MEEPT and
+the solvent is relatively small, so one needs high concentrations
+of MEEPT to observe solute-related features. The bromine atoms
+in DBrMEEPT strongly scatted X-rays, and even dilute solutions
+yield solute signals (Figure S6). SAXS spectra for 0.20–0.65 M solutions of DBrMEEPT (which has low solubility in MeCN) do not exhibit correlation peaks.
+We conclude that the longer ether chain in DBrMEEPT and
+MEEPT vs. the shorter chain in MEPT precludes ordering of the
+redoxmer, and this property may account for MEEPT’s miscibility
+
+3.3. Neutral and charged MEEPT solutions
+With these results for binary solutions, we proceeded to examine the properties of MEEPT+dTFSI– and 1:1 mol/mol MEEPT/LiTFSI
+ternary solutions. In the following, we will refer to these compositions as the charged and neutral MEEPT solutions, respectively.
+3.3.1. Density
+For single-crystal MEEPT+dTFSI–, the specific gravity is 1.637 g/
+3
+cm , which is equivalent to a molarity of 2.82 M. The relatively low
+5
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+3.3.2. Ionic conductivity.
+Fig. 5a shows ionic conductivity r of neutral and charged
+MEEPT solutions (up to 1.5 M) together with our MD simulations
+(see ref. [18] for more detail), which reproduce the trends in the
+data quite well. The conductivity maximum is attained at ~ 0.5 M
+and ~ 0.7 M for neutral and charged solutions, respectively (vs.
+1 M for LiTFSI in Fig. 3a). These concentrations are comparable to
+similarly sized redoxmers. [7] Qualitatively, addition of a redoxmer
+increases ionic association between Li+ and TFSI–, in this way lowering ionic conductivity. At lower concentrations, ionic conductivity for charged and neutral MEEPT solutions is similar, but at
+higher concentrations, it is greater for the charged MEEPT solution.
+At 1.5 M, it is three times greater compared to the equivalent neutral solution. In the latter, ionic conductivity decreases from the
+maximum of 25 mS/cm at 0.5 M to 6 mS/cm at 1.5 M, which is
+barely acceptable in an RFB electrolyte. As ionic association is
+stronger for a smaller Li+ cation than for a larger MEEPT+d ion,
+the ionic conductivity in charged MEEPT solution is higher.
+Fig. 5b shows temperature dependence of ionic conductivity at
+the maxima (Fig. 5a) and 1.5 M. These dependencies are almost linear. As seen in Fig. 3b, the same behavior was observed in LiTFSIMeCN solutions. As in these binary solutions, the activation energy
+for solvent and ionic transport is low, which translates into weak
+temperature dependence for ionic conductivity. To illustrate, at
+1.5 M, the ionic conductivity of the neutral MEEPT solution
+increases from 5.7 mS/cm at 295 K to 12.9 mS/cm at 338 K, which
+barely makes this solution acceptable as an electrolyte.
+
+molarity is due to relatively great molecular weight of this radical
+ion pair. The latter is difficult to avoid as the species need to be
+derivatized in order to become sufficiently flexible and odd shaped
+to prevent crystallization from solution. Consequently, in this system, concentrations >2 M are equivalent to having <70 mol% MeCN
+in solution. This is insufficient to fully solvate redoxmer molecules
+and ions, so solute–solute interactions can become excessively
+strong.
+When the experimental densities of charged and neutral MEEPT
+solutions are plotted vs. their molarity at 300 K (Fig. 4a and 4b), the
+data points are close to each other. In the same plot, we show calculated NPT ensemble densities over a wider range of concentrations.
+The computed and experimental results are in good agreement, so
+we extended these MD estimates to superconcentrated solutions
+(Fig. 4b). Also shown in Fig. 4a are 1:1:0 and 1:1:1 mol/mol/mol
+MEEPT/LiTFSI/MeCN compositions. These compositions are on the
+same line; i.e., there is a continuous transformation from a dilute
+solution towards a solvate IL as the MeCN is removed. This computed line misses the MEEPT+dTFSI– crystallographic density but
+passes through an amorphous state with the estimated density of
+1.496 g/cm3. We observed the same behavior in other redoxmer systems, [43,44] which suggests that such disordered states are closer
+structurally to concentrated solutions than the corresponding crystals. The experimental maximum solubility of MEEPT+dTFSI– in
+MeCN is ~ 1.54 M at 298 K (the dashed vertical line in Fig. 4b). While
+the supersaturated MEEPT+dTFSI– solutions are experimentally
+inaccessible, they can be studied computationally.
+
+Fig. 4. (a) Concentration dependencies for neutral and charged MEEPT solutions. Traces i and ii are the experimental data for MEEPT+dTFSI– (charged solutions) and 1:1
+mol/mol MEEPT/LiTFSI (neutral solutions) in MeCN (300 K), respectively. Traces iii and iv are computed curves from the MD model. Also shown are the crystallographic density
+for MEEPT+dTFSI– (open blue squares). For MEEPT, 1:1:0 and 1:1:1 compositions are indicated. For the charged system, amorphous MEEPT+dTFSI– is also indicated. (b) Traces i
+and ii are the same as in panel a, and trace iii is a calculation in the MD model with full charge on the ions. Experimentally, MEEPT+dTFSI– has the solubility ~ 1.54 M (the
+vertical dashed line). Plotted to the left axis is the fraction of stacked MEEPT+d cations in (iv) the model with full charge on the ions and (v) 70% charge on the ions (which is our
+default MD model). The stacking of radical cations increases substantially as the system becomes supersaturated.
+6
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Fig. 5. (a) Concentration dependencies for ionic conductivity r of (i) neutral and (ii) charged MEEPT solutions (in the blue and red, respectively). The vertical bars show the
+experimental uncertainty. The dashed lines with error bars show MD simulation (gray for neutral and black for charged MEEPT solutions). (b) The symbols show temperature
+dependence for the conductivity in the neutral and charged MEEPT solutions at selected concentrations indicated in the plot (the same coloring scheme as in panel a). (c) A
+concentration plot for the neutral MEEPT solutions, with r plotted vs. the mole fraction of the solvent (mind the logarithmic vertical scale). At concentrations > 1 M, the
+conductivity exponentially decreases with the decreasing mole fraction of the MeCN solvent (the dashed line).
+
+In Fig. 5c, we plot r for neutral MEEPT solution vs. the mole
+fraction of the solvent as it decreases from 100 mol% to 20 mol%.
+It is seen that the decrease in r shown in Fig. 5a is but an onset
+of exponential decrease over a wider concentration range, as the
+solution increasingly becomes gel-like. While it is possible in this
+system to reach higher redoxmer concentrations without crystallization, this potential advantage is offset by rapid loss in mobility
+and ionic conductivity. Furthermore, as suggested by Fig. 5b,
+increasing the temperature cannot significantly expand the concentration range of liquid-like behavior. Indeed, while r decreases
+with the mole fraction of the solvent exponentially, it increases linearly with the temperature; thus, in the gel-like regime increasing
+temperature is equivalent to a small increase in the concentration.
+
+this system (mind the logarithmic scale for the diffusion coefficients). It is seen that both the experimental and estimated values
+fall on the same line; i.e., the solvent diffusivity (like r in Fig. 5c)
+exponentially decreases with the decreasing mole fraction of the
+solvent.
+Plotted as a function of molarity, the data reveal two distinct
+regimes (the dashed lines in Fig. 6b). Below 1.4 M, the solution is
+liquid-like; above 1.4 M, the solution increasingly congeals, and
+solvent diffusivity decreases exponentially with the redoxmer
+molarity. Using MD simulations, we computed self-diffusion of
+MeCN in supersaturated charged MEEPT solutions; these estimates
+are shown in the same plot. Qualitatively, these solutions behave
+like neutral MEEPT solutions, but the critical concentration
+increases from ~ 1.5 M to ~ 1.75 M due to weaker ionic association
+of MEEPT+d with TFSI–. Above this critical concentration, the exponential decrease in diffusivity with the redoxmer concentration
+sets in. As the solubility of MEEPT+dTFSI– solution is lower than
+this critical concentration, the solution remains liquid-like until
+this salt separates. Had the crystallization been avoided, gelling
+would be observed in this solution, too.
+Using NMR, it is possible to measure diffusion coefficients D for
+MEEPT and LiTFSI ions. The easiest way to visualize these data is to
+plot these diffusion coefficients against Ds on the log–log plot
+shown in Figure S8. In binary LiTFSI solutions, Li+ cations move faster than TFSI– anions [7,31]. However, in MEEPT solutions all Li+
+cations are complexed by MEEPT (so Li+ and MEEPT have similar
+mobility), and the TFSI– anion moves ~ 30% faster than the
+MEEPT:Li+ complex. As the concentration increases, the ionic D’s
+become increasingly closer to each other, and both ions move faster than MEEPT. Qualitatively [7], as ions associate, they exert drag
+on each other, and their diffusion coefficients become similar (this
+is already seen in binary LiTFSI solutions, see Ref. [31]) The ions can
+
+3.3.3. Molecular and ionic diffusivity.
+In ref. [11], it was observed that the viscosity of MEEPT solutions increased almost linearly for MEEPT/electrolyte ratios < 1:1
+mol/mol (0.5 M electrolyte), whereas an increase in the MEEPT
+concentration over 1–3 M caused rapid increase in the viscosity
+by the two orders of magnitude; the flow remained Newtonian
+for all compositions studied. The charged solutions of the same
+composition were less viscous than the neutral ones, and in these
+solutions, too, there was rapid increase in viscosity between 0.5 M
+and 1 M [11].
+Pulse field gradient NMR provides a means for quantification of
+molecular and ionic diffusion in liquids. For these measurements,
+CH3CN was replaced by CD3CN; the solvent contains sufficient
+CH3CN impurity to use it as a tracer to measure solvent selfdiffusion.
+Fig. 6a shows the coefficient Ds for solvent self-diffusion plotted
+vs. the mole fraction of MeCN in solution. Also shown in this plot
+are the diffusion coefficients calculated in our MD simulations for
+7
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+Fig. 6. (a) The coefficient Ds for solvent self-diffusion in the neutral MEEPT solution plotted vs. the mole fraction of the solvent. Mind the logarithmic vertical scale. The open
+circles are the experimental pulse gradient NMR measurements and the filled circles are the MD model. Both estimates exponentially decrease with the mole fraction of the
+solvent (the black solid line). (b) The MD simulations for Ds in the (i) neutral and (ii) charged MEEPT solutions plotted vs. molarity of these solutions. Two regimes, the liquidlike and the gel-like can be distinguished for both systems (the dashed lines). Shown in the inset is 1:1:0.6 MEEPT/LiTFSI/MeCN mixture illustrating gel-like properties of the
+solution.
+
+still outpace MEEPT as Li+ can hop between the neighboring MEEPT
+chains. In Figure S9, we show temperature dependencies for
+molecular an ionic diffusion at 1.5 M. These dependencies are linear, but the relative increase in the diffusivity over the same temperature range was ~3x times faster than in ionic conductivity
+shown in Fig. 5b. This is expected as the conductivity depends
+not only on ionic diffusion but also on ionic association. Thus,
+the non-Arrhenius behavior is seen not only in ionic conductivity
+but also in ionic and molecular diffusivity; in fact, it is seen in all
+dynamic behaviors of this system.
+
+4. Discussion
+4.1. Synopsis
+To summarize our observations, concentrated MEEPT solutions,
+either neutral or charged, are close to the gel-like regime, in which
+a small increase in the concentration causes exponential decreases
+in fluidity, diffusivity, and conductivity of the solutions. At concentrations >2 M the system advances deep into this regime. Increasing solution temperature makes diffusion faster, but due to low
+activation energy this increase is insufficiently fast to compensate
+for thickening and partial ordering of the solution at increased concentration of the redoxmer and salts, and the system becomes
+‘‘stuck” in the gel-like regime.
+Below, we revisit these observations, starting with neat MeCN.
+We first show that our dynamic model captures the unusual thermal behavior of this solvent and peculiarities of LiTFSI-MeCN system. We then consider how the models account for the properties
+of charged and neutral MEEPT solutions in different concentration
+and temperature regimes. With this knowledge, we use these models to show that changing electrolyte does not address challenges
+imposed by gel-like regimes. Finally, we demonstrate that in some
+systems these limitations can be surpassed, albeit only at high
+temperature and for small redoxmer molecules.
+Another way to follow this discussion is to conceive it as a stepwise proof of the assertions made in the Introduction that there
+always exists a well-defined upper limit to increasing the redoxmer concentration while maintaining acceptable dynamic
+properties.
+
+3.3.4. Small-angle X-ray scattering.
+Fig. 7a and 7b show SAXS spectra for the neutral and charged
+MEEPT solutions, respectively, plotted for different concentrations.
+In addition to the solvent domain peak at 1.2 Å1, at concentrations
+>1 M for neutral and >1.4 M for charged MEEPT solutions, there are
+correlation peaks that increase in the amplitude with the concentration and gradually shift towards higher transfer vectors q as
+the concentration increases. The same progression is observed for
+LiTFSI suggesting that the feature reflects the increasing association of TFSI– anions. We remind that without the salt, MEEPT does
+not yield correlation peaks even at 2.5 M (Fig. 2c), so these features
+originate through interaction of MEEPT and LiTFSI. All these behaviors are reproduced in our MD simulations shown in Figure S10. In
+fact, the SAXS spectra proved to be so sensitive to ionic association
+(that depends on the total charge on the ions) that we used these
+spectra to ‘‘titrate” these charges in our MD model (see Section S1).
+We will return to these observations in the next section.
+8
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Fig. 7. SAXS spectra of (a) neutral and (b) charged MEEPT solutions as a function of the molarity. The trend line shows the positions of correlation peaks.
+
+erature. In Figure S12 we used our MD model to calculate density,
+and in Figures S11 and S12 we calculate self-diffusion of MeCN as a
+function of temperature (viscosity data are also shown in the same
+plots). The error in the density is <3% for all temperatures. For selfdiffusion there is slight discrepancy between the reported data in
+the literature; to better match these data and viscosity measurements, one series was scaled by 10%. The high-temperature series
+gives Ea ~ 10.5 kJ/mol, whereas the low-temperature series gives
+Ea ~ 7.8 kJ/mol, illustrating non-Arrhenius behavior of the solvent
+(Figure S12b). In the same plot, we show MD estimates for the
+coefficient Ds of self-diffusion scaled by a factor of 1.5 to correct
+for reduced diffusivity arising from the use of nonpolarized force
+field. The scaled MD estimates closely follow the experimental
+points between 265 K and 330 K. That is, our MD model correctly
+describes temperature dependence of self-diffusion in the temperature range of interest for this study. The computed Ds also closely
+tracks g1 from 260 to 350 K.
+
+4.2. Liquid acetonitrile
+As suggested by results, the difficulty of raising the upper limit
+of redoxmer concentration by increasing temperature (without
+falling into gel-like behavior) originates in the anomalous properties of the solvent, which makes it impossible to mitigate. The salient property of concern here is the low activation energy near the
+room temperature. Here we show that our MD model accounts for
+the non-Arrhenius behavior of the solvent in general and this low
+activation energy in particular.
+A low activation energy (Ea < 10 kJ/mol) for diffusion in MeCN is
+not exceptional: it is typical for aprotic fluids consisting of light
+molecules (such as acetone, diethyl ether, and chloroform) but
+lower compared to most other polar solvents [55,56]. At 1 bar,
+MeCN melts at 227 K and boils at 355 K. In this temperature range,
+the relaxation rate for a 14N nucleus follows the VFT equation with
+T 0 ~ 170 K [57]. Around 300 K, for diffusional reorientation, Ea
+is ~ 8.4 kJ/mol by Raman spectroscopy and ~7.8 kJ/mol by NMR
+[58–61]. For dynamic viscosity, Ea is ~ 7.5 kJ/mol (233 K to
+373 K) and for self-diffusion, Ea is 7.8 kJ/mol (Figures S11 and
+S12) [62,63]. Similar estimates for Ea were obtained using
+quasielastic neutron scattering [64]. For tracer diffusion, ferrocene
+and ferrocenium ion have Ea of 6.5 and 7.2 kJ/mol, respectively
+[65], and for Cl– ions, Ea is ~ 7.6 kJ/mol [66]. The closeness of Ea
+for reorientation of solvent molecules and translational diffusion
+for tracer molecules and ions indicates that for all species in solution the translational diffusion is rate limited by molecular reorientation of the solvent molecules [67].
+While there are numerous MD models for MeCN [61,67–72],
+modeling of temperature-dependent dynamics is lacking in the lit-
+
+4.3. LiTFSI-MeCN solutions
+Turning to the LiTFSI-MeCN solutions (Fig. 8a and 8b), Figure S13 shows the diffusion coefficients for MeCN and LiTFSI ions
+plotted vs. salt molarity c. For c < 1.5 M the diffusion coefficients
+for ions decrease linearly with c1/2; for c > 2 M the gel-like regime
+sets in, and there is rapid exponential decrease. In Fig. 8a, the computed Ds is plotted as a function of density for room temperature
+LiTFSI solutions. In addition to these points, the plot includes
+320–360 K data for selected concentrations (color symbols).
+Remarkably, Ds appears to be largely a function of the density alone
+(as was recently observed for other nonaqueous electrolytes by
+9
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+Fig. 8. Simulation of solvent self-diffusion coefficients Ds in the LiTFSI in MeCN. (a) Ds plotted vs. the solution density. In both panels, symbols of the same color correspond to
+the same molarity but different solution temperatures. Traces i and ii are for NPT and NVT ensembles at 300 K, respectively. The color symbols show 300–360 K data from
+panel b. As the solution temperature increases, it expands, and the density decreases. It is seen that Ds is largely the function of the density. For concentrations > 2 M, the
+diffusivity exponentially decreases with the density (the dashed straight line). Plotted to the right axis is the activation energy Ea for self-diffusion obtained from the data of
+panel b. (b) Arrhenius plots for Ds at selected concentrations of LiTFSI. As the concentration increases over 2 M (corresponding to density ~ 1.1 g/cm3), the solution becomes
+increasingly gel-like and the activation energy increases.
+
+to ordering of the ions unless the ion network becomes contiguous
+and fragments the solvent into disconnected domains.
+
+Han). [73] From the Arrhenius plots for computed Ds shown in
+Fig. 8b, the activation energy for solvent transport increases
+from ~ 7.6 kJ/mol in dilute solution to ~ 16.5 kJ/mol in 4.2 M solution, and the onset of this increase corresponds to the onset of gelling, which is also seen in Fig. 3a. In this 4.2 M solution, at 300 K the
+diffusion coefficient decreases by two orders of magnitude relative
+to neat solvent. The density plot of Ea shown in Fig. 8a resembles
+the plot shown in Fig. 3a, suggesting that our MD model captures
+the salient features of this binary system.
+Using the same model, we estimated ionic conductivity r and
+diffusion coefficients D for Li+ and TFSI– in 0.2–3.0 M LiTFSI solutions between 270 K and 420 K (not shown). For the TFSI– anion,
+Ea linearly increased from ~ 11.5 to ~ 16.5 kJ/mol; for the Li+ cation,
+Ea increased from ~ 11.5 to ~ 14.5 kJ/mol, following the trend for Ds .
+For viscosity, Ea increased from 8 to 9 kJ/mol to ~ 13 kJ/mol; for
+conductivity, Ea increased from ~ 8–9 kJ/mol to ~ 10 kJ/mol. As seen
+from these calculations, the activation energies for ionic diffusion,
+solution viscosity, and ionic conductivity are all low in liquid-like
+LiTFSI solutions, and they increase only slightly in the gel-like
+regime despite the precipitous loss of ion and solvent mobility in
+this regime.
+This behavior may seem peculiar given that conductometry and
+SAXS spectroscopy both indicate increasingly strong association
+and ordering of the LiTFSI ions in concentrated LiTFSI solutions.
+In Section S2 and Figures S14 to S18 therein we argue that even
+in 2–4 M solutions, the associated ions do not form contiguous network, whereas solvent molecules still do. As ion transport occurs
+mainly through this extended solvent network, it is not sensitive
+
+4.4. MEEPT+dTFSI– (charged) solutions.
+As seen from SAXS data in Fig. 2c, MEEPT has a long, flexible
+chain that frustrates ordering of these molecules in solution. Poor
+ordering is further assisted by nonplanarity of aromatic head
+groups (Fig. 1a). This advantage does not extend to MEEPT+d,
+which has a planar radical cation (Fig. 1b). In MEEPT+dY– crystals,
+the radical ions form isolated pairs (TFSI– and SbCl–6) or infinite
+chains (BF–4, ClO–4, and PF–6) with the planes of aromatic rings separated by 3.24–3.52 Å (Fig. 1a). The Coulomb repulsion of positively
+charged radical cations in these p -stacks is reduced by electrostatic attraction to nearby anions. This compensation is stronger
+for smaller, rounder anions like BF–4, and weaker for odd-shaped,
+flexible anions like TFSI–. The stronger the ionic association, the
+greater this compensation, assisting ordering of the radical ion
+pairs into a crystal.
+To characterize this stacking in solution, we adapted metrics
+introduced in ref. [43] that include the proximity criterion
+(centroid-to-centroid distance) and angular criterion (the angle
+between the plane normal for the head group) as illustrated in Figure S3; see Figure S19 for an example of stacking analysis. When
+full charge is assumed for MEEPT+d, the fraction of the stacks
+increases linearly from zero at 1.5 M to ~ 20% at 2.6 M (Fig. 4b);
+i.e., the onset of stacking approximately coincides with the solubility limit. A more realistic estimate of the ionic charge is ~0.70
+10
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+their ether chains). The weak correlation in the positions of TFSI–
+anions seen in SAXS spectra is due to weak association with (large)
+radical cations.
+
+(which is required to simulate conductivity and SAXS data), so we
+calculated the stack fraction for this MD model. As seen from
+Fig. 4b, in this model, too, there is MEEPT+d stacking at ~ 1.5 M.
+Lowering of the charge on MEEPT+d decreases Coulomb repulsion,
+but it also decreases association with TFSI– anion, and the two
+effects cancel each other.
+It follows from our MD calculations that most MEEPT+d radical
+cations do not form stacks in solution; rather they make random
+contacts with each other. Assuming the contact radius of 2.8 Å,
+we calculated the neighboring statistics for MEEPT moieties in
+the charged and neutral MEEPT solutions (Figure S20). According
+to these calculations, the average number of MEEPT+d and TFSI–
+ions around each MEEPT+d radical cation linearly increases with
+molarity, eventually reaching six in MEEPT+d TFSI–. Over the same
+concentration range, the number of MeCN molecules in the solvation shell of MEEPT+d decreases from twelve to none. At the solubility limit, there are six MeCN molecules and three MEEPT+dTFSI–
+pairs around each radical cation, which is sufficient for a 3dimensional network of the associated MEEPT+d TFSI– pairs to
+arise.
+
+4.6. Dynamic properties
+We already presented conductivity (Fig. 5a) and diffusivity
+(Fig. 6a and 6b) data validating our MD model. Figure S27a shows
+MEEPT and ionic diffusivities plotted vs. Ds in the neutral MEEPT
+solution in a manner of Figure S8. Comparison with the latter figure indicates that the model reproduces the trends observed in
+the 300 K solutions. It also suggests that such trends would extend
+to a higher temperature of 360 K. While we do not have diffusion
+data for charged MEEPT solutions, Figure S27b suggests that in
+these solutions, too, the TFSI– anion moves faster than MEEPT+d
+at low concentrations, and the diffusion coefficients become comparable at higher concentrations.
+Figure S28 shows computed temperature dependences for the
+coefficient Ds of self-diffusion for MeCN compared to experimental
+data shown in Figure S9. The MD simulation yields almost linear
+increase in Ds with the temperature (reproducing the experimentally observed trend). Increasing temperature increases mobility
+in both states of charge; however, the general shape of the concentration dependencies remains the same (Figure S29). At 360 K, the
+charged system would be liquid-like for all concentrations < 2 M,
+while the neutral system still would be gel-like at 2 M. To obtain
+the same Ds as observed for 1.5 M at 300 K, the equivalent MEEPT
+concentration would be 1.86 M at 360 K, so the gain in concentration is only 25% (Figure S29). That is, in the gel-like regime even 10x
+gain in mobility results in modest gains in the redoxmer concentration.
+
+4.5. MEEPT:LiTFSI (1:1 mol/mol) system
+There are relatively small differences between neighborhood
+statistics for neutral and charged MEEPT solutions (Figure S20),
+except for fewer TFSI– anions associated with MEEPT as opposed
+to MEEPT+d. Figure S21a shows computed SAXS spectra for 1.5 M
+solution (see an MD snapshot in Figure S22) separated into linearized contributions from different species in solution (see ref.
+[44] for technical details of such spectral decompositions). Most
+of the signal that contributes to the correlation peak arises from
+TFSI– anions; however, had the correlation peak been exclusively
+from these anions, it would be at 0.65 Å1. The head groups of
+MEEPT contain X-ray scattering high-Z sulfur atoms, so MEEPT:
+Li+ complexes yield a correlation peak ~ 1.05 Å1, and the observed
+correlation peak partakes of both ionic species. The lithium atom
+does not scatter X-rays strongly, so its contribution to SAXS is negligible. In Figure S21b we exaggerate this contribution to illustrate
+that Li+ and MEEPT have the same correlation peak due to their 1:1
+complexation. We remind the reader that the MEEPT:Li+ cation
+complex and TFSI– anion is associated through the chelated Li+
+(Fig. 1d and S22). In Section S3 and Figures S23 to S26 therein
+we show that such MEEPT:Li+ complexes form a contiguous network at concentrations as low as 1–1.5 M. As the complexes aggregate, so do the associated TFSI– anions, and this ordering is
+observed in SAXS.
+For charged MEEPT solutions, the mode of TFSI– ordering is simple electrostatics. At 1.5 M, the stacking of MEEPT+d cations is inefficient, and their packing is loose (as there are no Li+ cations to fix
+
+4.7. Is the Li+ cation special?
+Given the MEEPT:Li+ complexation, it is pertinent to ask
+whether our observations generalize to cations that do not form
+such ion–solute complexes. To this end, we computationally
+replaced Li+ with organic cations (X+): tetramethylammonium
+(NMe+4) and N-propyl-N-pyrrolidinium (P+13). The latter is a flexible
+cation that is a popular choice for IL-based electrolytes (see, e.g.,
+refs. [74,75]).
+Table 1 shows computational results for 1:1 mol/mol MEEPT/X+
+TFSI–. When the compositions of the same mole fraction are compared (we chose 14 mol%, which corresponds to 1.5 M for MEEPT/
+LiTFSI), replacing the Li+ cation with an organic cation considerably
+increases cation and MEEPT mobility and (to a smaller degree)
+anion mobility. In this sense, excluding cation binding by MEEPT
+does improve mobility. However, replacing the Li+ cation with a
+bulkier cation reduces density and hence molarity of these solutions. To obtain solutions of the same molarity (in this case,
+
+Table 1
+MD calculated diffusion coefficients (D) for species in 1:1 mol/mol solutions of MEEPT and X+TFSI- in acetonitrile (MeCN), where X+ is the Li+ cation, tetramethylammonium
+(NMe+4) and N-propyl-N-methylpyrrolidinium (P+13), at 300 and 360 K.
+X+
+
++
+
+Li .
+
+NMe+4
+
+P+13
+
+T, K
+
+300
+360
+360
+300
+300
+360
+360
+300
+300
+360
+360
+
+MEEPT,.mol%
+
+14.00
+13.97
+15.19
+14.00
+18.26
+18.26
+20.84
+14.00
+21.91
+21.91
+27.16
+
+D, x10-6 cm2/s
+
+MEEPT,.M
+
+1.5
+1.44
+1.5
+1.33
+1.50
+1.41
+1.50
+1.23
+1.50
+1.42
+1.50
+11
+
+MeCN
+
+solute
+
+X+
+
+TFSI-
+
+3.73
+11.45
+11.40
+4.78
+2.94
+12.26
+9.46
+5.67
+1.38
+9.05
+6.67
+
+0.26
+1.41
+1.15
+0.49
+0.32
+1.75
+1.65
+0.71
+0.14
+1.22
+1.16
+
+0.86
+2.79
+2.60
+1.82
+0.79
+4.74
+2.79
+1.86
+0.39
+2.67
+1.77
+
+1.32
+4.07
+4.00
+1.58
+0.71
+3.71
+2.75
+1.35
+0.31
+2.63
+1.93
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+4.8. Can 2 M be exceeded?
+
+1.5 M), the solute mole fraction needs to be increased from 14 mol%
+for Li+ to 18.3 mol% for NMe+4 to 21.9 mol% for P+13. This increase
+(given the proximity to gel-like region) negates the advantage of
+cation replacement (Table 1), causing considerable decrease in
+diffusivity.
+Like in the MEEPT/LiTFSI solutions (see above), a temperature
+increase does not improve this situation as it causes volume
+expansion that further decreases molarity. To maintain the redoxmer molarity of 1.5 M at 300 K (that would define the power density) one needs to increase the mole fraction of this redoxmer still
+more to compensate for this volume expansion. For LiTFSI, this
+increase is modest (15.2 mol% vs. 14 mol%), for organic cations it
+is 20.8 mol% for NMe+4 and 27.2 mol% for P+13 (which almost doubles
+the mole fraction compared with the initial 14 mol%). Increasing
+the mole fraction of electrolyte causes net decrease in the mobility,
+so using hot solutions of the same molarity (1.5 M) shows no
+improvement in dynamic properties.
+The root problem are large molar volumes for the solute. At
+300 K, in 1:1 mol/mol MEEPT/X+TFSI– (no solvent) the concentration of MEEPT would be 2.03 M for NMe4TFSI and 1.85 M in P13TFSI
+compared to 2.48 M for LiTFSI. Triethylsulfonium dicyanamide,
+SEt3N(CN)2, is an ionic liquid composed of light ions and has
+uncommonly high fluidity and conductivity at 360 K (Figure S30).
+Even for this exceptional salt, the 1:1 mol/mol MEEPT:IL composition would have molarity of 2.26 M, which is still lower compared
+to 1:1 mol/mol MEEPT:LiTFSI. That is, large molar volume of
+MEEPT leaves little room for reaching 2 M without incursion into
+the gel-like regime. Actually, LiTFSI was a good choice for electrolyte despite the strong Li+ association with MEEPT that causes
+decreased mobility as it extends the acceptable molar range.
+We conclude that for molecules as large as MEEPT there may be
+no realistic path for achieving desired dynamic properties for solutions at concentrations > 2 M, for any reasonable temperature and
+any choice of electrolyte. For lighter redoxmers, such a path might
+exist, as we argue below.
+
+From the standpoint of dynamic properties alone (abstracting
+from all other requirements), the best electrolyte consists of (i)
+the lightest electrolyte ions and (ii) the lightest redoxmer molecules. Since small heterocyclic molecules tend to crystallize easily,
+improving solubility necessitates the use of odd-shaped, flexible
+molecules and ions that frustrate crystallization but also cause gelling in concentrated solutions. A way out of this predicament
+would be using smaller species and higher temperatures to
+increase solubility and mobility.
+From this standpoint, small redox-active molecules with low
+melting points would make the best choice for hot solutions. The
+familiar examples of such redoxmers are 2,2,6,6-tetramethylpiperi
+din-1-yl)oxyl that melts at 310 K and 2,1,3-benzothiadiazole
+(BzNSN) that melts at 327 K. For similar reasons, one desires electrolyte salt that is fluid and conductive; that is, an ionic liquid.
+Unfortunately, most ILs have prohibitively high viscosities (>50
+cP) even at 360 K, [76,77] and the select few ILs that are sufficiently
+fluid have heavy ions and low molarity. SEt3N(CN)2 is exceptional
+in this sense: [78,79] at 360 K, it is fluid (~6 cP) and conductive
+(>60 mS/cm) while having low molar volume; this advantage
+extends to MeCN mixtures (Figure S30). Here we show computationally that combining a small redoxmer molecule with this IL
+can push the acceptable concentrations over 2 M.
+Fig. 9a shows the computed Ds for 1:1 mol/mol BzNSN/LiTFSI
+solution in MeCN plotted vs. the mole fraction of redoxmer. Like
+in the MEEPT system, Ds exponentially decreases with the decreasing mole fraction of the solvent both at 300 K and 360 K, decreasing
+by a factor over 100x at 40 mol%. Fig. 9b shows the 360 K data
+replotted as a function of molarity and compares it with the equivalent SEt3N(CN)3 solutions. Even at 3 M, the solution remains fluid,
+outperforming the equivalent LiTFSI solution 10x in solute and solvent mobility. Figure S31 compare solvent, ionic, and BzNSN diffusivity at 360 K, for solutions containing the same mole fraction of
+
+Fig 9. Computed diffusion coefficients in 1:1 mol/mol BzNSN/salt solutions. (a) The diffusion coefficient for solvent self-diffusion plotted vs. mole fraction of BzNSN in LiTFSI
+solutions at 300 K and 360 K. (b) Diffusion coefficients for MeCN and BzNSN plotted vs. BzNSN molarity at 360 K, for LiTFSI (empty symbols) and SEt3 N(CN)2 (filled symbols).
+12
+
+
+
+Journal of Molecular Liquids 334 (2021) 116533
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+ination of one kind of electrolyte ions, which reduces crowding in
+the solutions. For ion conducting separation membranes, this can
+be achieved by using suitable ionic catholytes (C) or anolytes (A).
+For example, for a cation (X+) conducting membrane, one can consider a X+C– || A cell configuration that becomes Cd || X+A–d at full
+charge (we show the minimal supporting ions required for charge
+balancing). Examples of such catholyte molecules are given by verdazyl [80,81] and benzoylpyridinium [82–85] anions. Conversely,
+for an anion (Y–) conducting membrane, one can consider a C ||
+A+Y– configuration that becomes C+dY– || Ad at full charge (where
+the cationic anolyte is exemplified by verdazyl and benzoylpyridinium cations). A variant of the latter chemistry is the wellknown Cd || A2+(Y–)2 system, in which a nitroxyl radical is paired
+with a viologen dication. [86–90] If the separation membrane is
+redoxmer-blocking, then X+C– || A+Y– M C+Y– || X+A– two-electron
+chemistry would be potentially possible, giving yet another
+approach to reducing crowding in solution. Each scenario would
+require separate analyses, but most of the factors considered in this
+study would be in play for these chemistries, too. Indeed, all salts
+that avoid crystallization in highly concentrated solutions do so
+through disorder, and so they tend to gel. For this reason, excluding
+one of the electrolyte ions relaxes but does not remove the limits
+considered above.
+
+redoxmer in either state of charge. All diffusion coefficients are in
+the acceptable range; that is, charging of these solutions does not
+make them more viscous or less conductive.
+We found several other examples of such systems, and MD calculations suggest that 2.5–3 M electrolytes can be obtained in this
+manner, albeit only at 340–360 K. The practical significance of this
+finding is unclear, as chemical stability of charged redoxmers
+would suffer in hot solutions, while maintaining high temperature
+diverts electric power. Nevertheless, this approach appears to be
+the only path to reaching concentrations of 2–4 M assumed in
+technoeconomic analyses that underlie nonaqueous RFB development. [6]
+
+5. Conclusion
+In the Introduction, we asked what factors other than solubility
+would limit redoxmer molarity in nonaqueous RFB electrolytes.
+We purposely disregarded all properties other than fluidity and
+ionic conductivity. These additional requirements will only further
+decrease the limits we have established. Most of our experimental
+work was on a phenothiazine system, yet our conclusions are
+general.
+Presently, improving solubility of redox-active molecules in
+nonaqueous RFB electrolytes draws the most attention, and it
+may appear that this solubility is the main obstacle to achieving
+a higher energy density. Our study suggests otherwise: gelling of
+concentrated solutions and freezing of dynamics effectively limits
+the maximum redoxmer concentration in systems that avoid crystallization; in fact, this gelling is precisely how the crystallization is
+avoided. Above a certain well-defined concentration, which for
+most redoxmers is between 1 and 2 M, fluidity, conductivity, and
+diffusivity of electrolyte decrease exponentially with increasing
+concentration, so even a slight increase in this concentration
+makes the solution excessively viscous and electrically resistive.
+This gelling occurs in either state of charge and at all temperatures.
+The critical concentration for gelling is somewhat higher for a
+charged redoxmer, but, as favorable dynamic properties need to
+extend to all states of charge, this does not lower the concentration
+limit.
+Still it may appear that increasing the solution temperature can
+improve these concentration limits by increasing molecular and
+ionic mobility and redoxmer solubility. Unfortunately, low thermal
+activation energies for molecular and ion transport preclude significant improvement in this fashion. The dynamic properties (such as
+viscosity and conductivity) increase slowly with the increasing
+temperature, whereas they change very rapidly with the increasing
+redoxmer concentration. This property makes it extremely difficult
+or even impossible to achieve molarities > 2 M not only at room
+temperature, but at any temperature.
+While conventional electrolytes run into such limitations, less
+conventional ones might extend this limit to 2.5–3 M but only at
+340–360 K and only for light redoxmer molecules. Such unconventional electrolytes may not be practically relevant; however, in
+more conventional electrolytes, operation > 2 M might be physically impossible.
+A troubling aspect of our findings is that the current technoeconomic case for nonaqueous RFBs largely rests on expectations
+of high redoxmer concentration (2–4 M) while maintaining favorable dynamics [6]. Our study suggests that such requirements
+could be fundamentally irreconcilable due to physical properties
+of crowded electrolytes that were unknown to researchers when
+these projections were made.
+We stress that our analyses examined only one of the battery
+chemistries (which is the most common). In some chemistries, rheological properties of battery fluids can be improved through elim-
+
+6. Note added after the review.
+During review, one of the authors of this study, Susan Odom,
+suddenly and tragically died on April 18, 2021. Susan was a dear
+colleague who will be fondly remembered for her industry, amicability, outstanding chemical imagination, and boundless curiosity.
+She pioneered the use of phenothiazines as redox materials in solid
+and flow batteries, and she provided the initial spark for this
+inquiry by asking the important questions that we addressed.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared
+to influence the work reported in this paper.
+Acknowledgements
+This work was supported as part of the Joint Center for Energy
+Storage Research (JCESR), an Energy Innovation Hub funded by the
+U.S. Department of Energy, Office of Science, Basic Energy Sciences.
+The submitted manuscript has been created by UChicago Argonne,
+LLC, Operator of Argonne National Laboratory (‘‘Argonne”).
+Argonne, a U.S. Department of Energy Office of Science laboratory,
+is operated under Contract No. DE-AC02-06CH11357. The U.S.
+Government retains for itself, and others acting on its behalf, a
+paid-up nonexclusive, irrevocable worldwide license in said article
+to reproduce, prepare derivative works, distribute copies to the
+public, and perform publicly and display publicly, by or on behalf
+of the Government. This research used resources of the Advanced
+Photon Source, a U.S. Department of Energy (DOE) Office of Science
+User Facility operated for the DOE Office of Science by Argonne
+National Laboratory under Contract No. DE-AC02-06CH11357.
+Appendix A. Supplementary material
+A pdf file containing the additional sections, figures, and supporting references. This PDF file contains a link to a zipped file containing the input topologies for the species in our MD simulations,
+with the documentation. Supplementary data to this article can be
+found online at https://doi.org/10.1016/j.molliq.2021.116533.
+13
+
+
+
+I.A. Shkrob, L.A. Robertson, Z. Yu et al.
+
+Journal of Molecular Liquids 334 (2021) 116533
+[31] Z.X. Li, L.A. Robertson, I.A. Shkrob, K.C. Smith, L. Cheng, L. Zhang, J.S. Moore, Y.
+Z, Realistic Ion Dynamics through Charge Renormalization in Nonaqueous
+Electrolytes, J. Phys. Chem. B 124 (2020) 3214-3220.
+[32] W.L. Jorgensen, D.S. Maxwell, J. Tirado-Rives, Development and testing of the
+OPLS all-atom force field on conformational energetics and properties of
+organic liquids, J. Am. Chem. Soc. 118 (1996) 11225–11236.
+[33] G.A. Kaminski, R.A. Friesner, J. Tirado-Rives, W.L. Jorgensen, Evaluation and
+reparametrization of the OPLS-AA force field for proteins via comparison with
+accurate quantum chemical calculations on peptides, J. Phys. Chem. B 105
+(2001) 6474–6487.
+[34] L.S. Dodda, J.Z. Vilseck, J. Tirado-Rives, W.L. Jorgensen, 1.14*CM1A-LBCC:
+localized bond-charge corrected CM1A charges for condensed-phase
+simulations, J. Phys. Chem. B 121 (2017) 3864–3870.
+[35] L.S. Dodda, I. Cabeza de Vaca, J. Tirado-Rives, W.L. Jorgensen, LigParGen web
+server: an automatic OPLS-AA parameter generator for organic ligands, Nuclei
+Acid Res. 45 (2017) W331–W336.
+[36] J.-D. Chai, M. Head-Gordon, Long-range corrected hybrid density functionals
+with damped atom-atom dispersion corrections, Phys. Chem. Chem. Phys. 10
+(2008) 6615–6620.
+[37] M.J. Frisch, G.W. Trucks, H.B. Schlegel, G.E. Scuseria, M.A. Robb, J.R. Cheeseman,
+G. Scalmani, V. Barone, B. Mennucci, G.A. Petersson, et al., Gaussian 09,
+Revision D.01, Gaussian, Inc., Wallingford CT, 2009.
+[38] C.M. Breneman, K.B. Wiberg, Determining atom-centered monopoles from
+molecular electrostatic potentials. The need for high sampling density in
+formamide conformational analysis, J. Comput. Chem. 11 (1990) 361–373.
+[39] E. Sigfridsson, U. Ryde, Comparison of methods for deriving atomic charges
+from the electrostatic potential and moments, J. Comput. Chem. 19 (1997)
+377–395.
+[40] L. Martinez, R. Andrade, E.G. Birgin, J.M. Martinez, Packmol: A package for
+building initial configurations for molecular dynamics simulations, J. Comput.
+Chem. 30 (2009) 2157–2164.
+[41] D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A.E. Mark, H.J.C. Berendsen,
+GROMACS: fast, flexible and free, J. Comput. Chem. 26 (2005) 1701–1718.
+[42] W. Humphrey, A. Dalke, K. Schulten, VMD - Visual Molecular Dynamics 14
+(1996) 33–38.
+[43] Y. Zhao, E.S. Sarnello, L.A. Robertson, J. Zhang, Z. Shi, Z. Yu, S.R. Bheemireddy, Y. Z,
+T. Li, R.S. Assary, et al., Competitive Pi-Stacking and H Bond Piling Increase
+Solubility of Heterocyclic Redoxmers, J. Phys. Chem. B 124 (2020) 10409-10418.
+[44] I.A. Shkrob, T. Li, E. Sarnello, L.A. Robertson, Y. Zhao, H. Farag, Z. Yu, J. Zhang, S.
+R. Bheemireddy, Y. Z, et al., Self-Assembled Solute Networks in Crowded
+Electrolyte Solutions and Nanoconfinement of Charged Redoxmer Molecules J.
+Phys. Chem. B 124 (2020) 10226-10236.
+[45] J.-H. Choi, H. Lee, H.R. Choi, M. Cho, Graph theory and ion and molecular
+aggregation in aqueous solutions, Ann. Rev. Phys. Chem. 69 (2018) 125–129.
+[46] H.-J. Gores, J. Barthel, Conductance of salts at moderate and high
+concentrations in propylene carbonate-dimethoxyethane mixtures, J.
+Solution Chem. 9 (1980) 939–954.
+[47] S.-D. Han, O. Borodin, D.M. Seo, Z.-B. Zhou, W.A. Henderson, Electrolyte
+solvation and ionic association V. Acetonitrile-lithium bis(fluorosulfonyl)
+imide (LiFSI) mixtures, J. Electrochem. Soc. 161 (2014) A2042–A2053.
+[48] D.M. Seo, O. Borodin, D. Balogh, M. O’Connell, Q. Ly, S.-D. Han, S. Passerini, W.A.
+Henderson, Electrolyte solvation and ionic association III. Acetonitrile-lithium
+salt mixtures-transport properties, J. Electrochem. Soc. 160 (2013) A1061–
+A1070.
+[49] D.M. Seo, O. Borodin, S.-D. Han, Q. Ly, P.D. Boyle, W.A. Henderson, Electrolyte
+solvation and ionic association I. Acetonitrile-lithium salt mixtures:
+intermediate and highly associated salts, J. Electrochem. Soc. 159 (2012)
+A553–A565.
+[50] M. Teubner, R. Strey, Origin of the scattering peak in microemulsions, J. Chem.
+Phys. 87 (1987) 3195–3200.
+[51] A. Perera, L. Zoranić, F. Sokolić, R. Mazighi, A comparative Molecular Dynamics
+study of water–methanol and acetone–methanol mixtures, J. Molec. Liq. 159
+(2011) 52–59.
+[52] M. Pozar, B. Lovrincevic, L. Zoranic, T. Primorac, F. Sokolic, A. Perera, Microheterogeneity versus clustering in binary mixtures of ethanol with water or
+alkanes, Phys. Chem. Chem. Phys. 18 (2016) 23971–23979.
+[53] A. Perera, R. Mazighi, B. Kežíc, Fluctuations and micro-heterogeneity in
+aqueous mixtures, J. Chem. Phys. 136 (2012) 174516.
+[54] N.H. Attanayake, J. Kowalski, K. Greco, M.D. Casselman, J. Milshtein, S.
+Chapman, S. Parkin, F.R. Brushett, S.A. Odom, Tailoring two-electron
+donating phenothiazines to enable high concentration redox electrolytes for
+use in non-aqueous redox flow batteries, Chem. Mater. 31 (2019) 4353–4363.
+[55] O. Suárez-Iglesias, I. Medina, M.A. Sanz, C. Pizarro, J.L. Bueno, Self-Diffusion in
+Molecular Fluids and Noble Gases: Available Data, J. Chem. Eng. Data 60 (2757)
+2757-2817.
+[56] F.M. Samigullin, Study of translational self-diffusion of molecules in liquids, J.
+Struct. Chem. 14 (1974) 569–574.
+[57] E.H. Hardy, A. Zygar, M.D. Zeidler, Nuclear magnetic relaxation measurements
+on liquid acetonitrile and acetonitrile water mixtures, Z. Phys. Chem. 214
+(2000) 1633–1657.
+[58] J.E. Griffiths, Molecular reorientational motion in liquid acetonitrile: Raman
+band shapes, diffusion constants and activation energy of reorientation, J.
+Chem. Phys. 59 (1973) 751–758.
+[59] P. Yuant, M. Schwatz, Molecular reorientation in acetonitrile: a comparison of
+diffusion coefficients from Raman bandshapes and nuclear magnetic
+resonance relaxation times, J. Chem. Soc. Faraday Trans. 86 (1990) 593–596.
+

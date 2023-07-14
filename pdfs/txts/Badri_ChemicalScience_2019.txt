@@ -1,0 +1,675 @@
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Chemical
+Science
+View Article Online
+
+EDGE ARTICLE
+
+Cite this: Chem. Sci., 2019, 10, 7449
+All publication charges for this article
+have been paid for by the Royal Society
+of Chemistry
+
+View Journal | View Issue
+
+Accurate quantum chemical energies for 133 000
+organic molecules†
+Badri Narayanan,
+
+ab
+
+Paul C. Redfern,b Rajeev S. Assaryb and Larry A. Curtiss*b
+
+The energies of the 133 000 molecules in the GDB-9 database have been calculated at the G4MP2 level of
+theory and then were used to calculate their enthalpies of formation. This database contains organic
+molecules having nine or less atoms of carbon, nitrogen, oxygen, and ﬂuorine, as well as hydrogen
+atoms. The accuracy of the G4MP2 energies was investigated on a subset of 459 of the molecules
+having experimental enthalpies of formation with small uncertainties. On this subset the G4MP2
+enthalpies of formation have an accuracy of 0.79 kcal mol1, which is similar to its accuracy previously
+reported for the smaller G3/05 test set. An error analysis of the theoretical enthalpies of formation of the
+459 molecules is presented in terms of the size and type of the molecules. Three diﬀerent density
+functionals (B3LYP, uB97X-D, M06-2X) were also assessed on 459 molecules of accurate enthalpy data
+for comparison with the G4MP2 results. The G4MP2 energies for the 133 K molecules provide a database
+
+Received 10th June 2019
+Accepted 18th June 2019
+
+that can be used to calculate accurate reaction energies as well as to assess new or existing
+experimental enthalpies of formation. Several examples are given of types of reactions that can be
+
+DOI: 10.1039/c9sc02834j
+
+predicted using the G4MP2 database of energies. The G4MP2 energies of the GDB-9 molecules will also
+
+rsc.li/chemical-science
+
+be useful in future investigations of applications of machine learning to quantum chemical data.
+
+I.
+
+Introduction
+
+Knowledge of thermochemical data of molecules is very
+important in many areas of science. Thermochemical data
+provide the information needed to determine stabilities and
+reactivities of molecules present in combustion, battery electrolytes, drugs, the atmosphere, catalysis, etc. It is especially
+important that the thermochemical data for molecules be of
+chemical accuracy (<1 kcal mol1) for such applications.
+Composite quantum chemical methods have been developed
+that can give molecular energies accurate to better than
+1 kcal mol1. This includes methods such as the Gn theory,1–4
+the Complete Basis Set (CBS) methods,5–7 the correlation
+consistent Composite Approaches (ccCA),8–10 the multicoeﬃcient correlation methods (MCCMs),11–13 Weizmann (Wn)
+methods,14–17 and the Wuhan-Minnesota scaling WMS
+method.18 In addition, accuracies of as small as 0.1 kcal mol1
+can be obtained for small molecules using much more expensive and elaborate methods.19–21 While density functional
+methods are faster, even the latest methods have not yet
+reached an accuracy of better than 1 kcal mol1.22,23 With the
+power of today's computers and using quantum chemical
+a
+
+Department of Mechanical Engineering, University of Louisville, Louisville, Kentucky
+40292, USA
+
+b
+
+Materials Science Division, Argonne National Laboratory, Argonne, Illinois 60439,
+USA. E-mail: curtiss@anl.gov
+† Electronic supplementary
+10.1039/c9sc02834j
+
+information
+
+(ESI)
+
+This journal is © The Royal Society of Chemistry 2019
+
+available.
+
+See
+
+DOI:
+
+methods capable of 1 kcal mol1 accuracy it is now possible to
+predict energies of tens of thousands of molecules that can
+provide a database for calculating millions of reaction energies.
+Such a database of energies can also provide information to
+assess the accuracy of experimental data on enthalpies of
+formation of molecules in the literature, many of which have
+signicant uncertainties.
+In this paper we report on the calculation of the energies of
+133 296 molecules in the GDB-9 database24 using the G4MP2
+method1 with the goal of providing accurate data for these
+molecules to use in calculating reaction energies and assessing
+existing enthalpies of formation. In addition, the accurate
+energies of these molecules can provide the data needed for
+development of low cost machine learning methods for predicting much larger sets of molecular energies. The GDB-9 data
+base contains all molecules of up to nine heavy atoms of the
+rst row (C, N, O, F) and hydrogens. The G4MP2 method has an
+accuracy of better than 1 kcal mol1 (ref. 1) based on the G3/05
+test set, which has a limited number of large molecules.25 We
+used a small subset of the GDB-9 molecules that have very
+accurate experimental enthalpies of formation to ensure that
+the G4MP2 method maintains its accuracy on the larger molecules in the GDB-9 dataset. This subset also provides an
+opportunity to assess the accuracy of some popular density
+functional methods for thermochemical data of larger molecules, which has not previously been done extensively for larger
+molecules. The G4MP2 energies are used to calculate reaction
+energies for ve diﬀerent types of reactions to illustrate how the
+
+Chem. Sci., 2019, 10, 7449–7455 | 7449
+
+
+
+View Article Online
+
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Chemical Science
+
+database of energies can be used to calculate a range of accurate
+reaction energies. In Section II we describe the database and
+molecular notation used as well as the quantum chemical
+methods. In Section III analysis of the errors in enthalpies of
+formation of a subset of the molecules with accurate experimental data is presented for G4MP2 theory as well as for three
+widely used density functional methods. In Section IV the
+calculation of a selection of reaction energies from the database
+is presented. Finally, conclusions are drawn in Section V.
+
+II.
+
+Methods
+
+The computations of the enthalpies of formation of the molecules in the GDB-9 database were carried out with the G4MP2
+method.1 G4MP2 is a composite method based on G4 theory,2
+but with reduced perturbation theory levels to lower the
+computational cost. More specically, in the G4MP2 method
+second-order perturbation theory is used in place of the time
+consuming fourth-order perturbation theory components in the
+G4 method. As a result the G4MP2 method is approximately six
+to eight times faster than the G4 method.1 Other parts of the
+method remain the same as in G4 theory including the CCSD(T)
+component, geometries, and zero-point energies. It was
+assessed on the G3/05 test set of accurate experimental data and
+found to have a mean absolute deviation of 1.04 kcal mol1 for
+454 enthalpies of formation, ionization potentials, electron
+aﬃnities, and proton aﬃnities. For the 138 hydrocarbons and
+substituted hydrocarbons in the G3/05 test set the mean absolute deviation was 0.77 kcal mol1. In order to better assess the
+likely accuracy of G4MP2 for the GDB-9 database of 133 296
+molecules we have selected 459 molecules from the Pedley
+compilation26 that have very accurate (<1 kcal mol1) gas phase
+enthalpies of formation. More details on this test set and how it
+was selected is given in the next section. All calculations were
+carried out with the Gaussian code.27
+In addition, we have carried out density functional calculations on these 459 molecules with three density functional
+methods. The B3LYP28 density functional results on these
+molecules were included in this study because they are part of
+the G4MP2 calculation with B3LYP being used for the geometry
+optimizations. Since the development of the hybrid GGA B3LYP
+functional, numerous other functionals with better performance have been reported.22,23 We chose two other popular
+functionals to assess on the 459 molecules, namely, M06-2X,29
+a hybrid meta-GGA functional, and uB97X-D,30 a GGA functional with dispersion correction. The 6-31G(2df,p) basis set
+used for the B3LYP functional, while the 6-311+G(3df,2p) basis
+(at B3LYP/6-31G(2df,p) geometries) is used for the M06-2X and
+uB97X-D functionals. A smaller basis set was used for B3LYP as
+it gives better results than the larger basis set. It has been noted
+previously that improvement in the basis sets does not always
+lead to improvement in results as is the case with wave function
+based methods.25 It has been suggested that this is due to
+cancelation of errors from an overestimation of the basis set
+superposition error that compensates for the lack of a dispersion correction.31
+
+7450 | Chem. Sci., 2019, 10, 7449–7455
+
+Edge Article
+
+We performed G4MP2 calculations for 133 296 molecules
+belonging to the GDB-9 database24,32 containing varying
+amounts of C, H, O, N, and F atoms; as aforementioned, the
+maximum number of non-hydrogen (heavy) atoms in any
+molecule in this database is 9. The molecules with 9 nonhydrogen atoms dominate the database, comprising 83% of
+the molecules (i.e., 111 128) in the GDB-9 database as shown in
+Table 1; in comparison, there are only 3 molecules with one
+heavy atom, namely CH4, NH3, and H2O. This is expected, owing
+to the large number of elemental combinations, and isomers
+possible for molecules made-up of 9 heavy atoms. In terms of
+molecule types, those made up exclusively of H, C, O and N
+atoms (listed as HCON) are most prominent (50%), followed
+by HCO (34%). For each molecule in the GDB-9 dataset, we
+adopted the DFT-relaxed (using the B3LYP functional) congurations from ref. 24 and 32 to perform calculations at the
+G4MP2 level of theory. We found that 581 molecules out of the
+133 877 molecules in the original GDB-9 database (refs) show
+imaginary modes of vibration; these molecules are discarded
+from this study. For the remaining 133 296 molecules, we
+computed zero-point energies, energies (at 0 K), enthalpies, free
+energies, standard enthalpies of formation, and atomization
+energies. The G4MP2 values, and atomic coordinates of all the
+molecules are stored within an Atomic Simulation Environment
+(ASE) database33 compatible with JSON and SQLite3 backends.
+The molecules and their corresponding G4MP2 data are all
+cross-indexed by their chemical formula, SMILES, and InChI
+keys. This makes it straightforward to retrieve G4MP2 for a class
+of compounds, isomers, or specic molecule from this database
+using a Python script (an example Python script to retrieve data
+is provided in the ESI†). Furthermore, the use of such a database enables fast/eﬃcient search for data (on-demand) necessary for various machine-learning studies.
+
+III. Assessment of expected accuracy
+of G4MP2 for the GDB-9 database
+In order to assess the accuracy of the G4MP2 method for the
+GDB-9 database we selected all molecules from the database
+that had an experimental value in the Pedley compilation26 with
+an uncertainty of less than 1 kcal mol1. This resulted in a total
+of 510 molecules. Comparing the G4MP2 and experimental
+values we found a number of values in disagreement by
+substantially more than 1 kcal mol1. In order to ensure that we
+had a reasonably accurate experimental test set we examined
+more closely all experimental values that diﬀered by more than
+2.50 kcal mol1 with G4MP2, of which there were 63. We then
+checked to see if there were any other recent experimental
+values that conicted with the Pedley values. In 12 cases (see
+ESI†) there were other values that diﬀered by more than
+1 kcal mol1, the quoted uncertainty of the Pedley value. In
+those cases we eliminated them from the test set as we could
+not verify their accuracy. That le 51 cases of diﬀerences greater
+than 2.5 kcal mol1. In those cases we used an isodesmic
+scheme34 to evaluate the questionable experimental values. The
+isodesmic scheme is one previously developed using G2MP2
+
+This journal is © The Royal Society of Chemistry 2019
+
+
+
+View Article Online
+
+Edge Article
+
+Chemical Science
+
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Table 1 Distribution of molecules in the GDB-9 database. We provide the number of molecules containing diﬀerent number of non-hydrogen
+atoms (left two columns), as well as for prominent molecule types, each with diﬀerent constituent elements (right two columns)
+
+Number of heavy atoms
+
+Number of molecules
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+3 (CH4, H2O, NH3)
+5
+9
+31
+129
+615
+3171
+18 205
+111 128
+
+Table 2
+
+Constituent elements
+of molecule
+
+Number of molecules
+
+HCON
+HCO
+HCN
+HC
+HCOFN
+HCFN
+HCOF
+HCF
+
+66 573
+45 601
+14 092
+4849
+1061
+734
+244
+90
+
+Mean absolute deviations (MAD) from experiment for the Pedley test set for G4MP2 and DFT methods
+
+Molecule typea
+
+G4MP2b
+
+B3LYPc
+
+M06-2Xc
+
+uB97X-Dc
+
+Hydrocarbons (175)
+Substituted hydrocarbons (284)
+Total (459)
+
+0.68 (0.63)
+0.86 (0.83)
+0.79 (0.77)
+
+2.77
+4.74
+3.99
+
+3.06
+2.51
+2.71
+
+1.35
+2.16
+1.85
+
+a
+Number of molecules given in parentheses. b G4MP2 MAD for the G3/05 test set25 given in parentheses. The G3/05 test set has 38 hydrocarbons,
+100 substituted hydrocarbons, and 138 molecules in total, 92 of which are in common with the Pedley test set. c The B3LYP energies were calculated
+with the 6-31G(2df,p) basis at the B3LYP/6-31G(2df,p) geometry; the M06-2X and uB97X-D energies were calculated with the 6-311+G(3df,2p) basis at
+the B3LYP/6-31G(2df,p) geometry. The zero-point energies used for the density functional results are unscaled ones from B3LYP/6-31G(2df,p).
+
+energies34 and very accurate experimental values for small
+molecules. This isodesmic scheme was found to give enthalpies
+of formation accurate to 0.5 kcal mol1.34 We eliminated 39
+molecules from the test set based on the criterion that the
+suspect experimental value diﬀered by more than 2 kcal mol1
+from the G2MP2 isodesmic enthalpy of formation. These
+experimental enthalpies of formation will be the subject of
+further high level quantum chemical calculations. The
+remaining 12 with diﬀerences greater than 2.50 kcal mol1 were
+kept in the test set as there was no basis to discard them. The
+resulting test set, referred to as the Pedley test set, has 459
+molecules including 175 hydrocarbons and 284 substituted
+hydrocarbons. We note that we have selected this test set for
+assessing the accuracy of G4MP2 on the organic molecules as
+opposed to others that are available35,36 because it is based on
+experimental numbers from a compilation, all of which have
+a quoted uncertainty. About 92 of the 459 molecules are
+included in the G3/05 test set, which also included molecules
+containing S and Cl as well as some larger systems.
+The Pedley test set of 459 enthalpies of formation is given in
+Table S2 of the ESI.† Also given in the table are the G4MP2
+calculated enthalpies of formation and the experimental
+enthalpies of formation along with the diﬀerences between the
+two. Table 2 gives a summary of the results in terms of mean
+absolute deviations (MAD) between experimental values and the
+G4MP2 values. The MAD between experiment and G4MP2 for
+the Pedley test set is 0.79 kcal mol1, which is comparable to
+MAD of 0.77 kcal mol1 of the smaller G3/05 test set of similar
+type molecules. The breakdown in terms of types of molecules
+(hydrocarbon and substituted hydrocarbons) is also similar.
+
+This journal is © The Royal Society of Chemistry 2019
+
+Mean absolute deviations (MAD) of G4MP2 and three DFT
+methods for the Pedley test set of 459 molecules as a function of
+number of heavy atoms.
+
+Fig. 1
+
+Mean absolute deviations (MAD) per electron pair of the G4MP2
+and three DFT methods for the Pedley test set of 459 molecules as
+a function of number of heavy atoms.
+
+Fig. 2
+
+Chem. Sci., 2019, 10, 7449–7455 | 7451
+
+
+
+View Article Online
+
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Chemical Science
+
+Edge Article
+
+Atomization energy as a function of standard enthalpy of formation at 298 K for (a) 133 K molecules in GDB-9 dataset, and (b) 459
+molecules in the selected Pedley test set. In each panel, a frequency distribution of atomization energy and standard enthalpy of formation
+among the molecules is shown at the top and right margins, respectively.
+
+Fig. 3
+
+Fig. 1 shows the MAD as a function of the number of heavy
+atoms (CNOF) in the molecule. This plot shows a gradually
+increasing error with size of the molecule for G4MP2. This is
+expected and has been found previously for long chain
+alkanes.37 The increase in error with size is due to the increase
+in the number of electron pairs. In Fig. 2 we have plotted the
+error per electron pair as a function of number of heavy atoms.
+This shows that the size of the error is quite level with
+increasing molecule size. In terms of calculating reaction
+energies from G4MP2 enthalpies of formation (see Section IV),
+the resulting reaction energies should be quite accurate because
+they are based on breaking one or a couple of bonds, whereas
+the enthalpies of formation are based on breaking all bonds in
+the molecule, i.e. they are calculated from atomization energies
+(along with temperature corrections, elemental standard states,
+and zero-point energies).38
+The Pedley test provides an opportunity to assess the accuracy of some popular density functional methods for thermochemical data of larger molecules. Previous test sets of
+thermochemical data used for assessing density functional have
+not included as extensive a set of larger molecules as the Pedley
+set established for this work. An error analysis on the Pedley test
+set was carried out for three popular DFT methods B3LYP,28
+M06-2X,29 and uB97X-D.30 The results for these three functionals are given in Table 2 with details for all 459 molecules
+given in ESI Tables 3–5.† The uB97X-D functional performs the
+best with a mean absolute deviation of 1.85 kcal mol1 for the
+459 molecules. M06-2X has an mean absolute deviation of
+2.71 kcal mol1. B3LYP has the largest mean absolute deviation
+of the three at 3.99 kcal mol1. Thus, even the best functional
+tested has a mean absolute deviation of more than twice as large
+as G4MP2. Fig. 1 shows the MAD for the three functionals as
+a function of the number of heavy atoms (CNOF) in the molecule. The plots show a generally increasing error with size of the
+molecule for the three functionals. In Fig. 2 the error per electron pair is plotted as a function of number of heavy atoms,
+which shows that the error remains approximately constant as
+the molecule size increases with the exception of B3LYP that
+
+7452 | Chem. Sci., 2019, 10, 7449–7455
+
+shows a decreasing trend. The trends for M06-2X and uB97X-D
+are similar to G4MP2.
+
+IV. Analysis of the energies of the 133
+K molecules in the GD9 database
+The energies of the 133 K molecules were calculated at the
+G4MP2 level of theory and are available from the ESI† on the
+
+Fig. 4 Standard enthalpy of formation from G4MP2 calculations of the
+133 K organic molecules classiﬁed into various groups of atom types.
+
+Standard enthalpy of formation of CHO type molecules as
+a function of diﬀerent number of oxygen atoms, as obtained from
+G4MP2 calculations.
+
+Fig. 5
+
+This journal is © The Royal Society of Chemistry 2019
+
+
+
+View Article Online
+
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Edge Article
+
+Chemical Science
+
+Web.33 Fig. 3 shows a plot of the atomization energies vs. the
+enthalpies of formation that illustrate the distribution of
+both types of energies. It is noted that for the 133 K molecules, the enthalpies of formation have a much larger range
+of positive values than those of the Pedley test set of 459
+molecules while the atomization energies have a similar
+range of values. The reason for the diﬀerence in distributions
+for the more positive enthalpies of formation is probably
+because the GDB-9 set includes some hypothetical molecules
+that can be more unstable (i.e., positive enthalpies of
+formation). This type of molecule would be hard to synthesize, and thus are not present in the Pedley test set. Otherwise
+
+Table 3
+
+the Pedley test seems to be a good representation of the GDB9 set.
+The trends in the G4MP2 enthalpies of formation with the
+types of atoms in the molecules are shown in Fig. 4 and 5. In
+Fig. 4 the enthalpies of formation of the 130 K organic molecules are classied into various groups of atom types. This
+gure indicates that addition of oxygen and uorine to the
+molecules generally increases their stability, i.e. they have more
+negative enthalpies of formation, whereas addition of nitrogen
+has the opposite eﬀect. In Fig. 5 the enthalpies of formation of
+CHO type molecules as a function of number of oxygen atoms is
+shown. It is apparent from this gure that increasing the
+
+Examples of reaction energies (in kcal mol1) derived from the G4MP2 energies
+
+Alcohol oxidation
+
+Alkane oxidation
+
+Ether hydrolysis
+
+Hydrogenolysis
+
+R1 ¼ H
+R1 ¼ H
+R1 ¼ CH3
+R1 ¼ CH3
+R1 ¼ C2H5
+
+R2 ¼ H
+R2 ¼ CH3
+R2 ¼ CH3
+R2 ¼ C3H7
+R2 ¼ C2H5
+
+R¼H
+R ¼ CH3
+R ¼ C2H5
+R ¼ C3H7
+R ¼ C4H9
+
+DE ¼ 97.5
+DE ¼ 102.4
+DE ¼ 105.3
+DE ¼ 105.6
+DE ¼ 106.0
+
+DE ¼ 88.4
+DE ¼ 94.4
+DE ¼ 94.3
+DE ¼ 94.2
+DE ¼ 94.3
+
+R1 ¼ CH3
+R1 ¼ CH3
+R1 ¼ C2H5
+R1 ¼ C3H7
+R1 ¼ C4H9
+
+R2 ¼ CH3
+R2 ¼ C2H5
+R2 ¼ C5H11
+R2 ¼ C4H9
+R2 ¼ C4H9
+
+DE ¼ 5.9
+DE ¼ 6.3
+DE ¼ 6.8
+DE ¼ 6.8
+DE ¼ 6.9
+
+R1 ¼ H
+R1 ¼ H
+R1 ¼ CH3
+R1 ¼ CH3
+R1 ¼ C2H5
+
+R2 ¼ CH3
+R2 ¼ C6H13
+R2 ¼ CH3
+R2 ¼ C3H7
+R2 ¼ C2H5
+
+DE ¼ 6.0
+DE ¼ 6.9
+DE ¼ 10.4
+DE ¼ 10.6
+DE ¼ 11.5
+
+R1 ¼ H
+R1 ¼ H
+R1 ¼ CH3
+R1 ¼ CH3
+R1 ¼ C2H5
+
+R2 ¼ H
+R2 ¼ CH3
+R2 ¼ CH3
+R2 ¼ C3H7
+R2 ¼ C2H5
+
+DE ¼ 19.7
+DE ¼ 14.8
+DE ¼ 11.9
+DE ¼ 11.6
+DE ¼ 11.2
+
+Carbonyl reduction
+
+This journal is © The Royal Society of Chemistry 2019
+
+Chem. Sci., 2019, 10, 7449–7455 | 7453
+
+
+
+View Article Online
+
+Open Access Article. Published on 27 June 2019. Downloaded on 1/11/2023 4:51:58 PM.
+This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence.
+
+Chemical Science
+
+number of oxygens in the molecules generally increases their
+stability.
+Since the G4MP2 energy calculation also includes the B3LYP/
+6-31G(2df,p) method for geometry optimization, we also obtained these energies for the 133 K molecules in the GDB-9
+database and they are included in the ESI† on the Web.33 The
+mean absolute deviation between these B3LYP energies and the
+G4MP2 energies is 4.54 kcal mol1. The breakdown of the mean
+absolute deviations for B3LYP with G4MP2 as a function of size
+of the molecule and type of molecule is given in ESI Fig. 1.† The
+error increases slightly with size of molecule. In addition, the
+B3LYP results in this gure indicate that the molecules containing uorine have much larger deviations with G4MP2 than
+those not containing uorine.
+The database of G4MP2 enthalpies of formation provides
+a source of data for the derivation of accurate energies of
+millions of reactions involving organic molecules up to nine
+heavy atoms. To illustrate this we have calculated some energies
+for ve diﬀerent types of reactions from the G4MP2 energies
+and tabulate them in Table 3. These include (1) alcohol oxidation, (2) alkane oxidation, (3) ether hydrolysis, (4) hydrogenolysis, and (5) carbonyl reduction. Energies for all of these
+types of reactions are expected to be accurate to about
+1 kcal mol1 based on the accuracy of the G4MP2 energies. In
+addition to the reaction energies that can be derived, the large
+database of enthalpies of formation also provides a basis on
+which to assess existing or newly measured enthalpies of
+formation. The method by which the enthalpies of formation
+can be obtained from the database of G4MP2 energies33 is
+described in the ESI.†
+
+V. Conclusions
+Energies for the 133 000 molecules in the GDB-9 database,
+containing organic molecules having nine or less atoms of
+carbon, nitrogen, oxygen, and uorine as well as hydrogen
+atoms, have been calculated at the G4MP2 level of theory. The
+following conclusions can be drawn from this study:
+(1) The accuracy of the G4MP2 energies was investigated on
+a subset of 459 of the molecules having experimental enthalpies
+of formation with small uncertainties and was found to have an
+accuracy of 0.79 kcal mol1, which indicates the G4MP2
+enthalpies of formation of the GDB-9 database should have
+a similar accuracy.
+(2) Three diﬀerent density functionals (B3LYP, uB97X-D,
+M06-2X) were also assessed on 459 molecules of accurate
+enthalpy data for comparison with the G4MP2 results and the
+latter two were found to be much more accurate that B3LYP, but
+less accurate than G4MP2.
+(3) The G4MP2 energies for the 133 K molecules provide
+a database that can be used to calculate accurate reaction
+energies as well as to assess new or existing experimental
+enthalpies of formation.
+The G4MP2 energies of the GDB-9 molecules will also be
+useful in future investigations of applications of machine
+learning to quantum chemical data by providing a large database of accurate energies for machine learning to develop new
+
+7454 | Chem. Sci., 2019, 10, 7449–7455
+
+Edge Article
+
+low cost methods for accurately predicting enthalpies of
+formation of the millions of molecules having more than nine
+heavy atoms, as well as reaction energies.
+
+Conﬂicts of interest
+There are no conicts to declare.
+
+Acknowledgements
+This work was supported by the Joint Center for Energy Storage
+Research (JCESR), an Energy Innovation Hub funded by the U.S.
+Department of Energy, Oﬃce of Science, Basic Energy Sciences.
+We acknowledge a generous grant of computer time from the
+ANL Laboratory Computing Resource Center (Bebop).
+
