@@ -5,7 +5,7 @@ def convert_pdf_to_txt(directory):
     for filename in os.listdir(directory):
         if filename.endswith(".pdf"):
             txt_filename = f"{os.path.splitext(filename)[0]}.txt"
-            txt_path = os.path.join(directory, txt_filename)
+            txt_path = os.path.join(directory,"txts", txt_filename)
             # Check if the txt file already exists
             if not os.path.exists(txt_path):
                 pdf_path = os.path.join(directory, filename)
