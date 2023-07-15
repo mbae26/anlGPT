@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gpt3-finetune"
+version = "0.1.0"
+description = ""
+authors = ["mbae26 <minseok@stanford.edu>"]
+readme = "README.md"
+packages = [{include = "gpt3_finetune"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+llama-index = "^0.7.8"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
