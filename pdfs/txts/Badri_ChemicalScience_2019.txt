@@ -666,10 +666,3 @@ heavy atoms, as well as reaction energies.
 Conﬂicts of interest
 There are no conicts to declare.
 
-Acknowledgements
-This work was supported by the Joint Center for Energy Storage
-Research (JCESR), an Energy Innovation Hub funded by the U.S.
-Department of Energy, Oﬃce of Science, Basic Energy Sciences.
-We acknowledge a generous grant of computer time from the
-ANL Laboratory Computing Resource Center (Bebop).
-

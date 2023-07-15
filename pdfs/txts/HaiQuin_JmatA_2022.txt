@@ -1103,16 +1103,3 @@ approval to the nal version of the manuscript.
 Conﬂicts of interest
 There are no conicts to declare.
 
-Acknowledgements
-The research was nancially supported by the Joint Center for
-Energy Storage Research (JCESR), an Energy Innovation Hub
-funded by the U.S. Department of Energy, Oﬃce of Science,
-Basic Energy Sciences. H. Q. gratefully acknowledges Dr Alexander Vladimirovich Ulanov (Metabolomics Center, Roy J.
-Carver Biotechnology Center, University of Illinois at UrbanaChampaign) for assistance with the setup of GC-MS
-instruments. N. A. I. gratefully acknowledges support by the
-National Science Foundation Graduate Research Fellowship
-Program under Grant No. DGE – 1746047. We gratefully
-acknowledge the computing resources provided on Bebop,
-a high-performance computing cluster operated by the Laboratory Computing Resource Center at Argonne National
-Laboratory.
-
