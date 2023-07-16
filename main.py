@@ -3,8 +3,13 @@ from llama_index import SimpleDirectoryReader, StorageContext, load_index_from_s
 from llama_index import ServiceContext 
 from llama_index import GPTVectorStoreIndex
 import openai
+import logging
+import sys
 
-os.environ["OPENAI_API_KEY"] = 'Your API key'
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+# logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+
+os.environ["OPENAI_API_KEY"] = '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'
 
 def build_storage(data_dir):
     documents = SimpleDirectoryReader(data_dir).load_data()
