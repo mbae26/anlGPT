@@ -4,7 +4,7 @@ from llama_index import ServiceContext
 from llama_index import GPTVectorStoreIndex
 import openai
 
-os.environ["OPENAI_API_KEY"] = 'Your openAI API key'
+os.environ["OPENAI_API_KEY"] = 'Your API key'
 
 def build_storage(data_dir):
     documents = SimpleDirectoryReader(data_dir).load_data()
@@ -27,13 +27,17 @@ def adding_data_to_GPT():
         index = read_from_storage(persist_dir)
     else:
         index = build_storage(data_dir)
-        query_engine = index.as_query_engine()
         
-    query = input("Ask GPT a question: ")
+    query_engine = index.as_query_engine()
     
-    response = query_engine.query(query)
-    
-    print(response)
+    while True:    
+        query = input("Ask GPT a question (or type 'exit' to stop):")
+
+        if query.lower() == "exit":
+            break
+        
+        response = query_engine.query(query)
+        print(response)
     
     
 if __name__ == '__main__':
