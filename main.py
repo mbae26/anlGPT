@@ -9,7 +9,7 @@ import sys
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 # logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 
 def build_storage(data_dir):
     documents = SimpleDirectoryReader(data_dir).load_data()
