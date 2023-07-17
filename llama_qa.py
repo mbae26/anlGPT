@@ -2,14 +2,16 @@ import os
 from llama_index import SimpleDirectoryReader, StorageContext, load_index_from_storage
 from llama_index import ServiceContext 
 from llama_index import GPTVectorStoreIndex
+from dotenv import load_dotenv
 import openai
 import logging
 import sys
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
-
-os.environ["OPENAI_API_KEY"] = ''
+load_dotenv()
+api = os.getenv('OPEN_AI_KEY')
+os.environ["OPENAI_API_KEY"] = api
 
 def build_storage(data_dir):
     # Load the documents
@@ -29,7 +31,7 @@ def read_from_storage(persist_dir):
 def adding_data_to_GPT():
     openai.api_key = os.environ["OPENAI_API_KEY"]
     # Relative path to the directory of data
-    data_dir = "./pdfs/txts"
+    data_dir = "./data/txts"
     # Relative path to the storage of index
     persist_dir = "./storage"
     index = None
