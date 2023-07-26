@@ -11,7 +11,7 @@ Cite this: DOI: 10.1039/d2dd00088a
 
 View Journal
 
-Accelerating the evaluation of crucial descriptors
+Title: Accelerating the evaluation of crucial descriptors
 for catalyst screening via message passing neural
 network†
 Hieu A. Doan, *a Chenyang Li,

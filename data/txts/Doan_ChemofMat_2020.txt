@@ -2,7 +2,7 @@ pubs.acs.org/cm
 
 Article
 
-Quantum Chemistry-Informed Active Learning to Accelerate the
+Title: Quantum Chemistry-Informed Active Learning to Accelerate the
 Design and Discovery of Sustainable Energy Storage Materials
 Hieu A. Doan, Garvit Agarwal, Hai Qian, Michael J. Counihan, Joaquín Rodríguez-Loṕ ez,
 Jeﬀrey S. Moore, and Rajeev S. Assary*
