@@ -165,3 +165,4 @@ gpt_env/
 /chroma_db/
 /faiss/
 /grobid-0.7.3/
+/faiss_grobid/
