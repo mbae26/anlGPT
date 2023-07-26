@@ -163,3 +163,4 @@ gpt_env/
 *.DS_Store/
 /doctran.ipynb
 /chroma_db/
+/faiss/
