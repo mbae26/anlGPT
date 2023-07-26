@@ -4,7 +4,7 @@ import model_const
 import openai
 from dotenv import load_dotenv
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma, FAISS
+from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import TextLoader
@@ -30,7 +30,6 @@ def load_docs(data_dir):
     return chunked_documents
 
 def chatbot(question):
-    # gpt-4-32k
     llm = ChatOpenAI(model_name="gpt-4", temperature=0)
     prompt = PromptTemplate(
         input_variables=['question'],
@@ -60,7 +59,6 @@ def chatbot(question):
 if __name__ == "__main__":
     # store path to data and storage directory
     data_dir = "./data/txts"
-    #persist_dir = "./chroma"
     persist_dir = "./faiss"
     
     if not os.path.exists(persist_dir):
@@ -69,13 +67,8 @@ if __name__ == "__main__":
         os.makedirs(persist_dir)  # Create persist_dir before saving
         db.save_local(os.path.join(persist_dir, "faiss_index"))  # Save faiss_index inside persist_dir
 
-        #vectordb = Chroma.from_documents(chunked_documents, embeddings=OpenAIEmbeddings, persist_directory=persist_dir)
-        #vectordb.persist()
     else:
-        #vectordb = Chroma(persist_directory=persist_dir)
         db = FAISS.load_local(os.path.join(persist_dir, "faiss_index"), embeddings=OpenAIEmbeddings())
-    
-    #qa = ConversationalRetrievalChain.from_llm(ChatOpenAI(temperature=0.2, model_name="gpt-3.5-turbo"), vectordb.as_retriever(search_kwargs={'k': 6}), return_source_documents=True, verbose=False)  
 
     chat_history = []
     # Start conversations

@@ -32,11 +32,19 @@ def load_docs(data_dir):
     
     return chunked_documents
 
+def print_sources(response):
+    for source in response['source_documents']:
+        print(source.metadata['source'])
+        
+    return 
+
 def chatbot(question):
-    # gpt-4-32k
     llm = ChatOpenAI(model_name="gpt-4", temperature=0)
     
-    qa = RetrievalQA.from_chain_type(llm, "stuff", retriever=vectordb.as_retriever(search_kwargs={'k': 5}))
+    QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"], template=model_const.QA_TEMPLATE)
+    
+    qa_chain = RetrievalQA.from_chain_type(llm, "stuff", retriever=vectordb.as_retriever(search_kwargs={'k': 5}), chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}, return_source_documents=True)
+    
     # stop if input is exit, quit, q, or f
     if question == "exit" or question == "quit" or question == "q" or question == "f":
         print("Exiting...")
@@ -44,8 +52,7 @@ def chatbot(question):
     # skip if input is empty
     if question == '':
         return
-    response = qa.run(question)
-    
+    response = qa_chain({"query": question})
     return response
 
 if __name__ == "__main__":
@@ -69,5 +76,7 @@ if __name__ == "__main__":
     # Start conversations
     while True:
         question = input("chat with GPT (or type 'exit' to stop): ")
-        print("Response: " + chatbot(question) + "\n")
+        response = chatbot(question)
+        print("Response: " + response['result'] + "\n")
+        print_sources(response)
         print("---------------------------------------------------------------------------------------------------------------------------------")
