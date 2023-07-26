@@ -1,0 +1,2289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Accelerating the evaluation of crucial descriptors for catalyst screening via message passing neural network †</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2022-11-29">29 November 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hieu</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+							<email>hadoan@anl.gov</email>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Chenya</forename><surname>Li</surname></persName>
+							<idno type="ORCID">0000-0002-9571-3307</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Logan</forename><surname>Ward</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Data Science and Learning Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mingxia</forename><surname>Zhou</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Larry</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<email>assary@anl.gov</email>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">State Key Laboratory of Heavy Oil Processing</orgName>
+								<orgName type="institution">China University of Petroleum Beijing</orgName>
+								<address>
+									<postCode>102249</postCode>
+									<settlement>Beijing</settlement>
+									<country key="CN">China</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Accelerating the evaluation of crucial descriptors for catalyst screening via message passing neural network †</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-11-29">29 November 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">127AC629B04F376EB8BF6FC17AE3019F</idno>
+					<idno type="DOI">10.1039/d2dd00088a</idno>
+					<note type="submission">Received 18th August 2022 Accepted 18th November 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>A priori catalyst design guidelines from first principles simulations and reliable data-driven models are essential for cost efficient catalyst discovery. Nonetheless, acquiring all properties that control catalytic activity and stability is computationally challenging due to the complex interactions among reactants, intermediates, and products at the active sites. Therefore, predictions of only the most relevant catalytic properties, or catalyst descriptors, are often used to guide new catalyst design. In the context of upgrading biomass materials via deoxygenation reaction to value-added chemicals, the molybdenum carbides (Mo 2 C) have been considered among the most active and economically viable catalysts.</p><p>Unfortunately, one of the bottlenecks related to longer term stability of Mo 2 C catalysts is the susceptibility to surface oxidation, a common problem in heterogeneous catalysis, which requires the use of excess hydrogen for active site regeneration. By using surface dopants to tune the oxygen affinity (catalyst descriptor) of Mo 2 C surfaces, it is possible to design new doped Mo 2 C catalysts with desired reactivity and stability. Here, we first employed periodic density functional theory to perform 20 000 high-throughput VASP simulations of oxygen binding energies (BE O ) on various pristine and doped Mo 2 C surfaces. We computed and developed a binding energy database of 20 000 oxygen adsorption structures consisting of 7 low Miller-index surfaces, 23 d-block elements as single-atom dopants, all possible surface terminations, dopant locations, and adsorption sites. Utilizing this dataset, we developed a message passing neural network (MPNN) machine learning model for extremely fast BE O prediction using only unoptimized local adsorption geometries as inputs. The best model yields a mean absolute error of 0.176 eV for BE O with respect to computed values from DFT. Our results highlight the use of MPNN as an accurate and broadly applicable machine learning approach to accelerate descriptor-based catalyst discovery.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Biomass conversion technology has the potential to alleviate our dependence on fossil fuels and promote a sustainable energy future. <ref type="bibr" target="#b0">1</ref> To produce fuels and chemicals, raw biomass materials must be rst transformed into bio-oils via fast pyrolysis. The high oxygen content in bio-oils is undesirable and oen removed using hydrodeoxygenation (HDO), a catalytic process in which C-O bond cleavage is carried out in the presence of H 2 gas as the reductant. <ref type="bibr" target="#b1">2</ref> Transition metal carbides have been considered the promising catalyst candidates for HDO reactions <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref> as they are of low cost and, in the case of Mo 2 C, can achieve Pt-like catalytic activity. <ref type="bibr" target="#b6">7</ref> Furthermore, strategies to modify Mo 2 C catalysts with transition metals to enhance HDO activity has been employed in both experimental and computational studies. <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref> A key challenge remaining with Mo 2 C as an HDO catalyst is the surface susceptibility to oxygen poisoning, which requires excess H 2 for the regeneration of the catalyst. <ref type="bibr" target="#b15">16</ref> Therefore, attenuating oxygen affinity toward Mo 2 C surface is necessary to improve the overall catalytic stability and performance. To this end, our previous computational study demonstrated that, by doping Mo 2 C surfaces with Ni atoms at low concentration, it is possible to weaken oxygen atom binding energy (BE O ) strength and subsequently enable the ease of oxygen removal via water formation and desorption. <ref type="bibr" target="#b10">11</ref> Such evidence also indicates that the computed BE O values on Mo 2 Cbased catalyst surfaces may be used as descriptors to gauge the stability against oxidation.</p><p>In recent years, computational screenings of descriptors have been carried out for various catalytic systems including bimetallic alloys, <ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref> single-atom catalysts, <ref type="bibr" target="#b19">20</ref> and transition metal carbides and nitrides <ref type="bibr" target="#b5">6</ref> via density functional theory (DFT) simulations. Nevertheless, the high cost of DFT calculations remains the bottleneck of high-throughput descriptor generation. To circumvent such problem, machine learning (ML) models utilizing existing DFT-computed datasets have been developed to accelerate the prediction of catalytic descriptors such as binding energies, <ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref><ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref> adsorption dynamics, <ref type="bibr" target="#b32">33</ref> d-band centers, <ref type="bibr" target="#b33">34</ref> and activation energy barriers. <ref type="bibr" target="#b34">35,</ref><ref type="bibr" target="#b35">36</ref> Notably, graph neural networks (GNNs) previously employed for property prediction of molecules <ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref><ref type="bibr" target="#b39">[40]</ref> have been quickly adopted for crystalline materials. <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref><ref type="bibr" target="#b43">[44]</ref> Perhaps, an attractive feature of GNN over typical ML approaches is the use of neural graph ngerprint <ref type="bibr" target="#b36">37</ref> that enables the prediction and interpretation of global properties based on local atomic contributions. To date, GNN frameworks such as message passing neural network (MPNN), <ref type="bibr" target="#b44">45</ref> crystal graph convolutional neural network (CGCNN), <ref type="bibr" target="#b40">41</ref> materials graph network (MEGNet), <ref type="bibr" target="#b45">46</ref> and SchNet 47 provide exible methods for training ML models to predict properties of various materials from isolated molecules to bulk crystals to catalytic surfaces. For an in-depth review of these GNN models and their performance benchmark, we refer the readers to a recent publication by Fung et al. <ref type="bibr" target="#b47">48</ref> Applications of GNNs in computational heterogenous catalysis have been demonstrated recently via the prediction of binding energies of various catalytic surface intermediates. <ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b49">50</ref> For clarity and practicality, the following reported mean absolute errors (MAEs), an accuracy metric of MLpredicted values relative to DFT values, are for the predictions on geometries prior to DFT optimization only (i.e., unrelaxed geometries). With a dataset of ca. 40 000 datapoints, <ref type="bibr" target="#b17">18</ref> Back and colleagues developed and trained a CGCNN to predict adsorption energies of CO and H on bimetallic alloys and obtained an MAE of 0.19 eV for both species. <ref type="bibr" target="#b48">49</ref> Gu et al. <ref type="bibr" target="#b49">50</ref> further improved the accuracy of CGCNN-predicted binding energies of CO and H (MAE CO = 0.128 eV and MAE H = 0.096 eV) using the same dataset but a different representation for the adsorption sites. In lieu of atom-based features, Fung and co-workers used the density of states of the surface atoms to develop a convolutional neural network for binding energy prediction. <ref type="bibr" target="#b42">43</ref> A diverse set of monoatomic (H, C, N, O, and S) and hydrogenated species (CH, CH 2 , CH 3 , NH, OH, and SH) on bimetallic alloy surfaces was employed (∼37 000 adsorption geometries). On average, an MAE value on the order of 0.1 eV was achieved. While these seminal examples highlight GNNs are useful to predict adsorption energies of various reaction intermediates quickly and accurately, the compositional nature of the datasets limits their applicability to only bimetallic transition metal alloys during computational catalyst screening.</p><p>Similar to bimetallic systems, computational screening of adsorption energies such as BE O for Mo 2 C-based catalysts is an important but challenging task. However, unlike binary alloys, doped Mo 2 C structures typically consist of up to three elements (metal dopant, Mo, and C) and are therefore more complex in composition. Furthermore, metal carbide surfaces are structurally diverse, yielding multiple terminations per surface index. <ref type="bibr" target="#b50">51</ref> The difficulty in developing accurate GNN models for catalyst property prediction in similar ternary systems such as ternary alloys <ref type="bibr" target="#b51">52</ref> and binary oxides <ref type="bibr" target="#b52">53</ref> have been addressed recently. Given a similar size of training data (∼10 4 ), the MAE of GNN-predicted adsorption energies on bimetallic alloys can reach a value of 0.1 eV, whereas the MAE obtained for a dataset containing ternary alloys is approximately one order of magnitude less accurate at MAE = 1.0 eV. <ref type="bibr" target="#b51">52</ref> Therefore, it is necessary to further improve the performance of ML models on ternary catalyst systems by creating more diverse datasets and improving feature representation. In this work, we aimed to generate high-delity DFT data for ∼20 000 catalyst models (doped Mo 2 C catalysts) and develop GNN models with suitable graph representation for accurate oxygen binding energy predictions. To do so, as shown in Scheme 1, we rst enumerated approximately 20 000 adsorption geometries for oxygen on pristine and doped Mo 2 C catalyst surfaces and carried out DFT calculations to evaluate their corresponding BE O values. Then, we utilized this dataset to develop a message passing neural network using local coordination graph representation (LCG-MPNN) for BE O prediction. Finally, in addition to the development of the data-driven deep learning model, we analyzed the representations learned by our model to better understand the effect of surface structure and composition on BE O .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enumeration of adsorption geometries on pristine and doped Mo 2 C</head><p>The crystal structure of orthorhombic Mo 2 C (materials project ID: mp -1552) was used as bulk to obtain the following optimized lattice parameters: a = 4.743 Å, b = 5.232 Å, and c = 6.058 Å. The bulk unit cell was sliced to create 7 low Miller-index surfaces including (100), (010), (001), (110), (101), (011), and (111) (see Fig. <ref type="figure" target="#fig_6">S1 †</ref>). For each surface index, all possible terminations were considered, and a total of 54 unique surface terminations were generated for pristine Mo 2 C. The pristine terminations were then doped with 23 different transition metal elements (see Fig. <ref type="figure" target="#fig_3">S2 †</ref>), one at a time, by replacing a surface Mo atom with a dopant atom. Finally, all possible oxygen adsorption sites were enumerated on both pristine and doped Mo 2 C surfaces via Delaunay triangulation as implemented in the Catalysis Kit (CatKit) package. <ref type="bibr" target="#b53">54</ref> Note that the placement of the oxygen atom is not required to be in the immediate vicinity of a dopant atom. A total of 20 177 oxygen adsorption structures were generated using Atomic Simulation Environment (ASE) <ref type="bibr" target="#b54">55</ref> package and subsequently evaluated for oxygen binding energies (BE O ) using a high-throughput DFT calculation workow managed by Balsam. <ref type="bibr" target="#b55">56</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Density functional theory (DFT) calculations</head><p>All DFT calculations were carried out using version 5.4.1 of the Vienna Ab initio Simulation Package (VASP/5.4.1). <ref type="bibr" target="#b56">57,</ref><ref type="bibr" target="#b57">58</ref> The core and valence electrons were represented by the projector augmented wave (PAW) method <ref type="bibr" target="#b58">59,</ref><ref type="bibr" target="#b59">60</ref> with a kinetic energy cut-off of 400 eV. Atomic simulation environment (ASE) <ref type="bibr" target="#b54">55</ref> was used as the Python modelling interface. Exchange and correlation were described by the generalized gradient approximation Perdew-Burke-Ernzerhof (GGA-PBE) 61 functional. While electron correlation in some transition metal carbides may be resolved using PBE + U functional, it can become computationally prohibitive for large-scale screening. Hence, we chose to neglect both Hubbard U correction and spin polarization in the evaluation of BE O to preserve a good trade-off between accuracy and computational cost. A Gaussian smearing with Fermi temperature of 0.1 eV was employed and the total energies (E) were subsequently extrapolated to k B T = 0.0 eV. <ref type="bibr" target="#b61">62</ref> The energy convergence criterion for the electronic self-consistent iterations was set to 10 -4 eV. For geometry optimization, the forces were converged below 0.05 eV Å -1 .</p><p>All pure and doped Mo 2 C catalyst surfaces were modelled as (1 × 1) unit cell slabs. Each slab is at least 5 Å in width and length and consists of an equivalent of four layers (see Fig. <ref type="figure" target="#fig_4">S3 †</ref>). All slabs were separated with a vacuum of 20 Å along the normal direction to the surface. The Brillouin zone for these systems was sampled using a 6 × 6 × 1 Monkhorst-Pack k-point grid. <ref type="bibr" target="#b62">63</ref> The binding energies of atomic oxygen (BE O ) were calculated as follows:</p><formula xml:id="formula_0">BE O ¼ E slabþO À E slab À 1 2 E O 2<label>(1)</label></formula><p>where E slab , E slab+O , and E O 2 are the computed total energy of the clean slab, the slab with a bound oxygen atom, and the gasphase molecular oxygen, respectively.</p><p>To automatically detect undesirable structural transformations upon relaxation, i.e., signicant reconstruction and oxygen desorption, we calculated the change in position of all surface atoms between the initial and nal geometries. If a surface structure contains one or more atoms that move beyond a certain threshold aer optimization, it will be removed from the dataset. We chose a threshold of 3 Å for this dataset as this is approximately equal to the distance between two coordinated Mo atoms in the top layer.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Message passing neural network using local coordination graph representation (LCG-MPNN)</head><p>To represent an input adsorption geometry of the catalyst in the deep learning models, we constructed a local coordination graph (LCG) consisting of the adsorbate and its neighbouring atoms as nodes and their connections to one another as edges, which is shown in Fig. <ref type="figure" target="#fig_0">1</ref>. In Fig. <ref type="figure" target="#fig_6">1a</ref>, up to two nearest-neighbour coordination shells surrounding the adsorbed O atom are accounted for in our implementation as they have been previously shown to contribute signicantly to the binding energy of small adsorbates. <ref type="bibr" target="#b48">49</ref> To determine whether there is a bond/edge to be included between two atoms/nodes in an LCG representation, we employ the following distance criterion:</p><formula xml:id="formula_1">d ij -(R i + R j ) &lt; D (2)</formula><p>where d ij is the distance between the centres of atom i and atom j, R i and R j are the covalent radii of atom i and atom j, respectively. Thus, a bonded interaction between two atoms is considered if their skin-to-skin distance is smaller than D. For the O/Mo 2 C catalyst models, D is chosen to be 0.25 Å, as this value provides a stable count for the number of nearest neighbours to the adsorbed oxygen atom on optimized catalyst surfaces (see Fig. <ref type="figure" target="#fig_5">S4 †</ref>).</p><p>In each LCG, nodes and edges are initially encoded with atom and bond features. Specically, element type, coordination number, atom type (adsorbate, 1 st , or 2 nd nearest neighbour), and list of neighbour atoms are used as atom features. For bonds, each is distinguished by type, distance, and the atom pair that it connects. Two types of bonds are considered: adsorption bonds between O and a catalyst surface atom or lattice bonds between different catalyst surface atoms. The connectivity matrix, atom, and bond features form the inputs for the machine learning model. The inputs are stored as undirected graphs in ".graphml" le format and can be fed directly to the ML model for a faster pre-processing step (see GitHub page).</p><p>The general architecture of our ML model is based on the MPNN framework rst introduced by Gilmer et al. <ref type="bibr" target="#b44">45</ref> and later applied by St John and co-workers for polymer screening. <ref type="bibr" target="#b37">38</ref> We chose MPNN model as it has been shown to provide the best accuracy for adsorption energy predictions for alloy catalysts compared to other graph neural networks including CGCNN, SchNet, MEGNet, and GCN in a recent benchmarking study. <ref type="bibr" target="#b47">48</ref> Here, we modied the Python code developed by St John to operate on the LCG representation for catalyst slabs. A schematic of the neural network is shown in Fig. <ref type="figure" target="#fig_6">1b</ref>. In the input graph layer, atom and bond classes are embedded into trainable feature vectors of 32 dimensions. The message passing layer passes information (m) among neighbouring atoms using matrix multiplication as follows:</p><formula xml:id="formula_2">m tþ1 v ¼ X w˛NðvÞ A evw h t w ;<label>(3)</label></formula><p>where v is the atom index, N(v) is the neighbouring atom indices of atom v, A e vw is the feature matrix consisting of edge/bond feature vectors between neighbouring atoms (e vw ), and h t w is the feature vector of atom w at time step t. A gated recurrent unit (GRU) block <ref type="bibr" target="#b63">64</ref> is then used to update atom feature vector from step t to t + 1:</p><formula xml:id="formula_3">h t+1 v = GRU(h t v , m t+1 v ).<label>(4)</label></formula><p>As shown in Fig. <ref type="figure" target="#fig_6">1b</ref>, the embedded feature matrix (h 0 v ) is passed through n message passing and GRU blocks before the output graph layer. The output graph layer was implemented as a read-out function that takes the nal GRU outputs to produce the whole graph/graph-level features ( y). Four read-out functions were tested including the 'sum', 'max', and 'min' of the nth node state, and the set2set model from Vinyals et al. <ref type="bibr" target="#b64">65</ref> Finally, three fully connected neural network layers with ReLU activation functions were used to produce the nal output, which is the predicted BE O .  presence of outliers is largely due to the rearrangement of catalyst surface atoms upon oxygen adsorption or the formation of surface carbon monoxide. The effects of dopants on BE O can be differentiated by their vicinity to the adsorbed oxygen atom, e.g., whether the dopant atom is in the rst (Fig. <ref type="figure" target="#fig_4">3a</ref>) or second (Fig. <ref type="figure" target="#fig_4">3b</ref>) coordination shell. For the latter, as the dopant atom is further away from the adsorbed oxygen, negligible differences compared to pristine Mo 2 C are observed (Fig. <ref type="figure" target="#fig_4">3b</ref>). In contrast, the presence of a dopant atom in the rst coordination shell can strongly inuence the magnitude of BE O (Fig. <ref type="figure" target="#fig_4">3a</ref>). Furthermore, we observed that the presence of Zn, Cu, or Ni dopants weakens the binding strength of oxygen atom on the catalytic facets, whereas Cr, V, and Ti dopants strengthen the binding strength of oxygen atoms. In addition, a trend in BE O with respect to the position of dopant element in the periodic table is observed. In general, from le to right, i.e., group IV to XII, and top to bottom, i.e., period 4 to 6, across the transition metals, the magnitude of BE O decreases gradually. For example, the median jBE O j of Ti-doped, Fe-doped, and Zn-doped Mo 2 C surfaces are 4.91, 3.94, and 3.80 eV, respectively. Similarly, the median jBE O j decreases from 3.73 to 3.22 eV for Mo 2 C surfaces doped with Cu and Au. Since dopant electronegativity also increases in the same directions, it may have an inversely proportional effect on BE O . We have also identied that the computed difference in BE O distribution is negligible among the 7 considered low Miller-index surfaces (Fig. <ref type="figure">S5 †</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and discussions</head><p>To gauge the BE O trend on a specic catalyst surface, we chose Mo 2 C(100) as an example, as it is the closest-packed and hence most widely studied surface for modelling orthorhombic Mo 2 C catalysts. <ref type="bibr" target="#b65">66,</ref><ref type="bibr" target="#b66">67</ref> The BE O on doped Mo 2 C(100) is shown as the red circles in Fig. <ref type="figure" target="#fig_4">3</ref>. Based on the computed BE O , several observations can be made for BE O on doped Mo 2 C(100) compared to all doped surfaces. First, the effect of the 1 st NN dopants on BE O (Fig. <ref type="figure" target="#fig_4">3a</ref>) is much stronger than that of the 2 nd NN counterparts (Fig. <ref type="figure" target="#fig_4">3b</ref>). Second, the trend in BE O with respect to dopant element position in the periodic table is identical between Mo 2 C(100) and all facets. These results indicate that the Mo 2 C(100) is a reasonable model facet for a qualitative assessment of dopant effects on oxygen adsorption in Mo 2 C catalysts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Machine learning prediction of BE O on Mo 2 C surfaces</head><p>A useful ML model for predicting BE O on Mo 2 C catalyst surfaces should only require unoptimized adsorption geometries inputs since geometry optimization of a catalyst facet with adsorbate is computationally demanding. Therefore, we developed our LCG-MPNN model using unoptimized adsorption geometries as the inputs and the computed BE O of optimized geometries as the prediction outputs. To validate our model, we reserved 20% of the data (∼4000 randomly selected datapoints) for testing and used the remaining data for hyperparameter optimization and cross-validation. Hyperparameter tuning was performed using Bayesian optimization (BO) via the Tree Parzen Estimator method. <ref type="bibr" target="#b67">68</ref> A total of 100 BO cycles were carried out, and the results are presented in Table <ref type="table">S1</ref>. † We identied the best model architecture with nine message passing layers, a set2set readout function, and three fully connected layers of 256, 32, and 256 dimensions (Table <ref type="table">S1</ref> †). With this architecture, we performed 4-fold cross-validation and obtained an average MAE of 0.175 eV. Finally, we applied the most accurate model to the holdout test set and achieved an MAE of 0.176 eV (Fig. <ref type="figure" target="#fig_5">4a</ref>). Close inspection on the model performance with respect to various ranges of the computed BE O indicates a strong dependence on the availability of the training data as shown in the inset of Fig. <ref type="figure" target="#fig_5">4a</ref>. Specically, at the upper/right tail of the computed BE O distribution where BE O &gt; -1.0 eV, the scarcity of training data/ optimized surface geometries (Fig. <ref type="figure" target="#fig_3">2</ref>) lead to a high local MAE of 0.680 eV. In Fig. <ref type="figure" target="#fig_5">4b</ref>, we show that the size of the dataset strongly inuences the performance (MAE) of the ML model. As the MAE decreases with increasing data size, it reaches a reasonable accuracy of ca. 0.20 eV when 15k catalyst surfaces of pristine and doped Mo 2 C are utilized by the model. Besides data availability, the model performance on the test set is also found to vary with respect to the 7 considered surface indices, with the MAE ranging from 0.086 eV for (001) surfaces to 0.338 eV for (111) surfaces (see Fig. <ref type="figure" target="#fig_7">S6 †</ref>).</p><p>To validate our choice of input representations and features, we modied several important parameters of the model and reexamined its performance, as shown in Table <ref type="table">1</ref>. For example, expanding the coordination shell to account for 3 rd NN atoms gives a marginal accuracy improvement of 9 meV (entry ii) from the default model (entry i), but increases the number of training parameters by 50k. In addition, employing an entirely different atom feature set 41 that focuses on elemental properties such as atomic volume and covalent radius did not improve the model (entry iii). Since the LCG-GNN model uses unrelaxed adsorption structures as inputs, we also tested the model sensitivity on how these structures are generated. While the relative position of an adsorbed oxygen atom (O ads ) with respect to those of surface atoms (e.g., top, bridge, or 3-fold) is determined via geometric methods, their distances are not required to achieve reasonable prediction accuracy. Indeed, excluding distance values between O ads and its nearest neighboring surface atoms only (entry iv) leads to a small decrease in the model performance (DMAE = 12 meV). In contrast, we noted the importance of pairwise distances among surface atoms of the catalyst, as their absence as input features (entry v) has a detrimental effect on the model accuracy (DMAE = 35 meV). These observations indicate that whereas the input adsorption structures are insensitive to the exact placement of O ads , it is necessary to employ optimized lattice constants during structure generation to maximize the performance of the ML model.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Analysis of BE O trends based on learned graph ngerprints</head><p>The ability of the LCG-MPNN to learn structure and composition representations of Mo 2 C surfaces was investigated by the t-distributed Stochastic Neighbouring Embedding (t-SNE) method to map the relationships between the learned graphlevel features (from the read-out layer) and BE O . This analysis is shown in Fig. <ref type="figure">5</ref>. Since the graph-level feature of each adsorption geometry is represented by a 32-dimensional data point, we used t-SNE to determine a human-interpretable, 2dimensional (2D) version of these representations that still reects how points are similar in the original 32-dimensional space, as shown in Fig. <ref type="figure">5a</ref>. The distinct coloured regions observed in Fig. <ref type="figure">5a</ref> indicate the effectiveness of the learned graph features in capturing various magnitudes of BE O . For example, going diagonally from the bottom le to the top right of the t-SNE plot, O binding energies transition from strong binding (dark blue, BE O &lt; -5.0 eV) to intermediate binding (white, BE O ∼ -3.0 eV) to weak binding (dark red, BE O &gt; -1.0 eV) areas.</p><p>Further analysis of the selected strong (blue rectangle), intermediate (black rectangle), and weak (red rectangle) O binding regions of the t-SNE plot is shown in Fig. <ref type="figure">5b-d</ref>, respectively. In these gures, the distribution of surface indices and O coordination numbers is explored to provide some understanding on the nature of the learned graph representation. For the strong binding region (Fig. <ref type="figure">5b</ref>), most catalyst surfaces possess a O coordination number of 2, which corresponds to a 'bridge' adsorption site. In contrast, we found that O adsorption at '3-fold' (O coordination number = 3) and '4fold' (O coordination number = 4) sites to have the largest fraction in the weak binding region as shown in Fig. <ref type="figure">5d</ref>. For the intermediate binding region (Fig. <ref type="figure">5c</ref>), the dominating fraction of surfaces is of (101) index with atomic oxygen at 3-fold binding sites. From these observations, we believe that both the surface index, which relates to the arrangement of surface atoms, and O coordination number should play an important role in the overall learned graph feature representation. Such conclusion remains true when different areas of strong, intermediate, and  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Elucidating feature importance from neural network gradients</head><p>The t-SNE plot in Fig. <ref type="figure">5</ref> provides a useful visual correlation between the learned graph features and the DFT-computed BE O , however, it does not show the contribution of each input feature to the nal prediction output, the binding energy of oxygen to the catalyst site (BE O ). Such contribution can be evaluated using the gradient values obtained from the differential operation of ML-predicted BE O outputs with respect to the embedding atom feature inputs, i.e., saliency maps. <ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b68">69</ref> A higher magnitude of the gradient indicates a larger impact of the atom feature on the prediction. In  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>In this contribution, to accelerate the estimation of crucial descriptors for catalyst properties, we have enumerated ca. 20 000 oxygen adsorption geometries on pristine and transition metal doped Mo 2 C catalyst surfaces. Periodic DFT calculations have been used to build a dataset containing optimized adsorption structures and their corresponding oxygen binding energies (BE O ). From the computed data, the BE O distribution indicates a strong dependence on the element of the dopant atom in the rst nearest neighbour with respect to the adsorbed oxygen. Furthermore, the results from high-throughput DFT calculations indicate that Zn, Ni, and Cu dopants decrease the BE O on Mo 2 C surfaces and could be used to improve surface stability against oxidation during HDO reactions. It is noted that surface oxidation of Mo 2 C is a dynamic and complex process in which other factors besides BE O such as atomic rearrangement, dopant diffusion, coverage effects, phase stability, and reducibility are also important and should be investigated with further computational and experimental studies. The high-delity DFT dataset was utilized to develop and train a message passing neural network using local coordination graph (LCG-MPNN) to predict BE O from a graph representation of the unoptimized geometry. The deep learning model achieves a mean absolute error of 0.176 eV for BE O on a test set of unoptimized adsorption structures. Upon studying the learned graph representation of oxygen adsorption on Mo 2 C, we identied that the local arrangement of surface atoms plays an important role in determining BE O and the data-driven model can be used for a fast and accurate estimation of binding energies. Furthermore, the gradient calculation from atom feature inputs allows for recognizing feature importance with atomic precision at the oxygen binding site. Our results highlight the use of LCG-MPNN as an accurate and broadly applicable machine learning approach for adsorption energy prediction for accelerated discovery of catalysts for hydrodeoxygenation and beyond. Future work will focus on improving feature representation, generating adsorption energy data for other important surface intermediates (e.g., H, OH and H 2 O), and utilizing transfer learning to increase the prediction accuracy and generalizability of this approach.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Scheme 1</head><label>1</label><figDesc>Scheme 1 High-throughput structure enumeration and data generation for oxygen adsorption on pristine and doped Mo 2 C catalyst surfaces. In these structures, O, C, Mo, and dopant atoms are shown as red, grey, green, and purple/yellow spheres, respectively.</figDesc><graphic coords="2,313.85,50.57,228.46,151.43" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Message passing neural network using local coordination graph representation (LCG-MPNN) for predicting oxygen binding energies (BE O ) on Mo 2 C catalyst surfaces. (a) Inputs in the form of LCGs are generated from O adsorption geometries and encoded with atom features, bond features, and connectivity matrices. Note that 1 st and 2 nd NN indicate first and second nearest neighbours of oxygen atom, respectively. (b) MPNN architecture consists of n message passing layers, a read-out layer, three fully connected layers, and an output layer for BE O prediction.</figDesc><graphic coords="3,114.46,387.78,366.40,292.99" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head></head><label></label><figDesc>Analysis of BE O on Mo 2 C surfacesThe distribution of 20 000 DFT-computed BE O on pristine and doped Mo 2 C surfaces is shown in Fig.2. The mean and standard deviation of BE O are -3.64 eV and 0.95 eV, respectively. From Fig.2, overall, doped Mo 2 C surfaces (blue histograms) possess a noticeably wider range of BE O ([-6.18 eV, -0.04 eV]) compared to their pristine (red histograms) Mo 2 C counterparts ([-5.15 eV, -0.35 eV]). Additionally, the distribution tails in Fig.2suggest that, with respect to pristine Mo 2 C surfaces, there are more doped surfaces with stronger (more negative) BE O than those with weaker (less negative) BE O .The BE O of all doped surfaces based on dopant category are shown in Fig.3. As a reference, the oxygen binding energy data for pristine Mo 2 C is shown on top and labelled as "Mo". The</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Distribution of oxygen binding energies (BE O ) on 20 000 pristine (red) and doped (blue) Mo 2 C surfaces. The solid black vertical line indicates the mean BE O of -3.64 eV. The standard deviation is 0.95 eV, denoted as s.</figDesc><graphic coords="4,320.49,508.31,215.21,172.46" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Distribution of 20k computed O binding energies (BE O ) on all considered Mo 2 C surfaces with respect to dopant element and its vicinity to O. Different bar colours correspond to different dopant elements. The dopant may be present in the 1 st (a) or 2 nd (b) nearest neighbour (NN) of adsorbed O. Mo dopant indicates the pristine Mo 2 C surfaces. Red circles represent BE O on doped Mo 2 C(100) facets only. Note: binding energy of O on Mo 2 C(100) doped with Au atom in 1 st nearest neighbour (NN) could not be obtained due to surface reconstruction upon O adsorption and geometry relaxation. In these box plots, the box length indicates the interquartile range (middle 50% of BE O ) wherein the inner vertical black line shows the median value. The outliers are shown as black diamonds.</figDesc><graphic coords="5,56.86,50.57,220.99,183.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 (a) Parity plot of oxygen binding energies predicted by LCG-MPNN (BE ML O ) and computed by DFT (BE O ) on the test set. The inset shows mean absolute errors, MAEs, of the model prediction with respect to various ranges of BE O (b) mean absolute error (MAE) of BE ML O relative to BE O of the test set as a function of data size. All subsets (of less than 20k datapoints) were selected randomly from the 20k dataset.</figDesc><graphic coords="6,69.28,50.57,456.92,196.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Table 1</head><label>1</label><figDesc>Performance of LCG-MPNN model with the default and modified parameters Number of NN shells: 3 (default value = 2) 0.167 (iii) Using a different atom feature set 41 0.189 (iv) Excluding distances between O ads and 1 st NN surface atoms 0.188 (v) Excluding pairwise distances between surface atoms 0.211 weak BE O were selected (see Fig. S7 †). Finally, we note that in all three considered O binding regions in Fig. 5, no single element yields a signicant contribution to any of the dominating surface populations (see Fig. S8 †).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 6 ,</head><label>6</label><figDesc>normalized gradient values of surface atoms are shown for three representative catalyst surfaces, namely Ta-Mo 2 C(100), Mo 2 C(101), and Co-Mo 2 C(010), of the strong, intermediate, and weak O binding regions of the t-SNE map (Fig.5a), respectively. First, the atoms in closer proximity, i.e., 1 st nearest neighbour (1 st NN), to the bound oxygen possess higher gradients or stronger inuences on the predicted output. Second, within the same coordination shell, atom contributions vary with respect to the element identity and its surroundings (i.e., nearby Mo or C atom). As seen in the le panel of Fig.6, the Ta atom provides a larger contribution, compared to the other bridging Mo atom, to the prediction of strong O adsorption on Ta-Mo 2 C(100) surface. On pristine Mo 2 C(101) surface (Fig.6, middle panel), three Mo atoms in the '3-fold' conguration are observed to have higher impact on the predicted output compared to the rest of the surface atoms.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig. 5 Fig. 6</head><label>56</label><figDesc>Fig. 5 (a) 2D t-distributed stochastic neighbour embedding (t-SNE) plot of graph-level features from the readout layer. Each point represents an adsorption geometry from the training set, of which colour was mapped to the computed oxygen binding energy (BE O ). The oxygen coordination number distribution of adsorption geometries in the regions enclosed by blue, black, and red rectangles are shown in (b), (c), and (d), respectively.</figDesc><graphic coords="7,73.59,50.57,448.26,293.84" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Digital Discovery© 2022 The Author(s). Published by the Royal Society of Chemistry</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>© 2022 The Author(s). Published by the Royal Society of Chemistry Digital Discovery</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>This work was conducted as part of the Consortium for Computational Physics and Chemistry (CCPC), which is supported by the Bioenergy Technologies Office (BETO) of Energy Efficiency and Renewable Energy (EERE). This research used resources of the Argonne Leadership Computing Facility (ALCF) through an ASCR Leadership Computing Challenge award, which is a DOE Office of Science User Facility supported under contract DE-AC02-06CH11357. We gratefully acknowledge the computing resources provided on "BEBOP", a computing cluster operated by the Laboratory Computing Resource Center at Argonne National Laboratory (ANL). We thank Dr Ganesh Sivaraman of ANL for the valuable assistance with data generation on Theta, a supercomputer at the ALCF.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes and references</head></div>
+			</div>
+
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>The codes and data used in this paper can be found on GitHub at https://github.com/MolecularMaterials/nfp. All optimized adsorption geometries and their energies obtained from VASP calculations are publicly available <ref type="bibr" target="#b69">70</ref> (see ESI †) at the Materials Data Facility. <ref type="bibr" target="#b70">71,</ref><ref type="bibr" target="#b71">72</ref> Data containing ∼ 20 000 geometry optimizations using VASP were saved as Atomic Simulation Environment databases and can be downloaded from the Materials Data Facility using the following link: https://acdc.alcf.anl.gov/mdf/detail/ doan_datasets_accelerating_representations_v1.1/, a l l relevant Python codes and instructions for running our LCG-MPNN models are provided on Github at https:// github.com/MolecularMaterials/nfp.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>The manuscript was written through contributions of all authors. All authors have given approval to the nal version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of interest</head><p>The authors declare no competing nancial interest.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sahir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Humbird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Snowden-Swan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sexton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yap</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lukas</surname></persName>
+		</author>
+		<title level="m">Process Design and Economics for the Conversion of Lignocellulosic Biomass to Hydrocarbon Fuels</title>
+		<meeting>ess Design and Economics for the Conversion of Lignocellulosic Biomass to Hydrocarbon Fuels</meeting>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Baek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ruiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Goundie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Brooks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Wheeler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Frederick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Grabow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Austin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="6509" to="6523" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Oyama</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Catal. Today</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="179" to="200" />
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="1477" to="1498" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Hensley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Will</forename><surname>Medlin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="5026" to="5043" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="8630" to="8637" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Top. Catal</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="439" to="445" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R J</forename><surname>Likith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Farberow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Manna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Abdulslam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Stevanović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Schaidle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Robichaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">V</forename><surname>Ciobanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="1223" to="1233" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>You</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Ammal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyden</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Catal</title>
+		<imprint>
+			<biblScope unit="volume">388</biblScope>
+			<biblScope unit="page" from="141" to="153" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">G</forename><surname>Baddour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Witte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Nash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Griffin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Ruddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Schaidle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Sustainable Chem. Eng</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="11433" to="11439" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="1595" to="1603" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salciccioli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Barteau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Vlachos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1409" to="1418" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Mellinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Barteau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="page" from="5720" to="5729" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Vlachos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ChemCatChem</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1402" to="1421" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="5636" to="5646" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salciccioli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Vlachos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ChemSusChem</title>
+		<imprint>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="798" to="801" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mamun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Winther</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. R. Boes and T. Bligaard, Sci. Data</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Ulissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Ulissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Montoya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Bartel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Esterhuizen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Curtarolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Isayev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tropsha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gossett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Toher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Oses</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mamun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Terejanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">AIChE J</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="28142" to="28150" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">P</forename><surname>Feng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Energy</title>
+		<imprint>
+			<biblScope unit="page">104304</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jinnouchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Asahi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="4279" to="4283" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">O J</forename><surname>Jäger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Morooka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Federici Canova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Himanen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Foster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="7760" to="7766" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Abdelfatah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Terejanu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1105" to="1114" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nayak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bhattacharjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="247" to="254" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">E K</forename><surname>Achenie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="3528" to="3533" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Xin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Catal. Today</title>
+		<imprint>
+			<biblScope unit="volume">280</biblScope>
+			<biblScope unit="page" from="232" to="238" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Noh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="5152" to="5159" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Toyao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kikuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Takakusagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">I</forename><surname>Shimizu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Takigawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="8315" to="8326" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Andersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Reuter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="734" to="742" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>O'connor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S M</forename><surname>Jonayat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Janik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Senle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Catal</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="531" to="539" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="22471" to="22478" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jiang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="23190" to="23199" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><surname>Takigawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">I</forename><surname>Shimizu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tsuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Takakusagi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Adv</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="52587" to="52595" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Miyazato</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="2405" to="2408" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Rohr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Gauthier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Nørskov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Catal. Lett</title>
+		<imprint>
+			<biblScope unit="volume">149</biblScope>
+			<biblScope unit="page" from="2347" to="2354" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Duvenaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Maclaurin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aguilera-Iparraguirre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gómez-Bombarelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hirzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Adams</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Neural Inf. Process. Syst</title>
+		<imprint>
+			<biblScope unit="page" from="2224" to="2232" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>St John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Phillips</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Kemper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Crowley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Nimlos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Larsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">150</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Henaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bruna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lecun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">arXiv</title>
+		<imprint>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dandu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="5990" to="5998" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Grossman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page">145301</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pandey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Stevanović</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>St</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gorai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Patterns</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Fung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ganesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Sumpter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Palizhati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Ulissi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="4742" to="4749" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Schoenholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Riley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+		<title level="m">34th Int. Conf. Mach. Learn. ICML</title>
+		<imprint>
+			<date type="published" when="2017">2017. 2017</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="2053" to="2070" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="3564" to="3572" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Schütt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Sauceda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Kindermans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Müller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">241722</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Fung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Juarez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Sumpter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Ulissi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="4401" to="4408" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Noh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Back</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ulissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="3185" to="3191" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Beller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jiao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Appl. Catal., A</title>
+		<imprint>
+			<biblScope unit="volume">478</biblScope>
+			<biblScope unit="page" from="146" to="156" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chanussot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shuaibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Riviere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Heras-Domingo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Palizhati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sriram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Parikh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Zitnick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ulissi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="6059" to="6072" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shuaibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">M</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Heras-Domingo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kolluru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rizvi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Shoghi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sriram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ulissi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Zitnick</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2206.08917v1</idno>
+		<imprint/>
+	</monogr>
+	<note>cond-mat.mtrl-sci</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Boes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mamun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Winther</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bligaard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="2281" to="2285" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Larsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Blomqvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dulak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Friis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hargus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Larsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Jakob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ivano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rune</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Marcin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jesper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Bjork</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cory</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page">273002</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Salim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Uram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Childers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Balaprakash</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vishwanath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Papka</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="1" to="12" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmüller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="15" to="50" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmüller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="11169" to="11186" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Blöchl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="17953" to="17979" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="1758" to="1775" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Perdew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="533" to="539" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Gillan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="689" to="711" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Monkhorst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Pack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Solid State</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="5188" to="5192" />
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<author>
+			<persName><forename type="first">K</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Van Merriënboer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proc. SSST 2014 -8th Work</title>
+		<meeting>SSST 2014 -8th Work</meeting>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="103" to="111" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kudlur</surname></persName>
+		</author>
+		<title level="m">th Int. Conf. Learn. Represent. ICLR 2016 -Conf. Track Proc</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Medford</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vojvodic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Studt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Abild-Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Norskov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Catal</title>
+		<imprint>
+			<biblScope unit="volume">290</biblScope>
+			<biblScope unit="page" from="108" to="117" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Kitchin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Nørskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Barteau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Catal. Today</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="66" to="73" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bergstra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yamins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Cox</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ICML</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="115" to="123" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<author>
+			<persName><forename type="first">K</forename><surname>Simonyan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vedaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zisserman</surname></persName>
+		</author>
+		<title level="m">2nd Int. Conf. Learn. Represent. ICLR 2014 -Work. Track Proc</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="page" from="1" to="8" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Datasets for Accelerating Catalysts Screening via Machine-Learned Local Coordination Graph Representations</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Materials Data Facility</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pruyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ananthakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tuecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JOM</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="2045" to="2052" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schwarting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1125" to="1133" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

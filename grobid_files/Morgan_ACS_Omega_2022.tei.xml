@@ -1,0 +1,2406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Interactions of CO 2 Anion Radicals with Electrolyte Environments from First-Principles Simulations</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2022-05-17">May 17, 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Morgan</forename><forename type="middle">M</forename><surname>Cencer</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chenyang</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName><roleName>Reginaldo</roleName><forename type="first">Garvit</forename><surname>Agarwal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jose</forename><surname>Gomes Neto</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Chibueze</forename><forename type="middle">V</forename><surname>Amanchukwu</surname></persName>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<email>assary@anl.gov</email>
+						</author>
+						<author>
+							<persName><forename type="first">Reginaldo</forename><forename type="middle">Jose</forename><surname>Gomes Neto</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiao-Hui</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jun</forename><surname>Cheng</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Meisi</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Youting</forename><surname>Wu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hao</forename><surname>Cao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Yang-Gang</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department" key="dep1">Pritzker School of Molecular Engineering</orgName>
+								<orgName type="department" key="dep2">School of Molecular Engineering</orgName>
+								<orgName type="institution">The University of Chicago</orgName>
+								<address>
+									<postCode>60637</postCode>
+									<settlement>Chicago</settlement>
+									<region>Illinois</region>
+									<country>United States Chibueze V. Amanchukwu -Pritzker</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Chemical Sciences and Engineering Division</orgName>
+								<orgName type="institution">The University of Chicago</orgName>
+								<address>
+									<postCode>60637</postCode>
+									<settlement>Chicago</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Interactions of CO 2 Anion Radicals with Electrolyte Environments from First-Principles Simulations</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-05-17">May 17, 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">9E7BAC00BA9D24ED7AAB8F61F6C8EBDD</idno>
+					<idno type="DOI">10.1021/acsomega.2c01733</idno>
+					<note type="submission">Received: March 22, 2022 Accepted: April 21, 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Successful transformation of carbon dioxide (CO 2 ) into valueadded products is of great interest, as it contributes in part to the circular carbon economy. Understanding chemical interactions that stabilize crucial reaction intermediates of CO 2 is important, and in this contribution, we employ atom centered density matrix propagation (ADMP) molecular dynamics simulations to investigate interactions between CO 2 -anion radicals with surrounding solvent molecules and electrolyte cations in both aqueous and nonaqueous environments. We show how different cations and solvents affect the stability of the CO 2 -anion radical by examining its angle and distance to a coordinating cation in molecular dynamics simulations. We identify that the strength of CO 2 -interactions can be tailored through choosing an appropriate cation and solvent combination. We anticipate that this fundamental understanding of cation/solvent interactions can facilitate the optimization of a chemical pathway that results from selective stabilization of a crucial reaction intermediate.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>Transforming CO 2 into value-added chemicals or fuels is of great interest to create a sustainable carbon neutral cycle to tackle challenges such as climate change. <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref> However, reducing CO 2 is a challenging process due to its thermodynamic stability, poor electron affinity, and large kinetic overpotentials. Additionally, as a nonpolar gas, it is only sparingly soluble in water (0.033 M), <ref type="bibr" target="#b3">4</ref> a common solvent for electrochemical reduction of CO 2 . <ref type="bibr" target="#b0">1</ref> Therefore, it might be advantageous to use nonaqueous (aprotic) solvents due to the higher CO 2 solubility, enhanced potential window, as well as lower proton concentrations that can suppress the undesired hydrogen evolution reaction. <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> The first step of the CO 2 reduction reaction (CO 2 RR) involves the formation of CO 2 -, and although successful studies have been performed to unravel the mechanism of electrochemical CO 2 RR, <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref> molecular-level understanding of the dynamics of CO 2 -interacting with surrounding electrolyte cations and solvents (aqueous vs nonaqueous) remains unclear. Of particular interest is the cation effect, <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref> which was first introduced by Murata and Hori, and it has been better understood that coupling alkali metal cations (M + ) with CO 2 cocatalyzes the first step <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> in aqueous solvents, i.e., * + CO 2 + M + + e -→ M + •••*CO 2 -by a short-range electrostatic interaction. In nonaqueous solvents, however, alkali metals are known to inhibit CO 2 reduction due to the formation of a passivation layer containing carbonate species. <ref type="bibr" target="#b26">27,</ref><ref type="bibr" target="#b27">28</ref> Therefore, electrolyte cations such as NX 4  + (X = methyl, ethyl, and butyl groups) are being used, and their catalytic roles were examined. <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b28">29</ref> In aprotic Li-CO 2 batteries, it was argued that a LiCO 2 intermediate is crucial to tuning CO 2 RR toward a solution-versus surface-mediated pathway. <ref type="bibr" target="#b29">30</ref> In this contribution, we aim to provide theoretical insights into the fundamental interactions between CO 2 -, obtained from the electrochemical reduction of CO 2 gas, and the supporting electrolyte cations in various solvents, which will help direct the mechanism toward desired products such as CO, formic acid, and/or oxalate, and will lay a foundation to the future study of specific catalyst systems. Here, we focus on the stabilization effect of the CO 2 -anion radical, as its formation is likely to be the rate-determining step <ref type="bibr" target="#b30">31</ref> for CO 2 reduction in some aqueous <ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref> and nonaqueous <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b34">35</ref> media, although this is still under debate. <ref type="bibr" target="#b0">1</ref> We compare water and nonaqueous solvents (mainly dimethoxyethane (DME) in this work), as glyme-ether-based solvents have been successfully used for electrochemistry (e.g., metal-air/Mg battery) and gas separation processes capturing CO <ref type="bibr">2 36,37</ref> but have been rarely studied for CO 2 reduction until recently, <ref type="bibr" target="#b26">27</ref> to the best of our knowledge.</p><p>To gain understanding of the specific molecular-level interactions, we used ab initio molecular dynamics (AIMD) simulations. <ref type="bibr" target="#b37">38,</ref><ref type="bibr" target="#b38">39</ref> These AIMD simulations show the atomic movement within the system, where the extremes and averages of the oscillations can give detailed information on the stability and other thermodynamic properties. We use the atom centered density matrix propagation (ADMP) <ref type="bibr" target="#b39">[40]</ref><ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref> molecular dynamics method, as it gives the accuracy of density functional theory (DFT) and has advantages particularly around handling the dynamics of charged and radical molecular systems. <ref type="bibr" target="#b42">[43]</ref><ref type="bibr" target="#b43">[44]</ref><ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref> This approach allows us to gather accurate information on how the CO 2 -anion radical interacts with cation and solvent species, based on the computed descriptors such as coordination bond distances (cation-CO 2 ) and bond angles to develop a fundamental understanding of the interactions. The shorter coordination distance and/or more decreased bond angle of CO 2 -indicate that the intermediate complex can be present for prolonged periods and likely undergo subsequent desired reactions such as chelation, charge transfer interactions, and bond cleavage/formation reactions. <ref type="bibr" target="#b47">48,</ref><ref type="bibr" target="#b48">49</ref> We further construct a physics-based model to rationalize the relative contributions of electrostatic and covalent/noncovalent interactions to the stabilization effects of CO 2 -.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ COMPUTATIONAL DETAILS</head><p>Initial geometry optimizations were performed using Gaussian 16 software 50 at the ωb97xD/6-31+G(d,p) level of theory <ref type="bibr" target="#b50">51,</ref><ref type="bibr" target="#b51">52</ref> with ultrafine integration grids and multiple conformers considered. <ref type="bibr" target="#b52">53</ref> The frequencies were calculated at the same level of theory. Upon geometry optimization, trajectories were calculated using ADMP molecular dynamics at the ωb97xD/ jun-cc-pVDZ level of theory <ref type="bibr" target="#b50">51,</ref><ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b54">55</ref> for 5000 time points (500 fs). ADMP simulations were performed with and without the presence of implicit solvents <ref type="bibr" target="#b55">56,</ref><ref type="bibr">57</ref> (water (H 2 O), tetrahydrofuran (THF), dimethyl sulfoxide (DMSO), acetonitrile (MeCN), and n,n-dimethylformamide (DMF)). Optimized, maximum, mean, and variation amplitude of the CO 2 -angle (θ) and the CO 2</p><p>-distance (to the cation, d) were extracted from the AIMD trajectory. As shown in Figure <ref type="figure" target="#fig_0">1a</ref>, the CO 2 -angle (θ) is measured from one oxygen to the other, with the carbon atom as the angle vertex. The CO 2 --to-cation distance (d) is measured from the carbon of the CO 2 -to the center of the cation (either the cation atom or the nitrogen in the ammonium cations). A typical ADMP trajectory is shown in Figure <ref type="figure" target="#fig_0">1b</ref>, where CO 2 -oscillates around its equilibrium position over the course of the simulation. Additional details of the simulations are provided in the Supporting Information (SI).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS AND DISCUSSION</head><p>The interaction strength of two charged particles is inversely related to the separating distance. <ref type="bibr" target="#b56">58</ref> As shown in yellow bars in Figure <ref type="figure" target="#fig_0">1c</ref>, based on the simulations, we observe that the interaction of dynamic water molecules increases the cation-to-CO 2 -distance (Δd) for all cations compared to the gas-phase geometry, which manifests less negative complexation energies and binding energies compared to those in the gas phase (ΔH gas , Table <ref type="table" target="#tab_0">1</ref>). Note that the equations for the complexation enthalpy calculations are provided in the Supporting Information. In the case of the DME solvent system, the chelation of the DME molecule with the alkali metal cation increases the interaction distance for alkali metal cations with the CO 2 -, while for NX 4 + cations (X = Me, Et, and Bu), the difference is minimal (&lt;0.1 Å). This is largely due to the chemical differences between water and DME molecules. Water molecules are strongly polar and have strong ion-dipole interactions with cations and CO 2 -, as seen from the computed complexation enthalpies (ΔH complex ) summarized in Table <ref type="table" target="#tab_0">1</ref>. DME is weakly polar and has chelating interactions with alkali metal cations, where the unshielded positive charge can interact closely with the lone pairs on the oxygen atoms of DME. On the basis of the computed enthalpies of complexation (Table <ref type="table" target="#tab_0">1</ref>), the CO 2 -species itself weakly interacts with DME as compared to water (by 0.50 eV) because DME molecules do not have any strong localized partial positive charges. The NBu 4 + positive charge is highly shielded by the butyl arms and as such does not closely interact with the DME oxygen atoms, which also can be seen from our quantum chemical calculations that the difference between ΔH complex and ΔH gas for the NBu 4 + complex is much smaller than that for alkali metal cations (Table <ref type="table" target="#tab_0">1</ref>). The optimized structures of NBu 4</p><p>+ complexes are shown in Figure <ref type="figure" target="#fig_0">S1</ref>. The optimized structures of Li + -CO 2 --solvent with DME and H 2 O also corroborate the above analysis; i.e., the oxygen atoms of CO 2 only bind to Li + in the DME solvent, as shown in Figure <ref type="figure" target="#fig_1">2a</ref>, whereas in water one of the CO 2 -oxygen atoms binds to Li + , and the other interacts with water to form an O•••H hydrogen bond as shown in Figure <ref type="figure" target="#fig_1">2b</ref>. Overall, this suggests that the identity of the supporting electrolyte cation, as well as the polarity of solvents, both dictate the strength of interactions of the CO 2 -anion radical, which primarily consist of (electrostatic) ion-ion and ion-dipole interactions and hydrogen bonds. The different types of interactions will be discussed in more detail.</p><p>To further explore how the NX 4 + -CO 2 -interaction responds to the polarity of the solvent, we carried out ADMP simulations with three explicit solvent molecules (in THF, MeCN, DMSO, DMF, and water) and at the same time included the implicit solvent field of corresponding solvent models in Gaussian 16. For these bulky clusters, we repeated each simulation three times with different initial geometries (randomly generated and subsequently optimized) to make sure that the selection of initial structures have no role in dictating the final results. The average and maximum cation-to-CO 2</p><p>-distances are shown in Figure <ref type="figure" target="#fig_2">3</ref>. We observe that the strength of interaction between NBu 4 + and CO 2 -decreases with increasing solvent polarity, indicated by the increasing cation-to-CO 2 -distance, as shown in Figure <ref type="figure" target="#fig_2">3</ref>. Such an observation is consistent with the dominant electrostatic interactions and has experimental implications on salt dissociation or formation of ion pairs. <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b26">27</ref> The positive charge on the NBu 4 + cation is highly shielded by the bulky and electron donating alkyl chains, which means that changing solvents has a relatively minimal effect on the NBu 4 + . However, the strength of the interaction between CO 2 -and NBu 4 + is affected by how strongly CO 2</p><p>-is coordinated to the solvent and cationic species. Thus, increasing the polarity of the solvent increases CO 2</p><p>-coordination with the solvent, weakening the bond between CO 2 -and NBu 4 + . Similar qualitative trends in CO 2 RR were also reported by Berto et al. <ref type="bibr" target="#b57">59</ref> and Shi et al., <ref type="bibr" target="#b58">60</ref> where voltammetric experiments in the presence of NBu 4 + electrolytes have shown larger current density values for CO 2 RR in highly polar DMF and MeCN, as compared to low polarity THF. Here, DMSO has the largest standard deviation (Figure <ref type="figure" target="#fig_2">3</ref>), which was also found to exhibit the largest deviation from trends due to coordination via the sulfur atom (as opposed to via the oxygen atom in water and THF) in a study of aprotic solvent (THF, DMF, and DMSO) adsorption on metal surfaces by Nørskov and co-workers. <ref type="bibr" target="#b59">61</ref> In aprotic solvents and NBu 4 + salts, tailoring the lifetime of the CO 2</p><p>-will likely depend on solvent, due to the stabilizing influence of more polar solvents.</p><p>The foregoing analysis suggests that both solvents and cations play an important role in the stabilization of the CO 2 radical, <ref type="bibr" target="#b57">59,</ref><ref type="bibr" target="#b58">60</ref> but the precise effects are less clear. On the basis of our simulations, we hypothesize that inner-sphere solvation effects are the result of electrostatic and covalent/noncovalent interactions based around solvent stabilization and cation binding, and to this end, we sought to rationalize these by constructing a simple physics-based model. Compared to gasphase CO 2 -, the introduction of a solvent molecule or a cation reduces the angle of CO 2 -. In Figure <ref type="figure" target="#fig_3">4a</ref>, the largest reductions are observed with cations without solvent molecules, following the trend of Li + &gt; Na + &gt; K + &gt; NX 4</p><p>+ in the gas phase (gray bars), where X = methyl or longer alkyl groups. There is an overall trend of a larger change in the bond angle (Δθ) being  associated with more negative complexation enthalpies, as shown in Figure <ref type="figure" target="#fig_3">4b</ref>, which also indicates that increased complex stability is associated with a decreased CO 2 -angle. This decreased angle is due to anion radical stabilization through ion-ion interactions, ion-dipole interactions, and/or hydrogen bonds. Given the computed trends of solvent polarity and complexation enthalpy simultaneously (Figure <ref type="figure" target="#fig_2">3</ref> and Figure <ref type="figure" target="#fig_3">4b</ref>) and together with known experiment data, we would be able to provide guidance on the electrolyte environments, e.g., with larger stabilizing effects on CO 2 -63 toward the desired binding.</p><p>To decompose the quantum chemistry-calculated complexation enthalpies into stabilization effects by electrostatic ionion interactions and/or ion-dipole interactions explicitly, we have constructed a simple physics-based model (see Supporting Information). This model takes in the geometry of a cluster and computes the different types of interactions based on fundamental physics equations. The model-predicted complexation energies against the known DFT-calculated complexation energies are shown in Figure <ref type="figure" target="#fig_4">5</ref>, where red triangles ("ion-CO 2</p><p>-", e.g., K + -CO 2 -) represent systems that have only electrostatic ion-ion interactions (also see ΔH gas in Table <ref type="table" target="#tab_0">1</ref>), green squares ("ion-solvent", e.g. NBu 4 + -2H 2 O) represent systems that have ion-dipole and dipole-dipole interactions, and purple circles ("ion-solvent-CO 2</p><p>-", e.g., Li + -CO 2 --3DME) represent systems that have ion-ion, ion-dipole, and   dipole-dipole interactions. The mean absolute error of the model-predicted complexation energy relative to the DFTcalculated value is about 0.12 eV per ion and solvent molecule in a cluster. For all the "ion-solvent-CO 2</p><p>-" clusters (purple circles), we calculate that on average 73% of the predicted complexation energy results from the electrostatic ion-ion interactions; likewise, the ion-dipole interaction is much stronger than the dipole-dipole interaction. This indicates that CO 2 activation could be achieved through electrolyte stabilization of the CO 2 -anion product due to a stronger interaction with CO 2 -than the neutral and nonpolar CO 2 gas. <ref type="bibr" target="#b62">64,</ref><ref type="bibr" target="#b63">65</ref> Finally, we show the average CO 2 -bond angles in DME and water as a function of the number of solvent molecules (Figure <ref type="figure" target="#fig_5">6</ref>) from our simulations. The average cation-to-CO 2 -distances are shown in Figure <ref type="figure" target="#fig_1">S2</ref>. Here, a small and computationally tractable number of solvent molecules could be used to simulate a reasonable solvation behavior, <ref type="bibr" target="#b64">66,</ref><ref type="bibr" target="#b65">67</ref> where key interactions between cation/anion and solvent (ion-dipole) are captured. We note that there is a different behavior for Li + -CO 2 --nDME where the CO 2 -angle keeps increasing as we increase the number of solvent molecules (Figure <ref type="figure" target="#fig_5">6a</ref>). Specifically, for Li + -CO 2 --3DME, only one CO 2 -oxygen binds to Li + (Figure <ref type="figure" target="#fig_1">2a</ref>), resulting in a weak interaction and thus increased angle and increased Li + -to-CO 2 -distance (by 0.9 Å, see Table <ref type="table" target="#tab_1">2</ref> and Figure <ref type="figure" target="#fig_0">1c</ref>). Such a weakening interaction from bidentate to monodentate geometry is also captured by the physics model. For Li + -CO 2 --nH 2 O the increased angle and Li + -to-CO 2 -distance is rather minimal (Table <ref type="table" target="#tab_1">2</ref> and Figure <ref type="figure" target="#fig_5">6b</ref>). These observations are important to keep in mind, as fully solvated systems indicate that the Li + -CO 2</p><p>-interaction is the weakest among alkali metal cations in DME but the strongest in water (Figure <ref type="figure" target="#fig_3">S4</ref>). However, we know that hard shell Li + cation coordinates poorly to an adsorbed CO 2 on the surface, <ref type="bibr" target="#b25">26</ref> and thus we also compare the relative stability of two configurations of Li + -CO 2 --4H 2 O (Figure <ref type="figure" target="#fig_5">S6</ref>) as a function of the partial charge of CO 2 , assuming the dominant interaction comes from the electrostatic interaction. We find that for a partial charge of -1e, Li + preferably coordinates with CO 2</p><p>-, but only within about 0.16 eV compared to the other configuration according to DFT. As the charge of CO 2 is decreased to -0.6e, which mimics its charge state on the surface, we find that Li + now preferably coordinates with 4H 2 O according to our physics-based model (Figure <ref type="figure" target="#fig_5">S6</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>We have used ADMP simulations to investigate the interactions of the CO 2 -anion radical in various chemical environments, including both aqueous and nonaqueous electrolytes. Simulations show the effect of cations and solvent molecules on the fundamental properties of bond distance and angle of CO 2 , e.g., DME solvation increases the interaction distance for small cations with CO 2 -, while for NX 4 + cations the difference is minimal. This correlates well with the complexation enthalpy of CO 2 -, offering a guide to which combinations of solvent and supporting electrolyte may provide the desired experimental conditions. Moreover, we have shown that the identity of the supporting electrolyte cation will likely matter more in polar solvents than in solvents of less polarity. Therefore, we can tailor the strength of interactions between CO 2 -and supporting electrolytes through the judicious choice of electrolyte cations and solvents. Our simulation and physics-based model provides a general and suitable approach to studying solvation effects particularly in an aprotic electrolyte environment, and it was shown that the electrochemical CO 2 RR activity could be correlated to the bulk solvation properties in DME and DMSO. <ref type="bibr" target="#b26">27</ref> We note the limitation of our model not yet including the electrode surface as well as the pH effect at the  interface, <ref type="bibr" target="#b66">68</ref> and future experimental and computational efforts are necessary to elucidate the interactions of the CO 2 anion radical with the electrode surface.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Schematic showing how the change in bond distance (Δd) or change in angle (Δθ) is calculated. Scheme (a) shows a molecular cluster with the dashed black line indicating the bond distance (measured Li + to CO 2 -from the center of the cation to the carbon atom) and gray lines showing how the bond angle (θ) is measured (with the carbon as the vertex of the angle). The lithium, carbon, oxygen, and hydrogen atoms are shown in purple, dark gray, red, and light gray, respectively. (b) Computed trajectories of the bond distance (Δd) and CO 2 -angle (θ) over 500 fs for a Li + -CO 2 --3H 2 O molecular cluster. (c) Computed average Δd for various cationic complexes. All complexes in state (i) include three explicit solvent molecules. The dots indicate the difference in bond distances of optimized complexes with and without explicit solvent molecules. Me, Et, and Bu denote methyl, ethyl, and butyl groups, respectively.</figDesc><graphic coords="2,315.44,60.44,239.98,485.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Gas-phase optimized structures of Li + -CO 2 --solvent with (a) DME and (b) H 2 O.</figDesc><graphic coords="3,142.64,582.52,321.56,145.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Average cation-to-CO 2 -distance d average and (b) maximum cation-to-CO 2 -distance d max during simulations in various solvents, as plotted against the polarity (E T (30)) 62 of solvent. These data points are for clusters of NBu 4 + , CO 2 -, three molecules of the solvent in question, and with an implicit solvent field of that solvent. Error bars represent standard deviations of three simulations.</figDesc><graphic coords="4,93.83,60.44,419.24,166.51" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Bar chart of the change in the CO 2 -angle (Δθ) between the uncomplexed CO 2 -anion radical in the gas phase and the CO 2 -angle when complexed with cations and/or three solvent molecules. (b) Computed complexation enthalpy plotted against the change in angle from the gas phase to solvated (by DME or H 2 O).</figDesc><graphic coords="4,53.52,278.48,235.90,384.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Physics-based model-predicted complexation energy against the known DFT-calculated energy. The dashed line indicates a perfect agreement between the model-predicted complexation energy and the known DFT-calculated complexation energy.</figDesc><graphic coords="4,359.26,487.50,152.39,135.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Average CO 2 -angle of different cation-CO 2 --solvent (DME or H 2 O) systems from AIMD simulations: (a) cation-CO 2 --nDME and (b) cation-CO 2 --nH 2 O (n = 0, 1, 2, 3).</figDesc><graphic coords="5,69.34,60.44,468.23,189.81" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Computed Complexation Enthalpies and Binding Enthalpies (ΔH complex and BE CO2-, in eV) of CO 2 -, Li + , Na + , K + , and NBu 4 + with Three Explicit H 2 O or DME Molecules</figDesc><table><row><cell>species</cell><cell>ΔH complex (3H 2 O)</cell><cell>BE CO2-(3H 2 O)</cell><cell>ΔH complex (3DME)</cell><cell>BE CO2-(3DME)</cell><cell>-ΔH gas (CO 2 + M + )</cell></row><row><cell>CO 2 -</cell><cell>-1.72</cell><cell></cell><cell>-1.22</cell><cell></cell><cell></cell></row><row><cell>Li +</cell><cell>-3.66</cell><cell>-5.08</cell><cell>-5.73</cell><cell>-3.59</cell><cell>-6.50</cell></row><row><cell>Na +</cell><cell>-2.73</cell><cell>-4.96</cell><cell>-4.65</cell><cell>-3.51</cell><cell>-5.66</cell></row><row><cell>K +</cell><cell>-2.03</cell><cell>-4.82</cell><cell>-3.55</cell><cell>-3.49</cell><cell>-5.00</cell></row><row><cell>NBu 4 +</cell><cell>-1.17</cell><cell>-3.65</cell><cell>-2.03</cell><cell>-3.28</cell><cell>-3.84</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Computed Li + Coordination Distances for Complexes with O Atoms (of DME/H 2 O) and C Atoms (of CO 2 -)</figDesc><table><row><cell></cell><cell>d(Li-O solvent )/Å</cell><cell>d(Li-C CO2-)/Å</cell></row><row><cell>Li + -CO 2 -</cell><cell></cell><cell>1.92</cell></row><row><cell>Li + -CO 2 --1DME</cell><cell>2.00</cell><cell>2.19</cell></row><row><cell>Li + -CO 2 --2DME</cell><cell>2.09</cell><cell>2.39</cell></row><row><cell>Li + -CO 2 --3DME</cell><cell>2.20</cell><cell>3.07</cell></row><row><cell>Li + -CO 2 --1H 2 O</cell><cell>1.86</cell><cell>2.63</cell></row><row><cell>Li + -CO 2 --2H 2 O</cell><cell>1.93</cell><cell>2.76</cell></row><row><cell>Li + -CO 2 --3H 2 O</cell><cell>2.01</cell><cell>2.89</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acsomega.2c01733 ACS Omega 2022, 7, 18131-18138 Downloaded via ARGONNE NATL LABORATORY on February 16, 2023 at 17:30:38 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acsomega.2c01733 ACS Omega 2022, 7, 18131-18138</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Author Contributions § M.M.C. and C.L. contributed equally to this work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>This work was supported by funding from The University of Chicago Center for Data and Computing (CDAC) program and the Data Science Institute. R.S.A. and C.L. would like to acknowledge Consortium for Computational Physics and Chemistry (CCPC), which is supported by the Bioenergy Technologies Office (BETO) of Energy Efficiency &amp; Renewable Energy (EERE). C.V.A. acknowledges support from the University of Chicago and the Neubauer Family Assistant Professors program. We gratefully acknowledge the computing resources provided on "Bebop", a 1024-node computing cluster operated by the Laboratory Computing Resource Center at the Argonne National Laboratory. We also acknowledge the computational resources from the Center for Nanoscale Materials, an Office of Science user facility, which was supported by the U.S. Department of Energy, Office of Science, Office of Basic Energy Sciences, under Contract No. DE-AC02-06CH11357. The submitted manuscript has been created by UChicago Argonne, LLC, Operator of Argonne National Laboratory ("Argonne"). Argonne, a U.S. Department of Energy Office of Science laboratory, is operated under Contract No. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive, irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Advances and Challenges in Understanding the Electrocatalytic Conversion of Carbon Dioxide to Fuels</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Y</forename><surname>Birdja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pérez-Gallent</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Figueiredo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Göttle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Calle-Vallejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T M</forename><surname>Koper</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41560-019-0450-y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Energy</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="732" to="745" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">What Would It Take for Renewably Powered Electrosynthesis to Displace Petrochemical Processes?</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>De Luna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Higgins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Jaffer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Sargent</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aav3506?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="issue">6438</biblScope>
+			<biblScope unit="page">364</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Prospects of CO2 Utilization via Direct Heterogeneous Electrochemical Reduction</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">T</forename><surname>Whipple</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J A</forename><surname>Kenis</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jz1012627?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2010</biblScope>
+			<biblScope unit="issue">24</biblScope>
+			<biblScope unit="page" from="3451" to="3458" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Lange&apos;s Handbook of Chemistry</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Dean</surname></persName>
+		</author>
+		<editor>Dean, J. A.</editor>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>McGraw-Hill</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Electrochemical Reduction of Carbon Dioxide at a Platinum Electrode in Acetonitrile-Water Mixtures</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tomita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0167-2991(98)80826-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Stud. Surf. Sci. Catal</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="581" to="584" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Selective Formation of Formic Acid, Oxalic Acid, and Carbon Monoxide by Electrochemical Reduction of Carbon Dioxide</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ikeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Takagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ito</surname></persName>
+		</author>
+		<idno type="DOI">10.1246/bcsj.60.2517</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bull. Chem. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="2517" to="2522" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Solvents and Supporting Electrolytes in the Electrocatalytic Reduction of CO 2 . iScience</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>König</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vaes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Klemm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pant</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.isci.2019.07.014</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="135" to="160" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Promoter Effects of Alkali Metal Cations on the Electrochemical Reduction of Carbon Dioxide</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Resasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Tsai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Bell</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.7b06765?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="11277" to="11287" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Product Selectivity Affected by Cationic Species in Electrochemical Reduction of CO2 and CO at a Cu Electrode</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Murata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hori</surname></persName>
+		</author>
+		<idno type="DOI">10.1246/bcsj.64.123</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Bull. Chem. Soc. Jpn</title>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="page" from="123" to="127" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Effect of Cations on the Electrochemical Conversion of CO 2 to CO</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Thorson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">I</forename><surname>Siil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Kenis</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/2.052301jes</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="69" to="F74" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Hydrolysis of Electrolyte Cations Enhances the Electrochemical Reduction of CO2 over Ag and Cu</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Lum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Ager</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Bell</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.6b07612?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">138</biblScope>
+			<biblScope unit="issue">39</biblScope>
+			<biblScope unit="page" from="13006" to="13012" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Reaction Intermediates during Operando Electrocatalysis Identified from Full Solvent Quantum Mechanics Molecular Dynamics</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fortunelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Goddard</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1821709116</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">116</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="7718" to="7722" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.8b00472?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Situ Fabrication and Reactivation of Highly Selective and Stable Ag Catalysts for Electrochemical CO 2 Conversion</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1301" to="1306" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Competition between H and CO for Active Sites Governs Copper-Mediated Electrosynthesis of Hydrocarbon Fuels</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schreier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Surendranath</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.201806051</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angewandte Chemie -International Edition</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="10221" to="10225" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Mechanism of the Electrochemical Reduction of Carbon Dioxide at Inert Electrodes in Media of Low Proton Availability</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gennaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Isse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">G</forename><surname>Severin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vianello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Bhugun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Savéant</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/FT9969203963</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Chemical Society -Faraday Transactions</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="issue">20</biblScope>
+			<biblScope unit="page" from="3963" to="3968" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Acetonitrile Transition Metal Interfaces from First Principles</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Nørskov</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.0c02692?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2020</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="9802" to="9811" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Mechanistic Insights for Low-Overpotential Electroreduction of CO 2 to CO on Copper Nanowires</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raciti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J T</forename><surname>Livi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Rottmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Hemker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscatal.7b03107?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="8578" to="8587" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">An Electrogenerative Acidobasic Cell Utilizing Biomass for the Generation of Electricity and Molecular Hydrogen</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kyriacou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G E</forename><surname>Jahngen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/BF00625595</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Electrochem</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1196" to="1198" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Electrolyte Effects on the Electrochemical Reduction of CO 2</title>
+		<author>
+			<persName><forename type="first">Moura</forename><surname>De Salles Pupo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kortlever</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+		<idno type="DOI">10.1002/cphc.201900680</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ChemPhysChem</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="2926" to="2935" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Analysis on the Effect of Operating Conditions on Electrochemical Conversion of Carbon Dioxide to Formic Acid</title>
+		<author>
+			<persName><forename type="first">H.-Y</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Jang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-K</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijhydene.2014.03.145</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Hydrogen Energy</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">29</biblScope>
+			<biblScope unit="page" from="16506" to="16512" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Understanding Cation Effects in Electrochemical CO 2 Reduction</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ringe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">L</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Resasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Walton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Seger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chan</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C9EE01341E</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3001" to="3014" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Probing Promoting Effects of Alkali Cations on the Reduction of CO at the Aqueous Electrolyte/Copper Interface</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Gunathunge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">J</forename><surname>Ovalle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Waegele</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C7CP06087D</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">44</biblScope>
+			<biblScope unit="page" from="30166" to="30172" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">The Effect of Electrolyte Composition on the Electroreduction of CO 2 to CO on Ag Based Gas Diffusion Electrodes</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Verma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">I</forename><surname>Masel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J A</forename><surname>Kenis</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5CP05665A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2016</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="7075" to="7084" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Electrolyte Dependence of CO 2 Electroreduction: Tetraalkylammonium Ions Are Not Electrocatalysts</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Berto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hamers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Berry</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cs501641z?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="703" to="707" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Alkali Cation Effect on CO 2 Electroreduction to CO: A Local Colligative Property</title>
+		<author>
+			<persName><forename type="first">S.-J</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ringe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">H</forename><surname>Won</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.26434/chemrxiv-2021-x0msb-v2?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ChemRxiv</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Absence of CO 2 Electroreduction on Copper, Gold and Silver Electrodes without Metal Cations in Solution</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C O</forename><surname>Monteiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Dattila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hagedoorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>García-Muelas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T M</forename><surname>Koper</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41929-021-00655-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Catalysis</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="654" to="662" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Probing Electrolyte Influence on CO 2 Reduction in Aprotic Solvents</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Birch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Cencer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Son</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bloom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">V</forename><surname>Amanchukwu</surname></persName>
+		</author>
+		<idno type="DOI">10.26434/chemrxiv-2021-17zmv?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<idno>10.26434/chemrxiv-2021-17zmv</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ChemRxiv</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Metal-CO2 Batteries on the Road: CO2 from Contamination Gas to Energy Source</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201605891</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page">1605891</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Standard Potential and Kinetic Parameters of the Electrochemical Reduction of Carbon Dioxide in Dimethylformamide</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lamy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nadjo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Saveant</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0022-0728(77)80143-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Electroanalytical Chemistry and Interfacial Electrochemistry</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="403" to="407" />
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Kinetics of the CO 2 Reduction Reaction in Aprotic Li-CO 2 Batteries: A Model Study</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Peng</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/D0TA11281J</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Materials Chemistry A</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="3290" to="3296" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Inhibited Proton Transfer Enhances Au-Catalyzed CO2-to-Fuels Selectivity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wuttig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Motobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Osawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Surendranath</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1602984113</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="4585" to="E4593" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Insights into the Low Overpotential Electroreduction of CO2 to CO on a Supported Gold Catalyst in an Alkaline Flow Electrolyzer</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Verma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hamasaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R M</forename><surname>Jhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Gewirth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fujigaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nakashima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J A</forename><surname>Kenis</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.7b01096?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Letters</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="193" to="198" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Understanding Surface-Mediated Electrochemical Reactions: CO2 Reduction and Beyond</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Dunwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Xu</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscatal.8b02181?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="8121" to="8129" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Interplay of Homogeneous Reactions, Mass Transport, and Kinetics in Determining Selectivity of the Reduction of CO2 on Gold Electrodes</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ozel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Elias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Costentin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Nocera</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscentsci.9b00302?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Central Science</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1097" to="1105" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Mechanism and Kinetic Characteristics of the Electrochemical Reduction of Carbon Dioxide in Media of Low Proton Availability</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Amatore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Savéant</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja00407a008?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page" from="5021" to="5023" />
+			<date type="published" when="1981">1981</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Mg/O2 Battery Based on the Magnesium-Aluminum Chloride Complex (MACC) Electrolyte</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Vardar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Inagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Naruse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hiramatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E S</forename><surname>Sleightholme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sakamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Siegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Monroe</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b02488?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="7629" to="7637" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Molecular Modeling Analysis of CO2 Absorption by Glymes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gutiérrez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Atilhan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Aparicio</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcb.7b10276?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1948" to="1957" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Self-Consistent Equations Including Exchange and Correlation Effects</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Sham</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRev.140.A1133</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="issue">4A</biblScope>
+			<biblScope unit="page">1133</biblScope>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Inhomogeneous Electron Gas</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hohenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kohn</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRev.136.B864</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="issue">3B</biblScope>
+			<biblScope unit="page">B864</biblScope>
+			<date type="published" when="1964">1964</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Ab Initio Molecular Dynamics: Propagating the Density Matrix with Gaussian Orbitals. II. Generalizations Based on Mass-Weighting, Idempotency, Energy Conservation and Choice of Initial Conditions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Voth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1416876</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="10291" to="10302" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Ab Initio Molecular Dynamics: Propagating the Density Matrix with Gaussian Orbitals. III. Comparison with Born-Oppenheimer Dynamics</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Voth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1514582</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="issue">19</biblScope>
+			<biblScope unit="page" from="8694" to="8704" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Ab Initio Molecular Dynamics: Propagating the Density Matrix with Gaussian Orbitals</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Voth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Daniels</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1372182</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="9758" to="9763" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Ultrafast Laser-Induced Isomerization Dynamics in Acetonitrile</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mcdonnell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Laforge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Reino-González</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Disla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">G</forename><surname>Kling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Obaid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sundberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Svoboda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Díaz-Tendero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Martín</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Berrah</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.0c01344?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2020</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="6724" to="6729" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">smart Decomposition&quot; of Cyclic Alanine-Alanine Dipeptide by VUV Radiation: A Seed for the Synthesis of Biologically Relevant Species</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Barreiro-Lage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bolognesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chiarinelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Richter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zettergren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Stockett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Carlini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Diaz-Tendero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Avaldi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpclett.1c01788?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page" from="7379" to="7386" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Platas-Iglesias, C. 17O and 1H Relaxometric and DFT Study of Hyperfine Coupling Constants in [Mn(H 2 O)6]2+</title>
+		<author>
+			<persName><forename type="first">Esteban-Gómez</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Cassino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Botta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<idno type="DOI">10.1039/c3ra45721d</idno>
+	</analytic>
+	<monogr>
+		<title level="j">RSC Adv</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="7094" to="7103" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Dynamical Effects on Vibrational and Electronic Spectra of Hydroperoxyl Radical Water Clusters</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.2006674</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">84310</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Ab Initio Molecular Dynamics Simulation Study of Dissociation Electron Attachment to Lactic Acid and Isomer</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-019-56019-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">On the Origin of the Elusive First Intermediate of CO2 Electroreduction</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">V</forename><surname>Chernyshova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Somasundaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ponnurangam</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1802256115</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. U. S. A</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="issue">40</biblScope>
+			<biblScope unit="page" from="9261" to="E9270" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Characterization of the Alkali Metal Oxalates (MC2O4-) and Their Formation by CO2 Reduction: Via the Alkali Metal Carbonites (MCO2-)</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Jestilä</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Denton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Perez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Khuu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Apra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Xantheas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Uggerud</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/D0CP00547A</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2020</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="7460" to="7473" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakatsuji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Caricato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Marenich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bloino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">G</forename><surname>Janesko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gomperts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Hratchian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Ortiz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">F</forename><surname>Izmaylov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Sonnenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Williams-Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lipparini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Egidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Goings</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Petrone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Henderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ranasinghe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">G</forename><surname>Zakrzewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ehara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Toyota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Fukuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hasegawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ishida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nakajima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Honda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kitao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Vreven</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Throssell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Peralta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ogliaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Bearpark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Heyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Brothers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Kudin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Staroverov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">A</forename><surname>Keith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kobayashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Normand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Rendell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Burant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Iyengar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tomasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Millam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Klene</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Adamo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Cammi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Morokuma</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Farkas</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Gaussian Inc</publisher>
+			<pubPlace>Wallingford, CT</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Foresman, J. B.; Fox, D. J. Gaussian 16, Revision A.03;</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Long-Range Corrected Hybrid Density Functionals with Damped Atom-Atom Dispersion Corrections</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">;</forename><surname>Da</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/b810189b</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">44</biblScope>
+			<biblScope unit="page" from="6615" to="6620" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A Complete Basis Set Model Chemistry. I. The Total Energies of Closed-Shell Atoms and Hydrides of the First-Row Elements</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bennett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">G</forename><surname>Tensfeldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Al-Laham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Shirley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mantzaris</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.455064</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2193" to="2218" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">PACKMOL: A Package for Building Initial Configurations for Molecular Dynamics Simulations</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martínez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Andrade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Birgin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Martínez</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.21224</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="2157" to="2164" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Perspectives on Basis Sets Beautiful: Seasonal Plantings of Diffuse Basis Functions</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Papajak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Leverentz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct200106a?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3027" to="3034" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Gaussian Basis Sets for Use in Correlated Molecular Calculations. V. Core-Valence Basis Sets for Boron through Neon</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Woon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">H</forename><surname>Dunning</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.470645</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">103</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="4572" to="4585" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Energies, Structures, and Electronic Properties of Molecules in Solution with the C-PCM Solvation Model</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp9716997?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1995" to="2001" />
+			<date type="published" when="1998">2003. 1998</date>
+		</imprint>
+	</monogr>
+	<note>J. Phys. Chem. A</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Progress in the Theory of Electrostatic Interactions between Charged Particles</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">B</forename><surname>Lindgren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Stace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Besley</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C5CP07709E</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2016</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="5883" to="5895" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Electrolyte Dependence of CO2 Electroreduction: Tetraalkylammonium Ions Are Not Electrocatalysts</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">C</forename><surname>Berto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hamers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Berry</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cs501641z?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="703" to="707" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Electrochemical Reduction of CO 2 into CO in Tetrabutylammonium Perchlorate/Propylene Carbonate: Water Effects and Mechanism</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">X</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">J</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Q</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">N</forename><surname>Dai</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.electacta.2017.04.065</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochim. Acta</title>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="page" from="114" to="121" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Nonaqueous Solvent Adsorption on Transition Metal Surfaces with Density Functional Theory: Interaction OfN,N-Dimethylformamide (DMF)</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ludwig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Nørskov</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.1c05724?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">40</biblScope>
+			<biblScope unit="page" from="21943" to="21957" />
+		</imprint>
+	</monogr>
+	<note>Tetrahydrofuran (THF), and Dimethyl Sulfoxide (DMSO) with Ag, Cu, Pt, Rh, and Re Surfaces</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Solvent Polarity Scales: Determination of New ET(30) Values for 84 Organic Solvents</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Ceroñ-Carrasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jacquemin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Laurence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Planchat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reichardt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sraïdi</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/poc.3293</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="512" to="518" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Absence of CO2 Electroreduction on Copper, Gold and Silver Electrodes without Metal Cations in Solution</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C O</forename><surname>Monteiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Dattila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hagedoorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>García-Muelas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T M</forename><surname>Koper</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41929-021-00655-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Catalysis</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="654" to="662" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Water-Mediated Heterogeneously Catalyzed Reactions</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Resasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscatal.9b04637?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="1294" to="1309" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Low-Energy Electrocatalytic CO 2 Reduction in Water over Mn-Complex Catalyst Electrode Aided by a Nanocarbon Support and K + Cations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Saita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sekizawa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Maeda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Morikawa</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscatal.8b01068?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Catal</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="4452" to="4458" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Alkali Cation Specific Adsorption onto Fcc(111) Transition Metal Electrodes</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Mills</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">T</forename><surname>Mccrum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Janik</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C4CP00760C</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">27</biblScope>
+			<biblScope unit="page" from="13699" to="13707" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Reaction Mechanisms of CO 2 Electrochemical Reduction on Cu(1 1 1) Determined with Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Janik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Asthagiri</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcat.2014.01.013</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Catal</title>
+		<imprint>
+			<biblScope unit="volume">312</biblScope>
+			<biblScope unit="page" from="108" to="122" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Spectroscopic Evidence of Size-Dependent Buffering of Interfacial PH by Cation Hydrolysis during CO 2 Electroreduction</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Ayemoba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cuesta</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.7b07351?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">2017</biblScope>
+			<biblScope unit="issue">33</biblScope>
+			<biblScope unit="page" from="27377" to="27382" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

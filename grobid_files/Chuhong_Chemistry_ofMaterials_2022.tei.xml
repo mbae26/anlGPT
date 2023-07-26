@@ -1,0 +1,2037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Ionic Dynamics of the Charge Carrier in Layered Solid Materials for Mg Rechargeable Batteries</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2022-09-23">September 23, 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Chuhong</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Tim</forename><surname>Mueller</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sajid</forename><surname>Rauf</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Wei</forename><surname>Xu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Kuan-Jen</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Xiaoke</forename><surname>Wang</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Cuiping</forename><surname>Han</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Minglei</forename><surname>Mao</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Liquan</forename><surname>Chen</surname></persName>
+						</author>
+						<title level="a" type="main">Ionic Dynamics of the Charge Carrier in Layered Solid Materials for Mg Rechargeable Batteries</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-09-23">September 23, 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">C148D3416DD4655633D0FBE62997A6AA</idno>
+					<idno type="DOI">10.1021/acs.chemmater.2c01954</idno>
+					<note type="submission">Received: June 30, 2022 Revised: September 6, 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Multivalent-ion batteries have attracted growing attention due to their high theoretical energy density that potentially outperforms Li-ion batteries. One of the critical challenges of realizing a multivalent-ion battery is the strong polarization that results in the sluggish intercalation of ions in the host lattice, which motivates a fundamental understanding of multivalent-ion dynamics in solid-state materials. In this contribution, we investigate the diffusion mechanisms of divalent ions in a novel Mg anode coating, BiOCl, using first-principles informed learning-on-the-fly molecular dynamics. Based on nanosecond-scale dynamics observations, we gained insights into the concerted diffusion mechanism of Mg cation site-to-site hopping facilitated by synchronous anion rotational motion. Furthermore, we compute the Mg-ion diffusion in additional candidate host structures screened from available layered materials space. The results suggest the co-operative divalent cation-anion motion is likely a common phenomenon in layered oxyhalide structures. Our findings provide a new perspective on how to enhance multivalent-ion diffusion in layered materials.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">INTRODUCTION</head><p>The recent emergence of rechargeable magnesium-based batteries has received extensive attention due to several unique advantages over their lithium counterparts. The metallic Mg possesses a low reduction potential, high abundance in the Earth's crust, and high theoretical specific capacity (3833 mA h cm -3 and 2205 mA h g -1 ). <ref type="bibr" target="#b3">1,</ref><ref type="bibr" target="#b4">2</ref> The high volumetric energy density and low cost promote the development of magnesiumbased batteries as the alternative candidates for beyond-lithium batteries. <ref type="bibr" target="#b5">3</ref> Additionally, Mg is less prone to dendrite formation than Li metal, thus eliminating the safety concerns of cell internal short circuits.</p><p>Despite these compelling features, two critical challenges limit the development of magnesium-based batteries. On the anode side, in contrast to the ionically conductive solidelectrolyte interphase layer formed in Li-ion batteries, the formation of an ionically insulating surface layer in numerous conventional electrolytes results in irreversible plating/ stripping of Mg. <ref type="bibr" target="#b6">[4]</ref><ref type="bibr" target="#b7">[5]</ref><ref type="bibr" target="#b8">[6]</ref> Another challenge is the sluggish insertion kinetics of the Mg in the cathode host structure due to its divalent nature, which generates large overpotentials for Mg intercalation and greatly hinders the commercialization of Mgion batteries. <ref type="bibr" target="#b9">7,</ref><ref type="bibr" target="#b10">8</ref> Many research efforts have been devoted to the material design of an artificial interphase layer on the anode that mitigates detrimental decomposition reactions and facilitates charge transfer. Several strategies for forming the interphase layer in-situ on the anode surface have demonstrated a protective effect on electrochemical cycling with reduced reaction overpotential. <ref type="bibr" target="#b11">[9]</ref><ref type="bibr" target="#b12">[10]</ref><ref type="bibr" target="#b13">[11]</ref><ref type="bibr" target="#b14">[12]</ref> Direct modification of the Mg anode surface prior to battery assembly with well-designed artificial coating materials has also been shown to enable reversible Mg plating/stripping behavior. <ref type="bibr" target="#b15">[13]</ref><ref type="bibr" target="#b16">[14]</ref><ref type="bibr" target="#b17">[15]</ref><ref type="bibr" target="#b18">[16]</ref> To accelerate materials design for anode artificial coatings, computational research has been focused on the identification of Mg 2+ conductors with desirable electronic and stability properties. Canepa et al. systematically evaluated a variety of compounds using first-principles calculations and suggested MgSiN 2 , MgS, MgSe, MgBr 2 , and MgI 2 as promising coating materials. Relatively high Mg 2+ migration barriers (&gt;600 meV) are predicted in the identified coating candidates, which can be attributed to the high degree of polarization and charge density of divalent Mg ions. <ref type="bibr" target="#b19">17</ref> Canepa et al. have also reported that the cation complex MgCl + is the major electroactive species in most halide-based Mg electrolytes. <ref type="bibr" target="#b20">18</ref> Several cathodes based on intercalation of Mg 2+ carriers, including Mg(DME) 3 2+ , Mg(H 2 O) x 2+ , and MgCl + , have been established to improve the magnesium conduction rate via electrostatic shielding of the Mg 2+ ions. <ref type="bibr" target="#b21">[19]</ref><ref type="bibr" target="#b22">[20]</ref><ref type="bibr" target="#b23">[21]</ref> A recent study of anode interphase modification showed that electrodeposited bismuth effectively functions as a passivation layer that permits diffusion of MgCl + as charge carriers. <ref type="bibr" target="#b14">12</ref> Fast transportation of ion complexes potentially alleviates the issue of sluggish dissociation and diffusion of bare Mg 2+ ions, which highlights the critical role of MgCl + diffusion in enhancing rate capability. Compared to Mg-based electro-lytes, such as magnesium aluminum chloride complex, <ref type="bibr" target="#b20">18</ref> less is known about the intercalation mechanism and diffusion kinetics of Mg cation complexes in solid materials.</p><p>A comprehensive understanding of Mg ion complex transfer in crystalline solids can lead to generalized design rules for improved ionic conductors, but it is challenging to attain via experimental characterization. <ref type="bibr">22</ref> This motivates the use of atomistic simulations to elucidate the mechanism behind macroscopic diffusional properties observed in experiments. In terms of first-principles investigations, the climbing image nudged elastic band method (CI-NEB) <ref type="bibr" target="#b24">23,</ref><ref type="bibr" target="#b25">24</ref> and ab initio molecular dynamics (AIMD) simulations are the two common approaches to calculating the ionic diffusion rate. The CI-NEB method is frequently used to determine the energy of the transition state along the minimum energy path; however, this approach requires prior knowledge of the diffusion mechanism, which substantially affects the prediction accuracy of migration energy. AIMD does not require prior knowledge of the diffusion mechanism, but it comes with a high computational cost due to longer-scale dynamic simulations based on a firstprinciples approach. The challenges of using AIMD to study solid-state conduction of multivalent ions arise from their high charge density and strong Coulombic interactions with the anion sublattice, which results in sluggish diffusion through solid materials. <ref type="bibr" target="#b26">[25]</ref><ref type="bibr" target="#b27">[26]</ref><ref type="bibr" target="#b28">[27]</ref> Owing to the high computational cost of AIMD simulation and the rare occurrence of multivalent ion hopping, we adopted learning on-the-fly molecular dynamics (LOTF-MD) driven by machine-learned interatomic potentials with automated density functional theory (DFT) retraining to capture the rare transition events of multivalent ions. <ref type="bibr" target="#b29">28</ref> A layered material, BiOCl, which has been characterized and computed as an effective Mg anode protection layer in our recent study, <ref type="bibr" target="#b14">12</ref> was selected as a representative host material for this investigation.</p><p>Enabled by the computational efficiency of the LOTF-MD method, we simulated atomic dynamics at nanosecond (ns) timescales, which revealed highly cooperative motion of Mg and Cl ions that facilitates Mg 2+ transfer in the BiOCl/MgCl + system. Based on the simulation of two types of ion carrier, MgCl + and Mg 2+ , we identified that the cooperative motion in the layered structure is induced by the ion complex MgCl + but not by the Mg 2+ ion alone. Identification of this characteristic feature provides guidelines for the rational design of host lattices paired with an ion carrier for an enhanced ion diffusion rate. The computed diffusion barrier of Mg under different external conditions is consistent with previous reports. <ref type="bibr" target="#b14">12</ref> Hence, we present the workflow as a systematic computational strategy to investigate the diffusion dynamics of ionic complexes in solid-state materials. Given the diffusional behavior observed in layered BiOCl, we further investigated the diffusion of MgCl + and Mg 2+ in analogous layered materials selected from a large materials space. The anion/cation cooperative motion and comparatively fast conduction detected in the identified structures highlights the importance of mechanistic insight toward rational design of an artificial interphase for Mg anodes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">METHODS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Density Functional Theory.</head><p>To simulate ionic dynamics in the layered structures, we performed ground-state structural optimization and AIMD simulations at elevated temperatures using Vienna Ab-initio Simulation Package <ref type="bibr" target="#b30">29</ref> and the projector augmented wave approach. <ref type="bibr" target="#b31">30</ref> 3 × 3 × 1 supercells of BiOCl, ScOCl, and BiOBr were constructed from the Materials Project 31 structure entries mp-22939, mp-989195, and mp-23072, respectively, with one embedded Mg 2+ or MgCl + (MgBr + in BiOBr), followed by full geometry optimizations with a plane wave energy cutoff of 520 eV and a 2 × 2 × 2 Monkhorst-Pack k-point mesh. The charged cell was compensated by a uniform jellium background of opposite charge. Supercells were constructed to ensure there was at least a 9 Å separation between neighboring images <ref type="bibr" target="#b33">32</ref> to avoid periodic boundary effects. The relaxed lattice parameters were then used as an initial geometry for the subsequent AIMD simulations. In line with previous publications, <ref type="bibr" target="#b33">32,</ref><ref type="bibr" target="#b34">33</ref> the calculation parameters of AIMD were selected to balance accuracy versus computational cost. We used a plane wave energy cutoff of 400 eV and a minimal Γ-point-only k-point mesh. The AIMD simulations were carried out at 1000 K using the NVT ensemble. Additionally, the lattice expansion of BiOCl resulting from MgCl + intercalation was investigated with AIMD using the NPT ensemble under 1 atm pressure for 160 ps. The temperature control for NVT-AIMD simulations and NPT-AIMD simulations was achieved by using the Noséthermostat <ref type="bibr" target="#b35">34,</ref><ref type="bibr" target="#b36">35</ref> and Langevin thermostat, <ref type="bibr" target="#b37">36,</ref><ref type="bibr" target="#b38">37</ref> respectively. In both 0 K geometry optimization and AIMD simulations, van der Waals interaction was approximated by applying the DFT-D3 method with Becke-Johnson damping. <ref type="bibr" target="#b39">38,</ref><ref type="bibr" target="#b40">39</ref> 2.2. Learning On-The-Fly Molecular Dynamics. As illustrated in Figure <ref type="figure" target="#fig_0">1</ref>, for each system, 15 ps AIMD at 1000 K was performed with the ground-state relaxed geometry using the DFT parameters described above. For the machine learned interatomic potential model, we applied moment tensor potentials (MTPs), which express the energy of the local environment around an atom using invariant polynomials. <ref type="bibr" target="#b41">40</ref> MTPs have shown an excellent trade-off between the execution speed and accuracy compared to Gaussian approximation potential, neural network (NN), and spectral neighbor analysis potential (SNAP). <ref type="bibr" target="#b42">41</ref> A MTP model was pretrained on a series of DFT-calculated energies and forces generated in AIMD. The pretrained potential was used for MTP molecular dynamics (MTP-MD) simulations with LAMMPS. <ref type="bibr" target="#b43">42</ref> The interface between MTP-MD and DFT static calculations was automated by the Machine Learning of Interatomic Potentials (MLIP) software package. <ref type="bibr" target="#b44">43</ref> During the dynamic evolution of the structure in MTP-MD, DFT calculations were conditionally triggered by the occurrence of "extrapolation" configurations. After updating the training set, the MTP was retrained, and the molecular dynamics run was restarted with the improved potentials. Details of MTP training, including the size of polynomial basis, cut-off radius for the local atomic environment, and the definition of extrapolation threshold, are provided in the Supporting Information Section S1. By sampling the configurational space iteratively, MTP eventually becomes sufficiently accurate for the entire energy landscape that it no longer acquires additional training data to complete nanosecond long molecular dynamics production. The use of this iterative scheme enables us to gather orders of magnitude more data than can be accessed by direct AIMD with little loss of accuracy, resulting in reduced statistical variance in the estimated diffusivity, which especially benefits the prediction of structures with medium-to-high diffusion barriers. DFT validation of MTP predicted energies and forces, as well as experimental benchmark results of diffusion barriers in various crystalline structures, are reported in a recent study. <ref type="bibr" target="#b45">44</ref> We performed DFT validation of the fitted MTP on configurations that are not included in the training set, as described in Section S1. The average mean absolute errors (MAE) of validation for energies and components of force vectors are 3.27 meV/atom and 70.1 meV/Å, respectively. Detailed training and validation results for each structure are listed in Table <ref type="table" target="#tab_0">S1</ref>.</p><p>The initial temperature (T) for LOTF-MD simulations of each simulation snapshot was 1000 K. We apply the following equation to compute the tracer diffusivity</p><formula xml:id="formula_0">= D r t t lim 1<label>6</label></formula><formula xml:id="formula_1">( ) t tr 2 (1)</formula><p>where r t ( )</p><formula xml:id="formula_2">2</formula><p>is the mean square displacement (MSD) of Mg atom after time t, and the constant 6 is used for three-dimensional diffusion.</p><p>MD simulation temperature was decremented by 50 K until the diffusivity of Mg was so low that no site-to-site hopping of Mg was detected within 20 ns. (Figure <ref type="figure" target="#fig_0">1</ref>) The temperature-dependent diffusivities were used to fit the Arrhenius relationship</p><formula xml:id="formula_3">= D T D ( ) ( ) e E k T / a B<label>(2)</label></formula><p>We denote the estimated tracer diffusivity at temperature T as D(T). The activation energy, E a , can be calculated from a linear fit of log(D(T)) to</p><formula xml:id="formula_4">k T 1 B</formula><p>, where k B is Boltzmann's constant. As demonstrated by He et al., <ref type="bibr" target="#b46">45</ref> the variance in the independent variable D should be considered when fitting the Arrhenius equation for a statistically meaningful estimation of E a . Following their method, we estimated the variance in the diffusivity of Mg ions and propagated to the variance in the activation barrier E a . These variances were then used in a weighted least-squares regression to estimate E a . The equation for variance calculation and weighted least-squares regression are provided in Section S2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">RESULTS AND DISCUSSION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Diffusion of Mg ion Carrier MgCl + Versus Mg 2+ in</head><p>BiOCl. A previous study by Yoo et al. on a layered Mg cathode (TiS 2 ) reports that the MgCl + exhibits faster diffusion due to the reduced polarization strength of Mg 2+ by an anionshielding effect. <ref type="bibr" target="#b23">21</ref> However, in the host structure such as BiOCl where Cl ions are already present, it is nontrivial to anticipate the interaction of Mg 2+ with the available Cl -and its effect on the diffusion rate. Thus, we constructed atomic models for both MgCl + and Mg 2+ inserted between layers of pristine BiOCl and relaxed the structures with DFT, as shown in Figure <ref type="figure" target="#fig_1">2a,</ref><ref type="figure">c</ref>. We simulate the dilute, noninteracting case where a single Mg 2+ or MgCl + is placed in the simulation box.</p><p>The DFT-relaxed lattice parameter for pristine BiOCl is 7.3 Å. Mg 2+ inserted into the host structure forms a tetrahedron with four nearest-neighbor Cl in their original lattice sites of BiOCl layers (Figure <ref type="figure" target="#fig_1">2</ref>) and reduces the DFT-optimized lattice constant to 7.2 Å. When MgCl + is inserted into the structure, the vertical dimension is expanded to 7.7 Å, where Cl ions adjacent to Mg are slightly displaced from the lattice sites by the cation complex.</p><p>To investigate the ionic dynamics, we performed LOTF-MD of both systems. Based on 2 ns of MD production at 1000 K, as shown in Figure <ref type="figure" target="#fig_1">2b</ref>, in the system where divalent Mg 2+ was inserted, Mg and Cl locally vibrated within their own lattice sites, and no site-to-site hopping was detected during the observation time. In contrast, during 2 ns MD, in the system where the MgCl + ion complex is inserted, the rotational motion of Cl around Mg in the center can be observed in Figure <ref type="figure" target="#fig_1">2d</ref>. Displaced by the nonstoichiometric Cl, the five-fold Mg-Cl coordination activates the Cl orbiting around the Mg cation. The reduced cation-anion bond strength facilitates Mg hopping as compared with the four-fold coordination of lattice Cl with Mg in the Mg 2+ /BiOCl system.</p><p>To better understand the ion motion and quantify Mg diffusivity in both systems, we simulated long (20 ns) LOTF-MD trajectories to obtain sufficient statistics on Mg hopping events. In the BiOCl/Mg 2+ system, the MSD of Mg atoms at 1000 K had no measurable slope with respect to time (t). Assuming each Mg 2+ undergoes a site-to-site hop exactly every 20 ns, we estimate the upper limit of its diffusivity to be 7.5 × 10 -9 cm 2 /s (the derivation is shown in Section S3). In comparison, Mg diffusion in the BiOCl/MgCl + system is significantly faster, with diffusivity of 8.2 × 10 -7 cm 2 /s at 1000 K, which is higher than that in BiOCl/Mg 2+ by at least 2 orders of magnitude.</p><p>The trajectory analysis reveals the significant impact of nonstoichiometric chlorine on the dynamics of both cations and anions in the system. The cooperative motion of Mg and Cl ions in BiOCl/MgCl + is demonstrated at 1000 K at 2, 4, To assess whether the improved diffusivity in BiOCl/MgCl + relative to BiOCl/Mg 2+ was due to its larger lattice parameter, we manually expanded the lattice of the BiOCl/Mg 2+ cell to match that of BiOCl/MgCl + and performed LOTF-MD. No rotational motion of Cl ions was observed in the expanded BiOCl/Mg 2+ system, which indicates that the presence of the Mg-Cl ion complex is critical to the cooperative diffusion behavior and enhanced Mg diffusion. There has recently been a growing interest in the study of the correlation between cooperative motion and enhanced ionic diffusion, such as the multivalent ion intercalation in the cathode, <ref type="bibr" target="#b47">46,</ref><ref type="bibr" target="#b48">47</ref> as well as Liion diffusion in solid electrolyte materials. <ref type="bibr" target="#b49">[48]</ref><ref type="bibr" target="#b50">[49]</ref><ref type="bibr" target="#b51">[50]</ref><ref type="bibr" target="#b52">[51]</ref> While intrinsic cooperative motion is commonly observed in several types of Li-ion superconductors, the cooperative motion of multivalent ions usually requires externally introduced ions. <ref type="bibr" target="#b47">46,</ref><ref type="bibr" target="#b53">52,</ref><ref type="bibr" target="#b54">53</ref> To our knowledge, this is the first time the characteristic mechanism of Mg diffusion facilitated by synchronous anion motion in the layered oxyhalide host structure has been identified. The atomistic insight improves the understanding of how tailoring  the ion carrier for a specific host lattice can lead to improved ionic conduction.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Interlayer Expansion of Host Lattice</head><p>BiOCl. The analysis of Mg diffusivity shown in Figure <ref type="figure" target="#fig_1">2</ref> was performed with molecular dynamics in the NVT ensemble with the lattice dimension fixed at that of the ground state of BiOCl with MgCl inserted. In many cases, the battery components, in particular layered materials, are likely to expand notably in the dimension of charge carrier intercalation. To investigate the lattice expansion caused by MgCl + insertion, we perform AIMD in the NPT ensemble under 1 bar pressure at 1000 K. During the 160 ps AIMD equilibration, the vertical lattice expanded from 7.7 to 8.6 Å. In the expanded lattice, the MgCl + ion complex has more free space for diffusion, which may lead to a lower diffusion barrier. To investigate this hypothesis and quantify the effect of lattice expansion on diffusion kinetics, we computed the activation energy (E a ) of Mg diffusion from values of diffusivity observed at 750-1050 and 700-1050 K in the simulation cell of the original lattice and the expanded lattice, respectively. The Arrhenius plot of two sets of diffusivity values is shown in Figure <ref type="figure" target="#fig_4">5</ref>. With the interlayer distance increased by ∼12%, the Mg diffusion barrier decreases from 1.13 to 0.41 eV. Literature values of diffusion barriers calculated by CI-NEB are listed in Table <ref type="table" target="#tab_0">1</ref> for comparison. The two methods reach the same qualitative conclusion about the lattice expansion effect. The diffusion activation barrier in the original lattice of BiOCl determined by CI-NEB is slightly higher than (by ∼0.2 eV) that determined by LOTF-MD. This could be explained by the concerted motion of Mg and Cl ions identified by LOTF-MD, which was not captured in the CI-NEB calculations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Diffusion of Mg Species in Layered Oxyhalide</head><p>Structures. Considering the cooperative diffusion mechanism observed in the BiOCl/MgCl + system, there is likely a family of structures where Mg diffusion is facilitated by the concerted cation-anion motion. To investigate analogous structures in the materials space, we perform a material screening of the Materials Project database <ref type="bibr" target="#b32">31</ref> with compositional and structural searching criteria illustrated in Figure <ref type="figure" target="#fig_5">6</ref>. We identified 91 oxyhalide compounds, and from these, we searched for P4/ nmm space group structures in layered configurations using the algorithm developed by Cheon et al. <ref type="bibr" target="#b55">54</ref> Considering the relatively long bond length of Bi-Cl <ref type="bibr" target="#b56">55</ref> in BiOCl may have contributed to the mobility of Cl anions, we require that the M-X (X = Cl, Br) bond length is longer than the sum of the covalent radii of the constituent atoms. Additionally, we require that +3 is among the common oxidation numbers of the metal cation M. This screening resulted in two candidate materials, BiOBr (mp-23072) and ScOCl (mp-989195), with high similarity to BiOCl in terms of the searching criteria. After inserting the guest ion MgBr + and MgCl + in BiOBr and ScOCl, respectively, we performed LOTF-MD to evaluate Mg diffusivities and activation energy barriers. Mg hopping coupled with halide-ion rotational motions, similar to that observed in BiOCl/MgCl + , was observed in both candidate host structures. This provides support to our hypothesized material descriptors governing ionic diffusional properties. The computed diffusivities and activation energies are shown in the Arrhenius plot in Figure <ref type="figure" target="#fig_6">7</ref>, with values listed in Table <ref type="table" target="#tab_2">2</ref>. The two materials are predicted to allow lower diffusion barriers for Mg than the reference BiOCl structure, which could be attributed to the larger intrinsic interlayer distance in the ground states of the pristine BiOBr and ScOCl structures. In addition, the atomic radius, polarization strength and electronegativity of constituent ions in the host lattice may also contribute to the mobility of the Mg ion carrier.</p><p>The activation energies for Mg ions diffusion in the layered materials studied in this work are at least 0.5 eV higher than that of Li-ion in the state-of-art thiophosphate electrolytes, such as Li 10 GeP 2 S 12 (0.22 eV) <ref type="bibr" target="#b57">56</ref> and Li 6 PS 5 X (X = Cl, Br, or I) argyrodites (0.3-0.4 eV) <ref type="bibr" target="#b58">57</ref> while within a comparable range of oxide-based Li-ion solid electrolytes, such as LiPON (0.55 eV) <ref type="bibr" target="#b59">58</ref> and tetragonal Li 7 La 3 Zr 2 O 12 (0.56 eV). <ref type="bibr" target="#b60">59</ref> It suggests the possibility of reducing the Mg migration barrier by substituting oxygen with sulfur in the host structure. <ref type="bibr" target="#b10">8,</ref><ref type="bibr" target="#b61">60</ref> The activation energies are lower than those reported for other multivalent ions in other materials. Yaghoobnejad Asl et al. reported   activation energies of 0.70 and 0.84 eV in hexagonal K x W 3 O 9 for Zn 2+ and Mg 2+ , respectively, and attributed faster kinetics of Zn to the occurrence of metastable monovalent Zn + . <ref type="bibr">61</ref> Iton and See, reviewed the latest findings in inorganic solid-state conductors of Mg 2+ , Zn 2+ , and Ca 2+ and summarized generally high values of diffusion barriers (≥0.8 eV) from experimental and computational measurements. The authors also highlighted leveraging complex migration mechanisms as one of the strategies to overcome the challenge facing multivalent ion battery. <ref type="bibr" target="#b26">25</ref> Our simulation results demonstrate the promising role of cation-anion concerted motion in reducing the diffusion barrier of multivalent ions in solid materials for practical battery applications.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">CONCLUSIONS</head><p>The learning on-the-fly molecular dynamics (LOTF-MD) framework provides a systematic approach to elucidating the ionic dynamics of multivalent ions in solid phases. Enabled by real-time observation at the ns timescale, the simulated trajectory reveals a highly cooperative motion of Mg and Cl during ionic conduction of MgCl + in BiOCl. We estimate its diffusivity upper limit to be 7.   Operator of Argonne National Laboratory ("Argonne"). Argonne, a U.S. Department of Energy Office of Science laboratory, is operated under contract no. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive, irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Calculation workflow of diffusivity and the activation energy barrier for each system using learning on-the-fly molecular dynamics (LOTF-MD).</figDesc><graphic coords="2,123.48,60.44,360.00,127.39" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Side-view and top-view images of the relaxed crystal structure of (a) Mg 2+ and (c) MgCl + insertion between the BiOCl sheets with the relaxed lattice along the c-axis labeled on the side view images. The purple, red, green, and orange spheres represent Bi, O, Cl, and Mg atoms, respectively. The Bi 3+ is bonded to four equivalent O 2-represented in a 4-coordinate geometry by purple tetrahedra. Plots of Mg and Cl atoms trajectories from 2 ns MD production at 1000 K for (b) Mg 2+ in BiOCl and (d) MgCl + in BiOCl. Note that the Bi and O atoms are omitted in the top-view images and trajectory plots (b,d) for clarity.</figDesc><graphic coords="3,316.40,60.44,238.05,157.66" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Molecular Dynamics (MD) trajectory plots of Mg and Cl atoms of MgCl + in BiOCl at 1000 K at 2, 4, and 6 ns. Projection planes correspond to the axis at the left corner on each row. Oxygen and bismuth ions have been omitted for clarity. Initial positions of Mg and Cl ions are denoted by orange and green spheres, respectively, on the 2 ns plots. Rotational motion of Cl ions synergetic with Mg motion observed from MD trajectories are marked by black solid curved arrows. Site-to-site hopping of the Mg ion is marked by dashed straight arrows.</figDesc><graphic coords="4,148.42,60.44,310.05,174.44" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. Displacement at each time step for Cl ions during the 6 ns trajectory. Within each subplot, the x axis represents time, and the y axis the magnitude of displacement in Å at each time step for each Cl ion. The warmer color represents the Cl ion closer to the Mg ion, while the cooler, the farther to the Mg ion.</figDesc><graphic coords="4,113.50,295.48,379.90,211.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Computed temperature-dependent MgCl + diffusivity (D) and activation energies (E a ) of BiOCl in the original lattice (c = 7.7 Å) and lattice expanded by cation complex insertion (c = 8.6 Å).</figDesc><graphic coords="5,71.49,302.97,199.90,185.73" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Screening workflow for identification of layered oxyhalide structures capable of Mg diffusion based on compositional and structural features of BiOCl.</figDesc><graphic coords="5,316.40,203.98,238.05,63.55" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 7 .</head><label>7</label><figDesc>Figure 7. Simulated temperature-dependent Mg 2+ diffusivity and activation energies (E a ) for ScOCl and BiOBr with reference to BiOCl. The diffusivities (D) on this plot are computed by LOTF-MD in the NVT ensemble with lattice parameters fixed at that of DFT 0 K optimized structures. The computational cell of ScOCl and BiOBr are shown next to the line of corresponding Arrhenius fitting labeled with lattice parameter c.</figDesc><graphic coords="6,81.47,60.44,180.00,148.03" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>Comparison of the Computed Diffusion Activation Barriers (E a ) of Mg in BiOCl/MgCl + Cells Using LOTF-MD and the CI-NEB obtained from ref 12</figDesc><table><row><cell></cell><cell>E a (eV)</cell><cell></cell></row><row><cell>optimized lattice c (Å)</cell><cell>LOTF-MD</cell><cell>CI-NEB 12</cell></row><row><cell>7.7 a</cell><cell>1.13 ± 0.256</cell><cell>1.4</cell></row><row><cell>8.6 b</cell><cell>0.41 ± 0.027</cell><cell>N/A</cell></row><row><cell>10.0 c</cell><cell>N/A</cell><cell>0.17</cell></row></table><note><p>a Original BiOCl lattice. b BiOCl lattice expanded by (MgCl + ) complex insertion. c Fixed-expanded BiOCl lattice from ref 12.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc>5 × 10 -9 and 8.2 × 10 -7 cm 2 /s at 1000 K for Mg diffusion in BiOCl/Mg 2+ and BiOCl/MgCl + systems, respectively, during the 20 ns LOTF-MD. Intercalation of Mg monovalent cation complexes (MgCl ScOCl and BiOBr), indicating a promising role of layered oxyhalide structures in alleviating the sluggish diffusion issue of multivalent ions in solid-state materials. We thus recommend these promising materials for further experimental validation. Our findings improve the understanding of the MV ion diffusion mechanism and open new paths for the rational design of Mg anode coatings for an enhanced rate performance. The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.chemmater.2c01954. Details of MTP training and validation; discussion of the statistical error analysis and weighted least-squares regression of the Arrhenius relationship; estimation of the upper limit of diffusivity; radial distribution function and coordination analysis of LOTF-MD data; MSD of Cl ions during the 6 ns LOTF-MD production; and MAE for predictions of energy and forces by MTP with reference to DFT (PDF) Rajeev S. Assary -Materials Science Division and Joint Center for Energy Storage Research (JCESR), Argonne National Laboratory, Lemont, Illinois 60439, United States; orcid.org/0000-0002-9571-3307; Phone: 630-252-3536; Email: Assary@anl.gov</figDesc><table><row><cell>■ AUTHOR INFORMATION Corresponding Author</cell></row></table><note><p>+ ) creates 5-fold Mg-Cl coordination and triggers the rotational motion of neighboring Cl anions, which, in turn, facilitates the site-tosite hopping of Mg cations by weakening the Mg-anion bond strength. In light of this newly identified diffusion mechanism, we searched for BiOCl analogous structures as potential Mg host materials and determined their diffusion barriers. The concerted motion was also observed in the two top candidate materials to come out of this screen (■ ASSOCIATED CONTENT * sı Supporting Information</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 2 .</head><label>2</label><figDesc>Computed Diffusion Activation Barriers (E a ) of Mg in BiOCl, ScOCl, and BiOBr Host Structure with Corresponding Ion Complex as a Mg Ion Barrier</figDesc><table><row><cell cols="2">host structure optimized lattice, c (Å)</cell><cell>E a (eV)</cell><cell>Mg ion carrier</cell></row><row><cell>BiOCl</cell><cell>7.67</cell><cell>1.13 ± 0.256</cell><cell>MgCl +</cell></row><row><cell>ScOCl</cell><cell>7.95</cell><cell>1.04 ± 0.076</cell><cell>MgCl +</cell></row><row><cell>BiOBr</cell><cell>8.58</cell><cell>0.65 ± 0.041</cell><cell>MgBr +</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acs.chemmater.2c01954 Chem. Mater. 2022, 34, 8769-8776 Downloaded via ARGONNE NATL LABORATORY on January 11, 2023 at 16:44:12 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acs.chemmater.2c01954 Chem. Mater. 2022, 34, 8769-8776</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Authors</head><p>Chuhong Wang  </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1021/acs.chemmater.2c01954?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.2c01954" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="8769" to="8776" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">■</forename><surname>References</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Study on electrochemically deposited Mg metal</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsui</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jpowsour.2010.11.141</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Power Sources</title>
+		<imprint>
+			<biblScope unit="volume">196</biblScope>
+			<biblScope unit="page" from="7048" to="7055" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Study of the electrochemical deposition of Mg in the atomic level: Why it prefers the non-dendritic morphology</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Banerjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Matsui</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.electacta.2012.05.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electrochim. Acta</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="270" to="274" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Odyssey of Multivalent Cathode Materials: Open Questions and Future Challenges</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Canepa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sai Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Hannah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">G</forename><surname>Gallagher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemrev.6b00614?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="4287" to="4341" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Electrolytes and interphases in Li-ion batteries and beyond</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xu</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr500003w?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">114</biblScope>
+			<biblScope unit="page" from="11503" to="11618" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Study of Electrochemical Phenomena Observed at the Mg Metal/ Electrolyte Interface</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Tutusaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mohtadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Arthur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Mizuno</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.6b00549?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="224" to="229" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Degradation Mechanisms of Magnesium Metal Anodes in Electrolytes Based on (CF3SO2)2N(-) at High Current Densities</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">L</forename><surname>Bolotin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Nolis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Bayliss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Burrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Vaughey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cabana</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.langmuir.7b01051?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Langmuir</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="9398" to="9406" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Mg rechargeable batteries: an on-going challenge</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Shterenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gershinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pour</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Aurbach</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c3ee40871j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energ Environ Sci</title>
+		<imprint>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">2265</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Cathode materials for magnesium and magnesium-ion based batteries</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Huie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Bock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Takeuchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Marschilok</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Takeuchi</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ccr.2014.11.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Coord. Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="15" to="27" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Rechargeable Mg metal batteries enabled by a protection layer formed in vivo</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Guan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ensm.2019.11.012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Storage Mater</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="408" to="413" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Reducing Mg Anode Overpotential via Ion Conductive Surface Layer Formation by Iodine Additive</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eidson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aenm.201701728</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1701728</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A Stable Solid Electrolyte Interphase for Magnesium Metal Anode Evolved from a Bulky Anion Lithium Salt</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cui</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201904987</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<date type="published" when="2020">2020. 1904987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ryu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Mcclary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Long</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Engelhard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Quinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Kotula</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Zavadil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Murugesan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shao</surname></persName>
+		</author>
+		<idno type="DOI">10.1149/1945-7111/ac3d2c</idno>
+	</analytic>
+	<monogr>
+		<title level="j">An Electrochemically Activated Nanofilm for Sustainable Mg Anode with Fast Charge Transfer Kinetics. J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="page">120519</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Kinetic surface control for improved magnesium-electrolyte interfaces for magnesium ion batteries</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Masse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cao</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ensm.2019.06.035</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Storage Mater</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="96" to="104" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Enabling Mg metal anodes rechargeable in conventional electrolytes by fast ionic transport interphase</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lv</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Guan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Luo</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/nsr/nwz157</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Natl. Sci. Rev</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="333" to="341" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Tailoring Ion-Conducting Interphases on Magnesium Metals for High-Efficiency Rechargeable Magnesium Metal Batteries</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-K</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Oh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-D</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.0c02102?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="3733" to="3740" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">A Bismuth-Based Protective Layer for Magnesium Metal Anode in Noncorrosive Electrolytes</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cui</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsenergylett.1c01243?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">2021</biblScope>
+			<biblScope unit="page" from="2594" to="2601" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Ionic Transport in Potential Coating Materials for Mg Batteries</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sai Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Canepa</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b02692?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="8087" to="8099" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Elucidating the structure of the magnesium aluminum chloride complex electrolyte for magnesium-ion batteries</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Canepa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jayaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Rajput</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">S</forename><surname>Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c5ee02340h</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="3718" to="3730" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Fast kinetics of multivalent intercalation chemistry enabled by solvated magnesium-ions into self-established metallic layered materials</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Mu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhao-Karger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Diemant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Behm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kubel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fichtner</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-018-07484-4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">5115</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Water-Activated VOPO4 for Magnesium Ion Batteries</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ruan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Miao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.8b02854?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="6441" to="6448" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Fast kinetics of magnesium monochloride cations in interlayer-expanded titanium disulfide for magnesium rechargeable batteries</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Yoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ru</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Jing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Pantelides</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Nolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mo</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemrev.9b00747?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Classical and Emerging Characterization Techniques for Investigation of Ion Transport Mechanisms in Crystalline Fast Ionic Conductors</title>
+		<meeting><address><addrLine>Gao, Y; Bo</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017">2017, 8, 339. 2020</date>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="5954" to="6008" />
+		</imprint>
+	</monogr>
+	<note>Chem. Rev.</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A climbing image nudged elastic band method for finding saddle points and minimum energy paths</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jónsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1329672</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9901" to="9904" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Henkelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jónsson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.1323224</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="9978" to="9985" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Multivalent Ion Conduction in Inorganic Solids</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W B</forename><surname>Iton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>See</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.1c04178?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="881" to="898" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A materials perspective on magnesium-ion-based solid-state electrolytes</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Jaschin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Bo</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c9ta11729f</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Mater Chem A</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="2875" to="2897" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Materials Design Rules for Multivalent Ion Mobility in Intercalation Structures</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Rong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Malik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Canepa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sai Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b02342?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="6016" to="6021" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Ionic Conduction through Reaction Products at the Electrolyte-Electrode Interface in All-Solid-State Li(+) Batteries</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aykol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mueller</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsami.0c17285?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl. Mater. Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="55510" to="55519" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kresse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Furthmuller</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevb.54.11169</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="11169" to="11186" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Projector Augmented-Wave Method</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Blöchl</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevb.50.17953</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="17953" to="17979" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Commentary: The Materials Project: A materials genome approach to accelerating materials innovation</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hautier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dacek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cholia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gunter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Skinner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.4812323</idno>
+	</analytic>
+	<monogr>
+		<title level="j">APL Mater</title>
+		<imprint>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">11002</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Phase stability, electrochemical stability and ionic conductivity of the Li10 +/-1MP2X12</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">F</forename><surname>Mo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Miara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<author>
+			<persName><surname>M = Ge</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Si</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Al</forename><surname>Sn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Or</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X = O</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Or Se</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c2ee23355j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="148" to="156" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>family of superionic conductors</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">) and Li5PS4Cl2: New Lithium Superionic Conductors Predicted from Silver Thiophosphates using Efficiently Tiered Ab Initio Molecular Dynamics Simulations</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04049?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2474" to="2484" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Canonical dynamics: Equilibrium phase-space distributions</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Hoover</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physreva.31.1695</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. A: At., Mol., Opt. Phys</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="1695" to="1697" />
+			<date type="published" when="1985">1985</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A unified formulation of the constant temperature molecular dynamics methods</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nosé</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.447334</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="511" to="519" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Polymorphic transitions in single crystals: A new molecular dynamics method</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Parrinello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.2c01954?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+		<ptr target="https://doi.org/10.1021/acs.chemmater.2c01954" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Phys</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="8769" to="8776" />
+			<date type="published" when="1981">1981. 2022</date>
+		</imprint>
+	</monogr>
+	<note>Chem. Mater.</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Crystal Structure and Pair Potentials: A Molecular-Dynamics Study</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Parrinello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.45.1196</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="1196" to="1199" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Improved density dependent correction for the description of London dispersion forces</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bucko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lebegue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Hafner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">G</forename><surname>Angyan</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct400694h?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="4293" to="4299" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Effect of the damping function in dispersion corrected density functional theory</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goerigk</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.21759</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1456" to="1465" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Moment Tensor Potentials: A Class of Systematically Improvable Interatomic Potentials</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Shapeev</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/15m1054183</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Multiscale Model Sim</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="1153" to="1173" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Performance and cost assessment of machine learning interatomic potentials</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Behler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Csányi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Shapeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpca.9b08723?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="731" to="745" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Fast Parallel Algorithms for Short-Range Molecular Dynamics</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Plimpton</surname></persName>
+		</author>
+		<idno type="DOI">10.1006/jcph.1995.1039</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Phys</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="1" to="19" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Active learning of linearly parametrized interatomic potentials</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Podryabinkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Shapeev</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.commatsci.2017.08.031</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comp Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="171" to="180" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Lithium Ion Conduction in Cathode Coating Materials from On-the-Fly Machine Learning</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Aoyagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wisesa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mueller</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b04663?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3741" to="3752" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Statistical variances of diffusional properties from ab initio molecular dynamics simulations</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Epstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mo</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41524-018-0074-y</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">18</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Fast Diffusion of Multivalent Ions Facilitated by Concerted Interactions in Dual-Ion Battery Systems</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Hatakeyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kumagai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Oba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ichitsubo</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aenm.201801475</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1801475</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Uncovering the Potential of M1-Site-Activated NASICON Cathodes for Zn-Ion Batteries</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Avdeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201907526</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<date type="published" when="2020">2020. 1907526</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Origin of fast ion diffusion in superionic conductors</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mo</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms15893</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">15893</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Mechanistic Origin of Superionic Lithium Diffusion in Anion-Disordered Li6PS5 X Argyrodites</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Morgan</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c03738?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<date type="published" when="2004">2021. 2004-2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Concerted Migration Mechanism in the Li Ion Dynamics of Garnet-Type Li7La3Zr2O12</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jalem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shiiba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Munakata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kasuga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kanamura</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm303542x?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="425" to="430" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Structural and Mechanistic Insights into Fast Lithium-Ion Conduction in Li4SiO4-Li3PO4 Solid Electrolytes</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Eames</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Chotard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Lalere</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Seznec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Emge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Pecher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Grey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Masquelier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Islam</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.5b04444?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="9136" to="9145" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Toward &quot;rocking-chair type&quot; Mg-Li dual-salt batteries</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ichitsubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Okamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kawaguchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Kumagai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Oba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yagi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Goto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Doi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Matsubara</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c5ta01365h</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Mater Chem A</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="10188" to="10194" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Multi-ion strategies towards emerging rechargeable batteries with high performance</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ensm.2019.03.028</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Storage Mater</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="566" to="586" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Data Mining for New Two-and One-Dimensional Weakly Bonded Solids and Lattice-Commensurate Heterostructures</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cheon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Duerloo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Sendek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Porter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Reed</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.nanolett.6b05229?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nano Lett</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1915" to="1923" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">The crystal and molecular structure of bismuth trichloride</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Nyburg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Ozin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">T</forename><surname>Szymanśki</surname></persName>
+		</author>
+		<idno type="DOI">10.1107/s0567740872007113</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Corrigendum. Acta. Crystallogr. B. Struct. Sci. Cryst. Eng. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page">2885</biblScope>
+			<date type="published" when="1972">1972</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Tetragonal Li10GeP2S12 and Li7GePS8 -exploring the Li ion dynamics in LGPS Li electrolytes</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kuhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Duppel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Lotsch</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c3ee41728j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energ Environ Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="3548" to="3552" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Mechanochemical synthesis of Li-argyrodite Li6PS5X (X=Cl, Br, I) as sulfur-based solid electrolytes for all solid state batteries application</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Boulineau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Courty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-M</forename><surname>Tarascon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Viallet</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ssi.2012.06.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Ionics</title>
+		<imprint>
+			<biblScope unit="volume">221</biblScope>
+			<biblScope unit="page" from="1" to="5" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Structural and Compositional Factors That Control the Li-Ion Conductivity in LiPON Electrolytes</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Lacivita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Artrith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b02812?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="7077" to="7090" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Solid-State Electrolytes: Revealing the Mechanisms of Li-Ion Conduction in Tetragonal and Cubic LLZO by First-Principles Calculations</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Meier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Laino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Curioni</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp5002463?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="6668" to="6679" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Mass Transfer of Divalent Ions in an Oxide Host: Comparison of Mg2+ and Zn2+ Diffusion in Hexagonal KxW3O9 Bronze</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Canepa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Bo</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Sai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gautam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Key</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Yaghoobnejad Asl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Manthiram</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b03756?urlappend=%3Fref%3DPDF&amp;jav=VoR&amp;rel=cite-as</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="2296" to="2307" />
+			<date type="published" when="1759">2017, 8, 1759. 2019</date>
+		</imprint>
+	</monogr>
+	<note>Chem. Mater</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

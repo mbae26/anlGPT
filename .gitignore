@@ -164,3 +164,4 @@ gpt_env/
 /doctran.ipynb
 /chroma_db/
 /faiss/
+/grobid-0.7.3/

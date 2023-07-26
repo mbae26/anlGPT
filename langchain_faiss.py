@@ -45,7 +45,7 @@ def chatbot(question):
     if question == '':
         return
     retriever = db.as_retriever()
-    retriever.search_kwargs = {'k':4}
+    retriever.search_kwargs = {'k': 4}
     chain = ConversationalRetrievalChain(
         retriever=db.as_retriever(),
         question_generator=question_generator,

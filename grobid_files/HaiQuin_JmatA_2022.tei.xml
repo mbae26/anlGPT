@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mesolytic cleavage of homobenzylic ethers for programmable end-of-life function in redoxmers † ‡</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2022-03-07">07 March 2022</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hai</forename><surname>Qian</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">J</forename><surname>Counihan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hieu</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nafisa</forename><forename type="middle">A</forename><surname>Ibrahim</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Andrew</forename><forename type="middle">S</forename><surname>Danis</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Worapo</forename><surname>Setwipatanacha</surname></persName>
+							<idno type="ORCID">0000-0003-4346-4668</idno>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Nath</forename><forename type="middle">S</forename><surname>Purwanto</surname></persName>
+							<idno type="ORCID">0000-0002-9571-3307</idno>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Materials Science and Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Joaqu</forename><surname>Ín Rodr Íguez-L Ópez</surname></persName>
+							<email>joaquinr@illinois.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<email>assary@anl.gov</email>
+						</author>
+						<author>
+							<persName><forename type="first">Jeffrey</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+							<email>jsmoore@illinois.edu</email>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<addrLine>9700 South Cass Avenue</addrLine>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">The Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mesolytic cleavage of homobenzylic ethers for programmable end-of-life function in redoxmers † ‡</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2022-03-07">07 March 2022</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4205211B11D1944F22CD17AE8D777754</idno>
+					<idno type="DOI">10.1039/d1ta10291e</idno>
+					<note type="submission">Received 1st December 2021 Accepted 26th February 2022</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Irreparable chemical damage to redox-active monomers, oligomers, and polymers (i.e. redoxmers) limits the lifetime of energy storage devices (e.g. redox flow batteries) by causing electrode and membrane fouling, as well as irreversible capacity loss. To predictably restore device and materials performance, it is desirable to add programmed destruction capabilities into these damage-prone materials. Here, we report the use of triggerable retrograde reactions to achieve programmable end-of-life function in redoxmers. Retrograde reactions are intended to break up damaged redoxmer materials into more soluble small-molecule constituents to prevent irreparably fouling battery interfaces. We investigated the redox-triggered mesolytic cleavage of homobenzylic ethers (HBEs) for this purpose. Combining experimental methods with simulations, we probed the influence of ring substituents on the programmable bond-scission behavior of HBEs. Variation of para-substituents on the HBEs allowed us to modify the oxidation potential, degradation pathway, and electrochemical mechanisms of the generated products. Given its ideal oxidation potential, we selected the para-methoxy-based HBE as the cleavage scaffold and integrated it with dialkoxybenzene, TEMPO, viologen, and para-nitrobenzene redox centers for compatibility, bulk deconstruction, and electrode defouling tests. Upon applying a high oxidation potential, the redox-active pendant is cleaved from the backbone via HBE bonds; of the four redox centers tested, three of them remained fully redox active. Viologen-appended redox active polymers with HBE linkers were cleaved to fully separate the redox centers from the backbone. Polymer-filmed electrodes were partially restored following HBE oxidation defouling. These studies highlight the codesign of new materials functions for developing sustainable energy storage materials.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Analogous to biological systems that have evolved to cope with the chemical demands of oxidative phosphorylation, 1,2 articial energy conversion (e.g. photovoltaics) and storage (e.g. batteries) systems also operate under extreme chemical stress. Thus, accumulated damage, including both physical and chemical, becomes unavoidable and is detrimental to longevity of energy capture and storage devices. <ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref> To prevent and repair damage, numerous healing strategies based on additives, which are extrinsic to the active material, have been developed. <ref type="bibr" target="#b5">6</ref> For example, power conversion efficiency losses and long-term damage caused by the effects of humidity in lead halide perovskite photovoltaics are prevented through the addition of polyethylene glycol as a water adsorption layer. <ref type="bibr" target="#b6">7</ref> Similarly, in Liion batteries, the addition of crack-healing agents (e.g. lowmelting point metallic alloys, <ref type="bibr" target="#b7">8,</ref><ref type="bibr" target="#b8">9</ref> self-healing polymer binders, <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> and new self-healing polymer electrolytes <ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref><ref type="bibr" target="#b13">[14]</ref> ) prevents capacity fade ascribed to the formation of micro-cracks upon cycling.</p><p>Irreparable chemical damage of battery components due to the demands of the electrochemical environment requires new mitigation strategies, as the above physical barrier and healing strategies are not relevant in all cases. Failure to remove degraded species may result in dysfunctional cell operation due to irreversible deposition of lms on electrodes and membrane fouling. For instance, defects in the formation of solid electrolyte interphase layers at Li-ion battery anodes lead to capacity fade and power loss, <ref type="bibr" target="#b3">4</ref> and the precipitation of vanadium electrolytes in redox ow batteries (RFBs) causes blockages in the stacks and pumps that suppress the energy density and capacity of RFBs. <ref type="bibr" target="#b4">5</ref> For these systems it would be desirable to develop a strategy that relies on conditionally activating an intrinsic redox response that would help dealing with irreversible damage.</p><p>Redoxmers, alternative RFB electrolytes incorporating multiple copies of redox-active units into a single molecule, are of great interest for size-exclusion RFBs. <ref type="bibr" target="#b14">15</ref> These redoxmers are also known to produce insoluble species in extreme electrochemical environments. Damaged or overcharged redoxmers passivate the electrodes, foul separator membranes, and contaminate electrolyte solutions, thus lowering the energy storage efficiency, overall performance, and long-term operation (Scheme 1a). <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> Early intervention via a restoration regime would halt the deterioration of power and storage capacities before system failure. We imagined the need to add new functionality that enables programmable deconstruction of redoxmers that reverts them back to their small-molecule constituents, <ref type="bibr" target="#b17">18</ref> which would be more soluble in electrolytes and limit precipitation of blocking lms. Further down the line, this operation might enable the separation of the damaged components and perhaps even their re-assembly. Organic redoxmers are the ideal platform to incorporate the programmable end-of-life functionality because of their structural versatility and synthetic accessibility.</p><p>A complete redoxmer restoration requires, in its simplest form, detachment of damaged redox centers from the redoxmer backbone followed by reattachment of fully functional centers. As a rst step towards this long-term objective, we set out to demonstrate the value of retrograde reactions that break up redoxmers in response to a redox-triggering event. In searching for retrograde processes in redoxmers, we again take inspiration from nature since many biomacromolecules are well suited for multi-generation lifecycles. For example, lignin is a class of complex organic biopolymers in which the b-aryl ether (i.e., a homobenzylic ether) is the most common linkage (45-60% of all linkages). <ref type="bibr" target="#b18">19</ref> Lignin scission at the C a -C b bonds occurs by a catalytic oxidative cleavage pathway triggered by bacteria and fungi. <ref type="bibr" target="#b19">20</ref> An electron transfer reaction followed by a bond breaking reaction is the elementary reaction step known as mesolytic cleavage. <ref type="bibr" target="#b20">21</ref> Mesolytic cleavage is a thermodynamically favorable bond scission reaction driven by a diminished bond dissociation free energy of a radical ion. This results in the formation of one radical and one ion. <ref type="bibr" target="#b21">22</ref> There have been many molecular scaffolds reported that undergo mesolytic cleavage, such as alkoxyamines, <ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref> aromatic disuldes, 27 benzylic thioethers, <ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b28">29</ref> enol carbonates, <ref type="bibr" target="#b29">30</ref> haloacetonitriles, <ref type="bibr" target="#b30">31</ref> and others. <ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref> Synthetic chemists have utilized these cleavage reactions for various purposes, <ref type="bibr" target="#b35">36,</ref><ref type="bibr" target="#b36">37</ref> such as in situ carbocation generation for organic synthesis, <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b27">28,</ref><ref type="bibr" target="#b36">37</ref> single-molecular conductance control via electrostatic cleavage, <ref type="bibr" target="#b37">38</ref> synthesis of terminal functionalized polymers, <ref type="bibr" target="#b38">39</ref> and photo-controlled cationic polymerization via mesolytic cleavage of dithioester chain transfer agents. <ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> Mesolytic cleavage of homobenzylic ethers (HBEs, Scheme 1b), were rst investigated by Arnold et al., <ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43</ref> then exploited by Floreancig and others, <ref type="bibr" target="#b43">44</ref> who developed electron-transfer-initiated cyclization reactions using mesolytic cleavage of HBEs. <ref type="bibr" target="#b44">[45]</ref><ref type="bibr" target="#b45">[46]</ref><ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref> By utilizing the fundamental reaction step of mesolytic bond cleavage, we imagined redoxmer architectures in which an HBE scaffold is appended with redox-active pendant groups. The pendant groups are the energy-storage redox center, chosen to exhibit stable, reversible electrochemical performance. Programmable end-of-life deconstruction is imagined as requiring a redox potential that is outside the operational window of the pendant group. To realize this design, the mesolytic cleavage pathway of the HBE must be tightly controlled. Despite many historical precedents, there are yet no systematic studies on tuning fragmentation and electrochemical behaviors of HBEs. Here, we advanced the fundamental chemistry for this purpose. We computationally screened and synthesized a series of HBEs with different electron donating (EDG) and withdrawing (EWG) groups at the para-position of the aryl core (Scheme 2), selecting the most practical HBE scaffold using the methods shown in Scheme 1b. Our results not only show that it is possible to achieve compatibility with various redox active centers and the deconstruction reaction, but also demonstrate an important step in the development of programmable electroactive materials.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Synthetic procedures and characterization (NMR and HRMS) of</head><p>HBEs and HBE-incorporated redox monomers, dimers, and polymers (i.e. viologen-appended polystyrenes with (P B -Vio-HBE) or without (P B -Vio) HBE linkers, and linear viologen-based redox active polymers with (P M -Vio-HBE) or without (P M -Vio) HBE linkers inserted into main-chain backbones) were detailed in ESI. ‡</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fragmentation studies</head><p>Chromatograms of fragmentation were acquired using a GC-MS system (Agilent Inc., CA, USA) consisting of an Agilent 6890 gas chromatograph, an Agilent 5973 MSD and a HP 7683B autosampler (see details in ESI ‡). All results were reproduced on a Shimadzu Gas Chromatograph/Mass Spectrometer (GCMS-QP2010 Plus) equipped with an auto injector (AOC-20i) to conrm the accuracy of fragmentation pattern. The error bar of relative intensity between benzylic and oxocarbenium cations was estimated from standard deviation of the average of three measurements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrochemistry studies</head><p>Tetrabutylammonium hexauorophosphate (TBAPF 6 , 98%, TCI) was recrystallized twice from ethanol and dried under vacuum before use. Acetonitrile (MeCN, 99.7%, anhydrous, Sigma-Aldrich) was dried over molecular sieves in an argon-lled glovebox prior to use.</p><p>All electrochemical experiments were carried out in an argon-lled glovebox (O 2 &lt; 0.1 ppm, H 2 O &lt; 0.1 ppm). HBE solutions containing 2-5 mM HBE and 100 mM TBAPF 6 in MeCN were used. The working electrode was a 3 mm diameter glassy carbon disc for standard CV studies. The counter electrode in all cases was a 0.5 mm platinum wire. The reference electrode was a 0.5 mm Pt wire on which a polypyrrole lm was deposited as described by Ghilane et al., <ref type="bibr" target="#b49">50</ref> and this electrode was sealed in a glass tube lled with 0.1 M TABPF 6 in MeCN and t with a porous glass frit. This ensured the potential did not dri during extended testing of each molecule. The reference was tested against ferrocene at the end of each experiment. For redoxmer-HBE molecules, a silver wire was used as quasireference, as any shi in potential shi could be tracked since the redoxmer potential versus ferrocene is known.</p><p>For collection experiments, a double-barreled theta ultramicroelectrode was used. Platinum wires (25 mm diameter, 99.99%, Goodfellow) were sealed in each barrel of the glass capillary. The nished theta-ultramicroelectrode (theta-UME) had the electrodes 100 mm apart (Fig. <ref type="figure" target="#fig_6">S6 ‡</ref>). The collection efficiency (collector-to-generator current ratio) was only #3%, but the high throughput in these tests was valued more than high collection efficiency that could be achieved with standard scanning electrochemical microscopy (SECM; data not shown). The generator electrode was held at a mass transfer-limited potential to oxidize the HBE. The collector electrode was scanned over a 2-3 V window from near the oxidation potential (1 V vs. Fc/Fc + ) to the negative limit of the system (usually À2 V) at 20 mV s À1 and back. Blanks were performed by leaving the generator at open circuit and scanning the collector. The redox potentials of the products were dened as the half-wave potentials of the reduction waves (Fig. <ref type="figure">S7 ‡</ref>).</p><p>Bulk electrolysis (BE) experiments were carried out in a Wcell with glass frits separating three compartments. Supporting electrolyte was placed in the reference and counter compartments, and the HBE solution was placed in the central working compartment. BEs were carried out with carbon felt, graphite rod, and gold slug working electrodes; carbon felt was the counter electrode, and silver wire was used as a quasireference electrode. Gold electrodes were deemed incompatible with HBE oxidation, as the process seemed to catalytically dissolve the gold. CVs of the products of HBE 2 using a graphite rod working electrode are shown in Fig. <ref type="figure" target="#fig_1">S11</ref>. ‡ Like theta-UME collection experiments, two reductions are seen and show minimal electrochemical reversibility.</p><p>To investigate oxidative deconstruction of redoxmers in bulk solution, membrane permeability studies were carried out in a custom Teon H-cell with a Daramic-175 membrane separating the compartments. One cell was lled with 2 mM (repeat unit) P B -Vio-HBE, 100 mM TBAPF 6 in MeCN solution (origin cell), and the other was lled with 100 mM TBAPF 6 in MeCN (blank cell) at equal volumes of 3.6 mL. A Pt microelectrode (25 mm diameter) was used as working electrode in the blank cell, where CVs (100 mV s À1 ) were run at regular intervals to quantify viologen (Vio) content based on steady-state currents. A carbon rod counter/reference electrode was used in the origin cell. Results, permeability calculations, and current corrections based on evaporation are presented in the Fig. <ref type="figure" target="#fig_6">S16</ref>. ‡</p><p>To investigate oxidative deconstruction of redoxmers at electrode interfaces, lm removal studies were performed with a 1.5 mm-diameter Pt macroelectrode. P B -Vio, P B -Vio-HBE, P M -Vio, and P M -Vio-HBE lms were electrodeposited by cyclic voltammetry in 1 mM (repeat unit) polymer, 100 mM TBAPF 6 in MeCN; one cycle accessing the second reduction of viologen is adequate to precipitate multiple polymer layers on the electrode. Filmed electrodes were then gently rinsed with MeCN and placed in a blank 100 mM TBAPF 6 solution. Vio content was determined by CV (20 mV s À1 ) of the rst reduction of viologen and quantied based on the integrated area of the anodic peak. E ox was accessed by CV (100 mV s À1 ) sweeping to those potentials, leaving the lm at or above the potential of HBE oxidation for a total of 3 seconds. Convection was accomplished by stirring the solution with a stir bar directly underneath the lmed electrode.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Computational studies</head><p>All density functional theory (DFT) calculations were performed using the B3LYP/6-31+G(d,p) 51 level of theory as implemented in Gaussian 16, Revision A.03. <ref type="bibr" target="#b51">52</ref> To account for the free energies of solvation in acetonitrile solvent (dielectric constant ¼ 37.5) when necessary, self-consistent reaction-eld (SCRF) calculations using the conductor-like polarizable continuum model (CPCM) <ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54</ref> was employed. Numerical integrations were carried using an ultra-ne grid. Equations for calculating the oxidation potentials (E ox ), the bond dissociation Gibbs free energy change of a radical cationic HBE (DG), and the bond dissociation free energy of a neutral HBE (BDFE sub ) are described in detail in ESI. ‡</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fragmentation analysis of HBEs</head><p>The para-substituted HBE derivatives 1-11 (Scheme 2) were synthesized from commercially available starting materials (see details in ESI ‡). All compounds were fully characterized using NMR spectroscopy and mass spectrometry. In order to probe the fragmentation behaviors of HBE radical cations, we rst employed gas chromatography-mass spectrometry (GC-MS) in which neutral HBE molecules are ionized to the corresponding radical cations under electron ionization (EI) conditions and the results are shown in Fig. <ref type="figure" target="#fig_1">1</ref>. The resulting radical cations undergo a variety of fragmentation pathways in the gas phase, and the generated cationic species are analyzed by mass spectrometry. For example, in HBE 2, three representative cationic species with m/z values at 166.10, 121.07, and 45.03 were observed and assigned to the parent radical cation (red), benzylic cation (blue), and oxocarbenium cation (pink), respectively (Fig. <ref type="figure" target="#fig_1">1a</ref>). Similar fragmentation patterns, with the benzylic cation displaying the highest intensity, were also found in HBEs 1, 3, 4, and 5, which all have EDGs at the para-position (Fig. <ref type="figure" target="#fig_3">S3b-e ‡</ref>). As for HBEs 6, 7, 9, 10, and 11, which have a hydrogen atom or EWGs at their para-position, the oxocarbenium cation became the most intense fragment (Fig. <ref type="figure" target="#fig_3">S3f, g</ref> and<ref type="figure">i</ref></p><formula xml:id="formula_0">-k ‡).{</formula><p>Comparison of GC-MS fragment intensities allowed us to quickly establish structure-reactivity trends in the fragmentation patterns (Fig. <ref type="figure" target="#fig_1">1b</ref>). We hypothesized that HBE electronic structures dominate the preferred selection of the competing fragmentation pathways (i.e., benzylic vs. oxocarbenium ion formation), as indicated by the respective pathways I and II in Fig. <ref type="figure" target="#fig_1">1b</ref>. A plot of the logarithmic value of the intensity ratio between benzylic and oxocarbenium cations vs. the Hammett para-substituent constant s p + showed a linear correlation (Fig. <ref type="figure" target="#fig_1">1c</ref>). As s p + shied from negative to positive values, the fragmentation pathway shied from benzylic-cation-dominated to oxocarbenium-dominated. This indicates that control over the fragmentation pathwayat least in the gas phaseis achievable by choice of the para-substituent. <ref type="bibr" target="#b54">55,</ref><ref type="bibr" target="#b55">56</ref> We next used these experimental observations as benchmarks for developing a computational screening and discovery tool. In particular, we employed DFT to compute oxidation potentials of HBEs and their mesolytic cleavage fragments (eqn S1 and Table <ref type="table">S2</ref> ‡), as well as the Gibbs free energy change of all possible mesolytic cleavage pathways associated with HBE radical cations, DG meso (eqn S2 ‡). <ref type="bibr" target="#b56">57</ref> By comparing the DG meso values (Table <ref type="table">S3</ref> ‡), the two most thermodynamically favorable cleavage pathways for most HBE cation radicals (except for HBE 4) are pathways I and II in Fig. <ref type="figure" target="#fig_1">1b</ref>, thus validating the computed patterns against the GC-MS observations. Pathway I results in a benzylic radical and an oxocarbenium cation, while the pathway II gives the opposite charge and multiplicity distribution for the two fragments. The lowest DG meso associated with each HBE was reported in Table <ref type="table" target="#tab_0">1</ref>, which ranges from 1 to 2 eV.k In contrast to DG meso , the corresponding homolytic bond dissociation free energies of the benzylic C a -C b bond (BDFE sub ) of all HBE molecules are much larger and in a range of 3.90-4.13 eV (Table <ref type="table" target="#tab_0">1</ref>).** Clearly, all HBEs demonstrate signicantly a Taken as the half-wave potentials of the respective oxidation waves at 50 mV s À1 . b Bond dissociation free energy of neutral HBE substrates (BDFE sub ) calculated from homolysis via a benzylic C a -C b bond in gas phase. c Simulated oxidation potential of neutral HBEs to their radical cations in MeCN solvent. d Simulated oxidation potential of benzylic cations to double cations (Fig. <ref type="figure" target="#fig_2">2c</ref>) in MeCN solvent. e The calculated lowest Gibbs free energy change of mesolytic cleavage (DG meso ) is considered as the most favorable cleavage pathway (see Fig. <ref type="figure" target="#fig_1">1b</ref>) in gas phase.</p><p>f Second oxidation waves do not appear or overlap with electrolyte breakdown. g Pathway II is the second favorable cleavage pathway, as the fragments in the more favorable pathway are not observed experimentally.</p><p>{ Ammonium-based HBE 8 is known to undergo demethylation, rst under the high injection temperature of 250 C, followed by a similar fragmentation pattern as found for HBE 1 (Fig. <ref type="figure" target="#fig_3">S3h ‡</ref>).</p><p>k HBE 8 shows the lowest DG meso ¼ À1.26 eV. We posit that the surprising exergonic mesolytic cleavage of 8 comes from the highly unstable nature of its doubly oxidized state of charge. ** The exception is HBE 3, where the BDFE sub is at 3.68 eV due to stabilization of the benzylic radical by two adjacent methyl groups.</p><p>more favorable bond cleavages once oxidized. Moreover, as the s p + increased, the DG meso dropped, accompanied with a shi in favorable cleavage pathway from II to I (Table <ref type="table" target="#tab_0">1</ref>). This indicates that the radical cations of HBEs with para-substituted EDGs are relatively more difficult to fragment than the ones with parasubstituted EWGs. A more quantitative probability analysis of two mesolytic pathways was performed by computing their associated Boltzmann factors (Fig. <ref type="figure" target="#fig_1">1d</ref>), which shows the same decreasing trend as that observed by GC-MS (Fig. <ref type="figure" target="#fig_1">1c</ref>).</p><p>Comparing HBEs 2 and 3, it is apparent that a more stabilized benzylic cation will lead to a higher probability of mesolytic cleavage pathway II. <ref type="bibr" target="#b42">43</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrochemistry studies of HBEs</head><p>We used cyclic voltammetry (CV) to assess the redox potential and electrochemical reversibility of these HBEs within a specied window (Fig. <ref type="figure" target="#fig_2">2a</ref>). Oxidations of all tested molecules † † showed total chemical irreversibility, as they lack return reduction waves even at and above 1 V s À1 scan rates (Fig. <ref type="figure" target="#fig_2">2a</ref> and S5 ‡). Only one of the solutions containing HBE 11 showed a reduction processes ascribed to the redox of the phenyl-NO 2 group as a primary electrochemical event. ‡ ‡ This lack of reductive electrochemistry makes HBEs excellent candidates for exclusively oxidation-triggered rapid mesolytic cleavage of bonds in redoxmer structures. The DFT-computed oxidation potential values of the substrate to the radical cation species (E ox,1 ) (Table <ref type="table" target="#tab_0">1</ref>) correlate well with the CV results with a mean absolute error (MAE) of 100 mV. Increasing values for s p + were reected in the experimental E ox,1 which shied from 0.30 to 2.12 V vs. Fc/Fc + . <ref type="bibr" target="#b57">58</ref> The same E ox,1 (1.10 V) found in HBEs 2 and 3 indicates that alkylation of the benzylic position does not affect the oxidation potential of the aryl group in neutral HBEs. This is instructive for selecting a proper para-functionality based on the value of s p + and including other chemistries on C a and C b for programmable redoxmer design. A second oxidation wave was observed in many tested HBEs (Fig. <ref type="figure" target="#fig_2">2a</ref>). For some HBEs like 2, these waves were much less than 500 mV more positive than the rst oxidation, a benchmark that is useful for characterizing if a second redox process occurs within the same redox motif as expected by electrostatic effects upon consecutive electron transfer. <ref type="bibr" target="#b58">59</ref> This is further evidence that the radical cation undergoes a bond scission step yielding two new fragments with different redox potentials. We suggest that the second oxidation belongs to the benzylic cation fragment (vide infra).</p><p>To determine the identity and stability of the fragments, we employed a generation-collection technique with a doublebarreled theta-UME (Fig. <ref type="figure" target="#fig_6">S6 ‡</ref>). This high-throughput method enabled potentiostatic oxidation of the HBE at one electrode and oxidation or reduction of the fragmented products via CV at a neighboring electrode, just 100 mm away. The results for HBE 2 are shown in Fig. <ref type="figure" target="#fig_2">2b</ref>; all HBE results are in Fig. <ref type="figure">S7</ref> ‡ and summarized in Fig. <ref type="figure" target="#fig_2">2c</ref>. For HBEs 2-7 that have EDGs or weak EWGs on the benzene ring, two reduction waves are seen in the same potential ranges, one group at À0.6 AE 0.3 V and one at À1.7 AE 0.2 V vs. Fc/Fc + . Additionally, the steady-state current from group 2 is consistently 2 to 3 times that of group 1, indicating that the products between HBEs are similar in size since currents are based on diffusion, which in turn depends on molecular size. This is expected from a controlled C a -C b bond cleavage as opposed to random fragmentation in the molecule. Both reductions are related to the benzylic fragment as proposed in the mechanism in Fig. <ref type="figure" target="#fig_2">2d</ref>, as oxidation of a methoxybenzene with a butyl chain instead of the benzylic ether showed products at the same reduction potentials as HBE 2 (Fig. <ref type="figure">S8 ‡</ref>). Based on the difference in size between the oxocarbenium and benzylic cations, the current intensity differences observed for the two reduction processes (Fig. <ref type="figure" target="#fig_2">2c</ref>) support the reduction of the benzylic cation (group 1) followed by reduction of both the oxocarbenium and benzylic species (group 2). It is also possible that group 1 contains the reduction of both benzylic and oxocarbenium cations, and that group 2 contains the second reduction of these species along with the reduction of other chemical adducts (e.g. cationic species chemically trapped by decomposed solvent and electrolyte, as shown in Fig. <ref type="figure" target="#fig_2">S22</ref> ‡) (vide infra). Thus, the generation-collection currents we observe may be from a mixture of multiple components, including the proposed reactive intermediates in Fig. <ref type="figure" target="#fig_2">2d</ref> and various quenched products.</p><p>Based on DFT calculations, the methoxy-substituted benzylic and oxocarbenium radicals have oxidation potentials at 0.01 and À0.04 V and reduction potentials at À1.93 and À2.20 V vs. Fc/Fc + , respectively (Table <ref type="table">S2</ref> ‡). Two reductions and no oxidations are seen experimentally because when the HBE is cleaved into radical and cation at the electrode, the radical (whether on the ether or benzylic group) is immediately oxidized since the electrode is well positive of their predicted standard redox potentials. § § This suggests that the oxidation of these HBEs follows an Electrochemical-Chemical-Electrochemical (ECE) mechanism, where the rst electrochemical step (oxidation of the HBE) is followed by a rapid irreversible chemical step (mesolytic cleavage) that produces oxidizable products (radicals) which are rapidly oxidized and only observed once reduced (Fig. <ref type="figure" target="#fig_2">2b</ref>). The one-electron reduction of the p-NO 2 moiety in HBE acts as an internal standard to probe the mobility of the parent HBE. We compared its Randles-Sevcik slope to that obtained via the oxidative cleavage process (Fig. <ref type="figure" target="#fig_1">S10 ‡</ref>). Our analysis showed that the oxidative process displays a current intensity 1.5 times higher than the reduction peak of the p-NO 2 aryl moiety, thus suggesting a multielectron process as expected for the proposed ECE mechanism. A multi-electron transfer mechanism is apparent from macrodisk voltammetry of other HBEs, where the currents for HBE oxidation favor n ¼ 2 electrons based on calculations using the Randles-Sevcik equation (Fig. <ref type="figure" target="#fig_1">S10 ‡</ref>). <ref type="bibr" target="#b59">60</ref> The double oxidation phenomenon essentially overrides the distinction between differentiated cleavage pathways I and II as discussed above, since both cations are inevitably formed. However, qualitatively, we observed more electrode passivation (via unwanted chemical degradation, polymerization, etc.) with EWG-containing HBEs, which may be due to pathway differences and/or the high potentials required to oxidize these molecules. Nonetheless, the ECE mechanism is advantageous for two reasons: it mostly eliminates chemically reactive radicals, and it produces two charged products from a neutral molecule, making the fragments more soluble in polar solvents.</p><p>Similar experiments were carried out with bulk electrolysis (BE) of HBE 2 (Fig. <ref type="figure" target="#fig_1">S11 ‡</ref>), in which the entire solution of HBE was electrolyzed and the products detected with a UME. The resultant fragments detected qualitatively match collections from theta-UME experiments, i.e., reduction potentials and current ratios are similar. This shows that these cationic products are stable over wide timescales, from single seconds (theta-UME) to tens of minutes and hours (BE). However, the products are not electrochemically reversible, as the reduction of these cations show minimal re-oxidation. Additionally, the experimental reduction potentials differ greatly (up to 500 mV more negative) from the predicted potentials (Table <ref type="table">S2</ref> ‡), indicating that either these products undergo a secondary chemical step or they are strongly dependent on solvent and electrolyte interactions that are not accurately predicted by our modelling. Previous studies on the electrooxidation of pmethoxytoluene have shown that aryl-aryl coupling can occur between oxidized methoxybenzene species in non-aqueous conditions, where two radical cations couple followed by deprotonation. <ref type="bibr" target="#b60">61</ref> This was shown to occur on the 10 À5 s timescale, which indicates a moderately high kinetic barrier to this process. We believe the C-C bond cleavage dominates in § § This observation is different from oxidative mesolytic cleavage using photooxidants, since no fast backward electron-transfer actually took place from reduced photooxidants to either radical cations or cleaved radical species.</p><p>our system for three reasons: (1) the C-C bond cleavage is predicted to be the most energetically favored (Fig. <ref type="figure" target="#fig_5">S95 ‡</ref>), ( <ref type="formula">2</ref>) the deprotonation will also be slow in the absence of base, and (3) the low concentration of our HBEs (&lt;5 mM) should limit the rate of bimolecular reaction. Additionally, we see no coupling in our HBE-containing polymers following oxidation (vide infra), indicating that dimerization does not occur even when the HBEs are in high concentration by being tethered together in the polymer. <ref type="bibr" target="#b0">1</ref> H NMR of the oxidized products of HBE 2 show very little aromatic signals aside from the parent molecule and the cleaved products that would indicate this process (Fig. <ref type="figure" target="#fig_6">S26 ‡</ref>). Still, this mechanism may operate at higher concentrations (the &gt;0.5 M in a RFB) and requires study in future. <ref type="bibr" target="#b18">19</ref> F NMR studies on bulk electrolyzed products (Fig. <ref type="figure" target="#fig_2">S22 ‡</ref>) indicate that new uorine adducts were generated aer BE, which may be attributed to the decomposition of PF 6 À in the electrolyte followed by association of the uoride anion with the carbocation products. Chemical trapping analysis on the products from mesolytic cleavage was also examined to conrm the formation of oxocarbenium cations (Fig. <ref type="figure" target="#fig_3">S23</ref> and S24 ‡).{{ , <ref type="bibr" target="#b36">37</ref> While further spectroscopic studies are underway to elucidate the chemical mechanisms and product identities, our results here show that HBEs are cleaved to form stable, soluble products in non-aqueous systems via oxidation at an electrode.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Applications of HBEs in redoxmer dimers</head><p>Redox-triggered deconstruction of the HBE scaffold must occur outside of the redox potential window of the redox-active centers. Moreover, the oxidation of cleavage moieties should not chemically or electrochemically interfere with the redoxactive unit's charge and discharge. To demonstrate this, we appended four different redox active moieties to dimer systems based on HBE 2: two catholytes, TEMPO and a dialkoxybenzene (DAB), <ref type="bibr" target="#b61">62</ref> and two anolytes, ethyl viologen (Vio)kk and paranitrobenzene (NP) (Fig. <ref type="figure" target="#fig_3">3</ref>). The DAB redox potential is sufficiently negative (0.5 V negative compared to HBE 2) so that the HBE is not cleaved under normal cycling conditions, while the remaining three are signicantly more negative than the cleavage potential for the HBE linkage.</p><p>To initially judge the chemical and electrochemical compatibility of these redoxmers and HBEs, we tested these species at slow (#100 mV s À1 ) and fast ($1 V s À1 ) scan rates. Scanning slowly allows time ($4 s here) for potential chemical processes (redoxmer deactivation by HBE products, lm formation, etc.) to occur aer HBE cleavage, as products are released into solution from the electrode surface. Fast scan CV gives a better idea of electrochemical compatibility because molecules have less time (&lt;0.5 s in the case of the DAB dimer) to diffuse from the electrode surface as the electrode sweeps kk The solubility of Vio dimer is poor in MeCN solution ($0.1 mM) with the presence of 0.1 M TBAPF 6 so that weak electrochemical signals were collected. Thus, the DiHBE Vio was synthesized for compatibility studies.</p><p>between HBE and redoxmer potentials, and thus cleaved redoxmer units will be electrolyzed at the electrode.</p><p>Fig. <ref type="figure" target="#fig_3">3</ref> compares fast and slow scan CVs for HBE architecture appended with the four different redox units. At all scan rates, TEMPO dimer and DiHBE Vio show well-behaved, reversible signals.*** The DAB dimer is mostly the same, although the potentials used to cleave the HBE are nearing potentials of the second oxidation of DAB, which is known to be highly irreversible and produce side products like quinones and biphenyls <ref type="bibr" target="#b62">63</ref> that might yield different re-reduction current proles as seen in Fig. <ref type="figure" target="#fig_3">3b</ref> (gray arrows). In contrast, the NP dimer showed degradation in both fast and slow scans. At fast scan rates, cleavage products are reduced before and along with the nitrobenzenes; any chemical reactivity between these species may deactivate the nitrobenzene and thus lower overall currents compared to the neat condition (pink arrows, Fig. <ref type="figure" target="#fig_3">3d</ref>). At slow scan rates, in which more time is allowed for HBE oxidations, a lm slowly accumulates on the electrode surface for this particular HBE, limiting the re-oxidation of the nitrobenzene; similar observations were made while testing HBE 11 (Fig. <ref type="figure">S9 ‡</ref>). Further evidence of HBE cleavage of redoxmer-HBE architectures is seen in BE collection experiments (vide infra), as the products show the same reduction potentials as the pure HBEs.</p><p>We also tested the extreme condition where all HBEs in solution are cleaved via BE to determine if large-scale programmed degradation is possible. Fig. <ref type="figure" target="#fig_4">4</ref> shows the BE results of a TEMPO-appended HBE monomer. Full charge and discharge of the redox unit is facile. Aer the rst charge-discharge cycle (Fig. <ref type="figure" target="#fig_4">4II</ref> and III), the HBE was cleaved (Fig. <ref type="figure" target="#fig_4">4IV</ref>); at these potentials, TEMPO will also be oxidized. CVs with a UME in the solution revealed that the TEMPO + product is electroactive, showing that the redox center survived the high cleavage potentials. Discharging (re-reducing, Fig. <ref type="figure" target="#fig_4">4V</ref>) the now-cleaved TEMPO + yields the expected charge value (ca. 0.8 C here), but UME CVs surprisingly show that the TEMPO has become almost entirely redox inactive. It is possible that the TEMPO interacts with reactive species from HBE oxidation, forming a N-O-R complex that is redox inactive in the usual potential window. <ref type="bibr" target="#b37">38</ref> Indeed, these complexes showed some partial release of redox active TEMPO aer re-oxidizing them at high potentials (Fig. <ref type="figure" target="#fig_4">S14 ‡</ref>). <ref type="bibr" target="#b54">55</ref> This result is consistent with the CV data of this species (Fig. <ref type="figure" target="#fig_3">S13 ‡</ref>), as here the whole solution has ample time and stirring to react TEMPO with the HBE products compared to small quantities in the diffusion layer in CVs. While rereduction in the presence of HBE products is inadvisable in *** Some additional charging currents were observed when sweeping back from the HBE potentials.</p><p>this case, the TEMPO/TEMPO + redox couple can withstand the high potentials needed to cleave the HBE, proving this architecture can be of practical use for redox-triggered degradation.</p><p>BE tests were also run with the DiHBE Vio from Fig. <ref type="figure" target="#fig_3">3c</ref> and show similar trends to HBE-TEMPO (Fig. <ref type="figure" target="#fig_5">S15 ‡</ref>). Charge and discharge before cleavage show reversible electrochemical signals, but once the molecules are cleaved, the viologen reduction occurs at a similar potential as the HBE products. Further charging of the solution ends up reducing the HBE products (at the electrode surface and through Vio + c mediation), eliminating the Vio wave. While this shows that cleaved products should not be fully recharged aer cleavage, it is promising that both redoxmers and HBE products are stable and thus could be recovered and separated downstream aer cleavage (vide infra).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Application of HBEs in redox active polymers</head><p>Redox active polymers (RAPs) show promise for use in RFBs due to their low crossover between compartments separated by sizeexclusion membranes that decrease RFB cell resistance. <ref type="bibr" target="#b14">15</ref> However, RAPs have a tendency deposit on electrode interfaces over time compared to monomeric and dimeric redoxmers. <ref type="bibr" target="#b63">64,</ref><ref type="bibr" target="#b64">65</ref> This challenge could be addressed by employing the deconstruction chemistry of HBEs. Here we incorporated cleavable HBE linkers into both branched and main-chain RAPs to evaluate their programmable deconstruction at electrode interfaces and in bulk solutions.</p><p>As a proof-of-concept, we rst took a well-studied viologenappended polystyrene (P B -Vio) as a control RAP and inserted a p-methoxy HBE linker between the Vio center and the polystyrene backbone to obtain a cleavable RAP (P B -Vio-HBE) (Fig. <ref type="figure" target="#fig_5">5a</ref>). P B -Vio is known to deposit lms on the electrode surface when overcharged (i.e., accessing potentials negative enough to reduce Vio 2+ to Vio 0 ). While these lms mediate charge transfer with solution species, lms that are too thick impede electron transfer rates and reduces the power output of the battery over time. <ref type="bibr" target="#b64">65</ref> The ability to remove these lms periodically would provide simple way to maintain cells without replacing the electrode (Fig. <ref type="figure" target="#fig_5">5c</ref>). We individually electrodeposited P B -Vio-HBE and P B -Vio RAPs on electrode surfaces to generate lms with similar thickness for proof-of-concept defouling tests (Fig. <ref type="figure" target="#fig_1">S17 ‡</ref>). To understand the effect of polymer architecture on defouling behavior, we also synthesized and tested main-chain viologen polymers with (P M -Vio-HBE) and without (P M -Vio) HBE linkers within the backbone (Fig. <ref type="figure" target="#fig_5">5b</ref>).</p><p>Filmed electrodes were defouled under two conditions: application of positive potentials (E ox ) that will oxidize HBE linkers, and solution convection underneath the lmed electrode, which imitate the effect of potential and ow in an RFB, respectively. Film content was quantied by integrating the charge from CVs of the Vio-containing RAP lm (Fig. <ref type="figure" target="#fig_1">S18</ref> and S19 ‡). For P B -Vio-HBE, immediately applying E ox for 3 seconds has little effect on removing the lm; only convection directly following lm oxidation leads to the decrease of the lm viologen content, though not by more than 30% (Fig. <ref type="figure" target="#fig_5">5d</ref> and<ref type="figure">f</ref>). Additionally, there is no signicant difference between the polymer with HBE and without HBE, indicating that although some HBEs are oxidized (likely just what is near the electrode surface and can transfer electrons), it does not disrupt the polymer lm. This holds true for thin (one electrodeposition cycle, Fig. <ref type="figure" target="#fig_5">5d</ref>) and thick lms (ten electrodeposition cycles, Fig. <ref type="figure" target="#fig_1">S18</ref> ‡), showing a fundamental limit of removal for this specic viologen polymer structure. In contrast, the main-chain polymer P M -Vio-HBE loses 30% of the viologen signal upon oxidation, and over 50% of the lm is removed with convection. Like the branched equivalent, however, there is only slightly more removal with the HBE-containing P M -Vio-HBE compared to the non-HBE-containing P M -Vio, although more than 50% of the lm can be removed under these conditions. Additionally, aer application of E ox , P M -Vio-HBE displays a slight positive shi and broadening of the CV wave, suggesting a small change in the energetics of adsorption and on the electrostatic interactions experienced by the adsorbed redox species. <ref type="bibr" target="#b64">65,</ref><ref type="bibr" target="#b65">66</ref> This suggests that, while not removing the adsorbed polymer, bond cleavage in P M -Vio-HBE may still lead to morphological changes detectable by its redox chemistry.</p><p>These results reveal several aspects of RAP-electrode interface design. First, polymer architectureand by extension lm morphologyplays a signicant role in electrode passivation with RAP adsorption and how easily those lms can be removed. Second, HBE incorporation into RAPs in this initial form plays a trivial role in lm removal. As alluded to above, this is likely due to the fact only the HBE linkers near the electrode surface (within the rst few nanometers) are oxidized. Since the ether linkage cleaves rapidly, there is little time for the oxidative charge to percolate out further in the lm before a "dead layer" of cleaved polymer forms on the electrode surface. This is evidenced by the persistence of the viologen signal even aer multiple removal treatments. Third, the removal of these particular Vio-containing RAPs is mostly driven by convection and electrostatic desorption, as evidenced by Fig. <ref type="figure" target="#fig_5">5g</ref> where the P M -Vio is removed almost as much as P M -Vio-HBE aer applying E ox . This suggests another design strategy for lm removal: nonfaradaic desorption caused by charge repulsion between the backbone of the polymer and the electrode surface. All of these discoveries can direct future RAP design with or without cleavage chemistries to improve electrode longevity.</p><p>Beyond the removal of thin lms from electrode interfaces, we investigated the deconstruction of HBE-containing RAPs in bulk solutions and how they would interact with other RFB components, namely the separator membrane between catholyte and anolyte compartments (Fig. <ref type="figure" target="#fig_6">6a</ref>). To test this, bulk electrolysis was used to oxidize all the HBEs in a 2 mM solution of P B -Vio-HBE. Microelectrode CVs before and aer bulk electrolysis show both an increase in the Vio reduction current, which is indicative of a larger diffusion coefficient for the repeat unit versus the polymer, and a loss of P B -Vio-HBE peak features in the oxidative sweep, indicating the removal of the Vio side chains from the polymer backbone (Fig. <ref type="figure" target="#fig_6">6b</ref>). <ref type="bibr" target="#b64">65</ref> NMR analysis of electrolyzed products also shows efficient cleavage of polymeric Vio species to monomeric ones (Fig. <ref type="figure" target="#fig_2">S21 ‡</ref>). Using a sizeexclusion membrane (Daramic 175), <ref type="bibr" target="#b66">67</ref> the crossover rates of cleaved Vio species and neat P B -Vio-HBE between two compartments were compared. The cleaved redoxmer shows two orders of magnitude higher permeability <ref type="bibr" target="#b67">68</ref> (1.0 Â 10 À3 cm 2 min À1 ) than the un-cleaved form (1.2 Â 10 À5 cm 2 min À1 ), and aer 24 h, nearly half of the cleaved species ($45% of Vio units) pass through the membrane, which is close to full crossover relying on diffusion alone (Fig. <ref type="figure" target="#fig_6">6c</ref>). An important aspect of deconstructing RAPs in situ is to separate the cleaved products from un-cleaved RAPs. These results demonstrate that size-exclusion is an effective way to separate deconstructed components from RAPs that are still functioning in the bulk solution of the RFB, as long as measures are taken to prevent excessive crossover to the opposite RFB compartment.</p><p>Finally, we present a vision for the application of these concepts in a practical RFB (Scheme 3). Should the electrodes foul or redoxmers chemically degrade, removal of those species is key to sustaining battery lifetime. Redox active linkers within redoxmers are cleavable at the electrode as demonstrated above. To prevent accumulation of deconstructed components in the primary tank and limit crossover between catholyte and anolyte Scheme 3 Proposed utilization of programmable end-of-life chemistries in RFBs. Cleavage chemistries incorporated into redoxmer architectures provide a way to defoul interfaces (A) and recycle redox components at the bulk scale (B). In practice, we envision redoxmer deconstruction triggered by redox stimuli happening through electrolysis at the electrode interface (shorter time of triggering stimuli for surface defouling, longer for larger volume recycling) followed by flow through a secondary collection system. This system can utilize size-exclusion membranes to separate redox centers from organic backbones, and ideally would allow chemistries for redoxmer regeneration via the reappending of intact redox centers to the backbone and injecting the regenerated redoxmer solution back into the primary system. In such a way, a self-contained and integrated RFB system could directly solve its capacity fade problems to sustain battery lifetimes. Note: the schematic redoxmer cartoon represents a universal programmable architecture rather than a single branched one.</p><p>compartments, the contaminated solution is owed through a secondary system. This collection system is used to separate cleaved species from un-cleaved redoxmers via a membrane based on size (as demonstrated in Fig. <ref type="figure" target="#fig_6">6</ref>), charge, or other properties. The products are then ltered through the system to separate redox centers and backbones, which would then ideally be regenerated, reattached (through chemical or electrochemical means), and recycled into the primary system. In this way, RFBs sustain their power and energy density by recycling dysfunctional material without the need for fully shutting down the system to rell and rebalance the solution. There are several chemical and engineering challenges to make this a reality, but this work provides the rst stepscontrolled deconstruction, and the tools to design and analyze new materialstowards this sustainable goal.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>In summary, we have systematically studied the oxidationtriggered mesolytic cleavage of a series of HBE molecules for potential use in redoxmer architectures. By changing the parasubstituent on the aryl core of HBE molecules, we were able to tune the most favorable mesolytic fragmentation pathway and oxidation potentials of HBE substrates. DFT, GC-MS, and generation-collection electrochemical methods were used to conrm these fragmentation pathways and offered insight into relevant structure-activity properties of HBEs to guide redoxmer design. Due to its oxidation potential and stable charged products, the HBE with the para-OMe group was chosen and integrated with various redox centers, among which TEMPO, DAB, and viologen are le chemically and electrochemically compatible with the cleavage of HBE linkages. As a proof-ofconcept, Vio-containing RAPs incorporating HBE linkers were prepared to elucidate programmable deconstruction of redoxmers from an interface for electrode defouling and in bulk solution for potential downstream recycling. Deconstruction efficiency of cleavable redoxmers from an interface was improved by using main-chain RAPs compared to branched ones. The design of programmatically cleavable redoxmers takes the rst step towards the development of sustainable materials for electrochemical and energy storage devices. Further research will investigate the long-term stability and the charge capacity recovery of these cleavable redoxmers in a ow battery cell. The HBE chemistries reported here may also be applicable in aqueous organic redox ow batteries, <ref type="bibr" target="#b68">69</ref> as HBE oxidation in the presence of water would yield soluble alcohols. <ref type="bibr" target="#b69">70</ref> The chemistries are applicable to both catholyte and anolyte materials, although care must be taken to ensure full redoxmer-cleavage moiety compatibility. We are currently exploring other mesolytic cleavage chemistries so that a synthetic toolkit will be available for all redoxmers to incorporate programmable cleavage.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Scheme 1 Scheme 2</head><label>12</label><figDesc>Scheme 1 Restoring fouled redox flow battery (RFB) components with programmable end-of-life function in redoxmers (a) fouling of RFB caused by consecutive processes of absorption, redox process, deactivation, and accumulation of redoxmers; (b) application of HBEs with redoxmer architectures for programmable redoxmer deconstruction via mesolytic cleavage.</figDesc><graphic coords="2,127.28,411.42,340.76,279.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Fragmentation patterns of HBEs (a) GC-MS results of 2 (red, blue, and pink denote radical cations, benzylic cations, and oxocarbenium cation, respectively); (b) Proposed mesolytic cleavage pathways of HBEs (pink and blue for pathways I and II, respectively); (c) the plot of the logarithmic m/z intensity ratio between benzylic and oxocarbenium cations (log(I B /I O )) as a function of the Hammett constant (s p +). The error was estimated using the standard deviation of the average of three measurements; (d) the empirical s p + parameter is able to predict the distribution ratio of two major mesolytic cleavage pathways for various HBEs as well as the Boltzmann factor (BF). The BF values are calculated using the inset equation with predicted DG values for each cleavage pathway.</figDesc><graphic coords="4,98.93,344.86,397.60,315.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Electrochemical oxidation of HBEs and collection of cleavage products (a) cyclic voltammograms of three HBEs with currents normalized to the experimental oxidative peak currents (50 mV s À1 , 3 mm glassy carbon electrode, 0.1 M TBAPF 6 in MeCN; CVs for all HBEs are in Fig. S5 ‡); (b) cyclic voltammogram (20 mV s À1 , 25 mm Pt microelectrode) of collected products after oxidation of 2 at 1.35 V vs. Fc/Fc + with a neighboring 25 mm Pt microelectrode. Arrows indicate scan direction, boxes and lines refer to product groups in (c) and (d); (c) summary of all reduction potentials of products (left) from HBE cleavage at E ox,1 and E ox,2 and steady state current ratios (right) of product group 2 (purple box) to group 1 (green box) after oxidation at E ox,1 . E ox,1 and E ox,2 correspond to values for each molecule in Table1. Asterisks denote that products from HBEs 1, 8, 9, and 10 are not in these potential ranges to compare with the current; (d) proposed cleavage and further electrochemical pathways of HBEs based on electrochemical data. Colored pathways match redox processes outlined in (b) and (c). This mechanistic scheme represents the most possible cleavage pathways. For the sake of clarity, other cleavage pathways as well as the quenching of short-lived charged species by various nucleophiles in solution are not shown.</figDesc><graphic coords="6,98.93,50.57,397.60,351.55" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Compatibility tests with HBE-containing redoxmer dimers slow (left) and fast (right) CV scans of (a) TEMPO dimer, (b) DAB dimer, (c) DiHBE Vio, and (d) NP dimer, (3 mm glassy carbon electrode, 0.5-1 mM dimer, 0.1 M TBAPF 6 in MeCN) before and after cleavage of the HBE core. Slow scans demonstrate chemical compatibility of the redox unit with HBE cleavage products and no film formation on the electrode, while fast scans reveal how compatible the redox units are with the high positive potentials applied to cleave the HBE. "Before" corresponds to CVs just in the potential window of the redoxmer. "After" corresponds to CVs of the redoxmer after the HBE had been oxidized in the same CV scan. Gray arrows show the emergence of new peaks in (b); pink arrows show smaller, distorted peaks in (d). Full CVs are shown in Fig. S12. ‡</figDesc><graphic coords="8,70.47,50.57,454.48,230.51" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Bulk electrolysis studies of an HBE-containing redoxmer top row: outline of the BE steps to test the HBE-TEMPO shown. Middle row: charge and discharge curves corresponding to the BE steps. Bottom row: UME CVs (25 mm Pt microelectrode) taken of the solution following BE steps showing the TEMPO redox. The solution contained 2 mM HBE-TEMPO, 0.1 M TBAPF 6 in MeCN, and BE was carried out with a carbon felt working electrode in a W-cell (see Electrochemistry studies in ESI ‡ for details).</figDesc><graphic coords="9,70.47,50.57,454.48,303.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 HBE-incorporated RAPs and deconstruction at the electrode interface. Structures of (a) viologen-appended polystyrenes with (P B -Vio-HBE) or without (P B -Vio) HBE linkers, and (b) linear viologen RAPs with (P M -Vio-HBE) or without (P M -Vio) HBE linkers inserted into main-chain backbones; (c) cartoon demonstrating the partial removal of electrodeposited film content following the applied potential (E ox ); CVs of electrodeposited thin films of (d) P B -Vio-HBE and (e) P M -Vio-HBE as deposited, after applying potentials to oxidize the HBE, and after stirring the solution for various times. Normalized charges of Vio reduction from electrodeposited films of (f) branched and (g) main-chain polymers after oxidation and solution stirring. Error bars are average of three trials with three different electrodes and films. More information can be found in the ESI. ‡</figDesc><graphic coords="10,98.93,50.57,397.60,534.67" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 6</head><label>6</label><figDesc>Fig. 6 Deconstruction of HBE-containing RAPs in bulk solution and interactions with size-exclusion membranes. (a) Schematic representation of the membrane permeability of HBE-containing RAPs before and after oxidative deconstruction; (b) microelectrode cyclic voltammograms of 2 mM (repeat unit) P B -Vio-HBE solution before and after bulk cleavage of the HBE linkers. Redox peaks in neat P B -Vio-HBE (black lines) are typical for RAPs that adsorb onto the electrode surface. When cleaving Vio units from P B -Vio-HBE RAPs, a higher current that is commensurate with an increase in apparent diffusion coefficient and the disappearance of RAP peaks are observed; (c) crossover experiments using a Daramic 175 size-exclusion membrane show two orders of magnitude faster crossover of the cleaved Vio monomers compared to the neat P B -Vio-HBE RAP.</figDesc><graphic coords="11,56.92,269.12,220.76,321.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0"><head></head><label></label><figDesc></figDesc><graphic coords="12,127.28,50.57,340.76,238.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Summary of electrochemical and corresponding computational results of HBEs</figDesc><table><row><cell></cell><cell>E ox,1</cell><cell>a</cell><cell>Simulated E ox,1</cell><cell>c</cell><cell>E ox,2</cell><cell>a</cell><cell>Simulated E ox,2</cell><cell>d</cell><cell>BDFE sub</cell><cell>b</cell><cell>DG meso e</cell></row><row><cell>HBEs</cell><cell cols="2">(V vs. Fc/Fc + )</cell><cell>(V vs. Fc/Fc + )</cell><cell></cell><cell cols="2">(V vs. Fc/Fc + )</cell><cell>(V vs. Fc/Fc + )</cell><cell></cell><cell>(eV)</cell><cell></cell><cell>(eV, fav. path.)</cell></row><row><cell>1</cell><cell>0.30</cell><cell></cell><cell>0.37</cell><cell></cell><cell>1.42</cell><cell></cell><cell>0.94</cell><cell></cell><cell>3.90</cell><cell></cell><cell>1.86 (II)</cell></row><row><cell>2</cell><cell>1.10</cell><cell></cell><cell>1.14</cell><cell></cell><cell>1.41</cell><cell></cell><cell>1.68</cell><cell></cell><cell>3.98</cell><cell></cell><cell>1.79 (II)</cell></row><row><cell>3</cell><cell>1.10</cell><cell></cell><cell>1.19</cell><cell></cell><cell>1.41</cell><cell></cell><cell>1.18</cell><cell></cell><cell>3.68</cell><cell></cell><cell>0.99 (II)</cell></row><row><cell>4</cell><cell>1.55</cell><cell></cell><cell>1.60</cell><cell></cell><cell>2.00</cell><cell></cell><cell>1.91</cell><cell></cell><cell>3.96</cell><cell></cell><cell>1.77 (II) g</cell></row><row><cell>5</cell><cell>1.36</cell><cell></cell><cell>1.32</cell><cell></cell><cell>1.85</cell><cell></cell><cell>1.44</cell><cell></cell><cell>3.93</cell><cell></cell><cell>1.94 (II)</cell></row><row><cell>6</cell><cell>1.78</cell><cell></cell><cell>1.83</cell><cell></cell><cell>2.27</cell><cell></cell><cell>2.05</cell><cell></cell><cell>4.00</cell><cell></cell><cell>1.74 (I)</cell></row><row><cell>7</cell><cell>1.71</cell><cell></cell><cell>1.76</cell><cell></cell><cell>2.09</cell><cell></cell><cell>2.11</cell><cell></cell><cell>4.01</cell><cell></cell><cell>1.86 (I)</cell></row><row><cell>8</cell><cell>2.20</cell><cell></cell><cell>2.27</cell><cell></cell><cell>-f</cell><cell></cell><cell>2.63</cell><cell></cell><cell>4.13</cell><cell></cell><cell>À1.26 (I)</cell></row><row><cell>9</cell><cell>2.40</cell><cell></cell><cell>2.12</cell><cell></cell><cell>2.90</cell><cell></cell><cell>2.30</cell><cell></cell><cell>3.97</cell><cell></cell><cell>1.35 (I)</cell></row><row><cell>10</cell><cell>2.45</cell><cell></cell><cell>2.08</cell><cell></cell><cell>2.98</cell><cell></cell><cell>2.45</cell><cell></cell><cell>3.93</cell><cell></cell><cell>1.31 (I)</cell></row><row><cell>11</cell><cell>2.12</cell><cell></cell><cell>2.20</cell><cell></cell><cell>-f</cell><cell></cell><cell>2.58</cell><cell></cell><cell>3.92</cell><cell></cell><cell>1.05 (I)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This journal is © The Royal Society of Chemistry 2022</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>† † With the exception of 1. ‡ ‡ HBE 11 showed an intrinsic and reversible one-electron reduction peak of the p-NO 2 aryl group at À1.62 V vs. Fc/Fc + (Fig.S9 ‡).</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>The research was nancially supported by the Joint Center for Energy Storage Research (JCESR), an Energy Innovation Hub funded by the U.S. Department of Energy, Office of Science, Basic Energy Sciences. H. Q. gratefully acknowledges Dr Alexander Vladimirovich Ulanov (Metabolomics Center, Roy J. Carver Biotechnology Center, University of Illinois at Urbana-Champaign) for assistance with the setup of GC-MS instruments. N. A. I. gratefully acknowledges support by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE -1746047. We gratefully acknowledge the computing resources provided on Bebop, a high-performance computing cluster operated by the Laboratory Computing Resource Center at Argonne National Laboratory.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>H. Q., M. J. C., H. A. D., J. R. L., R. S. A., and J. S. M. conceived the research; H. Q. and N. S. P. performed synthesis and fragmentation studies; M. J. C., N. A. I., A. S. D., and W. S. performed electrochemistry studies; H. A. D. performed computational studies; H. Q., M. J. C., and H. A. D. analyzed data and wrote the paper. J. R. L., R. S. A., and J. S. M. provided guidance during all stages of the project. All authors have given approval to the nal version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of interest</head><p>There are no conicts to declare.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Murphy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem. J</title>
+		<imprint>
+			<biblScope unit="volume">417</biblScope>
+			<biblScope unit="page" from="1" to="13" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Davies</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Biochem. Soc. Symp</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1" to="31" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Jorgensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Norrman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Krebs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sol. Energy Mater. Sol. Cells</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="686" to="714" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vetter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Novak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Wagner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Veit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Moller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Besenhard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wohlfahrt-Mehrens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vogler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hammouche</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Power Sources</title>
+		<imprint>
+			<biblScope unit="volume">147</biblScope>
+			<biblScope unit="page" from="269" to="281" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Z</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Platt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fatih</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Jang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. J. Energy Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="6599" to="6638" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">D</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">J</forename><surname>Zheng</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<date type="published" when="2017">2017, 7, 1700890</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">K</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<date type="published" when="2016">2016, 7, 10228</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Autonomic Restoration of Electrical Conductivity</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Blaiszik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="398" to="401" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Deshpande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">T</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Verbrugge</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">158</biblScope>
+			<biblScope unit="page" from="845" to="A849" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Kwon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Deniz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Alqaradawi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Coskun</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="11317" to="11324" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Mcdowell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">A</forename><surname>Bao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Chem</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1042" to="1048" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Belharouak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Bloom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bareno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="833" to="838" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Whiteley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Taynton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="6922" to="6927" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">H</forename><surname>Jo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">P</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">G</forename><surname>Xue</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="10354" to="10362" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodriguez-Lopez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="2649" to="2657" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lawrence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vijayakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Henderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">B</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cosimbescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sprenkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="8684" to="8687" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Goulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Tong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Pollack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Tabor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Kwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Aziz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="8014" to="8019" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Nguyen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Easley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Lim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">H</forename><surname>Rezenom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Letteri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Lutkenhaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">L</forename><surname>Wooley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">593</biblScope>
+			<biblScope unit="page" from="61" to="66" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D H</forename><surname>Bugg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Hardiman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Rahmanpour</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Prod. Rep</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1883" to="1896" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Enoki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">P</forename><surname>Goldsby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Gold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Arch. Microbiol</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="227" to="231" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmittel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Burghart</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="2550" to="2589" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Mcnaught</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wilkinson</surname></persName>
+		</author>
+		<title level="m">Compendium of Chemical Terminology: IUPAC Recommendations, Blackwell Science</title>
+		<meeting><address><addrLine>Oxford [England], Malden, MA, USA, 2nd edn</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="page">450</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kirner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schwarzenbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Van Der Schaaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hafner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rast</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nesvadba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rist</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Synth. Catal</title>
+		<imprint>
+			<biblScope unit="volume">346</biblScope>
+			<biblScope unit="page" from="554" to="560" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">L</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Gentry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Knowles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="9969" to="9973" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Gentry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Rono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Hale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Matsuura</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Knowles</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="3394" to="3402" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Norcott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Hammill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Noble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Olding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Bissember</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Coote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">141</biblScope>
+			<biblScope unit="page" from="15450" to="15455" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Antonello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Daasbjerg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Taddei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Maran</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="14905" to="14916" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lanzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Merad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">V</forename><surname>Boyarskaya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Maestri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Allain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Masson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Lett</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="5247" to="5250" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Baciocchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bettoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Del Giacco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lanzalunga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mazzonna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mencarelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page" from="573" to="582" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmittel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Haeuseler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Trenkle</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="page" from="3265" to="3276" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cardinale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Isse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gennaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Saveant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="13533" to="13539" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hejda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lycka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mikysek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jambor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ruzicka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vinklarek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wilfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Herres-Pawlis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem.-Eur. J</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="15340" to="15349" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Hamed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Doai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K</forename><surname>Mclaughlin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Houmam</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page" from="6595" to="6604" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Maslak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Narvaez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="283" to="285" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Maslak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Vallombroso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Chapman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Narvaez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="73" to="75" />
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">C</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Mariano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="204" to="215" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Baciocchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bietti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Lanzalunga</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acc. Chem. Res</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="243" to="251" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Laborda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Darwish</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Noble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Tyrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pluczyk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Le Brun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">G</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Coote</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ciampi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="766" to="774" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>O'bryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Braslau</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="9010" to="9017" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Michaudel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kottisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Fors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="9670" to="9679" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Michaudel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Chauvire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kottisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Supej</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Stawiasz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">X</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Zipfel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Abruna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Freed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Fors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="15530" to="15538" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Popielarz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Arnold</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="3068" to="3082" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Arnold</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Lamont</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Can. J. Chem</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="page" from="2119" to="2127" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+		<idno type="DOI">10.1055/s-2007-968021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Synlett</title>
+		<imprint>
+			<biblScope unit="page" from="191" to="203" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Aubele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Org. Lett</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="3443" to="3446" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Seiders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="2406" to="2407" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">S</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="3842" to="3843" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">J</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Seiders</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="12596" to="12603" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Aubele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Y</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="3485" to="3488" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ghilane</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Hapiot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Bard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="6868" to="6872" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Rassolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Ratner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="976" to="984" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Gaussian, Inc</publisher>
+			<pubPlace>Wallingford, CT</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<date type="published" when="1995">1998. 1995-2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="669" to="681" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">L</forename><surname>Hammill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Noble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Norcott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ciampi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Coote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="5273" to="5281" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J M</forename><surname>Rogers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Coote</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<date type="published" when="2019">2019. 20174-20180</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Counihan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodríguez-López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Larsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Holm</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roberson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Daasbjerg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="1723" to="1729" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodriguez-Lopez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">A</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">H</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Bard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<biblScope unit="page" from="13453" to="13461" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Coullerez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Voros</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zambelli</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="11073" to="11078" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Said</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Mhalla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Amatore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Verpeaux</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroanal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">464</biblScope>
+			<biblScope unit="page" from="85" to="92" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Tung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Silcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">T</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">T</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">L</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<date type="published" when="2017">2017, 7, 1701272</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">P</forename><surname>Buck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Wagoner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroanal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="89" to="113" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hernandez-Burgos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">H</forename><surname>Simpson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lichtenstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Avetian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagarjuna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodriguez-Lopez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="3006" to="H3013" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Burgess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hernandez-Burgose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Schuh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Davila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Montoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Ewoldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodriguez-Lopez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">140</biblScope>
+			<biblScope unit="page" from="2093" to="2104" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><surname>Laviron</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroanal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="263" to="270" />
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Montoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Nagarjuna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodriguez-Lopez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">164</biblScope>
+			<biblScope unit="page" from="1688" to="A1694" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ahn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kim</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Storage Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="105" to="114" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">N</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Cong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">C</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Energy Chem</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1304" to="1325" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Weinreb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Epling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Comi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Reitano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1356" to="1358" />
+			<date type="published" when="1975">1975</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

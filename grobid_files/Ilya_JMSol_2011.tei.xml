@@ -1,0 +1,2947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Crowded electrolytes containing redoxmers in different states of charge: Solution structure, properties, and fundamental limits on energy density</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2021-05-23">23 May 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Ilya</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+							<email>shkrob@anl.gov</email>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Chemical Sciences and Engineering Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lily</forename><forename type="middle">A</forename><surname>Robertson</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Chemical Sciences and Engineering Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Zhou</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lei</forename><surname>Cheng</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Lu</forename><surname>Zhang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="department">Chemical Sciences and Engineering Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Erik</forename><surname>Sarnello</surname></persName>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Chemistry and Biochemistry</orgName>
+								<orgName type="institution">Northern Illinois University</orgName>
+								<address>
+									<postCode>60115</postCode>
+									<settlement>DeKalb</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Xinyi</forename><surname>Liu</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Chemistry and Biochemistry</orgName>
+								<orgName type="institution">Northern Illinois University</orgName>
+								<address>
+									<postCode>60115</postCode>
+									<settlement>DeKalb</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Tao</forename><surname>Li</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Department of Chemistry and Biochemistry</orgName>
+								<orgName type="institution">Northern Illinois University</orgName>
+								<address>
+									<postCode>60115</postCode>
+									<settlement>DeKalb</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">X-ray Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Aman</forename><surname>Preet Kaur</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Kentucky</orgName>
+								<address>
+									<postCode>40506</postCode>
+									<settlement>Lexington</settlement>
+									<region>KY</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">T</forename><forename type="middle">Malsha</forename><surname>Suduwella</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Kentucky</orgName>
+								<address>
+									<postCode>40506</postCode>
+									<settlement>Lexington</settlement>
+									<region>KY</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Susan</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Kentucky</orgName>
+								<address>
+									<postCode>40506</postCode>
+									<settlement>Lexington</settlement>
+									<region>KY</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Yilin</forename><surname>Wang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department">Department of Mechanical Science and Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Randy</forename><forename type="middle">H</forename><surname>Ewoldt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department">Department of Mechanical Science and Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Nuclear, Plasma, and Radiological Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Hossam</forename><forename type="middle">M</forename><surname>Farag</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Joint Center for Energy Storage Research</orgName>
+								<address>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff7">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff8">
+								<orgName type="department">Department of Nuclear, Plasma, and Radiological Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff9">
+								<orgName type="department">Department of Electrical and Computer Engineering</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<postCode>61801</postCode>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Crowded electrolytes containing redoxmers in different states of charge: Solution structure, properties, and fundamental limits on energy density</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-05-23">23 May 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2E658E2E88E4645322659E0C0B213D1F</idno>
+					<idno type="DOI">10.1016/j.molliq.2021.116533</idno>
+					<note type="submission">Received 19 March 2021 Revised 10 May 2021 Accepted 17 May 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Redox-active molecules Solutions Electrolytes Ionic conductivity Diffusivity Small-angle X-ray scattering Molecular dynamics</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Nonaqueous redox flow batteries use liquid electrolytes containing redox-active organic molecules (redoxmers) as their energy storage medium. To maximize energy density, the redoxmer concentration needs to be maximized while maintaining low viscosity and high ionic conductivity. During charge, a redoxmer molecule pairs with an ion in the electrolyte while another ion migrates across the membrane to maintain electric neutrality. In a crowded electrolyte, this reconstitution changes physical and chemical properties of the solution. To explore these behaviors, a phenothiazine redoxmer fully miscible with acetonitrile was used, and electrochemical charge was mimicked by chemical oxidation. The solutions were examined using small-angle X-ray scattering, nuclear magnetic resonance, and conductometry and modeled using classical molecular dynamics. Our study indicates that physical and structural properties of redoxmer solutions in both states of charge make it exceedingly difficult to increase the redoxmer concentrations over 2 M at any temperature without compromising dynamic properties of such solutions. The cause for this limitation is proximity to a gel-like regime in which fluidity, diffusivity, and ionic conductivity exponentially decrease with increasing concentration. This tendency is compounded by non-Arrhenius behavior of the electrolyte: a small increase in the concentration outruns gains in fluidity and conductivity at a higher temperature. Thus the properties of crowded electrolytes generally make it impossible to operate when gel-like behavior sets in. Pushing the redoxmer concentration to 2.5-3 M might be possible for small redoxmer molecules, but it would require the use of ionic liquid electrolytes at 340-360 K.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Redox flow batteries (RFBs) are energy storage devices in which electrochemical conversion occurs in stacks, while the separated charges are stored in external reservoirs <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref><ref type="bibr" target="#b4">[5]</ref>. A pump is used to transfer charged active material in a battery fluid from the stacks to each reservoir and back, hence the ''flow" in the name of the battery. Due to this compartmentalization, the battery can be scaled up, and there are suggestions to use such batteries to balance supply and demand in the electric grid. Given their scale, the grid-size RFBs need to have high energy density, low cost, exceptional electrochemical stability, and ease of recycling for all materials. Only organic active materials (redoxmers) and/or complexes of crust abundant elements are viable on this scale <ref type="bibr" target="#b0">[1,</ref><ref type="bibr" target="#b5">6]</ref>. A particularly attractive option would be an all-organic RFB: as the electrochem-ical window of organic solvents is 2-3 times wider compared to water, their power density potentially can be greater.</p><p>To be useful in an RFB, an electrolyte solution needs to satisfy numerous technical and economic requirements. At the very minimum, such solutions need to be flowable in all states of charge using conventional pumps, which means that their kinematic viscosity (g) should be &lt;10-20 cP. For efficient charge separation in the stacks, the ions in the electrolyte need to conduct electricity well; the ionic conductivity (r) of the solution should exceed 5-10 mS/cm. To compete with aqueous RFBs, the molarity of redoxmers in these fluids needs to be at least 1.5-2.5 M and optimally 2-4 M (assuming that all active molecules become charged during cycling) <ref type="bibr" target="#b5">[6]</ref>. The redoxmers in such solutions need to be chemically stable in all states of charge and at all concentrations. The high molarity implies high solubility of both neutral and charged states of the redoxmer molecule.</p><p>To illustrate what these requirements entail, consider a neutral molecule (C) that serves a positive charge carrier (also known as a catholyte) in a battery. <ref type="bibr" target="#b6">[7]</ref>. In a charged state, this molecule becomes a radical cation, C +d that pairs with an anion, Y -in electrolyte (X + Y -). Depending on membrane selectivity, during charge, anion Y -can migrate across the membrane, cation X + can migrate in the opposite direction, or (if the membrane is not ion selective) both ions migrate in opposing directions. In this way, charge and discharge can be thought of as converting a mixture of C and X + Y -to C +d Y -salt and vice versa. Because ionic conductivity decreases with electrolyte concentration for salt molarities &gt;0.5-1 M (due to increasing ionic association between X + and Y -) <ref type="bibr" target="#b6">[7]</ref>, a limited amount of electrolyte can be introduced in order to minimize a loss of ionic conductivity and the concomitant increase in viscosity. In the following, we will consider the optimistic scenario, which is a quantitative conversion of 1:1 mol/mol C: X + Y -solution to C +d Y -solution: if the concentration of electrolyte is lower, some catholyte molecules would not be charged, while if it is higher, ionic conductivity and fluidity will suffer. As electrochemical charging of concentrated solutions could be problematic even if they have favorable dynamic properties, we used chemical conversion of C to C +d Y -to prepare such solutions <ref type="bibr" target="#b7">[8]</ref>.</p><p>As one increases the concentration, the solubility limit can become exceeded for one or more species, resulting in precipitation of C, X + Y -, or C +d Y -from the solution. Currently, there are examples of fully miscible redoxmers -at least in their uncharged states, <ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref> and there are also numerous examples of miscible eutectic and ionic liquid (IL) electrolytes <ref type="bibr" target="#b11">[12]</ref>. Potentially there could be miscible C +d Y -salts, too, although at present such materials have not been demonstrated. However, even if a solution is liquid, fluidity and conductivity of this solution can become too low for use as a battery fluid.</p><p>Importantly, these limits become less restrictive at a higher temperature. Ohmic resistance in RFB stacks generates heat that is trapped in the reservoir, so heating is inherent to the application. If the desired dynamic properties cannot be achieved at room temperature, it may be possible that such properties could be achieved at higher temperatures. Here we show that for most redoxmers, crossing the 2 M ''barrier" would be challenging at any temperature.</p><p>Our case study system involves the N-[2-(2-methoxyethoxy)et hyl]phenothiazine (MEEPT) developed and studied in our laboratories <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14]</ref>. This molecule (Fig. <ref type="figure" target="#fig_0">1a</ref>) has a redox-active heterocyclic core and an oligoether chain added to improve solubility in polar organic solvents. Neutral MEEPT is liquid and fully miscible with acetonitrile (MeCN) at 300 K. The molecule can be chemically or electrochemically oxidized and paired with bis(triflyl)imide (TFSI -) anion to yield the MEEPT +d TFSI -salt (Fig. <ref type="figure" target="#fig_0">1b</ref>) for which the crystal structure is known <ref type="bibr" target="#b7">[8]</ref>. In this and related crystals <ref type="bibr" target="#b9">[10]</ref>, the radical cation is planar (Fig. <ref type="figure" target="#fig_0">1b</ref>) forming face-to-face p-stacks and chains (Fig. <ref type="figure" target="#fig_0">1c</ref> and<ref type="figure" target="#fig_0">S1</ref>). In contrast, the neutral compound is nonplanar (Fig. <ref type="figure" target="#fig_0">1a</ref>) and does not form stacks, which is a contributing factor to miscibility. Solid salts containing MEEPT +d are exceptionally stable even in air, while solutions are sufficiently stable to allow for many types of measurements <ref type="bibr" target="#b7">[8]</ref>. While MEEPT +d TFSI -is not miscible, it is one of the most soluble charged redoxmer salts known to date (see below). TFSI -is electrochemically inert and flexible anion that is used in ILs due to its ability to frustrate crystallization; <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b15">16]</ref> it serves the same purpose in RFB electrolytes.</p><p>For the cation, we chose Li + for the following reasons. First, in hybrid RFBs, lithium metal serves as an anode, releasing the Li + cations during cycling. Second, there is a dearth of selective membranes for nonaqueous RFBs, and Li + cation conducting membranes are possible candidates, especially at a higher temperature. Third, lithium-based electrolytes are currently the most studied group of nonaqueous electrolytes.</p><p>In solution, the Li + cation strongly interacts with the ether chain of MEEPT (Fig. <ref type="figure" target="#fig_0">1d</ref>). It is well known that glymes yield solvate ILs with lithium salts, with the Li + cation chelated by two or more ether oxygens <ref type="bibr" target="#b11">[12,</ref><ref type="bibr" target="#b16">17]</ref>. We will show that MEEPT and LiTFSI also form a solvate IL. Below we examine ionic conductivity, diffusivity, and small angle X-ray scattering (SAXS) in neutral and chemically oxidized (charged) MEEPT solutions and use molecular dynamics (MD) to interpret our observations. In a sister publication <ref type="bibr" target="#b17">[18]</ref>, we examine viscoelastic properties of these solutions; some of the viscosity data for this system were presented by <ref type="bibr">Wang et al. in</ref> Ref. <ref type="bibr" target="#b10">[11]</ref>. To save space, some sections and figures are placed in the Supporting Information. These materials are referenced with a letter ''S" before the number, such as Figure <ref type="figure" target="#fig_0">S1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1.">Materials</head><p>MeCN (Baxter) was dried over molecular sieves before use; LiTFSI (Aldrich) was dried in a vacuum oven before use, CD 3 CN from Cambridge Isotope Laboratories was used without further purification. The phenothiazine redoxmers used in this study were synthesized and purified following the methods described in Refs. <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b12">13,</ref><ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref>. The crystal structures for neutral phenothiazines and their charged salts are given therein.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2.">Small-angle and wide-angle X-ray scattering (SAXS/WAXS)</head><p>SAXS/WAXS experiments were performed at Argonne's Advanced Photon Source (APS), sector 12ID, stations B and C. The liquid samples were contained in 1.5 mm diameter thinwalled quartz capillaries that we filled in an argon atmosphere containing &lt; 5 ppm oxygen and &lt; 5 ppm water and sealed. The data were collected on a Pilatus 2 M area detector (DECTRIS Ltd.), selecting a q range of 0.006-1 Å À1 and an incident energy of 18 keV. The scattering vector q was calibrated using silver behenate. In addition to SAXS (q &lt; 1 Å À1 ), we collected wideangle scattering (WAXS) in the 1-2 Å À1 range using a different X-ray detector operating in a tandem fashion with the SAXS detector. As the two detectors are optimized for different q ranges, there is a ''blind spot" around 0.8-1 Å À1 that is seen in some of the SAXS traces, which does not interfere with the data interpretation. All SAXS spectra were obtained at 298 K, and the signal from the capillary was subtracted to correct for background scattering <ref type="bibr" target="#b23">[24]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3.">Ionic conductivity.</head><p>Direct current (d. c.) conductivity of solutions was measured using forced-voltage BICON method <ref type="bibr" target="#b24">[25,</ref><ref type="bibr" target="#b25">26]</ref> implemented with a CH Instruments Model 660D analyzer. In this method, two 100 ls long pulses (5-50 mV, depending on resistance) of opposite polarity were applied sequentially, and the current was sampled every microsecond; this bipolar pulse sequence was repeated 200X to improve signal-to-noise ratio. The opposite pulses were used to remove capacitive contribution to impedance. The Ohmic component was quantified, averaged, and calibrated against an aqueous 10 mM KCl standard. A MI-905 platinum electrode from Microelectrodes, Inc. was used in these measurements.</p><p>The liquid sample was placed in a glass container with a thermocouple microprobe positioned right above the microelectrode. A magnetic stirrer was used to homogenize the sample between conductivity measurements. A series of such measurements starts at the highest concentration, and the sample was incrementally diluted with MeCN. The aliquots were taken and diluted with CDCl 3 for 1 H and 19 F NMR analysis that gives concentrations of all components (see Figure <ref type="figure" target="#fig_1">S2</ref>). In some cases, the NMR solvent contained 1,4-bis(trifluoromethyl)benzene as an internal standard: the signals of the protons in the solvent and the solute were referenced to the protons in the standard, and the same referencing was used for fluorine-19 nuclei in the TFSI -anions and the standard. In this way all mole ratios could be determined (the same method was used to verify concentrations in our SAXS experiments described below). This yielded the chemical composition, and molarities were computed knowing solution density. The molarities given below are for 298 K.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.4.">Diffusivity</head><p>To estimate diffusion coefficients D for a given species, pulsedfield gradient stimulated spin-echo (PGSE) NMR with longitudinal eddy current delay, bipolar gradients, and convection compensation was used <ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref>. DOSY module on a Bruker Avance III HD spectrometer operating at 300 MHz ( 1 H) was used for data collection and processing. Constant temperature was maintained throughout the experiments using a variable temperature unit. 1 H, 7 Li, and 19 F nuclei were used to probe the diffusion. The attenuation of the stimulated echo E was fit to equation</p><formula xml:id="formula_0">ÀlnðE=E 0 Þ ¼ DðcgdÞ 2 ðD À d=3 À s=2Þ</formula><p>where c is the gyromagnetic ratio, g is the gradient strength, d is the duration of the gradient pulse, D is the interval between gradient pulses, s is the separation between the radio-frequency pulses, and D is the diffusion coefficient. The temperature was controlled by the spectrometer and was limited to 280-345 K. Paramagnetic NMR line broadening makes it impossible to use this method for charged redoxmers. Note that the diffusion coefficients are measured in CD 3 CN, which is slightly more viscous than MeCN. The diffusion coefficients for LiTFSI solutions obtained using this method were reported in Refs. <ref type="bibr" target="#b30">[31]</ref> and <ref type="bibr" target="#b6">[7]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.5.">Molecular dynamics (MD) simulations.</head><p>Nonpolarized OPLS-AA force field <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref> in a LibParGen implementation <ref type="bibr" target="#b33">[34,</ref><ref type="bibr" target="#b34">35]</ref> was used for the bond, angle, and torsion potentials in the redoxmers, while the density functional theory (DFT) with the dispersive WB97XD functional <ref type="bibr" target="#b35">[36]</ref> and aug-cc-pVDZ basis set from Gaussian 16 <ref type="bibr" target="#b36">[37]</ref> was used to optimize the molecular geometries.</p><p>The partial atomic charges were calculated using CHELPG method <ref type="bibr" target="#b37">[38,</ref><ref type="bibr" target="#b38">39]</ref> in a single-point Hartree-Fock calculation with the DFT optimized geometry. The input topology files for all species are given in the Supplemental Information. Experimental solution densities were used to compute molecular composition in a periodic cubic cell (3-6 nm on the side). Alternatively, NPT equilibration at 1 bar (1-2 ns) was used to estimate the density using the Parrinello-Rahman coupling with the solution compressibility of 9.5 Â 10 À5 bar À1 . Particle mesh Ewald summation was used to account for electrostatic interactions, and the modified Berendsen thermostat was used to rescale atomic velocities. Short-range cutoffs of 1.1 nm were implemented, and the interatomic van der Waals interactions were parameterized using the OPLS-AA force field <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref>. For NVT equilibration, we ran the trajectory for 2 ns at 300 K and then sampled it over 4 ns to obtain 200-500 equally spaced time frames. The initial configuration was generated using Packmol <ref type="bibr" target="#b39">[40]</ref>, and the MD trajectories were computed using Gromacs 2018 <ref type="bibr" target="#b40">[41]</ref>. The VMD package <ref type="bibr" target="#b41">[42]</ref> was used for visualization of the MD snapshots. For temperature dependences, NPT ensemble averaging was used prior to NVT averaging. The input topologies for MeCN and LiTFSI were taken from Ref. <ref type="bibr" target="#b30">[31]</ref>, other topology files are contained in the Supporting Information.</p><p>For the graph theory analyses of molecular contacts in solution, <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b43">44]</ref> the connectivity matrices P ab were computed for the molecules of interest (P ab is 1 if molecules a and b are in contact and zero otherwise) and numerically diagonalized. The ensemble averaged histogram of the maximum eigenvalues k max for these matrices shows narrow peaks for the next neighbor molecules, but it becomes increasingly smooth as the contact network emerges, which makes this histogram a convenient diagnostic of the solute network emergence <ref type="bibr" target="#b44">[45]</ref>. The contact statistics were calculated for molecules with the interatomic distances smaller than the cutoff distance r cut of 2.8 Å, which was estimated from the computed interatomic radial pair distribution functions (RDFs). The partial charges and charge renormalization are examined in Section S1 of the Supporting Information. The details of calculation of SAXS and graph theory analyses are given in Refs. <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b43">44]</ref>. The quantification of p -stacking in the MEEPT +d TFSI -solutions followed methodology outlined by Zhao et al., <ref type="bibr" target="#b42">[43]</ref> which is summarized in Figure <ref type="figure" target="#fig_2">S3</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">LiTFSI-MeCN system.</head><p>Since LiTFSI is used as electrolyte in MEEPT:LiTFSI solution, we first briefly examined this binary system as we needed these results to shed light on the more complex ternary systems. Fig. <ref type="figure" target="#fig_1">2a</ref> and S4a show SAXS spectra for solutions of LiTFSI in MeCN at room temperature, and Figure <ref type="figure" target="#fig_3">S4b</ref> shows the SAXS spectra computed using our MD model. The high-q peak in the spectra corresponds to scattering of the X-rays of the solvent domains. The lower-q feature seen in concentrated solutions is the so-called correlation peak that indicates intermediate range spatial ordering of X-ray scattering centers. In this system, due to strong scattering of X-rays by the six fluorine atoms in TFSI -anion, this peak originates entirely from ordering of TFSI -anions. In our MD simulations, these anions interact through their sulfonyl groups with multiple Li + cations forming chains, and these chains organize themselves into networks of associated ions (see the Discussion). At higher concentrations, this ionic association becomes stronger and the aggregates become increasingly ordered. This is observed as an increase in the amplitude of the correlation peak (Figure <ref type="figure" target="#fig_3">S4a</ref>). The increased ordering is also seen in a progressive shift of the correlation peak to higher q that signifies the decreasing scale of spatial ordering.</p><p>The increased ionic association is also revealed by ionic conductivity measurements shown in Fig. <ref type="figure" target="#fig_2">3a</ref>. The ionic conductivity r increases for LiTFSI concentrations c &lt; 1 M and decreases at higher c as the ion mobility decreases while ionic association becomes stronger, reducing the effective concentration of charge carriers.</p><p>In Fig. <ref type="figure" target="#fig_2">3b</ref>, we show changes in r from 20 to 65 °C for several LiTFSI concentrations. As seen from these plots, r changes almost linearly with temperature.</p><p>In disordered systems, the Arrhenius behavior (log r / T À1 Þis frequently supplanted by the Vogel-Fulcher-Tammann (VFT)</p><p>behavior</p><formula xml:id="formula_1">(log r / T À T 0 ð Þ À1</formula><p>) that linearizes over narrow temperature intervals. Even neat MeCN shows non-Arrhenius behavior near 300 K (see the Discussion) as do all electrolytes studied here. It is possible to fit segments of the temperature dependence using the Arrhenius equation (Figure <ref type="figure" target="#fig_4">S5</ref>), and in Fig. <ref type="figure" target="#fig_2">3a</ref> we plot the corresponding activation energies E a vs. c. These activation energies remain small (~7 kJ/mol) until r passes through the maximum, at which point E a starts to increase reaching ~12 kJ/mol at 3 M. Similar behaviors were obtained in other electrolyte systems (see, for example, Figure <ref type="figure" target="#fig_0">10</ref> in Ref. <ref type="bibr" target="#b45">[46]</ref>). Henderson and co-workers <ref type="bibr" target="#b46">[47]</ref><ref type="bibr" target="#b47">[48]</ref><ref type="bibr" target="#b48">[49]</ref> have studied conductivity in LiTFSI-MeCN solutions and estimated E a from smoothed dlnðrÞ=dT plots obtained over a wide temperature range. These measurements gave rather different estimates from the ones reported here due to inherent ambiguity in using the Arrhenius equation for systems that display non-Arrhenius behaviors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Phenothiazine derivatives in acetonitrile.</head><p>MEPT (see the inset in Fig. <ref type="figure" target="#fig_1">2b</ref>) is a phenothiazine molecule that is closely related to MEEPT (Fig. <ref type="figure" target="#fig_0">1a</ref> and<ref type="figure" target="#fig_1">2c</ref>); it has the same aromatic head but a shorter ether chain. When the concentration of MEPT in MeCN increases over 1.5 M, a correlation peak is observed in the SAXS spectra of MEPT solutions, suggesting aggregation and ordering of these molecules. The low-q spectrum is Lorentzian suggesting the classical Orenstein-Zernike behavior of density fluctuations <ref type="bibr" target="#b49">[50]</ref><ref type="bibr" target="#b50">[51]</ref><ref type="bibr" target="#b51">[52]</ref><ref type="bibr" target="#b52">[53]</ref>.</p><p>For MEEPT (Fig. <ref type="figure" target="#fig_1">2c</ref>), which has a longer oligoether chain, even at 2.5 M there is no apparent correlation peak, indicating that the longer chain frustrates molecular ordering. To further probe this ordering, we used 3,7-dibromo derivative of MEEPT (DBrMEEPT), the synthesis of which is described in ref. <ref type="bibr" target="#b53">[54]</ref> Without the bromine atoms, the X-ray scattering contrast between MEEPT and the solvent is relatively small, so one needs high concentrations of MEEPT to observe solute-related features. The bromine atoms in DBrMEEPT strongly scatted X-rays, and even dilute solutions yield solute signals (Figure <ref type="figure" target="#fig_5">S6</ref>). SAXS spectra for 0.20-0.65 M solutions of DBrMEEPT (which has low solubility in MeCN) do not exhibit correlation peaks.</p><p>We conclude that the longer ether chain in DBrMEEPT and MEEPT vs. the shorter chain in MEPT precludes ordering of the redoxmer, and this property may account for MEEPT's miscibility in MeCN. The MD simulations shown in Figure <ref type="figure" target="#fig_6">S7</ref> qualitatively reproduce these behaviors: MEPT solutions yield correlation peaks at concentrations &gt;2 M (Fig. <ref type="figure" target="#fig_1">2b</ref>), whereas MEEPT and DBrMEEPT solutions do not show such features at all concentrations (Fig. <ref type="figure" target="#fig_1">2c</ref>).</p><p>A remarkable transformation occurs when LiTFSI is added to MEEPT solutions (Figure <ref type="figure" target="#fig_4">S5a</ref>): a strong correlation peak emerges, with the amplitude greatly exceeding that of MEEPT scattering (the same is observed when LiTFSI is added to DBrMEEPT, see Figure <ref type="figure" target="#fig_4">S5b</ref>). This additional scattering is certainly from the TFSI - anions. The similar transformations have been observed in other redoxmer containing electrolytes, see Refs. <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b43">44]</ref>. Two effects are at work here. First, in the presence of a solute, fewer solvent molecules are available to screen ions, so the ionic association becomes stronger, causing increased ordering of electrolyte ions and stronger correlation peaks (as seen for LiTFSI solutions). Second, in this system, Li + cations are complexed by MEEPT as shown in Fig. <ref type="figure" target="#fig_0">1d</ref>. Due to this complexation, the chain flexibility decreases, so MEEPT molecules become easier to order, and spatial correlation between these ordered MEEPT:Li + complexes and the TFSI -anions associated with these Li + cations arises (see the Discussion below). Thus, SAXS spectroscopy is instrumental in revealing special modes of interactions between the components in a crowded electrolyte.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Neutral and charged MEEPT solutions</head><p>With these results for binary solutions, we proceeded to examine the properties of MEEPT +d TFSI -and 1:1 mol/mol MEEPT/LiTFSI ternary solutions. In the following, we will refer to these compositions as the charged and neutral MEEPT solutions, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.1.">Density</head><p>For single-crystal MEEPT +d TFSI -, the specific gravity is 1.637 g/ cm 3 , which is equivalent to a molarity of 2.82 M. The relatively low molarity is due to relatively great molecular weight of this radical ion pair. The latter is difficult to avoid as the species need to be derivatized in order to become sufficiently flexible and odd shaped to prevent crystallization from solution. Consequently, in this system, concentrations &gt;2 M are equivalent to having &lt;70 mol% MeCN in solution. This is insufficient to fully solvate redoxmer molecules and ions, so solute-solute interactions can become excessively strong.</p><p>When the experimental densities of charged and neutral MEEPT solutions are plotted vs. their molarity at 300 K (Fig. <ref type="figure" target="#fig_3">4a</ref> and<ref type="figure" target="#fig_3">4b</ref>), the data points are close to each other. In the same plot, we show calculated NPT ensemble densities over a wider range of concentrations. The computed and experimental results are in good agreement, so we extended these MD estimates to superconcentrated solutions (Fig. <ref type="figure" target="#fig_3">4b</ref>). Also shown in Fig. <ref type="figure" target="#fig_3">4a</ref> are 1:1:0 and 1:1:1 mol/mol/mol MEEPT/LiTFSI/MeCN compositions. These compositions are on the same line; i.e., there is a continuous transformation from a dilute solution towards a solvate IL as the MeCN is removed. This computed line misses the MEEPT +d TFSI -crystallographic density but passes through an amorphous state with the estimated density of 1.496 g/cm 3 . We observed the same behavior in other redoxmer systems, <ref type="bibr" target="#b42">[43,</ref><ref type="bibr" target="#b43">44]</ref> which suggests that such disordered states are closer structurally to concentrated solutions than the corresponding crystals. The experimental maximum solubility of MEEPT +d TFSI -in MeCN is ~1.54 M at 298 K (the dashed vertical line in Fig. <ref type="figure" target="#fig_3">4b</ref>). While the supersaturated MEEPT +d TFSI -solutions are experimentally inaccessible, they can be studied computationally.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.2.">Ionic conductivity.</head><p>Fig. <ref type="figure" target="#fig_4">5a</ref> shows ionic conductivity r of neutral and charged MEEPT solutions (up to 1.5 M) together with our MD simulations (see ref. <ref type="bibr" target="#b17">[18]</ref> for more detail), which reproduce the trends in the data quite well. The conductivity maximum is attained at ~0.5 M and ~0.7 M for neutral and charged solutions, respectively (vs. 1 M for LiTFSI in Fig. <ref type="figure" target="#fig_2">3a</ref>). These concentrations are comparable to similarly sized redoxmers. <ref type="bibr" target="#b6">[7]</ref> Qualitatively, addition of a redoxmer increases ionic association between Li + and TFSI -, in this way lowering ionic conductivity. At lower concentrations, ionic conductivity for charged and neutral MEEPT solutions is similar, but at higher concentrations, it is greater for the charged MEEPT solution. At 1.5 M, it is three times greater compared to the equivalent neutral solution. In the latter, ionic conductivity decreases from the maximum of 25 mS/cm at 0.5 M to 6 mS/cm at 1.5 M, which is barely acceptable in an RFB electrolyte. As ionic association is stronger for a smaller Li + cation than for a larger MEEPT +d ion, the ionic conductivity in charged MEEPT solution is higher.</p><p>Fig. <ref type="figure" target="#fig_4">5b</ref> shows temperature dependence of ionic conductivity at the maxima (Fig. <ref type="figure" target="#fig_4">5a</ref>) and 1.5 M. These dependencies are almost linear. As seen in Fig. <ref type="figure" target="#fig_2">3b</ref>, the same behavior was observed in LiTFSI-MeCN solutions. As in these binary solutions, the activation energy for solvent and ionic transport is low, which translates into weak temperature dependence for ionic conductivity. To illustrate, at 1.5 M, the ionic conductivity of the neutral MEEPT solution increases from 5.7 mS/cm at 295 K to 12.9 mS/cm at 338 K, which barely makes this solution acceptable as an electrolyte. In Fig. <ref type="figure" target="#fig_4">5c</ref>, we plot r for neutral MEEPT solution vs. the mole fraction of the solvent as it decreases from 100 mol% to 20 mol%.</p><p>It is seen that the decrease in r shown in Fig. <ref type="figure" target="#fig_4">5a</ref> is but an onset of exponential decrease over a wider concentration range, as the solution increasingly becomes gel-like. While it is possible in this system to reach higher redoxmer concentrations without crystallization, this potential advantage is offset by rapid loss in mobility and ionic conductivity. Furthermore, as suggested by Fig. <ref type="figure" target="#fig_4">5b</ref>, increasing the temperature cannot significantly expand the concentration range of liquid-like behavior. Indeed, while r decreases with the mole fraction of the solvent exponentially, it increases linearly with the temperature; thus, in the gel-like regime increasing temperature is equivalent to a small increase in the concentration.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.3.">Molecular and ionic diffusivity.</head><p>In ref. <ref type="bibr" target="#b10">[11]</ref>, it was observed that the viscosity of MEEPT solutions increased almost linearly for MEEPT/electrolyte ratios &lt; 1:1 mol/mol (0.5 M electrolyte), whereas an increase in the MEEPT concentration over 1-3 M caused rapid increase in the viscosity by the two orders of magnitude; the flow remained Newtonian for all compositions studied. The charged solutions of the same composition were less viscous than the neutral ones, and in these solutions, too, there was rapid increase in viscosity between 0.5 M and 1 M <ref type="bibr" target="#b10">[11]</ref>.</p><p>Pulse field gradient NMR provides a means for quantification of molecular and ionic diffusion in liquids. For these measurements, CH 3 CN was replaced by CD 3 CN; the solvent contains sufficient CH 3 CN impurity to use it as a tracer to measure solvent selfdiffusion.</p><p>Fig. <ref type="figure" target="#fig_5">6a</ref> shows the coefficient D s for solvent self-diffusion plotted vs. the mole fraction of MeCN in solution. Also shown in this plot are the diffusion coefficients calculated in our MD simulations for this system (mind the logarithmic scale for the diffusion coefficients). It is seen that both the experimental and estimated values fall on the same line; i.e., the solvent diffusivity (like r in Fig. <ref type="figure" target="#fig_4">5c</ref>) exponentially decreases with the decreasing mole fraction of the solvent.</p><p>Plotted as a function of molarity, the data reveal two distinct regimes (the dashed lines in Fig. <ref type="figure" target="#fig_5">6b</ref>). Below 1.4 M, the solution is liquid-like; above 1.4 M, the solution increasingly congeals, and solvent diffusivity decreases exponentially with the redoxmer molarity. Using MD simulations, we computed self-diffusion of MeCN in supersaturated charged MEEPT solutions; these estimates are shown in the same plot. Qualitatively, these solutions behave like neutral MEEPT solutions, but the critical concentration increases from ~1.5 M to ~1.75 M due to weaker ionic association of MEEPT +d with TFSI -. Above this critical concentration, the exponential decrease in diffusivity with the redoxmer concentration sets in. As the solubility of MEEPT +d TFSI -solution is lower than this critical concentration, the solution remains liquid-like until this salt separates. Had the crystallization been avoided, gelling would be observed in this solution, too.</p><p>Using NMR, it is possible to measure diffusion coefficients D for MEEPT and LiTFSI ions. The easiest way to visualize these data is to plot these diffusion coefficients against D s on the log-log plot shown in Figure <ref type="figure" target="#fig_7">S8</ref>. In binary LiTFSI solutions, Li + cations move faster than TFSI -anions <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b30">31]</ref>. However, in MEEPT solutions all Li + cations are complexed by MEEPT (so Li + and MEEPT have similar mobility), and the TFSI -anion moves ~30% faster than the MEEPT:Li + complex. As the concentration increases, the ionic D's become increasingly closer to each other, and both ions move faster than MEEPT. Qualitatively <ref type="bibr" target="#b6">[7]</ref>, as ions associate, they exert drag on each other, and their diffusion coefficients become similar (this is already seen in binary LiTFSI solutions, see Ref. <ref type="bibr" target="#b30">[31]</ref>) The ions can still outpace MEEPT as Li + can hop between the neighboring MEEPT chains. In Figure <ref type="figure" target="#fig_8">S9</ref>, we show temperature dependencies for molecular an ionic diffusion at 1.5 M. These dependencies are linear, but the relative increase in the diffusivity over the same temperature range was ~3x times faster than in ionic conductivity shown in Fig. <ref type="figure" target="#fig_4">5b</ref>. This is expected as the conductivity depends not only on ionic diffusion but also on ionic association. Thus, the non-Arrhenius behavior is seen not only in ionic conductivity but also in ionic and molecular diffusivity; in fact, it is seen in all dynamic behaviors of this system.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.4.">Small-angle X-ray scattering.</head><p>Fig. <ref type="figure" target="#fig_6">7a</ref> and<ref type="figure" target="#fig_6">7b</ref> show SAXS spectra for the neutral and charged MEEPT solutions, respectively, plotted for different concentrations. In addition to the solvent domain peak at 1.2 Å À1 , at concentrations &gt;1 M for neutral and &gt;1.4 M for charged MEEPT solutions, there are correlation peaks that increase in the amplitude with the concentration and gradually shift towards higher transfer vectors q as the concentration increases. The same progression is observed for LiTFSI suggesting that the feature reflects the increasing association of TFSI -anions. We remind that without the salt, MEEPT does not yield correlation peaks even at 2.5 M (Fig. <ref type="figure" target="#fig_1">2c</ref>), so these features originate through interaction of MEEPT and LiTFSI. All these behaviors are reproduced in our MD simulations shown in Figure <ref type="figure" target="#fig_0">S10</ref>. In fact, the SAXS spectra proved to be so sensitive to ionic association (that depends on the total charge on the ions) that we used these spectra to ''titrate" these charges in our MD model (see Section S1). We will return to these observations in the next section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Synopsis</head><p>To summarize our observations, concentrated MEEPT solutions, either neutral or charged, are close to the gel-like regime, in which a small increase in the concentration causes exponential decreases in fluidity, diffusivity, and conductivity of the solutions. At concentrations &gt;2 M the system advances deep into this regime. Increasing solution temperature makes diffusion faster, but due to low activation energy this increase is insufficiently fast to compensate for thickening and partial ordering of the solution at increased concentration of the redoxmer and salts, and the system becomes ''stuck" in the gel-like regime.</p><p>Below, we revisit these observations, starting with neat MeCN. We first show that our dynamic model captures the unusual thermal behavior of this solvent and peculiarities of LiTFSI-MeCN system. We then consider how the models account for the properties of charged and neutral MEEPT solutions in different concentration and temperature regimes. With this knowledge, we use these models to show that changing electrolyte does not address challenges imposed by gel-like regimes. Finally, we demonstrate that in some systems these limitations can be surpassed, albeit only at high temperature and for small redoxmer molecules.</p><p>Another way to follow this discussion is to conceive it as a stepwise proof of the assertions made in the Introduction that there always exists a well-defined upper limit to increasing the redoxmer concentration while maintaining acceptable dynamic properties. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Liquid acetonitrile</head><p>As suggested by results, the difficulty of raising the upper limit of redoxmer concentration by increasing temperature (without falling into gel-like behavior) originates in the anomalous properties of the solvent, which makes it impossible to mitigate. The salient property of concern here is the low activation energy near the room temperature. Here we show that our MD model accounts for the non-Arrhenius behavior of the solvent in general and this low activation energy in particular.</p><p>A low activation energy (E a &lt; 10 kJ/mol) for diffusion in MeCN is not exceptional: it is typical for aprotic fluids consisting of light molecules (such as acetone, diethyl ether, and chloroform) but lower compared to most other polar solvents <ref type="bibr" target="#b54">[55,</ref><ref type="bibr" target="#b55">56]</ref>. At 1 bar, MeCN melts at 227 K and boils at 355 K. In this temperature range, the relaxation rate for a 14 N nucleus follows the VFT equation with T 0 ~170 K <ref type="bibr" target="#b56">[57]</ref>. Around 300 K, for diffusional reorientation, E a is ~8.4 kJ/mol by Raman spectroscopy and ~7.8 kJ/mol by NMR <ref type="bibr" target="#b57">[58]</ref><ref type="bibr" target="#b58">[59]</ref><ref type="bibr" target="#b59">[60]</ref><ref type="bibr" target="#b60">[61]</ref>. For dynamic viscosity, E a is ~7.5 kJ/mol (233 K to 373 K) and for self-diffusion, E a is 7.8 kJ/mol (Figures <ref type="figure" target="#fig_0">S11</ref> and<ref type="figure" target="#fig_1">S12</ref>) <ref type="bibr" target="#b61">[62,</ref><ref type="bibr" target="#b62">63]</ref>. Similar estimates for E a were obtained using quasielastic neutron scattering <ref type="bibr" target="#b63">[64]</ref>. For tracer diffusion, ferrocene and ferrocenium ion have E a of 6.5 and 7.2 kJ/mol, respectively <ref type="bibr" target="#b64">[65]</ref>, and for Cl -ions, E a is ~7.6 kJ/mol <ref type="bibr" target="#b65">[66]</ref>. The closeness of E a for reorientation of solvent molecules and translational diffusion for tracer molecules and ions indicates that for all species in solution the translational diffusion is rate limited by molecular reorientation of the solvent molecules <ref type="bibr" target="#b66">[67]</ref>.</p><p>While there are numerous MD models for MeCN <ref type="bibr" target="#b60">[61,</ref><ref type="bibr" target="#b66">[67]</ref><ref type="bibr" target="#b67">[68]</ref><ref type="bibr" target="#b68">[69]</ref><ref type="bibr" target="#b69">[70]</ref><ref type="bibr" target="#b70">[71]</ref><ref type="bibr" target="#b71">[72]</ref>, modeling of temperature-dependent dynamics is lacking in the lit-erature. In Figure <ref type="figure" target="#fig_1">S12</ref> we used our MD model to calculate density, and in Figures <ref type="figure" target="#fig_0">S11</ref> and<ref type="figure" target="#fig_1">S12</ref> we calculate self-diffusion of MeCN as a function of temperature (viscosity data are also shown in the same plots). The error in the density is &lt;3% for all temperatures. For selfdiffusion there is slight discrepancy between the reported data in the literature; to better match these data and viscosity measurements, one series was scaled by 10%. The high-temperature series gives E a ~10.5 kJ/mol, whereas the low-temperature series gives E a ~7.8 kJ/mol, illustrating non-Arrhenius behavior of the solvent (Figure <ref type="figure" target="#fig_1">S12b</ref>). In the same plot, we show MD estimates for the coefficient D s of self-diffusion scaled by a factor of 1.5 to correct for reduced diffusivity arising from the use of nonpolarized force field. The scaled MD estimates closely follow the experimental points between 265 K and 330 K. That is, our MD model correctly describes temperature dependence of self-diffusion in the temperature range of interest for this study. The computed D s also closely tracks g À1 from 260 to 350 K.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">LiTFSI-MeCN solutions</head><p>Turning to the LiTFSI-MeCN solutions (Fig. <ref type="figure" target="#fig_7">8a</ref> and<ref type="figure" target="#fig_7">8b</ref>), Figure <ref type="figure" target="#fig_2">S13</ref> shows the diffusion coefficients for MeCN and LiTFSI ions plotted vs. salt molarity c. For c &lt; 1.5 M the diffusion coefficients for ions decrease linearly with c 1/2 ; for c &gt; 2 M the gel-like regime sets in, and there is rapid exponential decrease. In Fig. <ref type="figure" target="#fig_7">8a</ref>, the computed D s is plotted as a function of density for room temperature LiTFSI solutions. In addition to these points, the plot includes 320-360 K data for selected concentrations (color symbols). Remarkably, D s appears to be largely a function of the density alone (as was recently observed for other nonaqueous electrolytes by Han). <ref type="bibr" target="#b72">[73]</ref> From the Arrhenius plots for computed D s shown in Fig. <ref type="figure" target="#fig_7">8b</ref>, the activation energy for solvent transport increases from ~7.6 kJ/mol in dilute solution to ~16.5 kJ/mol in 4.2 M solution, and the onset of this increase corresponds to the onset of gelling, which is also seen in Fig. <ref type="figure" target="#fig_2">3a</ref>. In this 4.2 M solution, at 300 K the diffusion coefficient decreases by two orders of magnitude relative to neat solvent. The density plot of E a shown in Fig. <ref type="figure" target="#fig_7">8a</ref> resembles the plot shown in Fig. <ref type="figure" target="#fig_2">3a</ref>, suggesting that our MD model captures the salient features of this binary system.</p><p>Using the same model, we estimated ionic conductivity r and diffusion coefficients D for Li + and TFSI -in 0.2-3.0 M LiTFSI solutions between 270 K and 420 K (not shown). For the TFSI -anion, E a linearly increased from ~11.5 to ~16.5 kJ/mol; for the Li + cation, E a increased from ~11.5 to ~14.5 kJ/mol, following the trend for D s . For viscosity, E a increased from 8 to 9 kJ/mol to ~13 kJ/mol; for conductivity, E a increased from ~8-9 kJ/mol to ~10 kJ/mol. As seen from these calculations, the activation energies for ionic diffusion, solution viscosity, and ionic conductivity are all low in liquid-like LiTFSI solutions, and they increase only slightly in the gel-like regime despite the precipitous loss of ion and solvent mobility in this regime.</p><p>This behavior may seem peculiar given that conductometry and SAXS spectroscopy both indicate increasingly strong association and ordering of the LiTFSI ions in concentrated LiTFSI solutions. In Section S2 and Figures S14 to S18 therein we argue that even in 2-4 M solutions, the associated ions do not form contiguous network, whereas solvent molecules still do. As ion transport occurs mainly through this extended solvent network, it is not sensitive to ordering of the ions unless the ion network becomes contiguous and fragments the solvent into disconnected domains.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">MEEPT +d TFSI -(charged) solutions.</head><p>As seen from SAXS data in Fig. <ref type="figure" target="#fig_1">2c</ref>, MEEPT has a long, flexible chain that frustrates ordering of these molecules in solution. Poor ordering is further assisted by nonplanarity of aromatic head groups (Fig. <ref type="figure" target="#fig_0">1a</ref>). This advantage does not extend to MEEPT +d , which has a planar radical cation (Fig. <ref type="figure" target="#fig_0">1b</ref>). In MEEPT +d Y -crystals, the radical ions form isolated pairs (TFSI -and SbCl 6 -) or infinite chains (BF</p><p>) with the planes of aromatic rings separated by 3.24-3.52 Å (Fig. <ref type="figure" target="#fig_0">1a</ref>). The Coulomb repulsion of positively charged radical cations in these p -stacks is reduced by electrostatic attraction to nearby anions. This compensation is stronger for smaller, rounder anions like BF 4 -, and weaker for odd-shaped, flexible anions like TFSI -. The stronger the ionic association, the greater this compensation, assisting ordering of the radical ion pairs into a crystal.</p><p>To characterize this stacking in solution, we adapted metrics introduced in ref. <ref type="bibr" target="#b42">[43]</ref> that include the proximity criterion (centroid-to-centroid distance) and angular criterion (the angle between the plane normal for the head group) as illustrated in Figure <ref type="figure" target="#fig_2">S3</ref>; see Figure <ref type="figure" target="#fig_8">S19</ref> for an example of stacking analysis. When full charge is assumed for MEEPT +d , the fraction of the stacks increases linearly from zero at 1.5 M to ~20% at 2.6 M (Fig. <ref type="figure" target="#fig_3">4b</ref>); i.e., the onset of stacking approximately coincides with the solubility limit. A more realistic estimate of the ionic charge is ~0.70 (which is required to simulate conductivity and SAXS data), so we calculated the stack fraction for this MD model. As seen from Fig. <ref type="figure" target="#fig_3">4b</ref>, in this model, too, there is MEEPT +d stacking at ~1.5 M. Lowering of the charge on MEEPT +d decreases Coulomb repulsion, but it also decreases association with TFSI -anion, and the two effects cancel each other.</p><p>It follows from our MD calculations that most MEEPT +d radical cations do not form stacks in solution; rather they make random contacts with each other. Assuming the contact radius of 2.8 Å, we calculated the neighboring statistics for MEEPT moieties in the charged and neutral MEEPT solutions (Figure <ref type="figure" target="#fig_1">S20</ref>). According to these calculations, the average number of MEEPT +d and TFSI - ions around each MEEPT +d radical cation linearly increases with molarity, eventually reaching six in MEEPT +d TFSI -. Over the same concentration range, the number of MeCN molecules in the solvation shell of MEEPT +d decreases from twelve to none. At the solubility limit, there are six MeCN molecules and three MEEPT +d TFSI - pairs around each radical cation, which is sufficient for a 3dimensional network of the associated MEEPT +d TFSI -pairs to arise.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.5.">MEEPT:LiTFSI (1:1 mol/mol) system</head><p>There are relatively small differences between neighborhood statistics for neutral and charged MEEPT solutions (Figure <ref type="figure" target="#fig_1">S20</ref>), except for fewer TFSI -anions associated with MEEPT as opposed to MEEPT +d . Figure <ref type="figure" target="#fig_1">S21a</ref> shows computed SAXS spectra for 1.5 M solution (see an MD snapshot in Figure <ref type="figure" target="#fig_1">S22</ref>) separated into linearized contributions from different species in solution (see ref. <ref type="bibr" target="#b43">[44]</ref> for technical details of such spectral decompositions). Most of the signal that contributes to the correlation peak arises from TFSI -anions; however, had the correlation peak been exclusively from these anions, it would be at 0.65 Å À1 . The head groups of MEEPT contain X-ray scattering high-Z sulfur atoms, so MEEPT: Li + complexes yield a correlation peak ~1.05 Å À1 , and the observed correlation peak partakes of both ionic species. The lithium atom does not scatter X-rays strongly, so its contribution to SAXS is negligible. In Figure <ref type="figure" target="#fig_1">S21b</ref> we exaggerate this contribution to illustrate that Li + and MEEPT have the same correlation peak due to their 1:1 complexation. We remind the reader that the MEEPT:Li + cation complex and TFSI -anion is associated through the chelated Li + (Fig. <ref type="figure" target="#fig_0">1d</ref> and<ref type="figure" target="#fig_1">S22</ref>). In Section S3 and Figures S23 to S26 therein we show that such MEEPT:Li + complexes form a contiguous network at concentrations as low as 1-1.5 M. As the complexes aggregate, so do the associated TFSI -anions, and this ordering is observed in SAXS.</p><p>For charged MEEPT solutions, the mode of TFSI -ordering is simple electrostatics. At 1.5 M, the stacking of MEEPT +d cations is inefficient, and their packing is loose (as there are no Li + cations to fix their ether chains). The weak correlation in the positions of TFSI - anions seen in SAXS spectra is due to weak association with (large) radical cations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.6.">Dynamic properties</head><p>We already presented conductivity (Fig. <ref type="figure" target="#fig_4">5a</ref>) and diffusivity (Fig. <ref type="figure" target="#fig_5">6a</ref> and<ref type="figure" target="#fig_5">6b</ref>) data validating our MD model. Figure <ref type="figure" target="#fig_6">S27a</ref> shows MEEPT and ionic diffusivities plotted vs. D s in the neutral MEEPT solution in a manner of Figure <ref type="figure" target="#fig_7">S8</ref>. Comparison with the latter figure indicates that the model reproduces the trends observed in the 300 K solutions. It also suggests that such trends would extend to a higher temperature of 360 K. While we do not have diffusion data for charged MEEPT solutions, Figure <ref type="figure" target="#fig_6">S27b</ref> suggests that in these solutions, too, the TFSI -anion moves faster than MEEPT +d at low concentrations, and the diffusion coefficients become comparable at higher concentrations.</p><p>Figure <ref type="figure" target="#fig_7">S28</ref> shows computed temperature dependences for the coefficient D s of self-diffusion for MeCN compared to experimental data shown in Figure <ref type="figure" target="#fig_8">S9</ref>. The MD simulation yields almost linear increase in D s with the temperature (reproducing the experimentally observed trend). Increasing temperature increases mobility in both states of charge; however, the general shape of the concentration dependencies remains the same (Figure <ref type="figure" target="#fig_8">S29</ref>). At 360 K, the charged system would be liquid-like for all concentrations &lt; 2 M, while the neutral system still would be gel-like at 2 M. To obtain the same D s as observed for 1.5 M at 300 K, the equivalent MEEPT concentration would be 1.86 M at 360 K, so the gain in concentration is only 25% (Figure <ref type="figure" target="#fig_8">S29</ref>). That is, in the gel-like regime even 10x gain in mobility results in modest gains in the redoxmer concentration.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.7.">Is the Li + cation special?</head><p>Given the MEEPT:Li + complexation, it is pertinent to ask whether our observations generalize to cations that do not form such ion-solute complexes. To this end, we computationally replaced Li + with organic cations (X + ): tetramethylammonium (NMe 4 + ) and N-propyl-N-pyrrolidinium (P 13 + ). The latter is a flexible cation that is a popular choice for IL-based electrolytes (see, e.g., refs. <ref type="bibr" target="#b73">[74,</ref><ref type="bibr" target="#b74">75]</ref>). Table <ref type="table">1</ref> shows computational results for 1:1 mol/mol MEEPT/X - + TFSI -. When the compositions of the same mole fraction are compared (we chose 14 mol%, which corresponds to 1.5 M for MEEPT/ LiTFSI), replacing the Li + cation with an organic cation considerably increases cation and MEEPT mobility and (to a smaller degree) anion mobility. In this sense, excluding cation binding by MEEPT does improve mobility. However, replacing the Li + cation with a bulkier cation reduces density and hence molarity of these solutions. To obtain solutions of the same molarity (in this case, 1.5 M), the solute mole fraction needs to be increased from 14 mol% for Li + to 18.3 mol% for NMe 4 + to 21.9 mol% for P 13 + . This increase (given the proximity to gel-like region) negates the advantage of cation replacement (Table <ref type="table">1</ref>), causing considerable decrease in diffusivity.</p><p>Like in the MEEPT/LiTFSI solutions (see above), a temperature increase does not improve this situation as it causes volume expansion that further decreases molarity. To maintain the redoxmer molarity of 1.5 M at 300 K (that would define the power density) one needs to increase the mole fraction of this redoxmer still more to compensate for this volume expansion. For LiTFSI, this increase is modest (15.2 mol% vs. 14 mol%), for organic cations it is 20.8 mol% for NMe 4 + and 27.2 mol% for P 13 + (which almost doubles the mole fraction compared with the initial 14 mol%). Increasing the mole fraction of electrolyte causes net decrease in the mobility, so using hot solutions of the same molarity (1.5 M) shows no improvement in dynamic properties.</p><p>The root problem are large molar volumes for the solute. At 300 K, in 1:1 mol/mol MEEPT/X + TFSI -(no solvent) the concentration of MEEPT would be 2.03 M for NMe 4 TFSI and 1.85 M in P 13 TFSI compared to 2.48 M for LiTFSI. Triethylsulfonium dicyanamide, SEt 3 N(CN) 2 , is an ionic liquid composed of light ions and has uncommonly high fluidity and conductivity at 360 K (Figure <ref type="figure" target="#fig_2">S30</ref>). Even for this exceptional salt, the 1:1 mol/mol MEEPT:IL composition would have molarity of 2.26 M, which is still lower compared to 1:1 mol/mol MEEPT:LiTFSI. That is, large molar volume of MEEPT leaves little room for reaching 2 M without incursion into the gel-like regime. Actually, LiTFSI was a good choice for electrolyte despite the strong Li + association with MEEPT that causes decreased mobility as it extends the acceptable molar range.</p><p>We conclude that for molecules as large as MEEPT there may be no realistic path for achieving desired dynamic properties for solutions at concentrations &gt; 2 M, for any reasonable temperature and any choice of electrolyte. For lighter redoxmers, such a path might exist, as we argue below.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.8.">Can 2 M be exceeded?</head><p>From the standpoint of dynamic properties alone (abstracting from all other requirements), the best electrolyte consists of (i) the lightest electrolyte ions and (ii) the lightest redoxmer molecules. Since small heterocyclic molecules tend to crystallize easily, improving solubility necessitates the use of odd-shaped, flexible molecules and ions that frustrate crystallization but also cause gelling in concentrated solutions. A way out of this predicament would be using smaller species and higher temperatures to increase solubility and mobility.</p><p>From this standpoint, small redox-active molecules with low melting points would make the best choice for hot solutions. The familiar examples of such redoxmers are 2,2,6,6-tetramethylpiperi din-1-yl)oxyl that melts at 310 K and 2,1,3-benzothiadiazole (BzNSN) that melts at 327 K. For similar reasons, one desires electrolyte salt that is fluid and conductive; that is, an ionic liquid. Unfortunately, most ILs have prohibitively high viscosities (&gt;50 cP) even at 360 K, <ref type="bibr" target="#b75">[76,</ref><ref type="bibr" target="#b76">77]</ref> and the select few ILs that are sufficiently fluid have heavy ions and low molarity. SEt 3 N(CN) 2 is exceptional in this sense: <ref type="bibr" target="#b77">[78,</ref><ref type="bibr" target="#b78">79]</ref> at 360 K, it is fluid (~6 cP) and conductive (&gt;60 mS/cm) while having low molar volume; this advantage extends to MeCN mixtures (Figure <ref type="figure" target="#fig_2">S30</ref>). Here we show computationally that combining a small redoxmer molecule with this IL can push the acceptable concentrations over 2 M. Fig. <ref type="figure" target="#fig_8">9a</ref> shows the computed D s for 1:1 mol/mol BzNSN/LiTFSI solution in MeCN plotted vs. the mole fraction of redoxmer. Like in the MEEPT system, D s exponentially decreases with the decreasing mole fraction of the solvent both at 300 K and 360 K, decreasing by a factor over 100x at 40 mol%. Fig. <ref type="figure" target="#fig_8">9b</ref> shows the 360 K data replotted as a function of molarity and compares it with the equivalent SEt 3 N(CN) 3 solutions. Even at 3 M, the solution remains fluid, outperforming the equivalent LiTFSI solution 10x in solute and solvent mobility. Figure <ref type="figure" target="#fig_2">S31</ref> compare solvent, ionic, and BzNSN diffusivity at 360 K, for solutions containing the same mole fraction of redoxmer in either state of charge. All diffusion coefficients are in the acceptable range; that is, charging of these solutions does not make them more viscous or less conductive.</p><p>We found several other examples of such systems, and MD calculations suggest that 2.5-3 M electrolytes can be obtained in this manner, albeit only at 340-360 K. The practical significance of this finding is unclear, as chemical stability of charged redoxmers would suffer in hot solutions, while maintaining high temperature diverts electric power. Nevertheless, this approach appears to be the only path to reaching concentrations of 2-4 M assumed in technoeconomic analyses that underlie nonaqueous RFB development. <ref type="bibr" target="#b5">[6]</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusion</head><p>In the Introduction, we asked what factors other than solubility would limit redoxmer molarity in nonaqueous RFB electrolytes. We purposely disregarded all properties other than fluidity and ionic conductivity. These additional requirements will only further decrease the limits we have established. Most of our experimental work was on a phenothiazine system, yet our conclusions are general.</p><p>Presently, improving solubility of redox-active molecules in nonaqueous RFB electrolytes draws the most attention, and it may appear that this solubility is the main obstacle to achieving a higher energy density. Our study suggests otherwise: gelling of concentrated solutions and freezing of dynamics effectively limits the maximum redoxmer concentration in systems that avoid crystallization; in fact, this gelling is precisely how the crystallization is avoided. Above a certain well-defined concentration, which for most redoxmers is between 1 and 2 M, fluidity, conductivity, and diffusivity of electrolyte decrease exponentially with increasing concentration, so even a slight increase in this concentration makes the solution excessively viscous and electrically resistive. This gelling occurs in either state of charge and at all temperatures. The critical concentration for gelling is somewhat higher for a charged redoxmer, but, as favorable dynamic properties need to extend to all states of charge, this does not lower the concentration limit.</p><p>Still it may appear that increasing the solution temperature can improve these concentration limits by increasing molecular and ionic mobility and redoxmer solubility. Unfortunately, low thermal activation energies for molecular and ion transport preclude significant improvement in this fashion. The dynamic properties (such as viscosity and conductivity) increase slowly with the increasing temperature, whereas they change very rapidly with the increasing redoxmer concentration. This property makes it extremely difficult or even impossible to achieve molarities &gt; 2 M not only at room temperature, but at any temperature.</p><p>While conventional electrolytes run into such limitations, less conventional ones might extend this limit to 2.5-3 M but only at 340-360 K and only for light redoxmer molecules. Such unconventional electrolytes may not be practically relevant; however, in more conventional electrolytes, operation &gt; 2 M might be physically impossible.</p><p>A troubling aspect of our findings is that the current technoeconomic case for nonaqueous RFBs largely rests on expectations of high redoxmer concentration (2-4 M) while maintaining favorable dynamics <ref type="bibr" target="#b5">[6]</ref>. Our study suggests that such requirements could be fundamentally irreconcilable due to physical properties of crowded electrolytes that were unknown to researchers when these projections were made.</p><p>We stress that our analyses examined only one of the battery chemistries (which is the most common). In some chemistries, rheological properties of battery fluids can be improved through elim-ination of one kind of electrolyte ions, which reduces crowding in the solutions. For ion conducting separation membranes, this can be achieved by using suitable ionic catholytes (C) or anolytes (A). For example, for a cation (X + ) conducting membrane, one can consider a X + C -|| A cell configuration that becomes C d || X + A -d at full charge (we show the minimal supporting ions required for charge balancing). Examples of such catholyte molecules are given by verdazyl <ref type="bibr" target="#b79">[80,</ref><ref type="bibr" target="#b80">81]</ref> and benzoylpyridinium <ref type="bibr" target="#b81">[82]</ref><ref type="bibr" target="#b82">[83]</ref><ref type="bibr" target="#b83">[84]</ref><ref type="bibr" target="#b84">[85]</ref> anions. Conversely, for an anion (Y -) conducting membrane, one can consider a C || A + Y -configuration that becomes C +d Y -|| A d at full charge (where the cationic anolyte is exemplified by verdazyl and benzoylpyridinium cations). A variant of the latter chemistry is the wellknown C d || A 2+ (Y -) 2 system, in which a nitroxyl radical is paired with a viologen dication. <ref type="bibr" target="#b85">[86]</ref><ref type="bibr" target="#b86">[87]</ref><ref type="bibr" target="#b87">[88]</ref><ref type="bibr" target="#b88">[89]</ref><ref type="bibr" target="#b89">[90]</ref> If the separation membrane is redoxmer-blocking, then X + C -|| A + Y -M C + Y -|| X + A -two-electron chemistry would be potentially possible, giving yet another approach to reducing crowding in solution. Each scenario would require separate analyses, but most of the factors considered in this study would be in play for these chemistries, too. Indeed, all salts that avoid crystallization in highly concentrated solutions do so through disorder, and so they tend to gel. For this reason, excluding one of the electrolyte ions relaxes but does not remove the limits considered above.</p><p>6. Note added after the review.</p><p>During review, one of the authors of this study, Susan Odom, suddenly and tragically died on April 18, 2021. Susan was a dear colleague who will be fondly remembered for her industry, amicability, outstanding chemical imagination, and boundless curiosity. She pioneered the use of phenothiazines as redox materials in solid and flow batteries, and she provided the initial spark for this inquiry by asking the important questions that we addressed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of Competing Interest</head><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. (a) A representation of the three-dimensional structure of MEEPT. Note the ''book" conformation of the ring (the atoms are indicated in the plot). (b) The planar radical cation of MEEPT. (c) Formation of p -stacks of phenothiazine radical cations in a crystal (exemplified by EPT +d BF 4 -). (d) The solvation environment for a Li + cation in a solution containing 1:1 mol/mol combination of MEEPT and LiTFSI in MeCN. The Li + cation is chelated by two oxygens in the ether chain of MEEPT and interacts with the nitrogen atoms in the cyano group of MeCN and one of the oxygens in the TFSI -anion.</figDesc><graphic coords="3,77.27,67.92,439.47,217.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. (a) SAXS spectra for 1 M (blue) and 2 M (magenta) solutions of LiTFSI in MeCN at 298 K. For comparison, the signal from MeCN alone is shown in black. The correlation peak from TFSI -anions is seen in LiTFSI-containing samples. Comparison of SAXS spectra for MeCN solutions of (b) MEPT and (c) MEEPT at 298 K. The short-chain molecule shows a well resolved correlation peak (indicated with the arrow) at higher concentrations, whereas MEEPT does not show this peak at any concentration.</figDesc><graphic coords="4,46.09,462.16,498.95,259.37" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. (a) Ionic conductivity rfor LiTFSI solutions in MeCN (298 K, red symbols plotted to the left). The blue curve and symbols plotted to the right show the concentration dependence for the activation energy Ea of the conductivity. The vertical bars show the experimental uncertainty in the measurement. (b) Temperature dependences for conductivity at different salt concentrations (indicated in the plot). The solid lines are linear fits.</figDesc><graphic coords="5,82.94,67.92,425.30,285.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. (a) Concentration dependencies for neutral and charged MEEPT solutions. Traces i and ii are the experimental data for MEEPT +d TFSI -(charged solutions) and 1:1 mol/mol MEEPT/LiTFSI (neutral solutions) in MeCN (300 K), respectively. Traces iii and iv are computed curves from the MD model. Also shown are the crystallographic density for MEEPT +d TFSI -(open blue squares). For MEEPT, 1:1:0 and 1:1:1 compositions are indicated. For the charged system, amorphous MEEPT +d TFSI -is also indicated. (b) Traces i and ii are the same as in panel a, and trace iii is a calculation in the MD model with full charge on the ions. Experimentally, MEEPT +d TFSI -has the solubility ~1.54 M (the vertical dashed line). Plotted to the left axis is the fraction of stacked MEEPT +d cations in (iv) the model with full charge on the ions and (v) 70% charge on the ions (which is our default MD model). The stacking of radical cations increases substantially as the system becomes supersaturated.</figDesc><graphic coords="6,82.94,369.92,428.17,325.87" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. (a) Concentration dependencies for ionic conductivity r of (i) neutral and (ii) charged MEEPT solutions (in the blue and red, respectively). The vertical bars show the experimental uncertainty. The dashed lines with error bars show MD simulation (gray for neutral and black for charged MEEPT solutions). (b) The symbols show temperature dependence for the conductivity in the neutral and charged MEEPT solutions at selected concentrations indicated in the plot (the same coloring scheme as in panel a). (c) A concentration plot for the neutral MEEPT solutions, with r plotted vs. the mole fraction of the solvent (mind the logarithmic vertical scale). At concentrations &gt; 1 M, the conductivity exponentially decreases with the decreasing mole fraction of the MeCN solvent (the dashed line).</figDesc><graphic coords="7,82.94,67.92,431.06,273.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. (a) The coefficient D s for solvent self-diffusion in the neutral MEEPT solution plotted vs. the mole fraction of the solvent. Mind the logarithmic vertical scale. The open circles are the experimental pulse gradient NMR measurements and the filled circles are the MD model. Both estimates exponentially decrease with the mole fraction of the solvent (the black solid line). (b) The MD simulations for D s in the (i) neutral and (ii) charged MEEPT solutions plotted vs. molarity of these solutions. Two regimes, the liquidlike and the gel-like can be distinguished for both systems (the dashed lines). Shown in the inset is 1:1:0.6 MEEPT/LiTFSI/MeCN mixture illustrating gel-like properties of the solution.</figDesc><graphic coords="8,99.95,67.92,395.74,301.27" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. SAXS spectra of (a) neutral and (b) charged MEEPT solutions as a function of the molarity. The trend line shows the positions of correlation peaks.</figDesc><graphic coords="9,77.27,67.92,439.47,335.79" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Simulation of solvent self-diffusion coefficients D s in the LiTFSI in MeCN. (a) D s plotted vs. the solution density. In both panels, symbols of the same color correspond to the same molarity but different solution temperatures. Traces i and ii are for NPT and NVT ensembles at 300 K, respectively. The color symbols show 300-360 K data from panel b. As the solution temperature increases, it expands, and the density decreases. It is seen that D s is largely the function of the density. For concentrations &gt; 2 M, the diffusivity exponentially decreases with the density (the dashed straight line). Plotted to the right axis is the activation energy Ea for self-diffusion obtained from the data of panel b. (b) Arrhenius plots for D s at selected concentrations of LiTFSI. As the concentration increases over 2 M (corresponding to density ~1.1 g/cm 3 ), the solution becomes increasingly gel-like and the activation energy increases.</figDesc><graphic coords="10,91.45,67.92,410.40,302.23" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Fig 9 .</head><label>9</label><figDesc>Fig 9. Computed diffusion coefficients in 1:1 mol/mol BzNSN/salt solutions. (a) The diffusion coefficient for solvent self-diffusion plotted vs. mole fraction of BzNSN in LiTFSI solutions at 300 K and 360 K. (b) Diffusion coefficients for MeCN and BzNSN plotted vs. BzNSN molarity at 360 K, for LiTFSI (empty symbols) and SEt 3 N(CN) 2 (filled symbols).</figDesc><graphic coords="12,91.45,454.62,411.14,275.47" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>This work was supported as part of the Joint Center for Energy Storage Research (JCESR), an Energy Innovation Hub funded by the U.S. Department of Energy, Office of Science, Basic Energy Sciences. The submitted manuscript has been created by UChicago Argonne, LLC, Operator of Argonne National Laboratory (''Argonne"). Argonne, a U.S. Department of Energy Office of Science laboratory, is operated under Contract No. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive, irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government. This research used resources of the Advanced Photon Source, a U.S. Department of Energy (DOE) Office of Science User Facility operated for the DOE Office of Science by Argonne National Laboratory under Contract No. DE-AC02-06CH11357.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix A. Supplementary material</head><p>A pdf file containing the additional sections, figures, and supporting references. This PDF file contains a link to a zipped file containing the input topologies for the species in our MD simulations, with the documentation. Supplementary data to this article can be found online at https://doi.org/10.1016/j.molliq.2021.116533.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Materials and systems for organic redox flow batteries: status and challenges</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hollas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Reed</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="2187" to="2204" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<author>
+			<persName><forename type="first">P</forename><surname>Leung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ponce De Leon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Berlouis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">T J</forename><surname>Low</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Walsh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Progress in redox flow batteries, remaining challenges and their applications in energy storage</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="10125" to="10156" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Redox flow batteries: a review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Weber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mench</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Meyers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ross</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gostick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Appl. Electrochem</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="1137" to="1164" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Redox flow battery for energy storage</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ECS Trans</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1" to="5" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Redox flow cells for energy conversion</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ponce De León</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Frías-Ferrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>González-García</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Szánto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Walsh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Power Sources</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="page" from="716" to="732" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Pathways to low-cost electrochemical energy storage: a comparison of aqueous and nonaqueous flow batteries</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Darling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">G</forename><surname>Gallagher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Haac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Brushett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="3459" to="3477" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Solution properties and practical limits of concentrated electrolytes for nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Corman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">K</forename><surname>Schuh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Ewoldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="8159" to="8172" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Quantifying environmental effects on the solution and solid-state stability of a phenothiazine radical cation</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">C</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">H</forename><surname>Attanayake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3007" to="3017" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Liquid catholyte molecules for nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Burrell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">1401782</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">High current density, long duration cycling of soluble organic active species for nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Milshtein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Casselman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Modekrutti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">H</forename><surname>Attanayake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Risko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Environ. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="3531" to="3543" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Viscous flow properties and hydrodynamic diameter of phenothiazine-based redox-active molecules in different supporting salt environments</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">H</forename><surname>Attanayake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Suduwella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Ewoldt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Fluids</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page">83108</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Application of ionic liquids to energy storage and conversion materials and devices</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watanabe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">L</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ueno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Yasuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dokko</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="7190" to="7239" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A highly soluble organic catholyte for non-aqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Holubowitch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Technol</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="476" to="480" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The fate of phenothiazine-based redox shuttles in lithium-ion batteries</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Casselman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Narayana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Risko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="6905" to="6912" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Room-temperature ionic liquids. solvents for synthesis and catalysis</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Welton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="2071" to="2083" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Room-temperature ionic liquids: solvents for synthesis and catalysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Hallett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Welton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="3508" to="3576" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Criteria for solvate ionic liquids</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mandai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yoshida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ueno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dokko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Watanabe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="8761" to="8772" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Dynamic diversity of soft medium-range homo-radical selfassembly and rigid metal-organic network in non-aqueous redox flow batteries undecided</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Farag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ewoldt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Z</forename></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note>in preparation</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Overcharge protection of lithium-ion batteries above 4 V with a perfluorinated phenothiazine derivative</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Casselman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Risko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem A</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="5410" to="5414" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Overcharge performance of 3,7-bis (trifluoromethyl)-N-ethylphenothiazine at high concentration in lithium-ion batteries</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">163</biblScope>
+			<biblScope unit="page" from="1" to="A7" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">N-substituted phenothiazine derivatives: how the stability of the neutral and radical cation forms affects overcharge performance in lithium-ion batteries</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Narayana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Casselman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Risko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ChemPhysChem</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1179" to="1189" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">7-Bis(trifluoromethyl)-Nethylphenothiazine: a redox shuttle with extensive overcharge protection in lithium-ion batteries</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="18190" to="18193" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Overcharge performance of 3,7-disubstituted N-ethylphenothiazine derivatives in lithium-ion batteries</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ergun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">F</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Kaur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Comm</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="5339" to="5341" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Everything, small-angle scattering pattern collection and correction</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Pauw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A X S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys.: Condens. Matter</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page">383201</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Bipolar Pulse Technique For Fast Conductance Measurements</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Johnson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Enke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Anal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="329" to="335" />
+			<date type="published" when="1970">1970</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Bipolar pulse conductivity measurements applied to ionselective electrodes</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Sandifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gross</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Anal. Chim. Acta</title>
+		<imprint>
+			<biblScope unit="volume">192</biblScope>
+			<biblScope unit="page" from="237" to="242" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Pulsed field Gradient Stimulated Echo Methods for Improved NMR diffusion Measurements in Heterogeneous Systems</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Cotts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J R</forename><surname>Hoch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Market</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Magn. Res</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="252" to="266" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Pulsed-field gradient nuclear magnetic resonance measurements (PFG NMR) for diffusion ordered spectroscopy (DOSY) mapping</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pagès</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Gilard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Martino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Malet-Martino</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Analyst</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="page" from="3771" to="3796" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Diffusion ordered nuclear magnetic resonance spectroscopy: principles and applications</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Johnson</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Prog. Nucl. Magn. Res. Spect</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="203" to="256" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">An improved diffusion-ordered spectroscopy experiment incorporating bipolar-gradient pulses</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Johnson</surname><genName>Jr</genName></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Magn. Res</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="260" to="264" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Realistic Ion Dynamics through Charge Renormalization in Nonaqueous Electrolytes</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">C</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Z</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="3214" to="3220" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Development and testing of the OPLS all-atom force field on conformational energetics and properties of organic liquids</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Jorgensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Maxwell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tirado-Rives</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">118</biblScope>
+			<biblScope unit="page" from="11225" to="11236" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Evaluation and reparametrization of the OPLS-AA force field for proteins via comparison with accurate quantum chemical calculations on peptides</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Kaminski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Friesner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tirado-Rives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Jorgensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="6474" to="6487" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">*CM1A-LBCC: localized bond-charge corrected CM1A charges for condensed-phase simulations</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Dodda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Vilseck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tirado-Rives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Jorgensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="3864" to="3870" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">LigParGen web server: an automatic OPLS-AA parameter generator for organic ligands</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Dodda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Cabeza De Vaca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tirado-Rives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Jorgensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nuclei Acid Res</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="331" to="W336" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Long-range corrected hybrid density functionals with damped atom-atom dispersion corrections</title>
+		<author>
+			<persName><forename type="first">J.-D</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="6615" to="6620" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<title level="m">Gaussian 09</title>
+		<meeting><address><addrLine>Wallingford CT</addrLine></address></meeting>
+		<imprint>
+			<publisher>Gaussian, Inc</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note>Revision D.01</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Determining atom-centered monopoles from molecular electrostatic potentials. The need for high sampling density in formamide conformational analysis</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Breneman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">B</forename><surname>Wiberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="361" to="373" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Comparison of methods for deriving atomic charges from the electrostatic potential and moments</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sigfridsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Ryde</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="377" to="395" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Packmol: A package for building initial configurations for molecular dynamics simulations</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Martinez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Andrade</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Birgin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Martinez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="2157" to="2164" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">GROMACS: fast, flexible and free</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Der Spoel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lindahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hess</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Groenhof</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Mark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J C</forename><surname>Berendsen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1701" to="1718" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title level="m" type="main">VMD -Visual Molecular Dynamics</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Humphrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dalke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Schulten</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="33" to="38" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Competitive Pi-Stacking and H Bond Piling Increase Solubility of Heterocyclic Redoxmers</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Sarnello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Bheemireddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Z</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="10409" to="10418" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Self-Assembled Solute Networks in Crowded Electrolyte Solutions and Nanoconfinement of Charged Redoxmer Molecules</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sarnello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Robertson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Farag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Bheemireddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">Z</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="10226" to="10236" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Graph theory and ion and molecular aggregation in aqueous solutions</title>
+		<author>
+			<persName><forename type="first">J.-H</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ann. Rev. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="page" from="125" to="129" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Conductance of salts at moderate and high concentrations in propylene carbonate-dimethoxyethane mixtures</title>
+		<author>
+			<persName><forename type="first">H.-J</forename><surname>Gores</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Barthel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Solution Chem</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="939" to="954" />
+			<date type="published" when="1980">1980</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Electrolyte solvation and ionic association V. Acetonitrile-lithium bis(fluorosulfonyl) imide (LiFSI) mixtures</title>
+		<author>
+			<persName><forename type="first">S.-D</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Borodin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z.-B</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">161</biblScope>
+			<biblScope unit="page" from="2042" to="A2053" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Electrolyte solvation and ionic association III. Acetonitrile-lithium salt mixtures-transport properties</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Borodin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Balogh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>O'connell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-D</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Passerini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">160</biblScope>
+			<biblScope unit="page" from="1061" to="A1070" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Electrolyte solvation and ionic association I. Acetonitrile-lithium salt mixtures: intermediate and highly associated salts</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Borodin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-D</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Ly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">D</forename><surname>Boyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Henderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electrochem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="553" to="A565" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Origin of the scattering peak in microemulsions</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Teubner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Strey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">87</biblScope>
+			<biblScope unit="page" from="3195" to="3200" />
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">A comparative Molecular Dynamics study of water-methanol and acetone-methanol mixtures</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zoranic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sokolic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">´</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mazighi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Molec. Liq</title>
+		<imprint>
+			<biblScope unit="volume">159</biblScope>
+			<biblScope unit="page" from="52" to="59" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Microheterogeneity versus clustering in binary mixtures of ethanol with water or alkanes</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pozar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Lovrincevic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zoranic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Primorac</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sokolic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perera</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="23971" to="23979" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Kez ˇi ´c, Fluctuations and micro-heterogeneity in aqueous mixtures</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Perera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mazighi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page">174516</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Tailoring two-electron donating phenothiazines to enable high concentration redox electrolytes for use in non-aqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">H</forename><surname>Attanayake</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Greco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Casselman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Milshtein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chapman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Parkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Brushett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="page" from="4353" to="4363" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Self-Diffusion in Molecular Fluids and Noble Gases: Available Data</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Suárez-Iglesias</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Medina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Sanz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pizarro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Bueno</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Eng. Data</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="2757" to="2817" />
+			<date type="published" when="2757">2757</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Study of translational self-diffusion of molecules in liquids</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">M</forename><surname>Samigullin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Struct. Chem</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="569" to="574" />
+			<date type="published" when="1974">1974</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Nuclear magnetic relaxation measurements on liquid acetonitrile and acetonitrile water mixtures</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Hardy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zygar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Zeidler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">214</biblScope>
+			<biblScope unit="page" from="1633" to="1657" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Molecular reorientational motion in liquid acetonitrile: Raman band shapes, diffusion constants and activation energy of reorientation</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Griffiths</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="751" to="758" />
+			<date type="published" when="1973">1973</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Molecular reorientation in acetonitrile: a comparison of diffusion coefficients from Raman bandshapes and nuclear magnetic resonance relaxation times</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Yuant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schwatz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Soc. Faraday Trans</title>
+		<imprint>
+			<biblScope unit="volume">86</biblScope>
+			<biblScope unit="page" from="593" to="596" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Tumbling and spinning diffusions of acetonitrile in water and organic solvents</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wakai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Saito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Matubayasi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakahara</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="1462" to="1473" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Multinuclear relaxation and NMR self-diffusion study of the molecular dynamics in acetonitrile-chloroform liquid mixtures</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kovacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kowalewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maliniak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Stilbs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="962" to="969" />
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">A Comparative study of quasielastic neutron scattering and NMR relaxation in liquid acetonitrile</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Zeidler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ber. Bunsen-Ges. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">75</biblScope>
+			<biblScope unit="page" from="769" to="776" />
+			<date type="published" when="1971">1971</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">13 C-1 H intermolecular relaxation rate and molecular pair distribution function in liquid acetonitrile</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kratochwill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ber. Bunsen-Ges. Phys. Chem</title>
+		<imprint>
+			<biblScope unit="volume">82</biblScope>
+			<biblScope unit="page" from="783" to="789" />
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">Dynamics of liquid acetonitrile at high frequencies</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kunz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Calmettes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-C</forename><surname>Bellissent-Funel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="page" from="2079" to="2082" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">The measurement of the diffusion coefficients of ferrocene and ferrocenium and their temperature dependence in acetonitrile using double potential step microdisk electrode chronoamperometry</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Rogers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Compton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Electroanal. Chem</title>
+		<imprint>
+			<biblScope unit="volume">648</biblScope>
+			<biblScope unit="page" from="15" to="19" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Electron localization in liquid acetonitrile</title>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Sauer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="9120" to="9131" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Intermolecular orientations in liquid acetonitrile: New insights based on diffraction measurements and all-atom simulations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pothoczki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pusztai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Molec. Liq</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page" from="160" to="166" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Molecular dynamics simulation and NMR study of water-acetonitrile mixtures</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kovacs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Laaksonen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page" from="5596" to="5605" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">New six-site acetonitrile model for simulations of liquid acetonitrile and its aqueous mixtures</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Nikitin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Lyubartsev</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Chem</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="2020" to="2026" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Molecular dynamics simulation studies of liquid acetonitrile: new six-site model</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Grabuleda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jaim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Kollman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Chem</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="901" to="908" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<author>
+			<persName><forename type="first">E</forename><surname>Guàrdia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pinzón</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Casulleras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Orozco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Luque</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Comparison of different three-site interaction potentials for liquid acetonitrile</title>
+		<imprint>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="287" to="306" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title level="a" type="main">Acetonitrile revisited: a molecular dynamics study of the liquid phase</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Gee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">F</forename><surname>Van Gunsteren</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Molec. Phys</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="477" to="483" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title level="a" type="main">A salient effect of density on the dynamics of nonaqueous electrolytes</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Han</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Reports</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">46718</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title level="a" type="main">Electrical conductivities, viscosities, and densities of N-methoxymethyl-and N-butyl-Nmethylpyrrolidinium ionic liquids with the bis(fluorosulfonyl)amide anion</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Makino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kanakubo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Umecky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Suzuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Nishida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Takano</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Eng. Data</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="751" to="755" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title level="a" type="main">A comparison among viscosity, density, conductivity, and electrochemical windows of Nbutyl-N-methylpyrrolidinium and triethyl-n-pentylphosphonium bis (fluorosulfonyl imide) ionic liquids and their analogues containing bis (trifluoromethylsulfonyl) imide anion</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sánchez-Ramírez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Assresahegn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bélanger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Torresi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Eng. data</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="3437" to="3444" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title level="a" type="main">Ionic liquids containing sulfonium cations as electrolytes for electrochemical double layer capacitors</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J R</forename><surname>Rennie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">L</forename><surname>Martins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Torresi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">J</forename><surname>Hall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">119</biblScope>
+			<biblScope unit="page" from="23865" to="23874" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title level="a" type="main">Densities, refractive indices, viscosities, and conductivities of non-imidazolium ionic Liquids</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nazet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Sokolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sonnleitner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Friesen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Buchner</surname></persName>
+		</author>
+		<idno>N 8881 ][TFA], and [P 14</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Eng. Data</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="2549" to="2561" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note>Et 3 S] [TFSI. Et 2 MeS</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title level="a" type="main">Trialkylsulfonium dicyanamides -a new family of ionic liquids with very low viscosities</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gerhard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Alpaslan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Gores</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Uerdingen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wasserscheid</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Comm</title>
+		<imprint>
+			<biblScope unit="page" from="5080" to="5082" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title level="a" type="main">Synthesis and physical properties of new low-viscosity sulfonium ionic liquids</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dunya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mcgarry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">K</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Ionics</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="5979" to="5989" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title level="a" type="main">A bipolar verdazyl radical for a symmetric all-organic redox flow-type battery</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Charlton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Barbon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Gilroy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Dyker</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Energy Chem</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page" from="52" to="56" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<analytic>
+		<title level="a" type="main">Cekic-Laskovic, An oxo-verdazyl radical for a symmetrical nonaqueous redox flow battery</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Korshunov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Milner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Grunebaum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Studer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Winter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">202</biblScope>
+			<biblScope unit="page" from="22280" to="22291" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title level="a" type="main">Multielectron cycling of a low-potential anolyte in alkali metal electrolytes for nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Hendriks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Sevov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Cook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Sanford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Energy Lett</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="2430" to="2435" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Physical organic approach to persistent, cyclable, lowpotential electrolytes for flow battery applications</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Sevov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Hickey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Cook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Barnett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Minteer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Sigman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Sanford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">139</biblScope>
+			<biblScope unit="page" from="2924" to="2927" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title level="a" type="main">Evolutionary design of low molecular weight organic anolyte materials for applications in nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Sevov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E M</forename><surname>Brooner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Chénard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodríguez-López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Sanford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">137</biblScope>
+			<biblScope unit="page" from="14465" to="14472" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title level="a" type="main">Low-potential pyridinium anolyte for aqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Sevov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Hendriks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Sanford</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="24376" to="24380" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Synthesis and characterization of TEMPO-and viologen-polymers for water-based redox-flow batteries</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Janoschka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Morgenstern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hiller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Friebe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wolkersdörfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Häupler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Hager</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">S</forename><surname>Schubert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Polymer Chem</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="7801" to="7811" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title level="a" type="main">A total organic aqueous redox flow battery employing a low cost and sustainable methyl viologen anolyte and 4-HO-TEMPO catholyte</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sprenkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">1501449</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">TEMPO-based catholyte for high-energy density nonaqueous redox flow batteries</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vijayakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cosimbescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sprenkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="7649" to="7653" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">TEMPO: A mobile catalyst for rechargeable Li-O 2 batteries</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Bergner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schürmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Peppler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Garsuch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Janek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="15054" to="15064" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Murugesan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hollas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Spatially constrained organic diquat anolyte for stable aqueous flow batteries</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="2533" to="2538" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Accurate quantum chemical energies for 133 000 organic molecules †</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2019-06-27">27 June 2019</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Badri</forename><surname>Narayanan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Argonne</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Argonne</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Larry</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+							<email>curtiss@anl.gov</email>
+							<affiliation key="aff1">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Argonne</settlement>
+									<region>Illinois</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Louisville</orgName>
+								<address>
+									<postCode>40292</postCode>
+									<settlement>Louisville</settlement>
+									<region>Kentucky</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Accurate quantum chemical energies for 133 000 organic molecules †</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2019-06-27">27 June 2019</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D5EC5C0DA3C3AC3D291EE2366EE6C1F5</idno>
+					<idno type="DOI">10.1039/c9sc02834j</idno>
+					<note type="submission">Received 10th June 2019 Accepted 18th June 2019</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The energies of the 133 000 molecules in the GDB-9 database have been calculated at the G4MP2 level of theory and then were used to calculate their enthalpies of formation. This database contains organic molecules having nine or less atoms of carbon, nitrogen, oxygen, and fluorine, as well as hydrogen atoms. The accuracy of the G4MP2 energies was investigated on a subset of 459 of the molecules having experimental enthalpies of formation with small uncertainties. On this subset the G4MP2 enthalpies of formation have an accuracy of 0.79 kcal mol À1 , which is similar to its accuracy previously reported for the smaller G3/05 test set. An error analysis of the theoretical enthalpies of formation of the 459 molecules is presented in terms of the size and type of the molecules. Three different density functionals (B3LYP, uB97X-D, M06-2X) were also assessed on 459 molecules of accurate enthalpy data for comparison with the G4MP2 results. The G4MP2 energies for the 133 K molecules provide a database that can be used to calculate accurate reaction energies as well as to assess new or existing experimental enthalpies of formation. Several examples are given of types of reactions that can be predicted using the G4MP2 database of energies. The G4MP2 energies of the GDB-9 molecules will also be useful in future investigations of applications of machine learning to quantum chemical data.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. Introduction</head><p>Knowledge of thermochemical data of molecules is very important in many areas of science. Thermochemical data provide the information needed to determine stabilities and reactivities of molecules present in combustion, battery electrolytes, drugs, the atmosphere, catalysis, etc. It is especially important that the thermochemical data for molecules be of chemical accuracy (&lt;1 kcal mol À1 ) for such applications. Composite quantum chemical methods have been developed that can give molecular energies accurate to better than 1 kcal mol À1 . This includes methods such as the Gn theory, <ref type="bibr" target="#b0">[1]</ref><ref type="bibr" target="#b1">[2]</ref><ref type="bibr" target="#b2">[3]</ref><ref type="bibr" target="#b3">[4]</ref> the Complete Basis Set (CBS) methods, <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref> the correlation consistent Composite Approaches (ccCA), <ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> the multicoefficient correlation methods (MCCMs), <ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref> Weizmann (Wn) methods, <ref type="bibr" target="#b13">[14]</ref><ref type="bibr" target="#b14">[15]</ref><ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref> and the Wuhan-Minnesota scaling WMS method. <ref type="bibr" target="#b17">18</ref> In addition, accuracies of as small as 0.1 kcal mol À1 can be obtained for small molecules using much more expensive and elaborate methods. <ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref><ref type="bibr" target="#b20">[21]</ref> While density functional methods are faster, even the latest methods have not yet reached an accuracy of better than 1 kcal mol À1 . <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23</ref> With the power of today's computers and using quantum chemical methods capable of 1 kcal mol À1 accuracy it is now possible to predict energies of tens of thousands of molecules that can provide a database for calculating millions of reaction energies. Such a database of energies can also provide information to assess the accuracy of experimental data on enthalpies of formation of molecules in the literature, many of which have signicant uncertainties.</p><p>In this paper we report on the calculation of the energies of 133 296 molecules in the GDB-9 database 24 using the G4MP2 method <ref type="bibr" target="#b0">1</ref> with the goal of providing accurate data for these molecules to use in calculating reaction energies and assessing existing enthalpies of formation. In addition, the accurate energies of these molecules can provide the data needed for development of low cost machine learning methods for predicting much larger sets of molecular energies. The GDB-9 data base contains all molecules of up to nine heavy atoms of the rst row (C, N, O, F) and hydrogens. The G4MP2 method has an accuracy of better than 1 kcal mol À1 (ref. 1) based on the G3/05 test set, which has a limited number of large molecules. <ref type="bibr" target="#b24">25</ref> We used a small subset of the GDB-9 molecules that have very accurate experimental enthalpies of formation to ensure that the G4MP2 method maintains its accuracy on the larger molecules in the GDB-9 dataset. This subset also provides an opportunity to assess the accuracy of some popular density functional methods for thermochemical data of larger molecules, which has not previously been done extensively for larger molecules. The G4MP2 energies are used to calculate reaction energies for ve different types of reactions to illustrate how the database of energies can be used to calculate a range of accurate reaction energies. In Section II we describe the database and molecular notation used as well as the quantum chemical methods. In Section III analysis of the errors in enthalpies of formation of a subset of the molecules with accurate experimental data is presented for G4MP2 theory as well as for three widely used density functional methods. In Section IV the calculation of a selection of reaction energies from the database is presented. Finally, conclusions are drawn in Section V.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. Methods</head><p>The computations of the enthalpies of formation of the molecules in the GDB-9 database were carried out with the G4MP2 method. 1 G4MP2 is a composite method based on G4 theory, 2 but with reduced perturbation theory levels to lower the computational cost. More specically, in the G4MP2 method second-order perturbation theory is used in place of the time consuming fourth-order perturbation theory components in the G4 method. As a result the G4MP2 method is approximately six to eight times faster than the G4 method. <ref type="bibr" target="#b0">1</ref> Other parts of the method remain the same as in G4 theory including the CCSD(T) component, geometries, and zero-point energies. It was assessed on the G3/05 test set of accurate experimental data and found to have a mean absolute deviation of 1.04 kcal mol À1 for 454 enthalpies of formation, ionization potentials, electron affinities, and proton affinities. For the 138 hydrocarbons and substituted hydrocarbons in the G3/05 test set the mean absolute deviation was 0.77 kcal mol À1 . In order to better assess the likely accuracy of G4MP2 for the GDB-9 database of 133 296 molecules we have selected 459 molecules from the Pedley compilation <ref type="bibr" target="#b25">26</ref> that have very accurate (&lt;1 kcal mol À1 ) gas phase enthalpies of formation. More details on this test set and how it was selected is given in the next section. All calculations were carried out with the Gaussian code. <ref type="bibr" target="#b26">27</ref> In addition, we have carried out density functional calculations on these 459 molecules with three density functional methods. The B3LYP 28 density functional results on these molecules were included in this study because they are part of the G4MP2 calculation with B3LYP being used for the geometry optimizations. Since the development of the hybrid GGA B3LYP functional, numerous other functionals with better performance have been reported. <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23</ref> We chose two other popular functionals to assess on the 459 molecules, namely, M06-2X, <ref type="bibr" target="#b28">29</ref> a hybrid meta-GGA functional, and uB97X-D, <ref type="bibr" target="#b29">30</ref> a GGA functional with dispersion correction. The 6-31G(2df,p) basis set used for the B3LYP functional, while the 6-311+G(3df,2p) basis (at B3LYP/6-31G(2df,p) geometries) is used for the M06-2X and uB97X-D functionals. A smaller basis set was used for B3LYP as it gives better results than the larger basis set. It has been noted previously that improvement in the basis sets does not always lead to improvement in results as is the case with wave function based methods. <ref type="bibr" target="#b24">25</ref> It has been suggested that this is due to cancelation of errors from an overestimation of the basis set superposition error that compensates for the lack of a dispersion correction. <ref type="bibr" target="#b30">31</ref> We performed G4MP2 calculations for 133 296 molecules belonging to the GDB-9 database <ref type="bibr" target="#b23">24,</ref><ref type="bibr">32</ref> containing varying amounts of C, H, O, N, and F atoms; as aforementioned, the maximum number of non-hydrogen (heavy) atoms in any molecule in this database is 9. The molecules with 9 nonhydrogen atoms dominate the database, comprising $83% of the molecules (i.e., 111 128) in the GDB-9 database as shown in Table <ref type="table" target="#tab_0">1</ref>; in comparison, there are only 3 molecules with one heavy atom, namely CH 4 , NH 3 , and H 2 O. This is expected, owing to the large number of elemental combinations, and isomers possible for molecules made-up of 9 heavy atoms. In terms of molecule types, those made up exclusively of H, C, O and N atoms (listed as HCON) are most prominent ($50%), followed by HCO ($34%). For each molecule in the GDB-9 dataset, we adopted the DFT-relaxed (using the B3LYP functional) congurations from ref. 24 and 32 to perform calculations at the G4MP2 level of theory. We found that 581 molecules out of the 133 877 molecules in the original GDB-9 database (refs) show imaginary modes of vibration; these molecules are discarded from this study. For the remaining 133 296 molecules, we computed zero-point energies, energies (at 0 K), enthalpies, free energies, standard enthalpies of formation, and atomization energies. The G4MP2 values, and atomic coordinates of all the molecules are stored within an Atomic Simulation Environment (ASE) database 33 compatible with JSON and SQLite3 backends. The molecules and their corresponding G4MP2 data are all cross-indexed by their chemical formula, SMILES, and InChI keys. This makes it straightforward to retrieve G4MP2 for a class of compounds, isomers, or specic molecule from this database using a Python script (an example Python script to retrieve data is provided in the ESI †). Furthermore, the use of such a database enables fast/efficient search for data (on-demand) necessary for various machine-learning studies.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. Assessment of expected accuracy of G4MP2 for the GDB-9 database</head><p>In order to assess the accuracy of the G4MP2 method for the GDB-9 database we selected all molecules from the database that had an experimental value in the Pedley compilation <ref type="bibr" target="#b25">26</ref> with an uncertainty of less than 1 kcal mol À1 . This resulted in a total of 510 molecules. Comparing the G4MP2 and experimental values we found a number of values in disagreement by substantially more than 1 kcal mol À1 . In order to ensure that we had a reasonably accurate experimental test set we examined more closely all experimental values that differed by more than 2.50 kcal mol À1 with G4MP2, of which there were 63. We then checked to see if there were any other recent experimental values that conicted with the Pedley values. In 12 cases (see ESI †) there were other values that differed by more than 1 kcal mol À1 , the quoted uncertainty of the Pedley value. In those cases we eliminated them from the test set as we could not verify their accuracy. That le 51 cases of differences greater than 2.5 kcal mol À1 . In those cases we used an isodesmic scheme <ref type="bibr" target="#b32">34</ref> to evaluate the questionable experimental values. The isodesmic scheme is one previously developed using G2MP2 energies <ref type="bibr" target="#b32">34</ref> and very accurate experimental values for small molecules. This isodesmic scheme was found to give enthalpies of formation accurate to 0.5 kcal mol À1 . <ref type="bibr" target="#b32">34</ref> We eliminated 39 molecules from the test set based on the criterion that the suspect experimental value differed by more than 2 kcal mol À1 from the G2MP2 isodesmic enthalpy of formation. These experimental enthalpies of formation will be the subject of further high level quantum chemical calculations. The remaining 12 with differences greater than 2.50 kcal mol À1 were kept in the test set as there was no basis to discard them. The resulting test set, referred to as the Pedley test set, has 459 molecules including 175 hydrocarbons and 284 substituted hydrocarbons. We note that we have selected this test set for assessing the accuracy of G4MP2 on the organic molecules as opposed to others that are available <ref type="bibr" target="#b33">35,</ref><ref type="bibr" target="#b34">36</ref> because it is based on experimental numbers from a compilation, all of which have a quoted uncertainty. About 92 of the 459 molecules are included in the G3/05 test set, which also included molecules containing S and Cl as well as some larger systems.</p><p>The Pedley test set of 459 enthalpies of formation is given in Table <ref type="table" target="#tab_1">S2</ref> of the ESI. † Also given in the table are the G4MP2 calculated enthalpies of formation and the experimental enthalpies of formation along with the differences between the two. Table <ref type="table" target="#tab_1">2</ref> gives a summary of the results in terms of mean absolute deviations (MAD) between experimental values and the G4MP2 values. The MAD between experiment and G4MP2 for the Pedley test set is 0.79 kcal mol À1 , which is comparable to MAD of 0.77 kcal mol À1 of the smaller G3/05 test set of similar type molecules. The breakdown in terms of types of molecules (hydrocarbon and substituted hydrocarbons) is also similar. The B3LYP energies were calculated with the 6-31G(2df,p) basis at the B3LYP/6-31G(2df,p) geometry; the M06-2X and uB97X-D energies were calculated with the 6-311+G(3df,2p) basis at the B3LYP/6-31G(2df,p) geometry. The zero-point energies used for the density functional results are unscaled ones from B3LYP/6-31G(2df,p).  Fig. <ref type="figure" target="#fig_0">1</ref> shows the MAD as a function of the number of heavy atoms (CNOF) in the molecule. This plot shows a gradually increasing error with size of the molecule for G4MP2. This is expected and has been found previously for long chain alkanes. <ref type="bibr" target="#b35">37</ref> The increase in error with size is due to the increase in the number of electron pairs. In Fig. <ref type="figure" target="#fig_1">2</ref> we have plotted the error per electron pair as a function of number of heavy atoms. This shows that the size of the error is quite level with increasing molecule size. In terms of calculating reaction energies from G4MP2 enthalpies of formation (see Section IV), the resulting reaction energies should be quite accurate because they are based on breaking one or a couple of bonds, whereas the enthalpies of formation are based on breaking all bonds in the molecule, i.e. they are calculated from atomization energies (along with temperature corrections, elemental standard states, and zero-point energies). <ref type="bibr" target="#b36">38</ref> The Pedley test provides an opportunity to assess the accuracy of some popular density functional methods for thermochemical data of larger molecules. Previous test sets of thermochemical data used for assessing density functional have not included as extensive a set of larger molecules as the Pedley set established for this work. An error analysis on the Pedley test set was carried out for three popular DFT methods B3LYP, 28 M06-2X, <ref type="bibr" target="#b28">29</ref> and uB97X-D. <ref type="bibr" target="#b29">30</ref> The results for these three functionals are given in Table <ref type="table" target="#tab_1">2</ref> with details for all 459 molecules given in ESI Tables <ref type="table">3</ref><ref type="table">4</ref><ref type="table">5</ref>. † The uB97X-D functional performs the best with a mean absolute deviation of 1.85 kcal mol À1 for the 459 molecules. M06-2X has an mean absolute deviation of 2.71 kcal mol À1 . B3LYP has the largest mean absolute deviation of the three at 3.99 kcal mol À1 . Thus, even the best functional tested has a mean absolute deviation of more than twice as large as G4MP2. Fig. <ref type="figure" target="#fig_0">1</ref> shows the MAD for the three functionals as a function of the number of heavy atoms (CNOF) in the molecule. The plots show a generally increasing error with size of the molecule for the three functionals. In Fig. <ref type="figure" target="#fig_1">2</ref> the error per electron pair is plotted as a function of number of heavy atoms, which shows that the error remains approximately constant as the molecule size increases with the exception of B3LYP that shows a decreasing trend. The trends for M06-2X and uB97X-D are similar to G4MP2.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. Analysis of the energies of the 133 K molecules in the GD9 database</head><p>The energies of the 133 K molecules were calculated at the G4MP2 level of theory and are available from the ESI † on the   Web. 33 Fig. <ref type="figure" target="#fig_2">3</ref> shows a plot of the atomization energies vs. the enthalpies of formation that illustrate the distribution of both types of energies. It is noted that for the 133 K molecules, the enthalpies of formation have a much larger range of positive values than those of the Pedley test set of 459 molecules while the atomization energies have a similar range of values. The reason for the difference in distributions for the more positive enthalpies of formation is probably because the GDB-9 set includes some hypothetical molecules that can be more unstable (i.e., positive enthalpies of formation). This type of molecule would be hard to synthesize, and thus are not present in the Pedley test set. Otherwise the Pedley test seems to be a good representation of the GDB-9 set.</p><p>The trends in the G4MP2 enthalpies of formation with the types of atoms in the molecules are shown in Fig. <ref type="figure" target="#fig_3">4</ref> and<ref type="figure" target="#fig_4">5</ref>. In Fig. <ref type="figure" target="#fig_3">4</ref> the enthalpies of formation of the 130 K organic molecules are classied into various groups of atom types. This gure indicates that addition of oxygen and uorine to the molecules generally increases their stability, i.e. they have more negative enthalpies of formation, whereas addition of nitrogen has the opposite effect. In Fig. <ref type="figure" target="#fig_4">5</ref> the enthalpies of formation of CHO type molecules as a function of number of oxygen atoms is shown. It is apparent from this gure that increasing the Table <ref type="table">3</ref> Examples of reaction energies (in kcal mol À1 ) derived from the G4MP2 energies</p><formula xml:id="formula_0">Alcohol oxidation R 1 ¼ H R 2 ¼ H DE ¼ À97.5 R 1 ¼ H R 2 ¼ CH 3 DE ¼ À102.4 R 1 ¼ CH 3 R 2 ¼ CH 3 DE ¼ À105.3 R 1 ¼ CH 3 R 2 ¼ C 3 H 7 DE ¼ À105.6 R 1 ¼ C 2 H 5 R 2 ¼ C 2 H 5 DE ¼ À106.0 Alkane oxidation R ¼ H DE ¼ À88.4 R ¼ CH 3 DE ¼ À94.4 R ¼ C 2 H 5 DE ¼ À94.3 R ¼ C 3 H 7 DE ¼ À94.2 R ¼ C 4 H 9 DE ¼ À94.3 Ether hydrolysis R 1 ¼ CH 3 R 2 ¼ CH 3 DE ¼ 5.9 R 1 ¼ CH 3 R 2 ¼ C 2 H 5 DE ¼ 6.3 R 1 ¼ C 2 H 5 R 2 ¼ C 5 H 11 DE ¼ 6.8 R 1 ¼ C 3 H 7 R 2 ¼ C 4 H 9 DE ¼ 6.8 R 1 ¼ C 4 H 9 R 2 ¼ C 4 H 9 DE ¼ 6.9 Hydrogenolysis R 1 ¼ H R 2 ¼ CH 3 DE ¼ 6.0 R 1 ¼ H R 2 ¼ C 6 H 13 DE ¼ 6.9 R 1 ¼ CH 3 R 2 ¼ CH 3 DE ¼ 10.4 R 1 ¼ CH 3 R 2 ¼ C 3 H 7 DE ¼ 10.6 R 1 ¼ C 2 H 5 R 2 ¼ C 2 H 5 DE ¼ 11.5 Carbonyl reduction R 1 ¼ H R 2 ¼ H DE ¼ À19.7 R 1 ¼ H R 2 ¼ CH 3 DE ¼ À14.8 R 1 ¼ CH 3 R 2 ¼ CH 3 DE ¼ À11.9 R 1 ¼ CH 3 R 2 ¼ C 3 H 7 DE ¼ À11.6 R 1 ¼ C 2 H 5 R 2 ¼ C 2 H 5 DE ¼ À11.2</formula><p>number of oxygens in the molecules generally increases their stability.</p><p>Since the G4MP2 energy calculation also includes the B3LYP/ 6-31G(2df,p) method for geometry optimization, we also obtained these energies for the 133 K molecules in the GDB-9 database and they are included in the ESI † on the Web. <ref type="bibr">33</ref> The mean absolute deviation between these B3LYP energies and the G4MP2 energies is 4.54 kcal mol À1 . The breakdown of the mean absolute deviations for B3LYP with G4MP2 as a function of size of the molecule and type of molecule is given in ESI Fig. <ref type="figure" target="#fig_0">1</ref>. † The error increases slightly with size of molecule. In addition, the B3LYP results in this gure indicate that the molecules containing uorine have much larger deviations with G4MP2 than those not containing uorine.</p><p>The database of G4MP2 enthalpies of formation provides a source of data for the derivation of accurate energies of millions of reactions involving organic molecules up to nine heavy atoms. To illustrate this we have calculated some energies for ve different types of reactions from the G4MP2 energies and tabulate them in Table <ref type="table">3</ref>. These include (1) alcohol oxidation, (2) alkane oxidation, (3) ether hydrolysis, (4) hydrogenolysis, and (5) carbonyl reduction. Energies for all of these types of reactions are expected to be accurate to about 1 kcal mol À1 based on the accuracy of the G4MP2 energies. In addition to the reaction energies that can be derived, the large database of enthalpies of formation also provides a basis on which to assess existing or newly measured enthalpies of formation. The method by which the enthalpies of formation can be obtained from the database of G4MP2 energies 33 is described in the ESI. †</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. Conclusions</head><p>Energies for the $133 000 molecules in the GDB-9 database, containing organic molecules having nine or less atoms of carbon, nitrogen, oxygen, and uorine as well as hydrogen atoms, have been calculated at the G4MP2 level of theory. The following conclusions can be drawn from this study:</p><p>(1) The accuracy of the G4MP2 energies was investigated on a subset of 459 of the molecules having experimental enthalpies of formation with small uncertainties and was found to have an accuracy of 0.79 kcal mol À1 , which indicates the G4MP2 enthalpies of formation of the GDB-9 database should have a similar accuracy.</p><p>(2) Three different density functionals (B3LYP, uB97X-D, M06-2X) were also assessed on 459 molecules of accurate enthalpy data for comparison with the G4MP2 results and the latter two were found to be much more accurate that B3LYP, but less accurate than G4MP2.</p><p>(3) The G4MP2 energies for the 133 K molecules provide a database that can be used to calculate accurate reaction energies as well as to assess new or existing experimental enthalpies of formation.</p><p>The G4MP2 energies of the GDB-9 molecules will also be useful in future investigations of applications of machine learning to quantum chemical data by providing a large database of accurate energies for machine learning to develop new low cost methods for accurately predicting enthalpies of formation of the millions of molecules having more than nine heavy atoms, as well as reaction energies.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1</head><label>1</label><figDesc>Fig. 1 Mean absolute deviations (MAD) of G4MP2 and three DFT methods for the Pedley test set of 459 molecules as a function of number of heavy atoms.</figDesc><graphic coords="3,328.65,364.20,198.91,123.53" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2</head><label>2</label><figDesc>Fig. 2 Mean absolute deviations (MAD) per electron pair of the G4MP2 and three DFT methods for the Pedley test set of 459 molecules as a function of number of heavy atoms.</figDesc><graphic coords="3,328.65,562.39,198.91,118.94" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 3</head><label>3</label><figDesc>Fig. 3 Atomization energy as a function of standard enthalpy of formation at 298 K for (a) 133 K molecules in GDB-9 dataset, and (b) 459 molecules in the selected Pedley test set. In each panel, a frequency distribution of atomization energy and standard enthalpy of formation among the molecules is shown at the top and right margins, respectively.</figDesc><graphic coords="4,140.09,50.57,315.29,152.28" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 4</head><label>4</label><figDesc>Fig. 4 Standard enthalpy of formation from G4MP2 calculations of the 133 K organic molecules classified into various groups of atom types.</figDesc><graphic coords="4,342.88,401.95,170.38,116.33" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 5</head><label>5</label><figDesc>Fig. 5 Standard enthalpy of formation of CHO type molecules as a function of different number of oxygen atoms, as obtained from G4MP2 calculations.</figDesc><graphic coords="4,342.88,574.41,170.38,111.74" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1</head><label>1</label><figDesc>Distribution of molecules in the GDB-9 database. We provide the number of molecules containing different number of non-hydrogen atoms (left two columns), as well as for prominent molecule types, each with different constituent elements (right two columns)</figDesc><table><row><cell></cell><cell></cell><cell>Constituent elements</cell><cell></cell></row><row><cell>Number of heavy atoms</cell><cell>Number of molecules</cell><cell>of molecule</cell><cell>Number of molecules</cell></row><row><cell>1</cell><cell>3 (CH 4 , H 2 O, NH 3 )</cell><cell>HCON</cell><cell>66 573</cell></row><row><cell>2</cell><cell>5</cell><cell>HCO</cell><cell>45 601</cell></row><row><cell>3</cell><cell>9</cell><cell>HCN</cell><cell>14 092</cell></row><row><cell>4</cell><cell>31</cell><cell>HC</cell><cell>4849</cell></row><row><cell>5</cell><cell>129</cell><cell>HCOFN</cell><cell>1061</cell></row><row><cell>6</cell><cell>615</cell><cell>HCFN</cell><cell>734</cell></row><row><cell>7</cell><cell>3171</cell><cell>HCOF</cell><cell>244</cell></row><row><cell>8</cell><cell>18 205</cell><cell>HCF</cell><cell>90</cell></row><row><cell>9</cell><cell>111 128</cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>Mean absolute deviations (MAD) from experiment for the Pedley test set for G4MP2 and DFT methods</figDesc><table><row><cell>Molecule type a</cell><cell>G4MP2 b</cell><cell>B3LYP c</cell><cell>M06-2X c</cell><cell>uB97X-D c</cell></row><row><cell>Hydrocarbons (175)</cell><cell>0.68 (0.63)</cell><cell>2.77</cell><cell>3.06</cell><cell>1.35</cell></row><row><cell>Substituted hydrocarbons (284)</cell><cell>0.86 (0.83)</cell><cell>4.74</cell><cell>2.51</cell><cell>2.16</cell></row><row><cell>Total (459)</cell><cell>0.79 (0.77)</cell><cell>3.99</cell><cell>2.71</cell><cell>1.85</cell></row></table><note><p><p><p>a Number of molecules given in parentheses. b G4MP2 MAD for the G3/05 test set</p><ref type="bibr" target="#b24">25</ref> </p>given in parentheses. The G3/05 test set has 38 hydrocarbons, 100 substituted hydrocarbons, and 138 molecules in total, 92 of which are in common with the Pedley test set. c</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>This journal is © The Royal Society of Chemistry 2019</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>This work was supported by the Joint Center for Energy Storage Research (JCESR), an Energy Innovation Hub funded by the U.S. Department of Energy, Office of Science, Basic Energy Sciences. We acknowledge a generous grant of computer time from the ANL Laboratory Computing Resource Center (Bebop).</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of interest</head><p>There are no conicts to declare.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">124105</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">84108</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wiley</forename><surname>Interdiscip</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev.: Comput. Mol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="810" to="825" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rassolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="7764" to="7776" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Montgomery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">110</biblScope>
+			<biblScope unit="page" from="2822" to="2827" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Montgomery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="2598" to="2619" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">W</forename><surname>Ochterski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">B</forename><surname>Wiberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page" from="11299" to="11308" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Deyonker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Cundari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page">114104</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Deyonker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename><surname>Pierpont</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">R</forename><surname>Cundari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Phys</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="1107" to="1121" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mahler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Wilson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1402" to="1407" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Fast</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="6111" to="6116" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Lynch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">107</biblScope>
+			<biblScope unit="page" from="3898" to="3906" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Lynch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="43" to="52" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M L</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<date type="published" when="2012">2012, 136, 124114</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Boese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Oren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Atasoylu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kallay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gauss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="4129" to="4141" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><surname>Chan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Radom</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="4769" to="4778" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Oliveira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="1843" to="1856" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">X</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">B</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="27375" to="27384" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tajti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">G</forename><surname>Szalay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">G</forename><surname>Csaszar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kallay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gauss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">F</forename><surname>Valeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Flowers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Vazquez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Stanton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">121</biblScope>
+			<biblScope unit="page" from="11599" to="11613" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Rabinovich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M L</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ruscic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">144108</biblScope>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wiley</forename><surname>Interdiscip</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rev.: Comput. Mol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="292" to="310" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mardirossian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Phys</title>
+		<imprint>
+			<biblScope unit="volume">115</biblScope>
+			<biblScope unit="page" from="2315" to="2372" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goerigk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hansen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ehrlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Najibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="32184" to="32215" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Dral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rupp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Lilienfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Data</title>
+		<imprint>
+			<date type="published" when="2014">2014, 1, 140022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">124107</biblScope>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Thermochemical Data and Structures of Organic Compounds</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Pedley</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<publisher>CRC Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<title level="m">Gaussian 09</title>
+		<meeting><address><addrLine>Wallingford CT</addrLine></address></meeting>
+		<imprint>
+			<publisher>Gaussian, Inc</publisher>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Becke</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">98</biblScope>
+			<biblScope unit="page" from="1372" to="1377" />
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Theor. Chem. Acc</title>
+		<imprint>
+			<biblScope unit="volume">120</biblScope>
+			<biblScope unit="page" from="215" to="241" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J.-D</forename><surname>Chai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Head-Gordon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="6615" to="6620" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Kruse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Goerigk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Grimme</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">77</biblScope>
+			<biblScope unit="page" from="10824" to="10834" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.18126/M23P9G</idno>
+		<ptr target="https://datarepository.wolframcloud.com/resources/GDB9-Database.33https://doi.org/10.18126/M23P9G" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Stefanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="page" from="6764" to="6767" />
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Karton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Daon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M L</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">510</biblScope>
+			<biblScope unit="page" from="165" to="178" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Tirado-Rives</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">L</forename><surname>Jorgensen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="297" to="306" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zapol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="5850" to="5854" />
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Raghavachari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="page" from="7221" to="7230" />
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

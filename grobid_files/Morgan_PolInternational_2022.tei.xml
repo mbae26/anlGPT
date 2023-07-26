@@ -1,0 +1,2988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Mini-review</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2021-12-21">21 December 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Morgan</forename><forename type="middle">M</forename><surname>Cencer</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Jeffrey</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Chemistry</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Beckman Institute for Advanced Science and Technology</orgName>
+								<orgName type="institution">University of Illinois at Urbana-Champaign</orgName>
+								<address>
+									<settlement>Urbana</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+							<email>assary@anl.gov</email>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="institution">Argonne National Laboratory</orgName>
+								<address>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>IL</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Mini-review</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-12-21">21 December 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">1511D94B25B767619A84EE8F54B2E093</idno>
+					<idno type="DOI">10.1002/pi.6345</idno>
+					<note type="submission">Received: 12 August 2021 Revised: 30 November 2021 Accepted article published: 4 December 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>machine learning</term>
+					<term>polymers</term>
+					<term>informatics</term>
+					<term>inverse design</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Polymers are incredibly versatile materials and have become ubiquitous. Increasingly, researchers are using data science and polymer informatics to design new materials and understand their structure-property relationships. Polymer informatics is an emerging field. While there are many useful tools and databases available, many are not widely utilized. Herein, we introduce the field of polymer informatics and discuss some of the available databases and tools. We cover how to share polymer data, approaches for preparing a dataset for machine learning and recent applications of machine learning to polymer property prediction and polymer synthesis.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Polymers are a critical material class due to their wide availability, range of properties and high tuneability. However, rational design of polymers is challenging due to the variety of aspects that influence their properties and performance. <ref type="bibr" target="#b0">1</ref> For example, the monomer(s) structure, synthesis method and processing control the chemical structure, morphology and hence properties of the final polymer. <ref type="bibr" target="#b1">2</ref> Additionally, researchers are increasingly considering sustainability of monomer sourcing, interactions between a polymer and its environment, polymer aging behavior and end of life (whether as waste, or recyclable). <ref type="bibr" target="#b2">3,</ref><ref type="bibr" target="#b3">4</ref> These relationships are schematically shown in Fig. <ref type="figure" target="#fig_0">1</ref>. These considerationsand moremean any given monomer leads to a variety of properties, and desired properties may be accessed through a variety of monomers. For example, low-density polyethylene and high-density polyethylene have the same monomer but very different mechanical properties, and polyethylene, polypropylene and polyvinyl chloride are all used to make similar plastic bottles. As a result, traditional research methods using trial and error based on chemical intuition are often insufficient to fully design solutions to polymer innovation and discovery. <ref type="bibr" target="#b4">5</ref> Data-driven and informatics-based approaches are needed to move the field forward faster. <ref type="bibr" target="#b5">6</ref> Recent advances in drug development and the successes of the Materials Genome Initiative <ref type="bibr" target="#b6">[7]</ref><ref type="bibr" target="#b7">[8]</ref><ref type="bibr" target="#b8">[9]</ref><ref type="bibr" target="#b9">[10]</ref> are examples illustrating the benefits of an informatics-based approach. <ref type="bibr" target="#b10">11</ref> Data-driven research can dramatically accelerate discovery, and lead to improved performance. <ref type="bibr" target="#b11">12</ref> Understanding which structures lead to specific properties (informatics) offers insights about underlying structure-function relationships. <ref type="bibr" target="#b12">13</ref> Data-driven approaches also allow inverse design, where a desired property (or properties) is identified, and data are used to determine what structure(s) corresponds to that property. <ref type="bibr" target="#b8">9,</ref><ref type="bibr" target="#b13">14</ref> Done properly, data-driven research allows researchers to move beyond their own intuition, experience and biases to discover connections that were previously unimagined.</p><p>Polymer informatics is a relatively new field, but one with rapidly growing importance. Polymer informatics has been applied to essentially every aspect of the polymer lifecycle. It has been used to design new monomers for various applications <ref type="bibr" target="#b11">12,</ref><ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b15">16</ref> ; engineer reactions <ref type="bibr" target="#b16">17</ref> ; model processing conditions and parameters <ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref><ref type="bibr" target="#b19">[20]</ref> ; identify and predict polymer conformations and phases <ref type="bibr" target="#b20">[21]</ref><ref type="bibr" target="#b21">[22]</ref><ref type="bibr" target="#b22">[23]</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref> ; predict materials properties <ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref><ref type="bibr" target="#b31">[32]</ref><ref type="bibr" target="#b32">[33]</ref><ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref> ; and finally offer insight into wear and end of life. <ref type="bibr" target="#b3">4,</ref><ref type="bibr" target="#b35">[36]</ref><ref type="bibr" target="#b36">[37]</ref><ref type="bibr" target="#b37">[38]</ref><ref type="bibr" target="#b38">[39]</ref> Most polymer informatics literature focuses on property prediction, but recently other aspects of polymer synthesis, processing and lifetime have been gaining attention. <ref type="bibr" target="#b13">14,</ref><ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b39">40</ref> There are still many areas ripe for an informatics approach, such as designing for longer term stability or circular economies.</p><p>In this mini-review we discuss necessary tools for polymer informatics. We aim to provide a starting point for the non-specialist to understand the tools and methods that currently exist in this rapidly evolving field. The data and databases section focuses on useful collections of information and specific tools to use for sharing data in the most accessible ways. Often, the best way to understand a dataset is through machine learning (ML) (i.e. regression and classification). To do this ML, we need accurate representations, so the polymer representation and featurization section focuses on popular approaches of developing ML input. This includes fingerprinting techniques for monomers and whole polymers, as well as alternative approaches such as graph-based methods. In the final section, ML approaches, we discuss commonly used methods, along with examples of each approach.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DATA AND DATABASES</head><p>Informatics is all about data, and as such, high-quality data are of paramount importance. ML is particularly sensitive to data quality, as it is very sensitive to artifacts, <ref type="bibr" target="#b40">[41]</ref><ref type="bibr" target="#b41">[42]</ref><ref type="bibr" target="#b42">[43]</ref> and is poor at extrapolation. <ref type="bibr" target="#b43">44</ref> Therefore, it is important to identify and account for any biases in a dataset, and gather large datasets. <ref type="bibr" target="#b44">45</ref> Despite a wide array of available materials databases, it is often challenging to find a complete dataset relevant to a specific research question. In contrast to synthetic macromolecules, there are many small-molecule databases with millions of entries (ZINC, <ref type="bibr" target="#b45">46</ref> ChemSpider, <ref type="bibr" target="#b46">47</ref> PubChem, <ref type="bibr" target="#b47">48</ref> ChEMBL, <ref type="bibr" target="#b48">49,</ref><ref type="bibr" target="#b49">50</ref> and many more), with extensive property data for each entry. The number of highquality materials databases is growing, but most databases only have hundreds or thousands of entries, representing a much smaller chemical space than the small-molecule databases. Additionally, initiatives to expand and create materials databases <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b50">51</ref> are divided between inorganic materials and soft materials. For polymers, databases of interest are PolyInfo, <ref type="bibr" target="#b51">52</ref> the extension of PolyInfo PI1M, <ref type="bibr" target="#b52">53</ref> and the Khazana <ref type="bibr" target="#b53">54</ref> databases. We note that to accelerate polymer informatics the community needs a validated and curated database and repository where researchers can deposit new polymer data, similar to the Cambridge Structural Database, <ref type="bibr" target="#b54">55</ref> but containing property data as well as characterization data. An additional source of polymer data is handbooks. Polymer data handbooks have a broad array of data, and while most would require some effort to make the data accessible to a computer, <ref type="bibr" target="#b55">56,</ref><ref type="bibr" target="#b56">57</ref> some are fully accessible online. <ref type="bibr" target="#b57">58</ref> The imprecision of polymer naming conventions is a hurdle to widespread polymer data sharing. Traditionally, polymer names indicate what repeat units are incorporated, and, if relevant, the relationship between comonomers (e.g. random or block) and tacticity. However, given the stochastic nature of polymers more precise information on structure is omitted. If a database of polymer information is going to be useful to a researcher who did not generate it, the new researcher must be able to understand the precise identity and nature of the entries in the database. This is especially important if multiple sources of data are being combined to develop a sufficiently large database for a specific problem. The polymer informatics community needs to settle on a standard method of detailing polymer structures and data. One approach to developing a standard schema for polymer data sharing is PolyDat. <ref type="bibr" target="#b58">59</ref> PolyDat is designed to include all relevant data for a polymer, including characterization data, synthesis procedures and information on all relevant species and post-functionalization. An overview of the PolyDat schema is shown in Fig. <ref type="figure" target="#fig_1">2(a)</ref>. There are three key parts of the PolyDat schema: preamble, species and transformations. The preamble contains all the metadata, reaction network information and data provenance. It gives all the information needed to understand the other sections. The species section contains all the characterization data on all the species in the reaction network. This characterization data can be of any type. The transformations section includes information on all the reactions (both synthesis and any post-synthetic modifications), including the reaction procedures. Use of a standard data schema will greatly increase the ability of researchers to extract published results.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>POLYMER REPRESENTATION AND FEATURIZATION</head><p>An accurate ML model requires inputs (features) that describe the system of interest. An accurate useful model depends on properly chosen and designed features. <ref type="bibr" target="#b59">60,</ref><ref type="bibr" target="#b60">61</ref> Features are a wide range of items, from properties of atoms (e.g. partial charge, atomic number) in the molecule of interest, to calculated electronic properties (HOMO, LUMO, etc.), to measured experimental values (e.g. glass transition temperature, heat capacity), to reaction or processing conditions <ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b61">62</ref> (temperature, pH, etc.). The critical requirement for a feature set is that it accurately and uniquely describes each data point in a machine-readable format. Often, the lengthiest stage in a ML project is identifying which features are needed, which are superfluous and what is the best method to generate those features.</p><p>Some ML models for the prediction of polymer properties may achieve high accuracy solely using features based on monomers. <ref type="bibr" target="#b62">63</ref> Monomer-based features range in complexity from constitutional descriptors (number of rings, number of heavy atoms, etc.), to two-dimensional representations (atomic connectivity, topological descriptors, molecular graphs, etc.), to three-dimensional geometric descriptors (computationally generated or crystallography based), to four-dimensional conformational ensemble descriptors. <ref type="bibr" target="#b63">64</ref> Two common approaches for developing monomer-based features are fingerprinting 62,64,65 and graph-based methods. Fingerprinting involves converting geometric and chemical information to a numerical representation. <ref type="bibr" target="#b65">66</ref> Most often, the numerical representation is a vector of fixed length, where each component in the vector represents a different characteristic of the monomer. A properly designed fingerprinting technique gives a unique fingerprint for each unique monomer. Fingerprints can be based on purely atomic neighborhoods, <ref type="bibr" target="#b64">65</ref> or on the molecule as a whole. <ref type="bibr" target="#b61">62,</ref><ref type="bibr" target="#b63">64</ref> Graph-based methods require a large number of data points and typically use neural nets to predict or classify polymers using a descriptor-free approach. Examples of this approach have been reported recently. <ref type="bibr" target="#b66">67,</ref><ref type="bibr" target="#b67">68</ref> The selection of appropriate methods depends on the size of the available dataset and the chemical information available about each monomer.</p><p>A polymeric fingerprint 54 is appropriate when the behaviors or properties being modeled are dependent on the bulk structure of the polymer. Polymer fingerprints are created with a wide variety of details. The simplest method is to encode the identity of the building block, and the count of each type of building block. Additional complexity is added by including information about the relationships between types of building blocks, clearly identifying the difference between a random copolymer and an alternating or block copolymer. <ref type="bibr" target="#b53">54</ref> However, a different approach is needed to include atomic and molecular properties. The Ramprasad group has developed a highly successful fingerprinting technique for polymers that includes information about every level of the molecule, from chain-specific values to atomic properties. This method starts with atomic-triple fingerprints, <ref type="bibr" target="#b68">69</ref> adds molecular descriptors from RDKit, <ref type="bibr" target="#b69">70</ref> then identifies commonly occurring substructures or blocks and finally adds polymer-chain-specific descriptors such as side-chain length. <ref type="bibr" target="#b70">71</ref> This multilevel approach to fingerprinting performs well in predicting polymer properties. <ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b70">71,</ref><ref type="bibr" target="#b71">72</ref> However, most fingerprint approaches do not completely capture the stochastic nature of polymers, <ref type="bibr" target="#b72">73,</ref><ref type="bibr" target="#b73">74</ref> especially for copolymers. <ref type="bibr" target="#b74">75</ref> These compositions are complex mixtures and mixtures are fundamentally different from pure substances. Simple average values, while easy to measure, may not fully capture the richer complexity in the underlying distributions. For example, molecular weight, comonomer composition and comonomer sequence will differ from one chain to the next. How do the distributions of these structural characteristics correlate to properties? <ref type="bibr" target="#b75">76</ref> Properly representing the dispersity and sequence variations inherent to polymers is an open question. <ref type="bibr" target="#b76">77,</ref><ref type="bibr" target="#b77">78</ref> In small-molecule research, fingerprinting and feature generation often use SMILES <ref type="bibr" target="#b78">79</ref> (Simplified Molecular Input Line Entry System) strings as input. The SMILES notation system is widely used for small molecules as it is machine-readable and well suited for informatics purposes. However, the stochastic nature of polymers and their size make using SMILES for polymers inefficient and awkward. BigSMILES <ref type="bibr" target="#b73">74</ref> adds the ability to define repeat units, copolymers and polymer structures (such as branched, star, etc.) clearly and easily to the SMILES system. Figure <ref type="figure" target="#fig_1">2(b)</ref> shows a schematic representation of a few of the ways BigSMILES represents polymers. While there are other ongoing efforts to improve SMILES (i.e. SELFIES, 80 a selfreferencing approach that is more robust than traditional SMILES), the BigSMILES approach is sufficiently flexible to still be one of the clearest and easiest methods of providing a polymer structural definition. Wide adoption of BigSMILES notation, especially within databases, will aid in making data fully accessible to all researchers.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ML APPROACHES</head><p>Two types of ML commonly used in polymer informatics are supervised and unsupervised learning (Fig. <ref type="figure" target="#fig_2">3</ref>). <ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b80">81</ref> Supervised learning uses data where the label is known. For example, performing a regression fit for predicting glass transition temperature, where all the training data have a known glass transition temperature. <ref type="bibr" target="#b81">82</ref> Unsupervised learning uses unlabeled data. It is most commonly used to identify clusters or groups within data, such as autoidentifying nanocluster shapes in a molecular dynamics dataset. <ref type="bibr" target="#b82">83</ref> Unsupervised learning can also be used for autoencoding. Autoencoders are a deep learning technique that independently learns how to encode or represent the training data. <ref type="bibr" target="#b79">80,</ref><ref type="bibr" target="#b83">84</ref> Supervised and unsupervised learning are combined in semi-supervised and active learning. These techniques use a small subset of labeled data to assign labels <ref type="bibr" target="#b84">85</ref> or predict outcomes for a larger, unlabeled, dataset. <ref type="bibr" target="#b85">86</ref> Semisupervised learning is very effective for labeling clusters and classification. Active learning iteratively identifies the unlabeled data that will most improve the model if the label was added, guiding experimental data collection. There are a wide variety of tools and packages available for polymer informatics. Some of the most commonly used tools include RDKit, <ref type="bibr" target="#b86">87,</ref><ref type="bibr" target="#b87">88</ref> Pybel, <ref type="bibr" target="#b88">89</ref> Sci-Kit Learn <ref type="bibr" target="#b43">44</ref> and Pymatgen. <ref type="bibr" target="#b89">90</ref> Supervised learning is the most common type of ML used in polymer informatics. Structure-to-property predictions are usually generated using supervised learning. The general process for this approach is to gather data (either from experimental/simulation data or from a database), verify that all data are comparable and have accurate labels, build a ML model to predict the property, before finally using the model on a new data point to predict the outcome. There are many examples in the literature using this approach. Supervised learning with a deep neural network has been used to predict solvents and non-solvents for a polymer <ref type="bibr" target="#b90">91</ref> and polymer phase transitions. <ref type="bibr" target="#b24">25</ref> Regression models can predict refractive indices of linear polymers <ref type="bibr" target="#b91">92</ref> and erosion behavior of silicon carbide-reinforced polymer composites. <ref type="bibr" target="#b3">4</ref> Supervised learning is most effective and useful when there is a large accurate dataset available for training, and directly measuring the predicted property is an intensive process. Ideally, all models of this type would be shared in a format that makes them useable to researchers without having to recreate the training process. One excellent example of sharing predictive models widely is the Polymer Genome, <ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b71">72,</ref><ref type="bibr" target="#b92">93</ref> which predicts a large number of properties from either the polymer name, the SMILES string for the repeat unit, or a drawing of the repeat unit.</p><p>Unsupervised learning has been used very effectively to solve inverse design problems in materials or polymer science. <ref type="bibr" target="#b14">15,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b62">63,</ref><ref type="bibr" target="#b93">[94]</ref><ref type="bibr" target="#b94">[95]</ref><ref type="bibr" target="#b95">[96]</ref> In an inverse design problem, the desired properties are known, but the suitable molecule/polymer to achieve those properties is unknown. <ref type="bibr" target="#b76">77,</ref><ref type="bibr" target="#b96">[97]</ref><ref type="bibr" target="#b97">[98]</ref><ref type="bibr" target="#b98">[99]</ref> In these problems a combination of autoencoders (unsupervised learning) and supervised learning often delivers accurate predictions. This approach is especially useful in situations where multiple properties must be optimized. Autoencoders in tandem with regression models have been used to predict polymers that are robust under high temperatures and high electric fields, <ref type="bibr" target="#b14">15</ref> find polymers suited for solar cells <ref type="bibr" target="#b60">61,</ref><ref type="bibr" target="#b62">63</ref> and predict polymer phases and phase transitions. <ref type="bibr" target="#b24">25,</ref><ref type="bibr" target="#b25">26</ref> Unsupervised learning has also been applied to identify defects <ref type="bibr" target="#b93">94</ref> and conformation states. <ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b94">95</ref> In these applications, selforganizing mapping <ref type="bibr" target="#b95">96</ref> and clustering are used to identify subsets of data and determine which characteristics separate subclasses.</p><p>For small datasets, semi-supervised or active learning combines supervised and unsupervised learning to leverage a small starting dataset for large learning gains. While there are only a few examples in the literature of semi-supervised learning, <ref type="bibr" target="#b84">85,</ref><ref type="bibr" target="#b99">100</ref> it is likely to grow in popularity. Active learning is relatively new; it is based around iterative data acquisition guided by Bayesian optimization. <ref type="bibr" target="#b100">101</ref> Active learning is especially notable in how it utilizes a very small starting dataset (initial data can be as small as 10 samples), and guides data acquisition to obtain a desired outcome much faster than random sampling. <ref type="bibr" target="#b101">102</ref> Active learning has been applied to discover redoxmers with a specific desired reduction potential, <ref type="bibr" target="#b85">86</ref> high-glass-transition polymers, <ref type="bibr" target="#b81">82,</ref><ref type="bibr" target="#b102">103</ref> ring polymer molecular dynamics <ref type="bibr" target="#b103">104</ref> and epoxy adhesive strength, <ref type="bibr" target="#b104">105</ref> among others. Active learning will become increasingly important and valuable, especially as high-throughput and robotic synthesis approaches are developed.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSIONS</head><p>Moving forward, polymer informatics will be central to the genesis of new materials. As we design materials to solve increasingly difficult problems, we need data-driven design to make the most use of available knowledge. One of the greatest challenges in polymer design is developing polymers that need multiple properties optimized. Multi-property design (Fig. <ref type="figure" target="#fig_0">1</ref>), especially when one of the properties is degradation behavior or recyclability, is increasingly necessary, and very difficult to do well, as maximizing one property often requires tradeoffs in other properties. Additional key challenges for polymer informatics include the need for polymer representations that capture stochasticity, larger datasets and more research into retrosynthetic design approaches. <ref type="bibr" target="#b76">77,</ref><ref type="bibr" target="#b77">78,</ref><ref type="bibr" target="#b98">99</ref> An informatics-driven approach allows quantification of tradeoffs and expands the pool of possible materials, working from an inverse design approach. Whether it is designing a polymer that includes triggered deconstruction, one that responds to changing conditions, or is suitable for an extreme environment, data-driven approaches can shorten design cycles and open new avenues of research. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GLOSSARY</head><p>A curated collection is one that is carefully managed and presented.</p><p>Features are the input for a machine learning model. Featurization is the process of generating features.</p><p>Inverse design is a process of determining the desired end properties then identifying the molecular structure needed to produce those properties.</p><p>Neural nets consist of densely linked processing nodes, modeled loosely on the neurons in a brain.</p><p>A stochastic feature is one that is best described by a random variable; for example, the distribution of each monomer in a copolymer.</p><p>Validated data have been checked and confirmed by a researcher uninvolved in generating the data.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Designing for multigenerational lifecycles requires consideration of all three lifecycle stages (manufacturing, in service and end of life) and all the factors that contribute to each stage. Environmental interactions play a role in all aspects of the material lifecycle.</figDesc><graphic coords="2,84.42,61.00,170.19,267.31" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. (a) The PolyDAT schema is a data-sharing layout that includes information on the polymer, characterization, synthesis, processing and any other measurements or relevant information. (b) BigSMILES is a text-based description of polymer structure using a variant of SMILES strings.</figDesc><graphic coords="3,52.67,61.00,487.90,274.45" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Unsupervised learning groups and interprets data based only on the input (i.e. x values). Supervised learning develops predictive models using both input and output (i.e. x and y values).</figDesc><graphic coords="4,54.54,61.00,229.89,198.31" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>wileyonlinelibrary.com/journal/pi © 2021 Society of Industrial Chemistry. Polym Int 2022; 71: 537-542</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>10970126, 2022, 5, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/pi.6345 by Argonne National Laboratory, Wiley Online Library on [11/01/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p>Polym Int 2022; 71: 537-542 © 2021 Society of Industrial Chemistry.wileyonlinelibrary.com/journal/pi</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p>© 2021 Society of Industrial Chemistry.Polym Int 2022; 71: 537-542</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ACKNOWLEDGEMENTS</head><p>We acknowledge UChicago/Argonne, CDAC funding via AI for Electrochemistry program. The authors thank Dorothy Loudermilk for assistance in making figures.</p></div>
+			</div>
+
+
+			<div type="funding">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The submitted manuscript has been created by UChicago Argonne, LLC, Operator of Argonne National Laboratory ("Argonne"). Argonne, a U.S. Department of Energy Office of Science Laboratory, is operated under Contract no. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan. http://energy.gov/ downloads/doe-public-access-plan</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Audus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Pablo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Macro Lett</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1078" to="1082" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Polymer Chemistry</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">P</forename><surname>Lodge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Hiemenz</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>CRC Press</publisher>
+			<pubPlace>Boca Raton, Florida</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Scaffaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sutera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Gulino</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Morreale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Polymers (Basel)</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">651</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Kharb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Antil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Antil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Sihag</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kumar</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12633-020-00497-z</idno>
+		<ptr target="https://doi.org/10.1007/s12633-020-00497-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Silicon</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1113" to="1119" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sundmacher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Engineering</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1017" to="1026" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannodi-Kanakkithodi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Botu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater Today</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="785" to="796" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Khaira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Doxastakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bowen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Suh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Segal-Peretz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="7783" to="7793" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Morse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Delaney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Fredrickson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">S</forename><surname>Bates</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="4675" to="4690" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Mulholland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Paradiso</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">APL Mater</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page">53207</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>De Pablo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jackson</forename><forename type="middle">Ne</forename><surname>Webb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Q</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NPJ Comput Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="23" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tripathi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Goshisht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Sahu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Arora</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11030-021-10237-z</idno>
+		<ptr target="https://doi.org/10.1007/s11030-021-10237-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol Divers</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1643" to="1664" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Iyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">F</forename><surname>Ghumman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Bi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Polymers (Basel)</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">163</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Rickman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">V</forename><surname>Kalinin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Mater</title>
+		<imprint>
+			<biblScope unit="volume">168</biblScope>
+			<biblScope unit="page" from="473" to="510" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">H</forename><surname>Liow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Yuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">R</forename><surname>Byon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Cho</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acsnano.1c00211</idno>
+		<ptr target="https://doi.org/10.1021/acsnano.1c00211" />
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="3971" to="3995" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Gutekunst</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="10489" to="10500" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannodi-Kanakkithodi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Gubernatis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="92" to="99" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lazzari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lischewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Orlov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Deglmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Daiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schreiner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Chem Eng</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="187" to="227" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ibañez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Casteran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Argerich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Ghnatios</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Hascoet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ammar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Fluids</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="23" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">O</forename><surname>Abuomar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nouranian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">King</forename><forename type="middle">R</forename><surname>Lacy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">158</biblScope>
+			<biblScope unit="page" from="98" to="109" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">T</forename><surname>Le</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Compos Mater</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="787" to="811" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">H</forename><surname>Tu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lee</forename><forename type="middle">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">-</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><forename type="middle">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chinese J Polym Sci (Engl Ed)</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="1403" to="1408" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Venkatram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Shelton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem B</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="6046" to="6054" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Patra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Huan</forename><surname>Td</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">172</biblScope>
+			<biblScope unit="page">109286</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bhattacharya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Patra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="3065" to="3074" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hiraide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Hirayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Endo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Muramatsu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">190</biblScope>
+			<biblScope unit="page">110278</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><surname>Daghigh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">E</forename><surname>Lacy</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Jr</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Daghigh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Baghaei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Horstemeyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Reinf Plast Compos</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="587" to="598" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Massari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Schena</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Massaroni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Saccomandi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Menciassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Sinibaldi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soft Robot</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="409" to="420" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Heliyon</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">5055</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Schadler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Sundararaman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater Charact</title>
+		<imprint>
+			<biblScope unit="volume">173</biblScope>
+			<biblScope unit="page">110909</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Mikulskis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Dundas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Irvine</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sanni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anderson</forename><forename type="middle">D</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Appl Mater Interfaces</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="139" to="149" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Deshpande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Radue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Odegard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gowtham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ghosh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Compos Sci Technol</title>
+		<imprint>
+			<biblScope unit="volume">207</biblScope>
+			<biblScope unit="page">108627</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">N</forename><surname>Iverson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Marrone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Inf Model</title>
+		<imprint>
+			<biblScope unit="volume">59</biblScope>
+			<biblScope unit="page" from="5013" to="5025" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Roch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">K</forename><surname>Saikin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Häse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Friederich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>León</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Nano</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="6589" to="6598" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">C</forename><surname>Epa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Hook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Langer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Anderson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Mater Chem</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="20902" to="20906" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kojima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Washio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Koishi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Rep</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chen</forename><forename type="middle">K</forename><surname>Kan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Fatigue</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page">105619</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Hsieh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Hsieh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Microelectron Reliab</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="48" to="58" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Prajna</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Antony</forename><surname>Pj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Jnanesh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Conf Ser</title>
+		<imprint>
+			<biblScope unit="volume">1142</biblScope>
+			<biblScope unit="page">12007</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Peerless</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Njb</forename><surname>Milliken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Oweida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Manning</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">G</forename><surname>Yingling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Theory Simul</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Driggs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Thorpe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gilbey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yeung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Ursprung</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Mach Intell</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="199" to="217" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lapuschkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Wäldchen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Binder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Montavon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Samek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Müller</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat Commun</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Chuang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Keiser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">362</biblScope>
+			<biblScope unit="issue">1-3</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m">Geron A, Hands-on Machine Learning with Scikit-Learn, Keras, and Ten-sorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</title>
+		<meeting><address><addrLine>O&apos;Reilly Media, Sebastopol, California</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Halevy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Norvig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pereira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Intell Syst</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="8" to="12" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sterling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Irwin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Inf Model</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="2324" to="2337" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Chemspider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Royal Society of Chemistry. Available: chemspider.com</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gindulyte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>He</surname></persName>
+		</author>
+		<idno>1388-D1395</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Davies</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nowotka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Papadatos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dedman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gaulton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Atkinson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="612" to="W620" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Mendez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gaulton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Bento</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chambers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>De Veij</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Félix</surname></persName>
+		</author>
+		<idno>D930-D940</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hautier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Dacek</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">APL Mater</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">11002</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><surname>Otsuka</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Kuwajima</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hosoya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Yamazaki</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/EIDWT.2011.13</idno>
+		<ptr target="https://doi.org/10.1109/EIDWT.2011.13" />
+		<title level="m">Proc 2011 Int Conf Emerg Intell Data Web Technol EIDWT 2011</title>
+		<meeting>2011 Int Conf Emerg Intell Data Web Technol EIDWT 2011</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="22" to="29" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Luo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Inf Model</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page" from="4684" to="4690" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannodi-Kanakkithodi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sharma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Data</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Groom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">J</forename><surname>Bruno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Lightfoot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Ward</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Crystallogr B</title>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="page" from="171" to="179" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Cheremisinoff</surname></persName>
+		</author>
+		<title level="m">Handbook of Polymer Science and Technology</title>
+		<meeting><address><addrLine>Taylor &amp; Francis, Milton Park, United Kingdom</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title level="m" type="main">Polymer Handbook</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Brandrup</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">H</forename><surname>Immergut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">A</forename><surname>Grulke</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1999">1999</date>
+			<publisher>Wiley</publisher>
+			<pubPlace>New Jersey</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title level="m" type="main">Polymer Data Handbook</title>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<publisher>Oxford University Press</publisher>
+			<pubPlace>Oxford, United Kingdom</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Rebello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Beech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>El-Zaatari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Lundberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jcim.1c00028</idno>
+		<ptr target="https://doi.org/10.1021/acs.jcim.1c00028" />
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Inf Model</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="1150" to="1163" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Del</forename><surname>Cueto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Geng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Troisi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="7777" to="7787" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Adv</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>David</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thakkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mercado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Engkvist</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="1" to="22" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">B</forename><surname>Jørgensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mesta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Shil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">García</forename><surname>Lastra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Jacobsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Thygesen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">148</biblScope>
+			<biblScope unit="page">241735</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Gallegos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Luchini</surname></persName>
+		</author>
+		<author>
+			<persName><surname>St</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kim</forename><forename type="middle">S</forename><surname>Paton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Acc Chem Res</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="827" to="836" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">D</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chapman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b03925</idno>
+		<ptr target="https://doi.org/10.1021/acs.jpcc.9b03925" />
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem C</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="15859" to="15866" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pattanaik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Coley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1204" to="1207" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mercado</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rastemo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lindelöf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Klambauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Engkvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach Learn Sci Technol</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">25023</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><surname>Gómez-Bombarelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Duvenaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Hernández-Lobato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sánchez-Lengeling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Sheberla</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Cent Sci</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="268" to="276" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Mannodi-Kanakkithodi A</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Comput</forename><surname>Mater Discov</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/9781788010122-00293</idno>
+		<ptr target="https://doi.org/10.1039/9781788010122-00293" />
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="293" to="319" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Landrum</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rdkit</surname></persName>
+		</author>
+		<title level="m">Open-Source Chemiformatics</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><surname>Doan Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Venkatram</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Appl Phys</title>
+		<imprint>
+			<biblScope unit="volume">128</biblScope>
+			<biblScope unit="page">171104</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem C</title>
+		<imprint>
+			<biblScope unit="volume">122</biblScope>
+			<biblScope unit="page" from="17575" to="17585" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Sukumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Lanzillo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">"</forename><surname>Rampi" Ramprasad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Polym Sci B Polym Phys</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="2082" to="2091" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">W</forename><surname>Coley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Mochigase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">K</forename><surname>Beech</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wang</forename><forename type="middle">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Cent Sci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="1523" to="1531" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Webb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jackson</forename><forename type="middle">Ne</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gil</forename><surname>Ps</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>De Pablo</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Adv</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Sifri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Padilla-Vélez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Coates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Fors</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Am Chem Soc</title>
+		<imprint>
+			<biblScope unit="volume">142</biblScope>
+			<biblScope unit="page" from="1443" to="1448" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sattari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lin</forename><forename type="middle">J</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Soft Matter</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="7607" to="7622" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kuenneth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mater Sci Eng R Rep</title>
+		<imprint>
+			<biblScope unit="volume">144</biblScope>
+			<biblScope unit="page">100595</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">D</forename><surname>Weininger</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Inf Comput Sci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="31" to="57" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Krenn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Häse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nigam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Friederich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aspuru-Guzik A</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach Learn Sci Technol</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">45024</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<monogr>
+		<title level="m" type="main">Introduction to Machine Learning with Python</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Guido</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<pubPlace>O&apos;Reilly Media, Sebastopol, California</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mrs Commun</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="860" to="866" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><forename type="middle">C</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Heat Mass Transf</title>
+		<imprint>
+			<biblScope unit="volume">162</biblScope>
+			<biblScope unit="page">120381</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Wetzel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys Rev E</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="1" to="11" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen</forename><forename type="middle">Q</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Counihan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodríguez-López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lovrić</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Molero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kern</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol Inform</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="4" to="7" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<monogr>
+		<title level="m" type="main">RDKit Documentation</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Landrum</surname></persName>
+		</author>
+		<ptr target="https://www.rdkit.org/docs/index.html#" />
+		<imprint>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>O'boyle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Morley</forename><forename type="middle">C</forename><surname>Hutchison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Chem Cent J</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="1" to="7" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">D</forename><surname>Richards</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hautier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kocher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cholia</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Mater Sci</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="314" to="319" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Venkatram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Macromolecules</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="4764" to="4769" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Minami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Okuno</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Adv</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="2975" to="2980" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Lect Notes Phys</title>
+		<imprint>
+			<biblScope unit="volume">968</biblScope>
+			<biblScope unit="page" from="397" to="412" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gasparotto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bochicchio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ceriotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Pavan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem B</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="589" to="599" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08927022.2020.1851028</idno>
+		<ptr target="https://doi.org/10.1080/08927022.2020.1851028" />
+	</analytic>
+	<monogr>
+		<title level="j">Mol Simul</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="1509" to="1521" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">S</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Oya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Saeki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kikugawa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Phys Chem C</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="12871" to="12882" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">B</forename><surname>Jadrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Lindquist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Truskett</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">146</biblScope>
+			<biblScope unit="page">184103</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Patra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Loeffler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Skrs</forename><surname>Sankaranarayanan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nanoscale</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page" from="23653" to="23662" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">H</forename><surname>Park</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">Y</forename><surname>Zubarev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Hedrick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Kiyek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Corbet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lottier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mac</forename><forename type="middle">-</forename></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="10847" to="10854" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Sivaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">E</forename><surname>Jackson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sanchez-Lengeling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Á</forename><surname>Vázquez-Mayagoitia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Vishwanath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach Learn Sci Technol</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">25015</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">Active learning: a survey</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Aggarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><forename type="middle">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Aggarwal CC</title>
+		<editor>
+			<persName><forename type="first">Data</forename><surname>Classification</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Landrum, G</addrLine></address></meeting>
+		<imprint>
+			<publisher>CRC Press</publisher>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note>RDKit Documentation.</note>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NPJ Comput Mater</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page">21</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Model Simul Mater Sci Eng</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page">24002</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b103">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">S</forename><surname>Novikov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Shapeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">V</forename><surname>Suleimanov</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Chem Phys</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page">224105</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b104">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pruksawan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Lambard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Samitsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sodeyama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Naito</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sci Technol Adv Mater</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1010" to="1021" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Graph-Based Approaches for Predicting Solvation Energy in Multiple Solvents: Open Datasets and Machine Learning Models</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2021-06-30">June 30, 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Logan</forename><surname>Ward</surname></persName>
+							<email>lward@anl.gov</email>
+						</author>
+						<author>
+							<persName><forename type="first">Naveen</forename><surname>Dandu</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ben</forename><surname>Blaiszik</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Badri</forename><surname>Narayanan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Paul</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Ian</forename><surname>Foster</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Larry</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">sı Supporting Information</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="department">-Data Science and Learning Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="department">-Data Science and Learning Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<orgName type="institution">University of Chicago</orgName>
+								<address>
+									<postCode>60439, 60637</postCode>
+									<settlement>Lemont, Globus, Chicago</settlement>
+									<region>Illinois, Illinois</region>
+									<country>United States, United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff4">
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<orgName type="institution">Badri Narayanan -Materials Science Division</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff5">
+								<orgName type="department">Department of Mechanical Engineering</orgName>
+								<orgName type="institution">University of Louisville</orgName>
+								<address>
+									<postCode>40292</postCode>
+									<settlement>Louisville</settlement>
+									<region>Kentucky</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff6">
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<orgName type="institution">Rajeev S. Assary -Materials Science Division</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="department">Materials Science Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff8">
+								<orgName type="department">Ian Foster -Data Science and Learning Division</orgName>
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff9">
+								<orgName type="department">Department of Computer Science and Globus</orgName>
+								<orgName type="laboratory">Larry A. Curtiss -Materials Science Division</orgName>
+								<orgName type="institution">University of Chicago</orgName>
+								<address>
+									<postCode>60637</postCode>
+									<settlement>Chicago</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff10">
+								<orgName type="laboratory">Argonne National Laboratory</orgName>
+								<address>
+									<postCode>60439</postCode>
+									<settlement>Lemont</settlement>
+									<region>Illinois</region>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Graph-Based Approaches for Predicting Solvation Energy in Multiple Solvents: Open Datasets and Machine Learning Models</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-06-30">June 30, 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">59BC05507E770BFC49206B1D9AA26D1D</idno>
+					<idno type="DOI">10.1021/acs.jpca.1c01960</idno>
+					<note type="submission">Received: March 4, 2021 Revised: June 15, 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Metrics &amp; More Article Recommendations</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The solvation properties of molecules, often estimated using quantum chemical simulations, are important in the synthesis of energy storage materials, drugs, and industrial chemicals. Here, we develop machine learning models of solvation energies to replace expensive quantum chemistry calculations with inexpensive-to-compute message-passing neural network models that require only the molecular graph as inputs. Our models are trained on a new database of solvation energies for 130,258 molecules taken from the QM9 dataset computed in five solvents (acetone, ethanol, acetonitrile, dimethyl sulfoxide, and water) via an implicit solvent model. Our best model achieves a mean absolute error of 0.5 kcal/mol for molecules with nine or fewer non-hydrogen atoms and 1 kcal/mol for molecules with between 10 and 14 non-hydrogen atoms. We make the entire dataset of 651,290 computed entries openly available and provide simple web and programmatic interfaces to enable others to run our solvation energy model on new molecules. This model calculates the solvation energies for molecules using only the SMILES string and also provides an estimate of whether each molecule is within the domain of applicability of our model. We envision that the dataset and models will provide the functionality needed for the rapid screening of large chemical spaces to discover improved molecules for many applications.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>The ability of a molecule to dissolve in a particular solvent is a key factor in determining whether it will be suitable for many technological applications, such as drug molecules that must dissolve in the bloodstream or redox-active molecules that must remain in solution inside a flow battery. Chemists assess the solubility of a molecule by computing the solvation energy (ΔG solv )a measure of the strength of the interaction between a molecule and a solventfrom quantum mechanical simulations. <ref type="bibr" target="#b3">1</ref> While methods for computing solvation energy are well established, 2 their computational expense is large enough (minutes to hours per compound on a single processor) to impose serious limitations on how many molecules can be assessed. Evaluating thousands of chemicals requires significant computational resources, yet would explore a small fraction of modern chemical search spaces that approach billions of molecules. <ref type="bibr" target="#b5">[3]</ref><ref type="bibr" target="#b6">[4]</ref><ref type="bibr" target="#b7">[5]</ref><ref type="bibr" target="#b8">[6]</ref> Faster approaches, such as machine-learned QSAR models, <ref type="bibr" target="#b9">7</ref> are required to reach the necessary evaluation throughput to scan for promising leads in these large chemical spaces.</p><p>The quality of a machine-learned model of a chemical property is highly dependent on the size, breadth, and quality of the available data. Existing machine learning (ML) models for solvation energy have been trained using small databases of experimental data, which limits their applicability. One such database, FreeSolv, <ref type="bibr" target="#b10">8</ref> has been used extensively to create ML models for hydrogenation energy based on diverse techniques including convolutional neural networks <ref type="bibr" target="#b11">9,</ref><ref type="bibr" target="#b12">10</ref> and fingerprintbased ML. <ref type="bibr" target="#b13">11,</ref><ref type="bibr" target="#b14">12</ref> Similar experimental databases, like those from the University of Minnesota, <ref type="bibr" target="#b15">13</ref> provide solvation data for many solvents and have also been used as the basis for ML models, as illustrated by pioneering work from Borhani et al. <ref type="bibr" target="#b16">14</ref> and Subramanian et al. <ref type="bibr" target="#b17">15</ref> The limited size and chemical diversity of experimental data (only a few hundred molecules) make them impractical to use with high-accuracy, deep learning models (e.g., refs 16-18). This issue can be addressed by developing large and diverse datasets of solvation properties (&gt;100,000 molecules) via computations that provide sufficient representation of different regions of the chemical space.</p><p>Here, we report on a new large dataset, QM9-solvation, of computed solvation energies (ΔG solv ) for 130,258 molecules in multiple solvents and provide an initial set of ML models trained using this data. The dataset was generated from density functional theory (DFT) simulations using the SMD solvation model <ref type="bibr" target="#b21">19</ref> and is openly available for use by the chemistry community. <ref type="bibr" target="#b22">20</ref> We also demonstrate a state-of-the-art ML prediction model of molecular solvation energies trained on this database. Our models use a message-passing architecture that includes the properties of both the solvent and the solute, which we demonstrate is capable of learning solvent/solute relationships from over a half-million training entries. We establish a domain of applicability region for these models and find that it is possible to predict solvation energies of molecules larger than those in our training set. The models are freely available through GitHub and DLHub. <ref type="bibr">21,</ref><ref type="bibr" target="#b23">22</ref> We envision that our database and models will help spur rapid advancements in the ability for scientists to efficiently assess the solvation properties of molecules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ METHODS</head><p>Our work involved first creating a database of solvation energies using quantum chemistry computations and creating models to predict solvation energy using ML. We describe the quantum chemistry and ML aspects of our work separately.</p><p>Quantum Chemistry. We performed DFT calculations using Gaussian 16 software to compute solvation energies of molecules. <ref type="bibr" target="#b24">23</ref> All calculations were performed using the B3LYP functional and the 6-31G(2df,p) basis set starting with the relaxed geometries from the QM9 <ref type="bibr" target="#b25">24</ref> and G4MP2-GDB9 datasets. <ref type="bibr" target="#b26">[25]</ref><ref type="bibr" target="#b27">[26]</ref><ref type="bibr" target="#b28">[27]</ref> Each relaxed geometry was then used in computing single-point energies in the presence of five different solvents using a solvation model based on density (SMD model) <ref type="bibr" target="#b21">19</ref> at the same level of theory that was used for geometry relaxation. The solvents chosen for the DFT calculations are acetone, ethanol, acetonitrile (ACN), dimethyl sulfoxide, and water. The energies of these molecules in the gas phase [E gas ] and in the solvent [E solvent ] were used to calculate the solvation energy [ΔG sol ] of the molecules in each of the solvents via the following equation.</p><formula xml:id="formula_0">G E E sol solvent gas [Δ ] = [ ] -[ ]<label>(1)</label></formula><p>The computed solvation energies of all molecules from QM9 and selected molecules from the Pedley compilation, <ref type="bibr" target="#b29">28</ref> reported in kcal/mol, are available on the Materials Data Facility. <ref type="bibr" target="#b22">20</ref> Machine Learning. We use message passing neural networks (MPNNs) for most ML tasks described in this work. As formalized by Gilmer et al., <ref type="bibr" target="#b19">17</ref> MPNNs are a general class of architectures for learning properties of graphs, and there exist significant degrees of freedom within the MPNN design. The general architecture of MPNNs includes "message" layers that produce a signal for each node (or, in some architectures, each edge <ref type="bibr" target="#b30">29</ref> ), given its neighboring edges and nodes, and a function then updates the features of each node based on its message. The combined "message-thenupdate" cycle can be repeated many times before the final "readout" function that produces a single feature vector for the entire graph. The features for the graph are then passed as inputs to another model (e.g., a fully connected neural network) that maps the graph features to a property of the graph. As with all neural networks, the weights of an MPNN are learned by adjusting them to minimize the error between prediction and true values through gradient descent.</p><p>We start with the message, update, and readout functions used by St. John et al. <ref type="bibr" target="#b31">30</ref> The initial features of the atoms and bonds are determined by looking up a set of features for each type of atomdefined using its element, number of bonds, number of bonded hydrogen atoms, and whether it is aromaticand for each bonddefined using its type (e.g., single vs double), whether the bond is conjugated or in a ring, and the elements of the bonded atoms. The features for each type of atom or bond are learned while training the ML model. The messages are produced by summing over the product of atom and bond features of each neighboring atom. The features are updated using a gated recurrent unit module, which generates the new atom features considering both the new message and all previous feature values for that atom. We apply the message and update functions six times. After these layers, we generate a set of features for each atom that reflect its properties and those of up to the sixth-nearest neighbors.</p><p>As shown in Figure <ref type="figure" target="#fig_0">1</ref>, we use two versions of the MPNN that differ based on whether the readout function is applied before or after reducing the atomic features to a single scalar. The first, "molecular fingerprint," version uses a sum readout function before reducing the atomic features to a single value, which effectively produces a set of features that describes the entire molecule. The "atomic contribution" version reduces the atomic features to a single scalar value before summing over all atoms, which approximates each atom having an additive contribution to solvation energy.</p><p>Full details of the models are available in the Supporting Information on the GitHub page associated with this work and on the Materials Data Facility. <ref type="bibr" target="#b22">20,</ref><ref type="bibr">21</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS AND DISCUSSION</head><p>We describe the development of a ML model that predicts the solvation energies of a diverse class of molecules in five solvents. The following sections describe how we accomplished this goal by first establishing a database of solvation The Journal of Physical Chemistry A energies based on an unbiased sampling of molecular structures and then gradually increasing the complexity of ML techniques used to learn correlations from this data.</p><p>Database of 650,000 Solvation Energies of Small Molecules. We base our training set on the QM9 database of Ramakrishnan et al. <ref type="bibr" target="#b25">24</ref> , which has been used frequently in the molecular ML community for a number of reasons. First, the database is large: with over 10 5 entries, QM9 provides sufficient training data to support the development of many ML models. <ref type="bibr" target="#b30">29,</ref><ref type="bibr" target="#b32">31,</ref><ref type="bibr">32</ref> Second, the database is diverse. QM9 is based on an exhaustive sampling of molecules, <ref type="bibr" target="#b7">5,</ref><ref type="bibr" target="#b33">33</ref> which allows us to train and validate our molecules with a minimal concern over whether it is learning patterns related to the sampling of data rather than the physics of the problem.</p><p>We used the SMD implicit solvation model in Gaussian to compute the solvation energy for 130,258 molecules from QM9. We selected SMD for its comparable accuracy to explicit solvent models and reasonable correlation with experimental solvation energies at a reduced computational cost. <ref type="bibr" target="#b34">34,</ref><ref type="bibr" target="#b35">35</ref> For each molecule, we computed the solvation energy in five solvents that sample a broad range of dielectric constants: acetone (ϵ = 20.49), ethanol (ϵ = 24.85), acetonitrile (ACN) (ϵ = 35.69), dimethyl sulfoxide (DMSO) (ϵ = 46.83), and water (ϵ = 78.36). We selected these solvents to not only capture differences among the solvation behavior of different molecules but also selecting solvents of technological relevance (e.g., ACN and water are common solvents for flow batteries <ref type="bibr" target="#b36">36</ref> ).</p><p>As illustrated in Figure <ref type="figure" target="#fig_1">2</ref>, the solvation energies for our molecules follow, generally, a single-modal distribution. The notable exception is water, which features multiple peaks near -10, -5, and 0 kcal/mol. The standard deviation in the solvation energy is approximately 2.8 kcal/mol for all solvents except water, which shows a wider distribution with a standard deviation of 4.3 kcal/mol. Some molecules have solvation energies substantially higher or lower than most in the dataset. The solvation energies for these molecules can range from as low as -84 kcal/mol to as high as 5 kcal/mol. For example, there are 543 (0.4%) and 428 (0.3%) molecules with solvation energies below -20 kcal/mol in water and acetone, respectively.</p><p>We divide the QM9 molecules into a first subset of 117,232 molecules, used for model training, and a second subset of 13,026 molecules, used for model evaluation. Following our previous work, 37 the latter 10% -drawn from the same population as the training examples (i.e., molecules of smaller than nine heavy atoms) -serve as a test set. The test set molecules are neither used to train the parameters of any of the architectures nor to determine early stopping criteria employed in the neural network training.</p><p>We use a set of 191 molecules with more than nine heavy atoms to provide further evaluation of the models. These molecules were selected in a previous study, <ref type="bibr" target="#b28">27</ref> where we identified molecules with between 10 and 14 heavy atoms from the Pedley Compilation 28 that have accurate measurements of formation enthalpy. These molecules capture molecular motifs that are impossible to form with fewer than 10 heavy atoms, such as polycyclic aromatic compounds. We denote these molecules our "Pedley test set." They were not selected randomly but drawn from a set of molecules for which solvation energies have been measured experimentally (unlike those in the QM9 training set, which were generated procedurally) and, further, were chosen to exhibit qualities desirable for validation (e.g., possessing molecular motifs not included in the QM9-solvation dataset).</p><p>The full dataset, which we denote QM9-solvation, is available through GitHub and the Materials Data Facility. <ref type="bibr" target="#b22">20,</ref><ref type="bibr">21</ref> Predicting Solvation Energies of Molecules in Water Solvent: MPNNs. Our goal is to link the graph structure of a molecule to solvation energy. Using only the molecular graph means that estimating the solvation energy of a molecule does not require any force field or quantum chemistry computations, which both allows our models to screen new chemicals at high rates and mitigates concerns about tying predicted solvation energy to a specific conformation.</p><p>The use of ML to link molecular structures to properties is well studied. <ref type="bibr" target="#b9">7</ref> We choose to evaluate two techniques from the literature due to their simplicity: group contribution with linear regression and MPNNs. Both methods start by labeling atoms in the molecule with type information, such as by element or by functional group, but differ significantly in how these labels are mapped to functional properties.</p><p>We modeled our group contribution approach on the widely used model for water-octanol partition coefficient (log P) of Wildman and Crippen. <ref type="bibr" target="#b37">38</ref> We define functional groups for each non-hydrogen atom in a molecule by first assigning a type based on the element of that atom, whether it is in an aromatic cycle, and its degree. We then complete the description of the atom by computing the types of the neighboring atoms using the same procedure and recording the type of bonding. Our procedure lacks the hand-tuned groups of Wildman and Crippen but distinguishes atomic sites more fully. For example, our method describes primary and secondary aliphatic carbons differently; these are treated as identical by Wildman and Crippen. We believe that this further granularity is needed for a dataset as diverse as QM9. We represent each molecule as a vector in which each entry corresponds to the count of that functional group type. We then use L 1 regularized linear regression using the least absolute shrinkage and selection operator (LASSO) <ref type="bibr" target="#b38">39</ref> to fit a linear model between this vector and solvation energy.</p><p>Our second type of model is a message-passing neural network, which provides an automatic path for learning the similarity between different functional groups and their impact on a material property. An MPNN, as formalized by Gilmer et al. <ref type="bibr" target="#b19">17</ref> and described in the Methods section, learns interactions between atoms/functional groups through "message-passing" steps that update the description of each atom based on the types of neighboring atoms and the types of bonds connecting to the neighboring atoms. In this work, we use an MPNN architecture implemented by St. John et al. <ref type="bibr" target="#b31">30</ref> Our MPNN The Journal of Physical Chemistry A describes atoms initially based on their type, degree, number of bonded hydrogen atoms, and whether it is in an aromatic ring; updates the atom description with messages based on sums of those from its nearby atoms; and generates a description of the entire molecule as a sum of all atoms. Full details are available in the Methods section.</p><p>We compared the MPNN and linear regression models for predicting the solvation energy in water using the training and test datasets described in the previous section. As shown in Figure <ref type="figure" target="#fig_2">3</ref>, our MPNN model has a mean absolute error (MAE) of 0.44 kcal/mol2.3× better than the 1.0 kcal/mol MAE of the linear regression model. The increased accuracy of MPNN can be traced to the limited complexity available to the linear regression model. The LASSO model only includes 1228 parameters, far below the 897,409 parameters in the MPNN model, which likely explains why the LASSO model does not improve in accuracy when provided with more than 10 4 data points. Some routes to improving the accuracy of this linear regression model could be to add non-linear combinations of existing features or to add more features by differentiating functional groups based on second-nearest neighbors. The elegance of the MPNN is that it learns such non-linear combinations and more complex features automatically. As we demonstrate here, the ability to learn such interactions leads to superior predictive accuracy.</p><p>We studied the outliers of the MPNN to gain a further insight into the generalizability of the model. The compounds with the largest absolute errors are those with particularly high solvation energies, with 15 of the top 25 errors being within the 1% most negative solvation energies. The relatively poor predictive performance on these materials is partly explained by the solvation energy being outliers compared to the rest of the data. Twelve of the top 25 (48%) errors belong to a class of molecules, zwitterions, that is rare, with only 396 (0.3%) entries within the training data. We conclude that the model's predictions are most reliable for molecules with solvation energies of less negative than -25 kcal/mol and are, for example, inaccurate for zwitterions.</p><p>Extending an MPNN Solvation Model to Other Solvents. We next enhanced our MPNN model to predict solvation energies in other solvents. We explored two different strategies for creating "multi-task" models able to predict solvation energy in different solvents simultaneously. The first approach is a standard multi-task model in which the last layer of the neural network produces multiple outputs, one per solvent. The second approach involves a network that predicts solvation energy given the molecular structure of the solute and the dielectric constant of the solvent. This "dielectric constant" model, unlike the multi-task model, can predict solvation energy in solvents not included in the training set. Here, we test which method produces more accurate models and how well the dielectric constant model computes solvation energy for solvents outside of the training set.</p><p>We evaluate our two strategies by training a model with the same 90/10% test split as our single-solvent model and data from all the five solvents. The multi-task and dielectricconstant models have comparable accuracy to the singlesolvent model in predicting solvation energy in water. The single-solvent model has an error of 0.44 kcal/mol for solvation energy in watereffectively equal to the errors of 0.43 and 0.45 kcal/mol for the multi-task and dielectric constant models, respectively. We note that we previously observed that training a multi-task model with greatly varied properties (e.g., highest occupied molecular orbital energy and atomization energy) can lead to a significant degradation in model accuracy. <ref type="bibr">37</ref> It appears that the solvation energies of a molecule in different solvents are sufficiently similar such that modeling different solvents simultaneously in the same model does not lead to degradation in performance.</p><p>We further explored the concept of multi-solvent prediction by withholding data from one of our five solvents, ACN, to use as a test set. We selected ACN for this test case because it has the median dielectric constant of the five solvents and thus should be a good test for our ML model's ability to interpolate.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>The Journal of Physical Chemistry A</head><p>The MAE of our dielectric constant model for predicting solvation energy in water is not changed by the exclusion of ACN training data; the MAE decreases by only 5 × 10 -4 kcal/ mol. Based on these results, we see neither benefit nor disadvantage to training a ML model on data from more solvents at least for solvents that exist within the range of dielectric constants in our training set.</p><p>The fact that the dielectric constant model uses solvent properties as inputs allows us to predict the properties of solvents not contained within the training set. As shown in Figure <ref type="figure" target="#fig_3">4</ref>, our model smoothly interpolates how the solvation energy changes as a function of dielectric constant. The model also appropriately detects that the solvation energy for propane increases for solvents with large dielectric constants and increases for water. The dielectric constant model trained without any data with ACN as a solvent achieves an MAE for an ACN solvation energy of 0.62 kcal/mol across all molecules and an MAE of 0.70 kcal/mol on molecules from the holdout set, for which neither molecule nor solvent are included in the training set. From this, we conclude that the model is able to interpolate between solvents with dielectric constants between 10 and 80ϵ 0 .</p><p>Improving Performance for Molecules Larger than in the Training Set. The training data used in the previous sections are drawn from the same population, which provides a useful but limited view of the utility of our model. Specifically, all molecules were taken from the QM9 dataset and, as a result, have only nine or fewer non-hydrogen atoms, limiting the estimates of accuracy discussed above to only these smaller molecules. We therefore studied the accuracy of our model on predicting the solvation energy of 191 molecules with more than nine non-hydrogen atoms (i.e., our Pedley test set).</p><p>The errors for these molecules from the Pedley test set are substantially greater than those observed for the QM9-based test set. For example, the MAE for solvation energy in ACN for the Pedley test set is 3.46 kcal/molover 10× larger than the MAE of 0.32 kcal/mol for the QM9 test set. The errors tend to increase with molecule size. As shown in Figure <ref type="figure" target="#fig_4">5c</ref>, the MAE for molecules in the Pedley test set generally increases as a function of molecular size and reaches over 10 kcal/mol for molecules with 14 heavy atoms. The increase in error with molecule size is not monotonic, with molecules of size 11 having errors around 2× smaller than errors for molecules with 14 non-hydrogen atoms but is strong enough that we speculate that the poor performance of our models on the Pedley test set has to do with the issues with capturing the effect of molecular size more than the presence of structural motifs absent from the training set.</p><p>We explored improving the performance of our model by adopting an "atomic contribution" model for solvation energy. As illustrated in Figure <ref type="figure" target="#fig_0">1</ref>, our current model generates a single fingerprint to describe an entire molecule by summing the fingerprint of each atom (the output of the message passing layers) and computing the solvation energy from the resultant "molecular fingerprint". An alternative approach is to predict "atomic contributions" for each atom in the molecule separately and then to express the molecular property as a sum of these contributionsa technique used often in ML models of molecular energy. <ref type="bibr" target="#b18">16,</ref><ref type="bibr" target="#b32">31,</ref><ref type="bibr" target="#b39">40,</ref><ref type="bibr" target="#b40">41</ref> The atomic contribution approach explicitly encodes a linear relationship between a molecular property and the size of the molecule, which is a fair approximation for solvation energies given the known correlation between solvation energy and molecular size. <ref type="bibr" target="#b16">14</ref> The atomic contribution model performs worse for the QM9 holdout set but has a less dramatic increase in error with molecule size than our original model. As shown in Figure <ref type="figure" target="#fig_4">5b</ref>, the atomic contribution model has a 50% larger error on the QM9 dataset, 0.47 kcal/mol, than the molecular fingerprint model, 0.32 kcal/mol. However, we see a much smoother increase with error with increasing molecular size. The MAE for molecules with 14 non-hydrogen atoms is, for example, at least 5× smaller than our molecular fingerprint model. The drastic differences between the performance on QM9 and our external test sets strongly motivates the need for evaluating ML models more closely to how they will be used for larger molecules and the need for molecular datasets with larger molecules. We also note that the atomic contribution model is not fully free from the effect of molecular size on error. The errors steadily increase for molecules with sizes more distant from nine non-hydrogen atoms, which is the size with the The Journal of Physical Chemistry A greatest amount of training data. There could be a few explanations for the relationship between error and molecule size. Namely, there could be an effect of bias in the training set due to the overrepresentation of data with nine heavy atoms or a failure in the assumption that the atom count and solvation energy should be linearly related. We therefore propose reweighting techniques to account for training set bias or different approaches for summing atomic contributions (e.g., generalized means) as a direction for modeling non-linear relationships between atomic size and property.</p><p>The final ingredient of the utility of our model is the speed at which we can evaluate new molecules. Evaluating the model requires parsing the SMILES string to an RDKit molecule object, converting the RDKit molecule to a graph representation compatible with TensorFlow and evaluating the MPNN. The conversion steps can be performed in parallel for each molecule and the individual mathematical operations of the MPNN can also be parallelized, allowing us to exploit highly parallel CPUs and general purpose GPUs. Accordingly, we can achieve an evaluation rate of 10 3 molecules per second on two 32-core Intel Xeon CPU E5-2683 v4 CPUs. This evaluation rate makes it possible to evaluate all of QM9 (10 5 molecules) in 2 min and all of ZINC15 in 33 h using only a single workstation. The extreme evaluation rates noted here can be further improved by running the models on multiple nodes of a supercomputer, making it possible to rapidly screen molecule spaces with billions of candidates.</p><p>Quantifying Domain of Applicability. The empirical nature of ML models makes it difficult to identify which predictions are most or least likely to be accurate. In the previous section, we established that molecular size correlates with errora likely effect of the training set being biased toward molecules with nine non-hydrogen atoms. Here, we explore improved metrics for establishing a quantitative estimate of the size of the error for a prediction.</p><p>Our previous analysis of the performance of the models on predicting solvation energies in water give clues on what is important in estimating the performance of the model. We noted, in particular, that zwitterions were overrepresented in the molecules with the largest error (48% of largest errors were zwitterions compared to only 0.4% in the test set). The poor performance of the models on a class of molecules that are structurally distinct from most of the training set is reflective on how the MPNN models implicitly learn the behavior of functional groups within molecules. Unseen or rare functional groups will have little training data, which leads can lead to poor performance. Such behavior suggests for us to consider metrics that measure similarity in functional groups between molecules to estimate the performance of our model.</p><p>Our metrics are based on common approaches from the chemoinformatics community, 42 such as distances from the training set and variance of an ensemble of ML models. We explore three different applicability metrics. We first chose the Tanimoto similarity based on Morgan Fingerprints, <ref type="bibr" target="#b41">43</ref> which represents a molecular similarity metric that is not tuned for any particular property. We also chose two applicability metrics based on our MPNN models. The first is based on the molecular fingerprint MPNN model, where we compute the mean L 2 distance between the molecular fingerprint (see Figure <ref type="figure" target="#fig_0">1</ref>) for a molecule and those of the 64 closest molecules from the training set. The second is based on the fingerprints for each atom as computed using the atomic contribution model, where we compute the dissimilarity of a molecule from one in the training set as the mean distance between the most similar pairs of atoms</p><formula xml:id="formula_1">a m n N m n ( , ) 1 max m i j i j 2 ∑ = -<label>(2)</label></formula><p>where m is the molecule, n is a molecule from the training set, N m is the number of atoms in m, the sum ∑ i is over all atoms in m, the maximum max j is over all atoms in n, m i is the atomic fingerprint of atom i in m, n h is the fingerprint of atom j in n, and ||•••|| 2 represents the L 2 norm. We note that a(m, n) is not a proper distance metric, as a(m, n) ≠ a(n, m). As with the "molecular fingerprint distance", we compute the atomic fingerprint distance as the average distance over the 64 closest molecules. In all cases, we assume that larger distances or lower similarities from the training set indicate greater likelihood that a molecule is outside of the training set.</p><p>Our final applicability metric is based on the variance of the predictions of an ensemble of MPNNs. We created an ensemble by training 16 atomic contribution MPNNs each with a different, randomly selected subset created by randomly sampling the full training set with replacement (i.e., a bootstrapped ensemble). The variance of this training captures the uncertainty of individual predictions. <ref type="bibr" target="#b42">44,</ref><ref type="bibr" target="#b43">45</ref> We assume that molecules with larger uncertainties are more likely to have larger errors.</p><p>We evaluated the quality of our domain of applicability metrics by measuring the correlation between each application metric for each prediction and the size of the observed error. The Journal of Physical Chemistry A We seek applicability metrics for which molecules with larger applicability metrics have a greater likelihood of having larger errors than those with smaller metrics. The statistical variation in error means that we assume that these changes will be visible in averages and not that all points with larger metrics will have larger errors. Accordingly, we grouped our data into 16 bins based on each of the applicability metric and show the average errors and likelihood of an error being greater than 1 kcal/mol. In all cases, we used the predicted solvation energy in ACN based on the atomic contribution MPNNs for molecules in our Holdout and Pedley test sets. The results are shown in Figure <ref type="figure" target="#fig_5">6</ref>.</p><p>We find that the applicability based on the molecular fingerprint MPNN yields the best performance according to both quality metrics. We find that there is the strongest correlation between both the magnitude of error and the likelihood of a 1 kcal/mol error. The MPNN-based fingerprint distance strongly outperforms a generic circular fingerprint with Tanimoto similarity, suggesting a benefit to using fingerprints trained to reflect a certain atomic property as a similarity metric. In general, we find a significant need for developing a good domain of applicability metrics. As illustrated by specialized MPNN fingerprints outperforming conventional Tanimoto fingerprints, the dependence of model error on inputs can require complicated models. Further research on developing complex applicability metrics or, even, measuring the performance of different metrics (e.g., ref 46) is greatly needed.</p><p>We therefore train a linear regression and logistic classification model on the MPNN molecular fingerprint distance as a means to provide a quantitative estimate of the uncertainty of any prediction made using our model. Users of the model can define their own cutoff for a domain of applicability depending on how much uncertainty that can tolerate. We can also use the uncertainties of the models to further improve them <ref type="bibr" target="#b45">47</ref> or accelerate the discovery of molecules with target properties. <ref type="bibr" target="#b46">48,</ref><ref type="bibr" target="#b47">49</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>We have presented QM9-solvation, a new dataset of DFTcomputed solvation energies of 130,258 molecules in five solvents, a total of 651,290 values, and used this new dataset to train a suite of ML models. Our best-performing ML models, based on a message-passing neural network that takes properties of both solute molecules and solvent as inputs, achieve an accuracy of 0.5 kcal/mol, 2× better than group contribution models. We established that our models can generalize to predict solvation energy in solvents outside of the training set and for molecules larger than those used to train our datasets. Finally, we created a domain-of-applicability metric to provide users an estimate of whether the predictions of our models are trustworthy for a certain molecule. The data, models, and code used in this study are all freely available online, and the ML models are accessible through a simple web interface that both invokes the model and provides estimates of model uncertainty for each prediction. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Two MPNN versions used in this work: (a) a model that computes solvation energy based on a molecular fingerprint and (b) a model that computes solvation energy by summing contributions of each atom in a molecule. Boxes represent key computations in a network, and open yellow arrows illustrate how data is passed between them. Orange closed arrows indicate the model outputs that represent molecular fingerprints for (a) and atomic fingerprints for (b).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Histogram of solvation energies, ΔG solv , of all 130,258 molecules in our QM9-solvation dataset in each of the five solvents considered in this work.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. Comparison of the performance of different ML models on predicting the solvation energy in water of 13,026 molecules outside of their training set. Each model was trained on the same 117,232 molecules. From left to right: performance of group contribution model trained using sparse linear regression (LASSO); MPNN performance; and LASSO and MPNN vs training set size. LASSO fails to continue improving in accuracy with training set sizes of &gt;10 4 and is half as accurate as MPNN at training set sizes nearing 10 5 entries.</figDesc><graphic coords="4,60.49,190.72,239.98,83.96" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Predictions of solvation energy as a function of the dielectric constant of a solvent for four solute molecules with different solvation behaviors. Our MPNN model includes the dielectric constant of the solvent as an input feature. It was trained on the solvation energies of 117,232 molecules. The solid blue line is the solvation energy prediction for each molecule from our MPNN. Black circles represent solvents that were included in the training set (left to right: acetone, ethanol, DMSO, and water) and the red square is a solvent withheld from our training set (ACN). (b) Performance of the MPNN model in predicting the solvation energy in DMSO for all 130,258 molecules in our dataset.</figDesc><graphic coords="4,363.36,590.19,99.40,99.40" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Performance of two different MPNN models trained on 117,232 molecules with nine or fewer non-hydrogen atoms on predicting the solvation energy in ACN, DMSO, and water on our validation holdout sets: (a,c) a model which learns the solvation energy from a molecular fingerprint and (b,d) a model which predicts solvation energy by summing over contributions from each atom. (a,b) Histogram of errors in the solvation energy in the ACN solvent for holdout molecules from the QM9 dataset. (c,d) The MAE for molecules from the QM9 holdout set and our larger molecule holdout set binned by the number of non-hydrogen atoms. Error bars represent the standard error of the mean.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 6 .</head><label>6</label><figDesc>Figure 6. Comparison of different domains of applicability metrics: Tanimoto similarity to the 64 most similar molecules in the training set, distance based on the atomic and molecular fingerprints from an MPNN model for solvation energy, and variance in a bootstrap ensemble of 16 models. The performance of each metric was assessed using 13,217 molecules from our holdout set using ACN as a solvent. (a) MAE and normalized applicability metric for molecules divided into 16 bins grouped by each metric. The metrics are normalized by applying a linear transformation such that the 1st and 99th percentiles have values of 0 and 1, respectively. (b) Likelihood of an error greater than 1 kcal/mol for 16 bins of molecules grouped by each metric. The dotted lines between data points are intended to guide the eye. The black dashed lines show the (a) MAE on the entire holdout set and (b) fraction of errors &gt;1 kcal/mol for the holdout set.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>(</head><label></label><figDesc>IMaD): Leverage, Innovate, and Disseminate." Work by B.B. on making ML models available through DLHub was supported in part by Laboratory Directed Research and Development funding from Argonne National Laboratory under U.S. Department of Energy under contract DE-AC02-06CH11357. We also thank the Argonne Leadership Computing Facility for access to the PetrelKube Kubernetes cluster. This research used resources of the Argonne Leadership Computing Facility, a DOE Office of Science User Facility supported under contract DE-AC02-06CH11357.</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1021/acs.jpca.1c01960 J. Phys. Chem. A 2021, 125, 5990-5998 Downloaded via ARGONNE NATL LABORATORY on January 11, 2023 at 16:49:20 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://doi.org/10.1021/acs.jpca.1c01960 J. Phys. Chem. A 2021, 125, 5990-5998</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The authors declare no competing financial interest. The data, models, and code used in this study are freely available via the Materials Data Facility, <ref type="bibr" target="#b48">50,</ref><ref type="bibr" target="#b49">51</ref> DLHub, <ref type="bibr" target="#b23">22,</ref><ref type="bibr" target="#b48">50</ref> and GitHub, respectively. Specifically, we have published our training and test datasets, <ref type="bibr" target="#b22">20</ref> the best trained models (the atomic contribution models with solvent dependence), and the code used for training and testing our ML models. 21 ■ ACKNOWLEDGMENTS L.W., N.D., B.N., R.S.A., P.C.R., and L.A.C. were supported to develop the database and ML algorithms as part of the Joint Center for Energy Storage Research (JCESR), an Energy Innovation Hub funded by the US Department of Energy, Office of Science, Basic Energy Sciences. L.W. and I.F. were supported to perform ML tasks on High-Performance Computing by the DOE Exascale Computing Project, ExaLearn Co-design Center. B.B. and work on making the dataset openly available was performed under financial assistance award 70NANB14H012 from the U.S. Department of Commerce, National Institute of Standards and Technology, as part of the Center for Hierarchical Material Design (CHiMaD). B.B. and I.F. were also supported by the National Science Foundation as part of the Midwest Big Data Hub under NSF award number: 1636950 "BD Spokes: SPOKE: MIDWEST: Collaborative: Integrative Materials Design The Journal of Physical Chemistry A</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1021/acs.jpca.1c01960?rel=cite-as&amp;ref=PDF&amp;jav=VoR</idno>
+		<ptr target="https://doi.org/10.1021/acs.jpca.1c01960" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="5990" to="5998" />
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">■</forename><surname>References</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Accelerating Electrolyte Discovery for Energy Storage with High-Throughput Screening</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Rajput</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jz502319n?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="283" to="291" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Continuum Solvation Models: What Else Can We Learn from Them?</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Mennucci</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jz100506s?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. Lett</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1666" to="1674" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">ZINC 15 -Ligand Discovery for Everyone</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Sterling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Irwin</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jcim.5b00559?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="2324" to="2337" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">IMPECCABLE: Integrated Modeling PipelinE for COVID Cure by Assessing Better LEads</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Saadi</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2010.06574</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Enumeration of 166 Billion Organic Small Molecules in the Chemical Universe Database GDB-17</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ruddigkeit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Van Deursen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Blum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-L</forename><surname>Reymond</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ci300415d?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="2864" to="2875" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Targeting SARS-CoV-2 with AI-and HPCenabled Lead Generation: A First Data Release</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Babuji</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2006.02431</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Quantitative Structure-Property Relationship Modeling of Diverse Materials Properties</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Le</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">C</forename><surname>Epa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Burden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Winkler</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cr200066h?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Rev</title>
+		<imprint>
+			<biblScope unit="volume">112</biblScope>
+			<biblScope unit="page" from="2889" to="2919" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">FreeSolv: A database of experimental and calculated hydration free energies, with input files</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Mobley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Guthrie</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10822-014-9747-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput.-Aided Mol. Des</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="711" to="720" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Chemception: A deep neural network with minimal chemistry knowledge matches the performance of expert-developed QSAR/ QSPR models</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">B</forename><surname>Goh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Siegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vishnu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">O</forename><surname>Hodas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Baker</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:1706.06689</idno>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">MoleculeNet: a benchmark for molecular machine learning</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ramsundar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Feinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Geniesse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Pappu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Leswing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Pande</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c7sc02664a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="513" to="530" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Hydration free energies from kernel-based machine learning: Compound-database bias</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Rauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Bereau</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/5.0012230</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">14101</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Molecular Dynamics Fingerprints (MDFP): Machine Learning from MD Data To Predict Free-Energy Differences</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Riniker</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jcim.6b00778?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="page" from="726" to="741" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Marenich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">D</forename><surname>Hawkins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Chambers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Giesen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Winget</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Cramer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Minnesota Solvation Database</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note>version</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Hybrid QSPR models for the prediction of the free energy of solvation of organic solute/solvent pairs</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">N</forename><surname>Borhani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>García-Munõz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Vanesa Luciani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Galindo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Adjiman</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c8cp07562j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="13706" to="13720" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Multi-solvent models for solvation free energy predictions using 3D-RISM Hydration Thermodynamic Descriptors</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Subramanian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ratkova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Palmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Engkvist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fedorov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Llinas</surname></persName>
+		</author>
+		<idno type="DOI">10.26434/chemrxiv.11791245.v1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="page">2977</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">SchNet -A deep learning architecture for molecules and materials</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Schuẗt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Sauceda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P.-J</forename><surname>Kindermans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tkatchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K.-R</forename><surname>Muller</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5019779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">241722</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Neural message passing for quantum chemistry</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gilmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Schoenholz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">F</forename><surname>Riley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Vinyals</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Dahl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">34th International Conference on Machine Learning</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="2053" to="2070" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">ANI-1: an extensible neural network potential with DFT accuracy at force field computational cost</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Isayev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">E</forename><surname>Roitberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c6sc05720a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page" from="3192" to="3203" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Universal Solvation Model Based on Solute Electron Density and on a Continuum Model of the Solvent Defined by the Bulk Dielectric Constant and Atomic Surface Tensions</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Marenich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Cramer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp810292n?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. B</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="page" from="6378" to="6396" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Dataset: Datasets and Machine Learning Models for Accurate Estimates of Solvation Energy in Multiple Solvents; Materials Data Facility</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dandu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<ptr target="https://petreldata.net/mdf/detail/solv_ml_v1.2.(21)https://github.com/globus-labs/solvation-energy-ml" />
+		<imprint>
+			<date type="published" when="2021-02">2021. Feb 2021</date>
+			<biblScope unit="page">12</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">DLHub: Model and data serving for science</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Babuji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Woodard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tuecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Franklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Parallel and Distributed Processing Symposium</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="283" to="292" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<publisher>Wallingford CT</publisher>
+			<biblScope unit="volume">16</biblScope>
+		</imprint>
+	</monogr>
+	<note>Revision C.01;</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Quantum chemistry structures and properties of 134 kilo molecules</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">O</forename><surname>Dral</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rupp</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Von Lilienfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/sdata.2014.22</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Data</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">140022</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Accurate quantum chemical energies for 133 000 organic molecules</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c9sc02834j</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Sci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="7449" to="7455" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<ptr target="https://petreldata.net/mdf/detail/narayananbadri_g" />
+		<title level="m">Curtiss, L. G4MP2-GDB9 Database</title>
+		<imprint>
+			<date type="published" when="2019">2019. 4mp2gdb9_database_v1</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Quantum-Chemically Informed Machine Learning: Prediction of Energies of Organic Molecules with 10 to 14 Non-hydrogen Atoms</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Dandu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">T</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Curtiss</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpca.0c01777?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="page" from="5804" to="5811" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Thermochemical Data and Structures of Organic Compounds</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pedley</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1994">1994</date>
+			<publisher>CRC Press</publisher>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Graph networks as a universal machine learning framework for molecules and crystals</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b01294?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="3564" to="3572" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Messagepassing neural networks for high-throughput polymer screening</title>
+		<author>
+			<persName><surname>St</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>John</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">W</forename><surname>Kemper</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Guan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Crowley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Nimlos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Larsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Larsen</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5099132</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">234111</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Alchemical and structural distribution based representation for universal quantum machine learning</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Faber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">S</forename><surname>Christensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">A</forename><surname>Von Lilienfeld</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-020-18556-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<editor>
+			<persName><forename type="first">O</forename><surname>Lilienfeld</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">K</forename><surname>Burke</surname></persName>
+		</editor>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">4895</biblScope>
+			<date type="published" when="2018">2018, 148, 241717. 2020</date>
+		</imprint>
+	</monogr>
+	<note>Nat. Commun.</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">970 million druglike small molecules for virtual screening in the chemical universe database GDB-13</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">C</forename><surname>Blum</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J.-L</forename><surname>Reymond</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja902302h?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">131</biblScope>
+			<biblScope unit="page" from="8732" to="8733" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Comparison of Implicit and Explicit Solvent Models for the Calculation of Solvation Free Energy in Organic Solvents</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Van Der Spoel</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jctc.7b00169?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="1034" to="1043" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Are Explicit Solvent Models More Accurate than Implicit Solvent Models? A Case Study on the Menschutkin Reaction</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ho</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpca.9b03995?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="5580" to="5589" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Machine learning prediction of accurate atomization energies of organic molecules from low-fidelity quantum chemical calculations</title>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Shin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Yun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-H</forename><surname>Moon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Narayanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Curtiss</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/mrc.2019.107</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="891" to="899" />
+			<date type="published" when="2013">2013. 2019</date>
+		</imprint>
+	</monogr>
+	<note>RSC Adv</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Prediction of physicochemical parameters by atomic contributions</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Wildman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Crippen</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpca.1c01960?rel=cite-as&amp;ref=PDF&amp;jav=VoR</idno>
+		<ptr target="https://doi.org/10.1021/acs.jpca.1c01960" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="5990" to="5998" />
+			<date type="published" when="1999">1999. 2021</date>
+		</imprint>
+	</monogr>
+	<note>J. Phys. Chem. A</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Regression Shrinkage and Selection Via the Lasso</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tibshirani</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.2517-6161.1996.tb02080.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Roy. Stat. Soc. B</title>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="267" to="288" />
+			<date type="published" when="1996">1996</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Generalized neural-network representation of high-dimensional potential-energy surfaces</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Behler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Parrinello</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevLett.98.146401</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="page">146401</biblScope>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Efficiency of different measures for defining the applicability domain of classification models</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Bartók</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Payne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kondor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Csányi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Klingspohn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mathea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ter Laak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Heinrich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Baumann</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s13321-017-0230-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. Lett</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page">44</biblScope>
+			<date type="published" when="2010">2010. 136403. 2017</date>
+		</imprint>
+	</monogr>
+	<note>J. Cheminf</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Extended-connectivity fingerprints</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Rogers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hahn</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ci100050t?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Inf. Model</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="742" to="754" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">High-dimensional materials and process optimization using datadriven experimental design with well-calibrated uncertainty estimates</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hutchinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Antono</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Paradiso</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Meredig</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40192-017-0098-z</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Integr. Mater. Manuf. Innov</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="207" to="217" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Addressing uncertainty in atomistic machine learning</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Peterson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Christensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Khorshidi</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c7cp00375g</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Chem. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="page" from="10978" to="10985" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Methods for comparing uncertainty quantifications for material property predictions</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Neiswanger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yoon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">W</forename><surname>Ulissi</surname></persName>
+		</author>
+		<idno type="DOI">10.1088/2632-2153/ab7e1a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. learn.: sci. technol</title>
+		<imprint>
+			<date type="published" when="2020">2020, 1, 025006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Machine learning of molecular properties: Locality and active learning</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Gubaev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">V</forename><surname>Podryabinkin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">V</forename><surname>Shapeev</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5005095</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="page">241727</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Active learning in materials science with emphasis on adaptive sampling using uncertainties for targeted design. npj Comput</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41524-019-0153-8</idno>
+		<imprint>
+			<date type="published" when="2019-05-21">2019, 5, 21</date>
+			<publisher>Mater</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Quantum Chemistry-Informed Active Learning to Accelerate the Design and Discovery of Sustainable Energy Storage Materials</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Counihan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rodríguez-López</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c00768?ref=pdf</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">A data ecosystem to support machine learning in materials science</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schwarting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gaff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Pike</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/mrc.2019.118</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="1125" to="1133" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">The Materials Data Facility: Data services to advance materials science research</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Blaiszik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Chard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pruyne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ananthakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tuecke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Foster</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpca.1c01960?rel=cite-as&amp;ref=PDF&amp;jav=VoR</idno>
+		<ptr target="https://doi.org/10.1021/acs.jpca.1c01960" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="5990" to="5998" />
+			<date type="published" when="2016">2016. 2021</date>
+		</imprint>
+	</monogr>
+	<note>JOM</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

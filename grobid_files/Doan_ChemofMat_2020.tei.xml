@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Quantum Chemistry-Informed Active Learning to Accelerate the Design and Discovery of Sustainable Energy Storage Materials</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2020-05-28">May 28, 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Hieu</forename><forename type="middle">A</forename><surname>Doan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Garvit</forename><surname>Agarwal</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Hai</forename><surname>Qian</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Michael</forename><forename type="middle">J</forename><surname>Counihan</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Joaquín</forename><surname>Rodríguez-Loṕez</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jeffrey</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Rajeev</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+						</author>
+						<title level="a" type="main">Quantum Chemistry-Informed Active Learning to Accelerate the Design and Discovery of Sustainable Energy Storage Materials</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-05-28">May 28, 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">553D7CD6FFE2C3F0AC9C3BD2480F7096</idno>
+					<idno type="DOI">10.1021/acs.chemmater.0c00768</idno>
+					<note type="submission">Received: February 21, 2020 Revised: May 28, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.3" ident="GROBID" when="2023-07-26T19:56+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We employed density functional theory (DFT) to compute oxidation potentials of 1400 homobenzylic ether molecules to search for the ideal sustainable redoxmer design. The generated data were used to construct an active learning model based on Bayesian optimization (BO) that targets candidates with desired oxidation potentials utilizing only a minimal number of DFT calculations. The active learning model demonstrated not only significant efficiency improvement over the random selection approach but also robust capability in identifying desired candidates in an untested set of 112 000 homobenzylic ether molecules. Our findings highlight the efficacy of quantum chemistry-informed active learning to accelerate the discovery of materials with desired properties from a vast chemical space.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ INTRODUCTION</head><p>Redox flow batteries (RFBs) are a promising technology for stationary energy storage applications. <ref type="bibr">[1]</ref><ref type="bibr" target="#b5">[2]</ref><ref type="bibr" target="#b6">[3]</ref><ref type="bibr" target="#b7">[4]</ref> Among the technical challenges associated with nonaqueous redox flow batteries (NRFBs) is their inability to achieve both a long calendar life and a long cycle life. Mechanisms of calendar aging mainly involve the formation of passivating films on positive and negative electrodes. <ref type="bibr" target="#b8">5,</ref><ref type="bibr" target="#b9">6</ref> These films interfere with charge transfer processes at the electrolyte/electrode interfaces. <ref type="bibr" target="#b10">7</ref> One likely cause of film formation is the irreversible adsorption of damaged redoxmers. To regenerate electrode interfaces and retain long-lifetime NRFBs, we seek to develop redoxmers that are capable of programmed destruction, thereby providing a means to remove undesirable film deposits. We envisioned a design concept in which redox-active cores are connected to a molecular scaffold via a cleavable tether. By using a redoxtriggered cleavage reaction, the recreation of a pristine interface becomes possible simply by altering the electrode's potential to a value that is outside the battery's normal window of operation.</p><p>Mesolytic cleavage reactions are thermodynamically favorable bond dissociation processes that fragment a molecule into separated radical and ion species following a single electron oxidation or reduction event. <ref type="bibr" target="#b11">8</ref> In the context of designing sustainable NRFBs, we envision the fragmentation process to liberate the damaged redox-active cores allowing the deposited redoxmer to return to solution and restore the electrode surface (Scheme 1). In the literature, many classes of molecular scaffolds such as alkoxyamines, <ref type="bibr" target="#b12">9,</ref><ref type="bibr" target="#b13">10</ref> aromatic disulfides, <ref type="bibr" target="#b14">11</ref> enol carbonates, <ref type="bibr" target="#b15">12</ref> and haloacetonitriles <ref type="bibr" target="#b16">13</ref> have been reported to undergo mesolytic cleavage. Among these, homobenzylic ethers (HBEs) are of practical interest as their mesolytic cleavage properties have been previously utilized for the development and applications of electron-transfer-initiated reactions. <ref type="bibr" target="#b17">14</ref> Therefore, HBE was chosen as the molecular scaffold for mesolytic cleavage motif in this work.</p><p>For a molecule to undergo mesolytic cleavage, it must first be oxidized or reduced. Hence, identifying candidate tether motifs with suitable cleavage potentials is the first important step toward the imagined restoration function. As shown in Figure <ref type="figure" target="#fig_0">1a</ref>, an HBE scaffold with simple functional group variations generates a set of 1400 molecular candidates through systematic enumeration. The experimental investigation of such a vast structural space is impractical, being both time-consuming and expensive. In contrast, accurate quantum mechanical calculations, e.g., density functional theory (DFT), provide an alternative to accelerate the screening process. <ref type="bibr" target="#b18">[15]</ref><ref type="bibr" target="#b19">[16]</ref><ref type="bibr" target="#b20">[17]</ref> Indeed, it has been shown that DFT-computed redox potentials of organic molecules are in good agreement with experimental measurements. <ref type="bibr" target="#b21">[18]</ref><ref type="bibr" target="#b22">[19]</ref><ref type="bibr" target="#b23">[20]</ref> For example, Davis and Fry performed DFT simulations to compute reduction and oxidation potentials for 51 polycyclic aromatic hydrocarbons and showed a mean absolute deviation of 0.056 V compared to the experimental measurememnts. <ref type="bibr" target="#b21">18</ref> As the number of functional groups increases, the number of possible HBEs also grows in a combinatorial fashion. Therefore, even high-throughput computational screening approaches will eventually become intractable. Recently, machine learning (ML) has been successfully applied to predict various materials properties including crystal stability, <ref type="bibr" target="#b24">21,</ref><ref type="bibr" target="#b25">22</ref> diffusion barrier, <ref type="bibr" target="#b26">23</ref> band gap, <ref type="bibr" target="#b27">24,</ref><ref type="bibr" target="#b28">25</ref> melting point, <ref type="bibr" target="#b29">26</ref> superconducting transition temperature, 27 catalytic activity, <ref type="bibr" target="#b31">28,</ref><ref type="bibr" target="#b32">29</ref> and others. <ref type="bibr" target="#b33">30,</ref><ref type="bibr" target="#b34">31</ref> Consequently, ML offers an accelerated approach to materials screening and discovery from extensive molecular libraries. <ref type="bibr" target="#b35">[32]</ref><ref type="bibr" target="#b36">[33]</ref><ref type="bibr" target="#b37">[34]</ref><ref type="bibr" target="#b38">[35]</ref><ref type="bibr" target="#b39">[36]</ref><ref type="bibr" target="#b40">[37]</ref><ref type="bibr">[38]</ref> Compared to physics-based calculations (e.g., DFT), ML models offer a more efficient method for materials exploration of very large search space. <ref type="bibr" target="#b41">39</ref> However, a reliable supervised ML model such as regression often requires a substantial amount of training data, which typically come from expensive simulations or a large number of experiments. Active learning, on the other hand, constructs a self-improving cycle that dynamically queries new data for evaluation to maximize its predictive power. Thus, active learning is most useful when data are scarce or difficult to produce, which is often the case in materials research. Indeed, successful demonstrations of active learning applied to materials discovery have been highlighted across multiple disciplines in the recent literature. <ref type="bibr" target="#b42">[40]</ref><ref type="bibr">[41]</ref><ref type="bibr" target="#b43">[42]</ref><ref type="bibr" target="#b44">[43]</ref><ref type="bibr" target="#b45">[44]</ref><ref type="bibr" target="#b46">[45]</ref><ref type="bibr" target="#b47">[46]</ref> Here, we employed high-throughput DFT calculations and an active learning model based on Bayesian optimization (BO) to screen HBEs for the ideal design of redoxmers capable of programmed destruction. As the first step toward this goal, we aim to develop a computational method to identify HBE tethers that have redox potentials suitable for a particular electrochemical cell that operates using a given pair of half reactions. Specifically, for potential compatibility with catholytes in NRFBs, it is desirable to select HBEs with an oxidation potential (here noted as E ox implying that mesolytic cleavage is initiated by the oxidation of the molecule) between 1.40 and 1.70 V (vs NHE) for two primary reasons. First, many catholytes including dialkoxybenzenes (DMB), <ref type="bibr" target="#b48">47</ref> anthraquinone, <ref type="bibr" target="#b49">48</ref> and 2,2,6,6-tetramethylpiperidin-1-oxyl (TEMPO) <ref type="bibr" target="#b50">49</ref> have oxidation potentials below 1.40 V vs NHE, so they could be cycled without triggering HBE cleavage until the latter is wanted. Second, applying high oxidative potentials past 1.70 V is known to cause a breakdown in typical NRFB electrolytes and solvents, such as acetonitrile, which is used here for the calculation of E ox . With such criteria, we built a library of HBEs and computed their corresponding oxidation potentials. Subsequently, we assessed a Gaussian process regression model for E ox prediction of HBEs as a potential surrogate model for Bayesian optimization. Finally, we developed and evaluated the performance of Bayesian optimization on the DFT-computed data set as well as a previously unseen data set to search for optimal HBE candidates.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ RESULTS AND DISCUSSION</head><p>Library Generation and High-Throughput DFT Simulation. The systematic enumeration of HBEs with various functional groups (Rs) begins with a scaffold in the form of a Simplified Molecular-Input Line-Entry System (SMILES) string, namely,</p><formula xml:id="formula_0">[R3]C1 = CC = C(C([R4])([R5])C([R2])- [O][R1]) C = C1.</formula><p>Then, by substituting the R-designated residues within the scaffold with the appropriate functional groups (also in SMILES format), a total of ca. 1400 unique HBEs were generated (Figure <ref type="figure" target="#fig_0">1a</ref>). Note that this is not an exhaustive collection of such functional groups. This initial set was chosen primarily for their electron-donating and -withdrawing properties, as well as ease of synthesis. Overall, this HBE data set is diverse as the constituent molecules are composed of 10-39 heavy (i.e., non-hydrogen) atoms and five elements: C, H, O, N, and Br. To validate our computational approach, we compared DFT-derived oxidation potentials with cyclic voltammetry measurements for 11 HBE molecules from the data set. The benchmarking results show a mean absolute error of 0.11 V (Figure <ref type="figure" target="#fig_0">S1</ref>), indicating sufficient accuracy of our DFT method in computing oxidation potentials. In order to perform DFT calculations on all generated species, we employed a high-throughput workflow that primarily consists of two steps (Figure <ref type="figure" target="#fig_0">1b</ref>): (1) Conversion of SMILES inputs to three-dimensional structures, of which initial conformations were created at the force-field level (MMFF94) as implemented in the cheminformatics software RDKit. <ref type="bibr" target="#b51">50</ref> (2) Generation and mass submission of simulation input scripts to high-performance computing (HPC) systems for quantum mechanical evaluation. The distribution of the computed E ox for 1400 HBEs is shown in Figure <ref type="figure" target="#fig_0">1c</ref>, with the mean (μ) and standard deviation (σ) of 1.98 and 0.55 V, respectively. According to Figure <ref type="figure" target="#fig_0">1c</ref>, the evaluated HBEs possess a wide E ox window, ranging from 0.50 to 3.50 V. Most importantly, we identified a total of 133 molecules with the desired E ox between 1.40 and 1.70 V (Table <ref type="table" target="#tab_0">S1</ref>), which constitutes ca. 9% of the entire HBE candidate library. From Table <ref type="table" target="#tab_0">S1</ref>, we noted the majority of the identified HBEs possess either a methoxy (64%) or a phenyl functional group (35%) at the para position of the benzene ring in the scaffold (i.e., R 3 = -OMe or -Ph in Figure <ref type="figure" target="#fig_0">1a</ref>). Furthermore, for a randomly selected subset of 10 HBEs, Table <ref type="table">S2</ref> shows the exergonic nature of bond fragmentations upon one-electron oxidation and indicates the presence of mesolytic cleavages among the identified molecules. A more rigorous redox-triggered mesolytic cleavage study employing both computations and experiments will be carried out in the future.</p><p>Feature Generation and Dimensionality Reduction. In order to create an accurate model to predict E ox for HBEs, we utilized an extensive set of physical and chemical descriptors such as molecular weight, topological surface area, number of valence electrons, and number of aromatic rings. A total of 49 such features were generated automatically from SMILES inputs using RDKit and tabulated in Table <ref type="table">S3</ref>. Pearson correlation analysis indicates no single feature among those 49 can reliably capture the trend of computed E ox (Figure <ref type="figure" target="#fig_1">S2</ref> and Table <ref type="table">S3</ref>). Therefore, to extract the key components as well as reduce the dimensionality of our feature vector, we performed principle component analysis (PCA). In PCA, original feature components are combined linearly to create new features called principle components (PCs). These PCs are not only linearly independent but also created in a hierarchical order of their contributions such that the first PC captures the most variability in the data, followed by the second PC and so on. When PCA was performed on our data set, we found that 30 PCs are enough to account for 100% of the variance among all 1400 HBEs (Figure <ref type="figure" target="#fig_2">S3</ref>). Furthermore, since the first 15 PCs already explains 99.7% of the variance, they were chosen as the final feature set that yields a reasonable compromise between accuracy and efficiency. In Figure <ref type="figure" target="#fig_1">2</ref> the distribution of E ox is also plotted against two leading PCs (i.e., PCs that account for the most variance), namely, PC-1 and PC-2. From small HBEs such as (2methoxyethyl) benzene on the far left (1) to large molecules with multiple aromatic rings such as 4-(2-phenoxy-1,1,2triphenylethyl)-1,1′-biphenyl on the far right (6), Figure <ref type="figure" target="#fig_1">2</ref> illustrates the structural and electrochemical diversity of our library of 1400 HBEs.</p><p>Prediction of Oxidation Potentials of Materials Using Gaussian Process Regression. With the 15-PC feature vectors, we built a Gaussian process regression (GPR) model to predict the oxidation potentials <ref type="bibr" target="#b52">51</ref> of HBEs. GPR is a nonparametric (i.e., not limited to a functional form) approach to regression with the ability to provide uncertainty on the predictions. The statistically meaningful predictions are based on a Bayesian framework, wherein a prior Gaussian process is formulated from training data and a covariance (or kernel) function. In this work, we used the Mateŕn kernel, a generalization of the radial basis function, to construct the covariance matrices (see Methods). Two metrics were used to evaluate the performance of the GPR models, namely, root mean squared error (RMSE) and coefficient of determination (R 2 ). Nine models were tested to determine the optimal train/ test ratio, and the resulting learning curve is shown in Figure <ref type="figure" target="#fig_2">3a</ref>. The construction of each model first involves selecting a percentage (between 10% and 90% in our case) of the entire library of HBEs to serve as the training set. Then, the remaining molecules, which have not been seen by the model, are used as the test data set. In addition, a total of 100 runs (each run starting with a random training/test split) were repeated for each model to build a reasonable statistic of the model performance. <ref type="bibr" target="#b53">52</ref> For comparison, similar learning curves using different feature sets are plotted in Figure <ref type="figure" target="#fig_3">S4</ref>, which shows similar accuracy (RMSE &lt; 0.15 V) for models utilizing either 15 PCs, 30 PCs, or 49 original features. Again, this observation confirms the adequacy of our choice of the 15 PCs as descriptors for E ox prediction.</p><p>According to Figure <ref type="figure" target="#fig_2">3a</ref>, we found that increasing the train/ test ratio beyond 60% did not lead to any notable improvement in accuracy. The final regression model, utilizing a train/test ratio of 60%, yields accurate E ox predictions with R 2 = 0.97 and RMSE = 97 mV with respect to DFT-computed values (Figure <ref type="figure" target="#fig_2">3b</ref>). Such excellent predictive power of our GPR model provides us confidence in constructing a Bayesian optimization model to identify HBE candidates with desirable E ox , wherein GPR serves as the surrogate model.</p><p>Bayesian Optimization (BO) for Prediction of Materials with Desirable Oxidation Potentials. The goal of a BO process applied to computational materials screening is to efficiently identify candidates with desired property while requiring only a minimal number of expensive evaluations such as DFT calculations. At the beginning of a typical BO process, a small, randomly selected number of the data points are used to train a surrogate model. Then, based on the predicted mean values and uncertainties obtained from the surrogate model, the acquisition function optimizes the objective function by suggesting the next data point(s) for evaluation. New labeled data are used to improve the surrogate model and complete one BO iteration.  The specific BO process used in the evaluation of 1400 HBEs is shown in Figure <ref type="figure" target="#fig_3">4a</ref>. Initially, we employed 10 randomly chosen HBEs and their corresponding DFTcomputed E ox to train a GPR surrogate model in a similar fashion as the one detailed in the previous section. This GPR model was used to make predictions of E ox for the remaining HBE molecules in the library. Then, the expected improvement (EI) acquisition function utilized both the prediction and the uncertainty to suggest the next best HBE candidate for DFT evaluation. The EI is a widely used state-of-the-art acquisition function that balances between exploitation (following the trend of the current best estimates) and exploration (diversifying the search to avoid local optima).</p><p>Once the E ox value of the new HBE was computed, it was added to the current training data set to retrain the GPR model in the next iteration of the BO loop (Figure <ref type="figure" target="#fig_3">4a</ref>, red). In order to evaluate the performance of BO on our HBE database, we programmed the BO cycle to repeat until a total of 30 molecules with E ox ∈ [1.40 V, 1.70 V] are found. Based on the statistics observed earlier, there is a 9% chance of finding such an HBE molecule. This low probability is reflected by the slope of the blue curve in Figure <ref type="figure" target="#fig_3">4b</ref>, which was constructed by randomly selecting HBEs in the database and recording the number of those with the desired E ox . Indeed, we found that it would take approximately 330 random selections to find 30 desirable HBEs. In comparison, the same number of HBEs were correctly selected within 60 BO evaluations. Since every random selection or BO evaluation requires a DFT calculation, Figure <ref type="figure" target="#fig_3">4b</ref> indicates at least 5-fold improvement in efficiency in identifying appropriate candidates obtained from using BO over the random selection. Similar observation can be seen for the comparison between BO and Latin hypercube sampling (Figure <ref type="figure">S6</ref>).</p><p>We further examined the generalizability of the BO process by applying it to a significantly larger, previously unseen data set of approximately 112 000 HBEs. This new data set was created by incorporating a wider range of R-designated residues to the HBE scaffold (Table <ref type="table">S4</ref>). We conducted two independent BO runs, BO1 and BO2, each with an initial training set of 10 randomly chosen HBEs and set the maximum number of HBEs to evaluate to 40. With this setup, both BO runs successfully discovered a number of HBE molecules with the desired E ox (26 in BO1 and 16 in BO2), and the evaluation progress of BO1 is shown in Figure <ref type="figure" target="#fig_4">5</ref>. It can be seen that, after an initial exploration within the first 15 steps, BO1's predictive capability starts improving significantly as the gap between the predicted and DFT-computed values decreases rapidly. Table <ref type="table" target="#tab_0">1</ref> shows several HBE candidates discovered by BO1 and their corresponding R-designated residue identities. Interestingly, we notice that BO1 consistently identifies desired HBEs with either a propoxy or isopropoxy functional group at the R 3 position with respect to the scaffold (i.e., R 3 = -OPr or -OiPr) within 40 BO evaluations. Similarly, we identified 16 HBE molecules from BO2. These structural patterns, together with those found previously in the 133 molecules identified from the 1400 data set, suggests the presence of electron donating groups such as alkoxy and phenyl at the para position for designing HBEs with oxidation potential window of [1.40 V, 1.70 V vs NHE]. We note that a complete list of HBE candidates predicted by BO1 and BO2 is provided in Tables <ref type="table">S5</ref> and<ref type="table">S6</ref>, respectively. In summary, we demonstrated that BO coupled with DFT is a robust and efficient method for identifying molecules with desirable properties from large databases.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ CONCLUSIONS</head><p>We conducted high-throughput density functional theory (DFT) simulations to compute oxidation potentials (E ox ) values for 1400 homobenzylic ether (HBE) molecules, to program redoxmer destruction via a mesolytic cleavage reaction. We identified a small percentage, ca. 9%, of these HBEs to possess E ox in the ideal window of [1.40 V, 1.70 V, vs NHE]. Based on the performance of an initial Gaussian process regression (GPR) model for E ox prediction, we implemented an active learning framework based on Bayesian optimization (BO) for efficient identification of desired HBEs. The BO not only determined the ideal HBEs correctly but also demonstrated more than 5-fold improvement in computational efficiency compared to the random selection. When BO was further applied to a previously unseen data set of 112 000 HBEs, it successfully identified 42 optimal HBE candidates after evaluating only 100 molecules. Moreover, BO's ability to uncover potential structural patterns that lead to desired properties may help us recognize important underlying structure-property relations. The use of active learning to efficiently guide high-throughput quantum mechanical simulations provides an accelerated practice to identify candidate components suitable for testing design concepts in the discovery of new materials.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ METHODS</head><p>Density Functional Theory (DFT). All DFT calculations for neutral and oxidized HBE molecules were performed using the B3LYP/6-31+G(d,p) <ref type="bibr" target="#b54">53</ref> level of theory as implemented in Gaussian 16, Revision A.03. <ref type="bibr" target="#b55">54</ref> To account for the free energies of solvation in acetonitrile solvent (ϵ = 37.5), self-consistent reaction-field (SCRF) calculations using the conductor-like polarizable continuum model (CPCM) <ref type="bibr" target="#b56">55,</ref><ref type="bibr" target="#b57">56</ref> were employed. Numerical integrations were carried using an ultrafine grid. The oxidation potentials, E ox , were computed from the Gibbs free energy change at 298 K (ΔG ox ) for the elimination of an electron from the species of interest (ΔG ox = G oxidized -G neutral ), using the equation: 57</p><formula xml:id="formula_1">= Δ - E G n F / NHE ox ox</formula><p>(1) where n is the number of electrons, F is the Faraday constant, and NHE is the absolute potential of the normal hydrogen electrode, 4.28 V. <ref type="bibr" target="#b59">58</ref> Gaussian Process Regression (GPR). All GPR models was built with the Scikit-learn machine learning package. <ref type="bibr" target="#b60">59</ref> The predicted mean, μ * , and variance, Σ * , are given as</p><formula xml:id="formula_2">μ * = * - K K y T y 1<label>(2)</label></formula><formula xml:id="formula_3">Σ * = ** -* * * - K K K K T 1<label>(3)</label></formula><p>where y is the labeled property of the train set and K = k(X, X), K * = k(X, X * ), and K ** = k(X * , X * ). X and X * are the feature matrix of the train and test set, respectively. If x and x′ represent the feature vectors, then their covariance function k(x, x′), based on the Mateŕn kernel (ν = 1.5), <ref type="bibr" target="#b61">60</ref> is expressed as the followings</p><formula xml:id="formula_4">σ σ σ ′ = + -′ - -′ + i k j j j j j y { z z z z z i k j j j j j y { z z z z z k x x x x x x ( , ) 1 3 exp 3 l l n 2<label>(4)</label></formula><p>where σ l and σ n are length scale and the expected noise level of the data, respectively. These hyperparameters were determined using the maximum likelihood estimation during the training of our models.</p><p>Expected Improvement (EI) Acquisition Function. The equation for computing EI is as follows:  </p><formula xml:id="formula_5">μ σ = - -ϵ + Z f x x x ( ) ( ) ( )<label>(6)</label></formula><p>where μ(x) and σ(x) are the predicted mean and standard deviation from the GPR model, f(x). Φ(Z) is the cumulative density function (CDF), and ϕ(Z) is the probability density function (PDF). f(x + ) is the property of the best material so far, and x + is the feature vector of that material. The parameter ϵ in eq 6 determines the amount of exploration during optimization, and we used a constant value of 0.01 as this yields the optimal trade-off between exploration and exploitation in our data set (Figure <ref type="figure" target="#fig_4">S5</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ASSOCIATED CONTENT</head><p>* sı Supporting Information</p><p>The Supporting Information is available free of charge at https://pubs.acs.org/doi/ The HBE entry numbers (#) are shown in Figure <ref type="figure" target="#fig_4">5</ref>. A complete set of molecules identified from BO1 is given in Table <ref type="table">S5</ref> of the Supporting Information. The R i (i = 1 to 5) are substituent groups of the HBE scaffold in Figure <ref type="figure" target="#fig_0">1a</ref>. The substituent groups are Ph, phenyl; Et, ethyl; OMe, methoxy; iPr, isopropyl; OPr, propoxy; EtOMe, methoxy ethyl; Pr, propyl.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Scheme 1 .</head><label>1</label><figDesc>Scheme 1. Strategy for Regenerating Active Redoxmer at the Electrolyte/Electrode Interface via Incorporating Programmable Mesolytic Cleavage Motifs</figDesc><graphic coords="2,151.31,96.21,322.30,159.08" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Graphical illustration of the chemical space of 1400 HBEs and their computed oxidation potentials (E ox ). PC-1 and PC-2 represent principle components 1 and 2, respectively.</figDesc><graphic coords="3,159.93,69.17,305.01,207.10" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Prediction accuracy of GPR models evaluated at different train set sizes, averaged over 100 runs. (b) Parity plot obtained from the model using a train/test ratio of 60%. In both plots, the error bars indicate one standard deviation.</figDesc><graphic coords="4,111.12,69.17,402.69,152.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Schematic representation of Bayesian optimization-guided computational workflow for identifying HBEs with desired oxidation potentials (E ox ). PCs, μ, and Σ are principle components, mean, and variance, respectively. (b) Comparison of computational efficiency between Bayesian optimization (red) and random selection (blue). The error bars denote one standard deviation from 100 repeated runs.</figDesc><graphic coords="4,64.18,263.23,496.52,136.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. Predicted (blue) and DFT-computed (red) oxidation potentials (E ox ) of 40 suggested candidates from a 112 000 HBE data set by BO1. The black dashed lines indicate the desired E ox range (1.40 V-1.70 V). The initial training set consists of 10 randomly selected HBEs.</figDesc><graphic coords="5,327.23,69.17,234.43,162.43" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>46</head><label>46</label><figDesc></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>10.1021/acs.chemmater.0c00768. Examples of Desired HBEs Identified Using Bayesian Optimization (Denoted as BO1 above) and DFT-Computed Oxidation Potential (E ox in Volts vs NHE) a</figDesc><table><row><cell>Homobenzylic ether data sets, principle component</cell></row><row><cell>analysis, and Gaussian process regression learning curves</cell></row><row><cell>(PDF)</cell></row><row><cell>■ AUTHOR INFORMATION Corresponding Author</cell></row><row><cell>Rajeev S. Assary -Materials Science Division and Joint Center</cell></row><row><cell>for Energy Storage Research, Argonne National Laboratory,</cell></row><row><cell>Lemont, Illinois 60439, United States; orcid.org/0000-</cell></row><row><cell>0002-9571-3307; Phone: 630-252-3536; Email: assary@</cell></row><row><cell>anl.gov</cell></row></table><note><p>Authors Hieu A. Doan -Materials Science Division and Joint Center for Energy Storage Research, Argonne National Laboratory, Lemont, Illinois 60439, United States</p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Downloaded via ARGONNE NATL LABORATORY on January 11, 2023 at 16:51:19 (UTC).See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p>https://dx.doi.org/10.1021/acs.chemmater.0c00768Chem. Mater. 2020, 32, 6338-6346</p></note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author Contributions</head><p>The manuscript was written through contributions of all authors. All authors have given approval to the final version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Notes</head><p>The authors declare no competing financial interest. Gaussian process regression and Bayesian optimization codes used in this work can be found on Github at https://github. com/hieuadoan/QM-ActiveLearning-Paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>■ ACKNOWLEDGMENTS</head><p>This work was supported as part of the Joint Center for Energy Storage Research, an Energy Innovation Hub funded by the U.S. Department of Energy, Office of Science, Basic Energy Sciences. We gratefully acknowledge the computing resources provided on "Bebop", a 1024-node computing cluster operated by the Laboratory Computing Resource Center at Argonne National Laboratory. We also thank Dr. Pankaj Rajak for the valuable discussions on Bayesian optimization.</p><p>■ ABBREVIATIONS HBE, homobenzylic ether; DFT, density functional theory; ML, machine learning; PCA, principle component analysis; PCs, principle components; BO, Bayesian optimization</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title/>
+		<idno type="DOI">10.1021/acs.chemmater.0c00768?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.chemmater.0c00768" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">J</forename><surname>Michael</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Counihan</surname></persName>
+		</author>
+		<idno>orcid.org/0000-0003-4346- 4668</idno>
+		<imprint>
+			<biblScope unit="volume">60439</biblScope>
+			<pubPlace>Urbana, Illinois 61801, United States; Lemont, Illinois; Urbana, Illinois 61801, United States; Lemont, Illinois 60439, United States</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>The Beckman Institute for Advanced Science and Technology and Department of Chemistry, University of Illinois at Urbana-Champaign ; Joint Center for Energy Storage Research, Argonne National Laboratory ; United States Joaquín Rodríguez-Loṕez -The Beckman Institute for Advanced Science and Technology and Department of Chemistry, University of Illinois at Urbana-Champaign ; Joint Center for Energy Storage Research, Argonne National Laboratory</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><forename type="middle">S</forename><surname>Moore</surname></persName>
+		</author>
+		<idno>orcid.org/0000-0001-5841-6269</idno>
+		<imprint>
+			<pubPlace>Urbana, Illinois 61801, United States; Lemont, Illinois 60439, United States</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>The Beckman Institute for Advanced Science and Technology, Department of Chemistry, and Department of Materials Science and Engineering, University of Illinois at Urbana-Champaign ; Joint Center for Energy Storage Research, Argonne National Laboratory</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">■ REFERENCES (1) Department of Energy (DOE)</title>
+		<idno type="DOI">10.1021/acs.chemmater.0c00768?ref=pdf</idno>
+		<ptr target="https://pubs.acs.org/10.1021/acs.chemmater.0c00768" />
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page">51</biblScope>
+		</imprint>
+	</monogr>
+	<note>Solving Challenges in Energy Storage</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Recent Advances in Molecular Engineering of Redox Active Organic Molecules for Nonaqueous Flow Batteries</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Milshtein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Brushett</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.coche.2016.08.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Chem. Eng</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page" from="45" to="52" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adfm.201200694</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Z. Recent Progress in Redox Flow Battery Research and Development</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="970" to="986" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note>Adv. Funct. Mater</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Molecular Engineering of Organic Electroactive Materials for Redox Flow Batteries</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Yu</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C7CS00569E</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Soc. Rev</title>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="69" to="103" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Radical Compatibility with Nonaqueous Electrolytes and Its Impact on an All-Organic Redox Flow Battery</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Walter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lawrence</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vijayakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Henderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cosimbescu</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.201501443</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">30</biblScope>
+			<biblScope unit="page" from="8684" to="8687" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Extending the Lifetime of Organic Flow Batteries via Redox State Management</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Goulet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Tong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Pollack</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Tabor</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Odom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Kwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Gordon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Aziz</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jacs.8b13295</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="page" from="8" to="13" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">The Lightest Organic Radical Cation for Charge Storage in</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Assary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Su</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">R</forename><surname>Brushett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Ferrandon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep32102</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Redox Flow Batteries. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2016-06">2016. June</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Mesolytic Cleavage of C-C Bonds. Comparison with Homolytic and Heterolytic Processes in the Same Substrate</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Maslak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Narvaez</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.199002831</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed. Engl</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="283" to="285" />
+			<date type="published" when="1990">1990</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Synthesis of N-Alkoxy Amines via Catalytic Oxidation of Hydrocarbons</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kirner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schwarzenbach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Van Der Schaaf</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hafner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Rast</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Nesvadba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rist</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adsc.200303194</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Synth. Catal</title>
+		<imprint>
+			<biblScope unit="volume">346</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="554" to="560" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Catalytic Carbocation Generation Enabled by the Mesolytic Cleavage of Alkoxyamine Radical Cations</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">C</forename><surname>Gentry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Knowles</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/anie.201604619</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Angew. Chem., Int. Ed</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">34</biblScope>
+			<biblScope unit="page" from="9969" to="9973" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Formation and Cleavage of Aromatic Disulfide Radical Anions</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Antonello</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Daasbjerg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Taddei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Maran</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja036380g</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="issue">48</biblScope>
+			<biblScope unit="page" from="14905" to="14916" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Radical Cation Ester Cleavage in Solution. Mechanism of the Mesolytic O-CO Bond Scission</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schmittel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Haeuseler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Trenkle</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jo0057093</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Org. Chem</title>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="3265" to="3276" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Dissociative Electron Transfer to Haloacetonitriles. An Example of the Dependency of in-Cage Ion-Radical Interactions upon the Leaving Group</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cardinale</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Isse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gennaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Saveánt</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ja0275212</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Am. Chem. Soc</title>
+		<imprint>
+			<biblScope unit="volume">124</biblScope>
+			<biblScope unit="issue">45</biblScope>
+			<biblScope unit="page" from="13533" to="13539" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Development and Applications of Electron-Transfer-Initiated Cyclization Reactions</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Floreancig</surname></persName>
+		</author>
+		<idno type="DOI">10.1055/s-2007-968021</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Synlett</title>
+		<imprint>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="191" to="0203" />
+			<date type="published" when="2007">2007. 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Data-Driven Discovery of Full-Visible-Spectrum Phosphor</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Amachraa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">T</forename><surname>Hung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b02505</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">16</biblScope>
+			<biblScope unit="page" from="6286" to="6294" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Assessing High-Throughput Descriptors for Prediction of Transparent Conductors</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Woods-Robinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Broberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Faghaninia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Dwaraknath</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b03529</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page" from="8375" to="8389" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">High-Throughput Computational Study of Halide Double Perovskite Inorganic Compounds</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">T</forename><surname>Teng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Harikesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ghosh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Huck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Persson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mathews</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Mhaisalkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Sherburne</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.9b00116</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="5392" to="5401" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Experimental and Computed Absolute Redox Potentials of Polycyclic Aromatic Hydrocarbons Are Highly Linearly Correlated over a Wide Range of Structures and Potentials</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Davis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Fry</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp106088n</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="issue">46</biblScope>
+			<biblScope unit="page" from="12299" to="12304" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Determination of the Oxidation Potentials of Organic Benzene Derivatives: Theory and Experiment</title>
+		<author>
+			<persName><forename type="first">Y</forename><forename type="middle">K</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0009-2614(02)01857-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Phys. Lett</title>
+		<imprint>
+			<biblScope unit="volume">368</biblScope>
+			<biblScope unit="issue">5-6</biblScope>
+			<biblScope unit="page" from="601" to="608" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Computing Redox Potentials in Solution: Density Functional Theory as a Tool for Rational Design of Redox Agents</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Baik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Friesner</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp025853n</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="issue">32</biblScope>
+			<biblScope unit="page" from="7407" to="7412" />
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">New Tolerance Factor to Predict the Stability of Perovskite Oxides and Halides</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Bartel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">R</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Musgrave</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Ghiringhelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Scheffler</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/sciadv.aav0693</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Adv</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">693</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Deep Neural Networks for Accurate Predictions of Crystal Stability</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">H</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41467-018-06322-x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">2018</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="6" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">An Efficient Rule-Based Screening Approach for Discovering Fast Lithium Ion Conductors Using Density Functional Theory and Artificial Neural Networks</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jalem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Nakayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Kasuga</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/C3TA13235H</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Mater. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">2014</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="720" to="734" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Prediction Model of Band Gap for Inorganic Compounds by Combination of Density Functional Theory Calculations and Machine Learning Techniques</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Seko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Shitara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nakayama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Tanaka</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevB.93.115104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Rev. B: Condens. Matter Mater. Phys</title>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Multi-Fidelity Machine Learning Models for Accurate Bandgap Predictions of Solids</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Gubernatis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.commatsci.2016.12.004</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="page" from="156" to="163" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Using Support Vector Regression for the Prediction of the Band Gap and Melting Point of Binary and Ternary Compound Semiconductors</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Bao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.solidstatesciences.2005.10.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Solid State Sci</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="129" to="136" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Prediction of Superconducting Transition Temperatures for Fe-Based Superconductors Using Support Vector Machine</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">O</forename><surname>Owolabi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">O</forename><surname>Akande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">O</forename><surname>Olatunji</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Phys. Theor. Appl</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="12" to="26" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Extrapolating Energetics on Clusters and Single-Crystal Surfaces to Nanoparticles by Machine-Learning Scheme</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jinnouchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hirata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Asahi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.7b08686</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">47</biblScope>
+			<biblScope unit="page" from="26397" to="26405" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Prediction of Adsorption Energies for Chemical Species on Metal Catalyst Surfaces Using Machine Learning</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Mamun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Heyden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Terejanu</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.8b09284</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">49</biblScope>
+			<biblScope unit="page" from="28142" to="28150" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Computational Surface Chemistry of Tetrahedral Amorphous Carbon by Combining Machine Learning and Density Functional Theory</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">L</forename><surname>Deringer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Caro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Jana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aarva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">R</forename><surname>Elliott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Laurila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Csańyi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pastewka</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b02410</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="7438" to="7445" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Using Machine Learning to Identify Factors That Govern Amorphization of Irradiated Pyrochlores</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">R</forename><surname>Whittle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Grimes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Stanek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">E</forename><surname>Sickafus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename><surname>Uberuaga</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.6b04666</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="2574" to="2583" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">From Organized High-Throughput Data to Phenomenological Theory Using Machine Learning: The Example of Dielectric Breakdown</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.5b04109</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Mater</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1304" to="1311" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Design of Efficient Molecular Organic Light-Emitting Diodes by a High-Throughput Virtual Screening and Experimental Approach</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Goḿez-Bombarelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Aguilera-Iparraguirre</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Hirzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Duvenaud</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Maclaurin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Blood-Forsythe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">S</forename><surname>Chae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Einzinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Ha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Wu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nmat4717</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Mater</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="1120" to="1127" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Accelerated Discovery of Metallic Glasses through Iteration of Machine Learning and High-Throughput Experiments</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">J</forename><surname>Laws</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wolverton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hattrick-Simpers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mehta</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/sciadv.aaq1566</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Sci. Adv</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">1566</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Sendek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Cubuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Antoniuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Cheon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Reed</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.8b03272</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Machine Learning-Assisted Discovery of Solid Li-Ion Conducting Materials</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="342" to="352" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Screening Billions of Candidates for Solid Lithium-Ion Conductors: A Transfer Learning Approach for Small Data</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">D</forename><surname>Cubuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">D</forename><surname>Sendek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Reed</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.5093220</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Phys</title>
+		<imprint>
+			<biblScope unit="volume">2019</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page">214701</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Machine Learning Enabled Computational Screening of Inorganic Solid Electrolytes for Suppression of Dendrite Formation in Lithium Metal Anodes</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Ahmad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Maheshwari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Grossman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Viswanathan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hautier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Fischer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jain</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ceder</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/cm100795d</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Cent. Sci</title>
+		<imprint>
+			<biblScope unit="volume">2018</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="3762" to="3767" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note>Chem. Mater.</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Ong</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/aenm.201903242</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Critical Review of Machine Learning of Energy Materials. Adv. Energy Mater</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<date type="published" when="2020">2020. 1903242</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Multi-Objective Optimization for Materials Discovery via Adaptive Design</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Gopakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Gubernatis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mannodi-Kanakkithodi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Pilania</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Huan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep20952</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Machine Learning Strategy for Accelerated Design of Polymer Dielectrics. Sci. Rep</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="12" />
+			<date type="published" when="2016">2018. 2016, 6, 20952</date>
+		</imprint>
+	</monogr>
+	<note>Sci. Rep</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Active Learning in Materials Science with Emphasis on Adaptive Sampling Using Uncertainties for Targeted Design. npj Comput. Mater</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41524-019-0153-8?ref=pdf</idno>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">5</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Accelerated Search for Materials with Targeted Properties by Adaptive Design</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hogden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Theiler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms11241</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Accelerated Discovery of Large Electrostrains in BaTiO3-Based Piezoelectrics Using Active Learning</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">V</forename><surname>Balachandran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Lookman</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201702884</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">1702884</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Active-Learning and Materials Design: The Example of High Glass Transition Temperature Polymers</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Chandrasekaran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<idno type="DOI">10.1557/mrc.2019.78</idno>
+	</analytic>
+	<monogr>
+		<title level="j">MRS Commun</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page">860</biblScope>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bassman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rajak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">K</forename><surname>Kalia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nakano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Sha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Aykol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Huck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Persson</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41524-018-0129-0</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Active Learning for Accelerated Design of Layered Materials. npj Comput. Mater</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">74</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">On Transferability of Performance Metrics for Redox-Active Molecules</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Silcox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">A</forename><surname>Shkrob</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Thompson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jpcc.9b02230</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. C</title>
+		<imprint>
+			<biblScope unit="issue">27</biblScope>
+			<biblScope unit="page" from="16516" to="16524" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Anthraquinone with Tailored Structure for a Nonaqueous Metal-Organic Redox Flow Battery</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cosimbescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="DOI">10.1039/c2cc32466k</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Chem. Commun</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="issue">53</biblScope>
+			<biblScope unit="page" from="6669" to="6671" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">TEMPO-Based Catholyte for High-Energy Density Nonaqueous Redox Flow Batteries</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vijayakumar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Cosimbescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Sprenkle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/adma.201403746</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Adv. Mater</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">45</biblScope>
+			<biblScope unit="page" from="7649" to="7653" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Landrum</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Rdkit</surname></persName>
+		</author>
+		<title level="m">Open-Source Cheminformatics Software</title>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">A Mixed Quantum Chemistry/Machine Learning Approach for the Fast and Accurate Prediction of Biochemical Redox Potentials and Its Large-Scale Application to 315000 Redox Reactions</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Jinich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sanchez-Lengeling</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Harman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Aspuru-Guzik</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acscentsci.9b00297</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACS Cent. Sci</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page" from="1199" to="1210" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Machine Learning Models for the Lattice Thermal Conductivity Prediction of Inorganic Materials</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Batra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Ramprasad</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.commatsci.2019.109155</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Mater. Sci</title>
+		<imprint>
+			<biblScope unit="volume">170</biblScope>
+			<biblScope unit="page">109155</biblScope>
+			<date type="published" when="2019-07">2019. July</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">6-31G* Basis Set for Third-Row Atoms</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">A</forename><surname>Rassolov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Ratner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Pople</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">C</forename><surname>Redfern</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.1058</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="976" to="984" />
+			<date type="published" when="2001">2001</date>
+			<pubPlace>Curtiss, L. A.</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Frisch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">W</forename><surname>Trucks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">B</forename><surname>Schlegel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Scuseria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">A</forename><surname>Robb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Cheeseman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Petersson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nakatsuji</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Gaussian</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<date type="published" when="2016">2016</date>
+			<publisher>Gaussian, Inc</publisher>
+			<pubPlace>Wallingford, CT</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Quantum Calculation of Molecular Energies and Energy Gradients in Solution by a Conductor Solvent Model</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/jp9716997</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Phys. Chem. A</title>
+		<imprint>
+			<biblScope unit="volume">102</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1995" to="2001" />
+			<date type="published" when="1998">1998</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Energies, Structures, and Electronic Properties of Molecules in Solution with the C-PCM Solvation Model</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Rega</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Scalmani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Barone</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/jcc.10189</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comput. Chem</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="669" to="681" />
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Critical Evaluation of Implicit Solvent Models for Predicting Aqueous Oxidation Potentials of Neutral Organic Compounds</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Guerard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Arey</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/ct4004433</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Theory Comput</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="5046" to="5058" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Molecular Modeling of Environmentally Important Processes: Reduction Potentials</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Truhlar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Cramer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Lewis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Bumpus</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c00768?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.chemmater.0c00768" />
+	</analytic>
+	<monogr>
+		<title level="j">J. Chem. Educ</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+			<date type="published" when="2004">2004. 2020</date>
+		</imprint>
+	</monogr>
+	<note>Chem. Mater.</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">G</forename><surname>Varoquaux</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Buitinck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Louppe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Grisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pedregosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Mueller</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Scikit-Learn</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/2786984.2786995</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Get Mobile Mob. Comput. Commun</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="29" to="33" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Rasmussen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">K I</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.chemmater.0c00768?ref=pdf</idno>
+		<ptr target="https://dx.doi.org/10.1021/acs.chemmater.0c00768" />
+	</analytic>
+	<monogr>
+		<title level="m">Gaussian Processes for Machine Learning</title>
+		<imprint>
+			<publisher>The MIT Press</publisher>
+			<date type="published" when="2006">2006. 2020</date>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="6338" to="6346" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -27,7 +27,7 @@ def load_docs(data_dir):
     documents = []
     documents.extend(text_loader.load())
     
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=30)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     chunked_documents = text_splitter.split_documents(documents)
     
     return chunked_documents
