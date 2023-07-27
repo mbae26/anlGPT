@@ -32,7 +32,7 @@ def load_docs(data_dir):
 
 def chatbot(question):
     prompt = PromptTemplate(
-        input_variables=['question'],
+        input_variables=['question', 'context'],
         template=model_const.TEMPLATE,
     )
     question_generator = LLMChain(llm=llm, prompt=prompt) 
@@ -44,12 +44,12 @@ def chatbot(question):
     # skip if input is empty
     if question == '':
         return
-    retriever = db.as_retriever()
-    retriever.search_kwargs = {'k': 4}
+    # retriever = db.as_retriever(search_kwargs={'k': 4})
+    # # retriever.search_kwargs = {'k': 4}
     chain = ConversationalRetrievalChain(
-        retriever=db.as_retriever(),
+        retriever=db.as_retriever(search_kwargs={'k': 4}),
         question_generator=question_generator,
-        combine_docs_chain=doc_chain
+        combine_docs_chain=doc_chain,
     )
     response = chain({"question": question, "chat_history": chat_history})
     # Add response to chat history
