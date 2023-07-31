@@ -1,6 +1,6 @@
 import os
 import sys
-import model_const
+import constants
 import openai
 from dotenv import load_dotenv
 from langchain.embeddings import OpenAIEmbeddings
@@ -41,7 +41,7 @@ def print_sources(response):
 def chatbot(question):
     llm = ChatOpenAI(model_name="gpt-4", temperature=0)
     
-    QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"], template=model_const.QA_TEMPLATE)
+    QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"], template=constants.QA_TEMPLATE)
     
     qa_chain = RetrievalQA.from_chain_type(llm, "stuff", retriever=vectordb.as_retriever(search_kwargs={'k': 5}), chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}, return_source_documents=True)
     

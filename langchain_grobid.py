@@ -1,6 +1,6 @@
 import os
 import sys
-import model_const
+import constants
 import openai
 from dotenv import load_dotenv
 from langchain.embeddings import OpenAIEmbeddings
@@ -12,6 +12,7 @@ from langchain.chains import ConversationalRetrievalChain, LLMChain
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains.qa_with_sources import load_qa_with_sources_chain
+from langchain.retrievers.document_compressors import EmbeddingsFilter
 
 load_dotenv()
 api = os.getenv('OPEN_AI_KEY')
@@ -25,16 +26,22 @@ def load_docs(data_dir):
         if file.endswith(".xml"):
             loader = UnstructuredXMLLoader(os.path.join(data_dir, file))
             documents.extend(loader.load())
-    
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     chunked_documents = text_splitter.split_documents(documents)
     return chunked_documents
 
 def chatbot(question):
     prompt = PromptTemplate(
-        input_variables=['question', 'context'],
-        template=model_const.TEMPLATE,
+        input_variables=['question'],
+        template=constants.TEMPLATE,
     )
+    
+    # embeddings_filter = EmbeddingsFilter(embeddings=embeddings, similarity_threshold=0.76)
+    # compression_retriever = ContextualCompressionRetriever(base_compressor=embeddings_filter, base_retriever=retriever)
+
+    # compressed_docs = compression_retriever.get_relevant_documents("What did the president say about Ketanji Jackson Brown")
+    # pretty_print_docs(compressed_docs)
+    
     question_generator = LLMChain(llm=llm, prompt=prompt) 
     doc_chain = load_qa_with_sources_chain(llm, chain_type="stuff")
     # stop if input is exit, quit, q, or f
@@ -44,8 +51,6 @@ def chatbot(question):
     # skip if input is empty
     if question == '':
         return
-    # retriever = db.as_retriever(search_kwargs={'k': 4})
-    # # retriever.search_kwargs = {'k': 4}
     chain = ConversationalRetrievalChain(
         retriever=db.as_retriever(search_kwargs={'k': 4}),
         question_generator=question_generator,

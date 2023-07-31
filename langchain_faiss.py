@@ -1,6 +1,6 @@
 import os
 import sys
-import model_const
+import constants
 import openai
 from dotenv import load_dotenv
 from langchain.embeddings import OpenAIEmbeddings
@@ -33,7 +33,7 @@ def chatbot(question):
     llm = ChatOpenAI(model_name="gpt-4", temperature=0)
     prompt = PromptTemplate(
         input_variables=['question'],
-        template=model_const.TEMPLATE,
+        template=constants.TEMPLATE,
     )
     question_generator = LLMChain(llm=llm, prompt=prompt) 
     doc_chain = load_qa_with_sources_chain(llm, chain_type="stuff")
