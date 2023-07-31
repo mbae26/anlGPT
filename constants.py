@@ -1,4 +1,8 @@
+ROOT_DIRECTORY = "/Users/minseokbae/ANL/gpt3_finetune"
+# Default Instructor Model
 EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"
+# Smaller instructor model 
+# EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2" 
 
 TEMPLATE = """
 You are an AI chatbot specialized in answering questions about material science and related topics. 
