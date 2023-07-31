@@ -4,6 +4,7 @@ import constants
 
 import click
 import torch
+import chromadb
 from langchain.docstore.document import Document
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -13,11 +14,7 @@ from chromadb.config import Settings
 
 SOURCE_DIRECTORY = f"{constants.ROOT_DIRECTORY}/data/grobid_files"
 PERSIST_DIRECTORY = f"{constants.ROOT_DIRECTORY}/DB"
-
-# Define Chroma Setting
-CHROMA_SETTINGS = Settings(
-    chroma_db_impl="duckdb+parquet", persist_directory=PERSIST_DIRECTORY, anonymized_telemetry=False
-)
+client = chromadb.PersistentClient(path=PERSIST_DIRECTORY)
 
 def split_documents(documents: list[Document]) -> list[Document]:
     # split documents into chunks 
@@ -57,15 +54,15 @@ def main(device_type):
     # Create embeddings
     embeddings = HuggingFaceInstructEmbeddings(
         model_name=constants.EMBEDDING_MODEL_NAME,
-        device_type=device_type,
     )
     
     # Create vector store (Chroma)
     db = Chroma.from_documents(
         text_documents, 
         embeddings,
+        client=client,
+        collection_name="instructor_embeddings",
         persist_directory=PERSIST_DIRECTORY,
-        client_settings=CHROMA_SETTINGS,
     )
     db.persist()
     db = None
