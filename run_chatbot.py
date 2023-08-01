@@ -9,8 +9,10 @@ from huggingface_hub import hf_hub_download
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.llms import HuggingFacePipeline, LlamaCpp
+from langchain import PromptTemplate
 
 from langchain.vectorstores import Chroma
+from langchain.llms import CTransformers
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -19,10 +21,18 @@ from transformers import (
     LlamaTokenizer,
     pipeline,
 )
-SOURCE_DIRECTORY = f"{constants.ROOT_DIRECTORY}/data/grobid_files"
 PERSIST_DIRECTORY = f"{constants.ROOT_DIRECTORY}/DB"
 client = chromadb.PersistentClient(path=PERSIST_DIRECTORY)
 
+def set_qa_prompt():
+    """
+    Define prompt template for QA
+    """
+    prompt = PromptTemplate(
+        template=constants.QA_TEMPLATE,
+        input_variables=["context", "question"],
+    )
+    return prompt
 
 def load_model(device_type, model_id, model_basename=None):
     """
@@ -143,26 +153,41 @@ def main(device_type, show_sources):
     logging.info(f"Showing sources: {show_sources}...")
     
     # load embedding model
-    embeddings = HuggingFaceInstructEmbeddings(model_name=constants.EMBEDDING_MODEL_NAME, device_type=device_type)
+    embeddings = HuggingFaceInstructEmbeddings(model_name=constants.EMBEDDING_MODEL_NAME)
     
     # load vector store
     db = Chroma(
-        persist_directory=constants.PERSIST_DIRECTORY,
+        persist_directory=PERSIST_DIRECTORY,
         embedding_function=embeddings,
         client=client,
         collection_name="instructor_embeddings",
     )
     # initialize retriever
-    retriever = db.as_retriever(search_kwargs={'k': 4})
+    retriever = db.as_retriever(search_kwargs={'k': 3})
     
     # load LLM 
     # TODO: 
-    model_id = ""
-    model_basename = ""
+    model_id = "TheBloke/Llama-2-7B-Chat-GGML"
+    model_basename = "llama-2-7b-chat.ggmlv3.q4_0.bin"
     llm = load_model(device_type, model_id, model_basename)
-    
-    # intialize QA chain
-    qa = RetrievalQA(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents=True)
+
+    # Local CTransformers wrapper for Llama-2-7B-Chat
+    # config = {'max_new_tokens': 256,'temperature': 0.01}
+    # llm = CTransformers(
+    #     model='/Users/minseokbae/ANL/gpt3_finetune/models/llama-2-7b-chat.ggmlv3.q8_0.bin',
+    #     model_type='llama',
+    #     config=config, 
+    # )
+    # initialize QA chain
+    qa_prompt = set_qa_prompt()
+
+    qa = RetrievalQA.from_chain_type(
+        llm=llm,
+        chain_type="stuff",
+        retriever=retriever,
+        return_source_documents=True,
+        chain_type_kwargs={'prompt': qa_prompt},
+    )
     
     # Interactive questions and answers
     while True:
@@ -171,10 +196,10 @@ def main(device_type, show_sources):
             break
         # Get the answer from the QA chain
         response = qa(query)
-        answer, source_documents = response["answer"], response["source_documents"]
+        answer, source_documents = response["result"], response["source_documents"]
         
         # Print the answer
-        print("\n> Answer:")
+        print("\n-> Answer:")
         print(answer)
         
         # Print the source documents if 'show_sources' is True
