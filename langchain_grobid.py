@@ -57,6 +57,7 @@ def main():
         retriever=retriever,
         return_source_documents=True,
         chain_type_kwargs={'prompt': qa_prompt},
+        
     ) 
     
     # Interactive questions and answers
@@ -75,6 +76,7 @@ def main():
         # Print the source documents if 'show_sources' is True
         for document in source_documents:
             print("\n> " + document.metadata["source"])
+            print(document.page_content)
         print("----------------------------------SOURCE DOCUMENTS---------------------------")
 
 
